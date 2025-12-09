@@ -1,0 +1,1265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir='ltr' itemscope='' itemtype='http://schema.org/Blog' xmlns:fb='http://www.facebook.com/2008/fbml' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationTime":722,"transactionName":"Jg4MFRNdCllURU4MXBATDAANQUlGWVgW","errorBeacon":"bam.nr-data.net","licenseKey":"240011c68f","applicationID":"11814779","agent":"","queueTime":0,"beacon":"bam.nr-data.net"}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content='text/css' http-equiv='Content-Style-Type'/>
+<meta content='text/javascript' http-equiv='Content-Script-Type'/>
+<meta content='summary' name='twitter:card'/>
+<meta content='@lang8' name='twitter:site'/>
+<meta content='Term paper' property='og:title'/>
+<meta content='blog' property='og:type'/>
+<meta content='http://lang-8.com/94819/journals/290778' property='og:url'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/99aaa491e9342c8beede7b010f34b989d7a182c6.jpg' property='og:image'/>
+<meta content="Dear friends, I need your help!&#x000A;I'am preparing the introduction for my term paper at British history. But i am afraid that i have a lot of mistakes.. %))&#x000A;&#x000A;Here it is:&#x000A;&#x000A;&#x000A;The History of England is very profound and many-sided. It totals a huge number of events and the persons, who anyhow influenc" property='og:description'/>
+<meta content='Lang-8' property='og:site_name'/>
+<meta content='138873442911' property='fb:app_id'/>
+<meta content='Term paper' itemprop='name'/>
+<meta content="Dear friends, I need your help!&#x000A;I'am preparing the introduction for my term paper at British history. But i am afraid that i have a lot of mistakes.. %))&#x000A;&#x000A;Here it is:&#x000A;&#x000A;&#x000A;The History of England is very profound and many-sided. It totals a huge number of events and the persons, who anyhow influenc" itemprop='description'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/99aaa491e9342c8beede7b010f34b989d7a182c6.jpg' itemprop='image'/>
+
+<title>
+Term paper | Lang-8: For learning foreign languages
+</title>
+<link href='/favicon.ico' rel='shortcut icon'/>
+<link href="http://dzhimp63a2tb1.cloudfront.net/assets/static/css/application-1b103989b91cc566c626a5030a5c0c04.css" media="screen" rel="stylesheet" type="text/css"/>
+<script type="text/cjs">
+var h = document.getElementsByTagName('head')[0];
+var link = document.createElement('link');
+link.href = 'https://fonts.googleapis.com/css?family=Telex';
+link.type = 'text/css';
+link.rel = 'stylesheet';
+link.media = 'screen'
+h.appendChild(link);
+</script>
+
+
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/application-462b56e1d78c3fb6374e9b344e47357a.js" type="text/javascript"></script>
+
+<script type='text/javascript'>//<![CDATA[
+var lang="2-2";var sessid="";
+//]]></script>
+
+<meta content='Dear friends, I need your help!  I&amp;#39;am preparing the introduction for my term paper at British his...' name='description'/>
+<meta content='term, paper, english, help, Mary, I' name='keywords'/>
+
+<meta content='1NyOQgk3_D9-R1XWpjxkGinHxWufQzM-DTGssOLEIvs' name='google-site-verification'/>
+</head>
+<body data-device='pc' id='journals_show'>
+<script type="text/javascript">var langsData=[];langsData.push({key:'cjv',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'ckb',body:'Please correct some sentences or comments on this journal.'});langsData.push({key:'cka',body:'Corrections'});langsData.push({key:'cjz',body:'Comment'});langsData.push({key:'cjt',body:'Post'});langsData.push({key:'cju',body:'Back to correcting'});langsData.push({key:'cjw',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjx',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjy',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'D063',body:'There has been an internal system error.'});langsData.push({key:'chc',body:'Show corrections'});langsData.push({key:'chd',body:'Hide'});langsData.push({key:'xlw',body:'Do you really want to reset the data?'});langsData.push({key:'xlx',body:'You have already started to leave a comment on this journal. Do you want to continue with it?'});langsData.push({key:'xly',body:'Continue'});langsData.push({key:'xlz',body:'No'});langsData.push({key:'cix',body:'Red'});langsData.push({key:'ciy',body:'Blue'});langsData.push({key:'qag',body:'Gray'});langsData.push({key:'ciz',body:'Bold'});langsData.push({key:'cja',body:'Cross out'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjc',body:'Cancel'});langsData.push({key:'cjd',body:'Correct'});langsData.push({key:'cje',body:'Unformat'});langsData.push({key:'rgo',body:'This sentence is perfect! No correction needed!'});langsData.push({key:'xll',body:'This is the original post.'});langsData.push({key:'xlm',body:'To correct, click this button.'});langsData.push({key:'xln',body:'You can use the colored fonts and strikethrough feature to help you with your correction.'});langsData.push({key:'xlo',body:'After correcting, please press this button.'});langsData.push({key:'xlp',body:'Your corrections are displayed here.'});langsData.push({key:'xlq',body:'Press this button to complete the correction.'});langsData.push({key:'xmm',body:'Sending...'});langsData.push({key:'xmn',body:'done'});langsData.push({key:'ycs',body:'Success! A friend request will now be sent to your friend.'});langsData.push({key:'xog',body:'Failed to send the friend request. Please try again in a few minutes.'});langsData.push({key:'cit',body:'Comments on this correction'});langsData.push({key:'cir',body:'Add to /Edit My Notebook'});langsData.push({key:'rfv',body:'Vertical View'});langsData.push({key:'rfw',body:'Normal View'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjp',body:'Cancel'});langsData.push({key:'cjr',body:'Remove correction'});langsData.push({key:'ckc',body:'Description about correction.(You can write in any language.)'});langsData.push({key:'cjk',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'cjl',body:'There are not any comments or corrections.'});langsData.push({key:'cjh',body:'Correct this entry'});langsData.push({key:'cjf',body:'Comment'});langsData.push({key:'cjm',body:'There has been an internal system error. Please try again.'});langsData.push({key:'kbm',body:'Draft Saved'});var l8=l8||{};l8.t=l8.t||{};l8.t=new L8I18n(langsData);</script>
+
+<div class='navbar navbar-fixed-top mb_20' id='header'>
+<div class='navbar-inner'>
+<div class='container'>
+<a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</a>
+<div class='nav-collapse'>
+<ul class='nav' id='dropmenu03'>
+<li class='logoname'>
+<a class='brand' href='/'>
+<img alt="Header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0" id="logo" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0.gif"/>
+</a>
+</li>
+<li class='divider'></li>
+<li class='home'>
+<a href="/" class="a_home" title="Home"><img alt="Ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb.png" title="Home"/>
+</a></li>
+<li class='divider'></li>
+<li class='help'>
+<a href="/help/about" class="help" target="_blank" title="What is Lang-8?"><span>
+What is Lang-8?
+</span>
+</a></li>
+<li class='divider'></li>
+</ul>
+<ul class='nav pull-right' id='dropmenu02'>
+<li class='help'>
+<a href="/register/step1?from=header" class="help"><span>Sign up</span>
+</a></li>
+<li class='divider'></li>
+<li class='help' id='login'>
+<a href="https://lang-8.com/login?from=header" class="help"><span>Log in</span>
+</a></li>
+<li class='divider'></li>
+<li class='language_list'>
+<form action="" class="language_select" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="lqde3Nqk1zMvsbkhq7v331a+woQMCxuOmYx4O+MWjwI="/></div>
+<select id="interface_lang" name="interface_lang" onchange="onChangeInterfaceLang()"><option value="2-2" selected="selected">English</option>
+<option value="2-5">Español</option>
+<option value="2-6">français</option>
+<option value="2-8">Deutsch</option>
+<option value="2-95">Português(Portugal)</option>
+<option value="2-10">Русский</option>
+<option value="2-59">Polski</option>
+<option value="2-78">Hrvatski</option>
+<option value="2-30">العربية</option>
+<option value="2-1">日本語</option>
+<option value="2-3">中文(简体)</option>
+<option value="2-300">中文(繁體)</option>
+<option value="2-4">한국어</option>
+<option value="2-20">ภาษาไทย</option>
+<option value="2-35">Svenska</option>
+<option value="2-47">Tagalog</option>
+<option value="2-65">Bahasa Melayu</option>
+<option value="2-58">Indonesian</option>
+<option value="2-7">Italiano</option></select>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class='alerter container alert fade in navbar-fixed-top' id='alert-top' style='top:60px;display:none;'>
+<a class='close' data-dismiss='alert' href='#'>
+&times;
+</a>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert Message here
+</span>
+</div>
+<div class='alerter alert fade in navbar-fixed-top' id='alert-box' style='left:40%;top:40%;width:200px;display:none;'>
+<div style='text-align:center;'>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert message here
+</span>
+</div>
+</div>
+
+
+
+
+      <div class="center" style="margin-bottom: 10px;">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- PC_Super_Before_Login -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6717840198266056" data-ad-slot="9171779343" data-ad-format="auto"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+
+      </div>
+
+
+
+
+<div id='page_content'>
+<div class='cfx' id='main_container'>
+<ul class="cfx" id="breadcrumbs"><li class="home"><a href="/">Home</a></li><li class=""><a href="/profiles/search">Member</a></li><li class=""><a href="/94819">alexia</a></li><li class=""><a href="/94819/journals">alexia's entries</a></li><li class=""><span>Term paper</span></li></ul>
+<div>
+<div data-use_friend_request_popover='data-use_friend_request_popover' id='main'>
+<style type='text/css'>@font-face{font-family:"FontAwesome";src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot);src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot?#iefix) format('eot') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.woff) format('woff') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.ttf) format('truetype') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.svg#FontAwesome) format('svg');font-weight:normal;font-style:normal}</style>
+<div class='cfx' id='entry_detail'>
+<div class='show_report_spam_link cfx' id='entry_title_box'>
+<div class='tit_02'>
+<h1 id='subject_show'>Term paper</h1>
+<div class='edit_links'>
+<ul class='cfx'>
+</ul>
+</div>
+</div>
+</div>
+<div class='clear_both'></div>
+<div class='cfx' id='tools_for_journal'>
+<ul class='journal_status floated_on_right'>
+<li class='privacy_level_5' data-original-title='Public' rel='tooltip'>&nbsp;</li>
+<li class='visiters' data-original-title='Views' rel='tooltip' title='Views'>420</li>
+<li class='comment_num' data-original-title='Comments' rel='tooltip' title='Comments'>0</li>
+<li class='corrections_num' data-original-title='Corrections' rel='tooltip' title='Corrections'>3</li>
+<li class='studying' data-original-title='The language that needs to be corrected' rel='tooltip'>English&nbsp;</li>
+</ul>
+<span class='journal_date floated_on_left'>
+Nov 22, 2009 05:02
+<a href="/journals/search?tag=term">term</a>
+
+<a href="/journals/search?tag=paper">paper</a>
+
+<a href="/journals/search?tag=english">english</a>
+
+<a href="/journals/search?tag=help">help</a>
+
+<a href="/journals/search?tag=Mary">Mary</a>
+
+<a href="/journals/search?tag=I">I</a>
+
+</span>
+<script type='text/javascript'>//<![CDATA[
+$j(function(){var journalCounterView=new Lang8.Views.JournalCounterView();});
+//]]></script>
+
+</div>
+<div id='show_buttons'>
+<input class='bt_lv3' data-original-title='Show corrections for sentences when you mouse-over.' id='showAndHide' rel='tooltip' title='' type='button' value='Show'/>
+<input class='bt_lv3' data-original-title='Show all corrections together in a pop-up window.' id='showAll' rel='tooltip' title='' type='button' value='Show All'/>
+</div>
+
+<div class='cfx' id='body_show'>
+<div id='body_show_ori'>
+<font onmouseover='emph_wt(this,"Dear")'>Dear</font> <font onmouseover='emph_wt(this,"friends")'>friends</font>, I <font onmouseover='emph_wt(this,"need")'>need</font> <font onmouseover='emph_wt(this,"your")'>your</font> <font onmouseover='emph_wt(this,"help")'>help</font>!<br/>I'<font onmouseover='emph_wt(this,"am")'>am</font> <font onmouseover='emph_wt(this,"preparing")'>preparing</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"introduction")'>introduction</font> <font onmouseover='emph_wt(this,"for")'>for</font> <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"term")'>term</font> <font onmouseover='emph_wt(this,"paper")'>paper</font> <font onmouseover='emph_wt(this,"at")'>at</font> <font onmouseover='emph_wt(this,"British")'>British</font> <font onmouseover='emph_wt(this,"history")'>history</font>. <font onmouseover='emph_wt(this,"But")'>But</font> i <font onmouseover='emph_wt(this,"am")'>am</font> <font onmouseover='emph_wt(this,"afraid")'>afraid</font> <font onmouseover='emph_wt(this,"that")'>that</font> i <font onmouseover='emph_wt(this,"have")'>have</font> a <font onmouseover='emph_wt(this,"lot")'>lot</font> <font onmouseover='emph_wt(this,"of")'>of</font> <font onmouseover='emph_wt(this,"mistakes")'>mistakes</font>.. %))<br/><br/><font onmouseover='emph_wt(this,"Here")'>Here</font> <font onmouseover='emph_wt(this,"it")'>it</font> is:<br/><br/><br/><font onmouseover='emph_wt(this,"The")'>The</font> <font onmouseover='emph_wt(this,"History")'>History</font> <font onmouseover='emph_wt(this,"of")'>of</font> <font onmouseover='emph_wt(this,"England")'>England</font> <font onmouseover='emph_wt(this,"is")'>is</font> <font onmouseover='emph_wt(this,"very")'>very</font> <font onmouseover='emph_wt(this,"profound")'>profound</font> <font onmouseover='emph_wt(this,"and")'>and</font> many-sided. <font onmouseover='emph_wt(this,"It")'>It</font> <font onmouseover='emph_wt(this,"totals")'>totals</font> a <font onmouseover='emph_wt(this,"huge")'>huge</font> <font onmouseover='emph_wt(this,"number")'>number</font> <font onmouseover='emph_wt(this,"of")'>of</font> <font onmouseover='emph_wt(this,"events")'>events</font> <font onmouseover='emph_wt(this,"and")'>and</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"persons")'>persons</font>, <font onmouseover='emph_wt(this,"who")'>who</font> <font onmouseover='emph_wt(this,"anyhow")'>anyhow</font> <font onmouseover='emph_wt(this,"influenced")'>influenced</font> <font onmouseover='emph_wt(this,"it")'>it</font>. <font onmouseover='emph_wt(this,"In")'>In</font> <font onmouseover='emph_wt(this,"each")'>each</font> <font onmouseover='emph_wt(this,"epoch")'>epoch</font> <font onmouseover='emph_wt(this,"there")'>there</font> <font onmouseover='emph_wt(this,"were")'>were</font> <font onmouseover='emph_wt(this,"key")'>key</font> <font onmouseover='emph_wt(this,"moments")'>moments</font> <font onmouseover='emph_wt(this,"and")'>and</font> <font onmouseover='emph_wt(this,"figures")'>figures</font> <font onmouseover='emph_wt(this,"about")'>about</font> <font onmouseover='emph_wt(this,"which")'>which</font> <font onmouseover='emph_wt(this,"it")'>it</font> <font onmouseover='emph_wt(this,"is")'>is</font> <font onmouseover='emph_wt(this,"possible")'>possible</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"read")'>read</font> a <font onmouseover='emph_wt(this,"lot")'>lot</font> <font onmouseover='emph_wt(this,"of")'>of</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"interesting")'>interesting</font>.<br/><br/>I <font onmouseover='emph_wt(this,"consider")'>consider</font> <font onmouseover='emph_wt(this,"that")'>that</font>  <font onmouseover='emph_wt(this,"one")'>one</font> <font onmouseover='emph_wt(this,"of")'>of</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"most")'>most</font> <font onmouseover='emph_wt(this,"ambiguous")'>ambiguous</font> <font onmouseover='emph_wt(this,"figures")'>figures</font> <font onmouseover='emph_wt(this,"of")'>of</font>   <font onmouseover='emph_wt(this,"English")'>English</font> <font onmouseover='emph_wt(this,"history")'>history</font>  <font onmouseover='emph_wt(this,"is")'>is</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"representative")'>representative</font> <font onmouseover='emph_wt(this,"of")'>of</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"Tudor")'>Tudor</font> <font onmouseover='emph_wt(this,"dynasty")'>dynasty</font>,  <font onmouseover='emph_wt(this,"daughter")'>daughter</font> <font onmouseover='emph_wt(this,"of")'>of</font> <font onmouseover='emph_wt(this,"king")'>king</font> <font onmouseover='emph_wt(this,"Henry")'>Henry</font> <font onmouseover='emph_wt(this,"VII")'>VII</font>  - <font onmouseover='emph_wt(this,"Maria")'>Maria</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"First")'>First</font> <font onmouseover='emph_wt(this,"or")'>or</font> <font onmouseover='emph_wt(this,"as")'>as</font> <font onmouseover='emph_wt(this,"she")'>she</font> <font onmouseover='emph_wt(this,"is")'>is</font> <font onmouseover='emph_wt(this,"also")'>also</font> <font onmouseover='emph_wt(this,"named")'>named</font> -  <font onmouseover='emph_wt(this,"Bloody")'>Bloody</font> <font onmouseover='emph_wt(this,"Mary")'>Mary</font>. <font onmouseover='emph_wt(this,"This")'>This</font> <font onmouseover='emph_wt(this,"name")'>name</font> <font onmouseover='emph_wt(this,"is")'>is</font> <font onmouseover='emph_wt(this,"still")'>still</font> <font onmouseover='emph_wt(this,"shrouded")'>shrouded</font> <font onmouseover='emph_wt(this,"by")'>by</font> <font onmouseover='emph_wt(this,"set")'>set</font> <font onmouseover='emph_wt(this,"of")'>of</font> <font onmouseover='emph_wt(this,"secrets")'>secrets</font> <font onmouseover='emph_wt(this,"and")'>and</font> <font onmouseover='emph_wt(this,"legends")'>legends</font>. <br/><font onmouseover='emph_wt(this,"There")'>There</font> <font onmouseover='emph_wt(this,"are")'>are</font> <font onmouseover='emph_wt(this,"no")'>no</font> <font onmouseover='emph_wt(this,"monuments")'>monuments</font> <font onmouseover='emph_wt(this,"put")'>put</font>  <font onmouseover='emph_wt(this,"in")'>in</font> <font onmouseover='emph_wt(this,"her")'>her</font>  <font onmouseover='emph_wt(this,"homeland")'>homeland</font>, <font onmouseover='emph_wt(this,"people")'>people</font> <font onmouseover='emph_wt(this,"associate")'>associate</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"period")'>period</font> <font onmouseover='emph_wt(this,"of")'>of</font> <font onmouseover='emph_wt(this,"her")'>her</font> <font onmouseover='emph_wt(this,"reign")'>reign</font>  <font onmouseover='emph_wt(this,"with")'>with</font> <font onmouseover='emph_wt(this,"bloody")'>bloody</font> massacres; <font onmouseover='emph_wt(this,"day")'>day</font> <font onmouseover='emph_wt(this,"of")'>of</font> <font onmouseover='emph_wt(this,"her")'>her</font> <font onmouseover='emph_wt(this,"death")'>death</font> (<font onmouseover='emph_wt(this,"and")'>and</font> <font onmouseover='emph_wt(this,"simultaneously")'>simultaneously</font> <font onmouseover='emph_wt(this,"day")'>day</font> <font onmouseover='emph_wt(this,"of")'>of</font> <font onmouseover='emph_wt(this,"accession")'>accession</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"throne")'>throne</font>  <font onmouseover='emph_wt(this,"Elizabeth")'>Elizabeth</font> I) <font onmouseover='emph_wt(this,"was")'>was</font> <font onmouseover='emph_wt(this,"marked")'>marked</font> <font onmouseover='emph_wt(this,"in")'>in</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"country")'>country</font> <font onmouseover='emph_wt(this,"as")'>as</font> a <font onmouseover='emph_wt(this,"national")'>national</font> <font onmouseover='emph_wt(this,"holiday")'>holiday</font>. <font onmouseover='emph_wt(this,"We")'>We</font> <font onmouseover='emph_wt(this,"see")'>see</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"picture")'>picture</font> <font onmouseover='emph_wt(this,"gloomy")'>gloomy</font> <font onmouseover='emph_wt(this,"enough")'>enough</font>, <font onmouseover='emph_wt(this,"but")'>but</font> <font onmouseover='emph_wt(this,"it")'>it</font> <font onmouseover='emph_wt(this,"has")'>has</font> <font onmouseover='emph_wt(this,"involved")'>involved</font> <font onmouseover='emph_wt(this,"me")'>me</font> <font onmouseover='emph_wt(this,"in")'>in</font> <font onmouseover='emph_wt(this,"this")'>this</font> <font onmouseover='emph_wt(this,"historic")'>historic</font> <font onmouseover='emph_wt(this,"figure")'>figure</font>. <font onmouseover='emph_wt(this,"Having")'>Having</font> <font onmouseover='emph_wt(this,"read")'>read</font> <font onmouseover='emph_wt(this,"about")'>about</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"queen")'>queen</font> <font onmouseover='emph_wt(this,"at")'>at</font> a <font onmouseover='emph_wt(this,"history")'>history</font> <font onmouseover='emph_wt(this,"lesson")'>lesson</font>, I <font onmouseover='emph_wt(this,"have")'>have</font> <font onmouseover='emph_wt(this,"started")'>started</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"search")'>search</font> <font onmouseover='emph_wt(this,"for")'>for</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"every")'>every</font> <font onmouseover='emph_wt(this,"possible")'>possible</font> <font onmouseover='emph_wt(this,"information")'>information</font> <font onmouseover='emph_wt(this,"about")'>about</font> <font onmouseover='emph_wt(this,"her")'>her</font>, <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"read")'>read</font> <font onmouseover='emph_wt(this,"various")'>various</font> <font onmouseover='emph_wt(this,"books")'>books</font>, <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"see")'>see</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"films")'>films</font> <font onmouseover='emph_wt(this,"connected")'>connected</font> <font onmouseover='emph_wt(this,"with")'>with</font> <font onmouseover='emph_wt(this,"her")'>her</font> <font onmouseover='emph_wt(this,"personality")'>personality</font>. <font onmouseover='emph_wt(this,"When")'>When</font> I <font onmouseover='emph_wt(this,"have")'>have</font> <font onmouseover='emph_wt(this,"looked")'>looked</font> <font onmouseover='emph_wt(this,"an")'>an</font> <font onmouseover='emph_wt(this,"English")'>English</font> <font onmouseover='emph_wt(this,"serial")'>serial</font> &quot;Tudors&quot;, <font onmouseover='emph_wt(this,"about")'>about</font> <font onmouseover='emph_wt(this,"this")'>this</font> <font onmouseover='emph_wt(this,"great")'>great</font> <font onmouseover='emph_wt(this,"dynasty")'>dynasty</font>, I <font onmouseover='emph_wt(this,"became")'>became</font> <font onmouseover='emph_wt(this,"assured")'>assured</font> <font onmouseover='emph_wt(this,"that")'>that</font> <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"term")'>term</font> <font onmouseover='emph_wt(this,"paper")'>paper</font> <font onmouseover='emph_wt(this,"will")'>will</font> <font onmouseover='emph_wt(this,"be")'>be</font> <font onmouseover='emph_wt(this,"about")'>about</font> <font onmouseover='emph_wt(this,"Maria")'>Maria</font>. <br/>I <font onmouseover='emph_wt(this,"wanted")'>wanted</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"learn")'>learn</font> <font onmouseover='emph_wt(this,"more")'>more</font> <font onmouseover='emph_wt(this,"about")'>about</font> <font onmouseover='emph_wt(this,"this")'>this</font> <font onmouseover='emph_wt(this,"strange")'>strange</font>, <font onmouseover='emph_wt(this,"fanatical")'>fanatical</font> <font onmouseover='emph_wt(this,"queen")'>queen</font> <font onmouseover='emph_wt(this,"who")'>who</font> <font onmouseover='emph_wt(this,"has")'>has</font> <font onmouseover='emph_wt(this,"doomed")'>doomed</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"death")'>death</font> a <font onmouseover='emph_wt(this,"large")'>large</font> <font onmouseover='emph_wt(this,"quantity")'>quantity</font> <font onmouseover='emph_wt(this,"innocent")'>innocent</font> <font onmouseover='emph_wt(this,"people")'>people</font>.<br/><font onmouseover='emph_wt(this,"In")'>In</font> <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"work")'>work</font> I <font onmouseover='emph_wt(this,"have")'>have</font> <font onmouseover='emph_wt(this,"tried")'>tried</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"track")'>track</font> Maria's <font onmouseover='emph_wt(this,"life")'>life</font> <font onmouseover='emph_wt(this,"from")'>from</font> a <font onmouseover='emph_wt(this,"birth")'>birth</font>, <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"death")'>death</font>.<br/>I <font onmouseover='emph_wt(this,"have")'>have</font> <font onmouseover='emph_wt(this,"collected")'>collected</font> <font onmouseover='emph_wt(this,"every")'>every</font> <font onmouseover='emph_wt(this,"possible")'>possible</font> <font onmouseover='emph_wt(this,"legends")'>legends</font> <font onmouseover='emph_wt(this,"connected")'>connected</font> <font onmouseover='emph_wt(this,"with")'>with</font> <font onmouseover='emph_wt(this,"her")'>her</font> <font onmouseover='emph_wt(this,"and")'>and</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"facts")'>facts</font> <font onmouseover='emph_wt(this,"of")'>of</font> <font onmouseover='emph_wt(this,"her")'>her</font> <font onmouseover='emph_wt(this,"biography")'>biography</font> <font onmouseover='emph_wt(this,"which")'>which</font> <font onmouseover='emph_wt(this,"prove")'>prove</font> <font onmouseover='emph_wt(this,"that")'>that</font> <font onmouseover='emph_wt(this,"this")'>this</font> <font onmouseover='emph_wt(this,"person")'>person</font> <font onmouseover='emph_wt(this,"was")'>was</font> <font onmouseover='emph_wt(this,"historical")'>historical</font> <font onmouseover='emph_wt(this,"and")'>and</font> <font onmouseover='emph_wt(this,"that")'>that</font> <font onmouseover='emph_wt(this,"it")'>it</font> <font onmouseover='emph_wt(this,"is")'>is</font> <font onmouseover='emph_wt(this,"noteworthy")'>noteworthy</font>.<br/>
+</div>
+<div class='box_like_button cfx' id='async_show_like'></div>
+<div class='ad_journal_center clear_both floated_on_left'>
+  
+    <div class="center" style="margin: 0 0 10px;">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- JournalCenter336_280 -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-6717840198266056" data-ad-slot="1360554540"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+
+    </div>
+  
+
+</div>
+</div>
+</div>
+<div class='little-spaced cfx' data-canonical_url='http://lang-8.com/94819/journals/290778' id='links_for_journal'>
+<span class='horizontal-spaced tw-btn'>
+<a class='twitter-share-button' data-hashtags='lang8,term,paper,english,help,Mary,I' data-related='lang8' data-text='Term paper' data-url='http://lang-8.com/94819/journals/290778' data-via='lang8' href='https://twitter.com/share'>Tweet</a>
+</span>
+<span class='horizontal-spaced fb-like' data-action='like' data-colorscheme='light' data-href='http://lang-8.com/94819/journals/290778' data-layout='button_count' data-show-faces='false' data-width='100'></span>
+<span class='horizontal-spaced gplus_btn'>
+<!-- %span.g-plusone{'data-size' => 'medium', :href => "#{@journal.canonical_url}"} -->
+</span>
+<span class='floated_on_left'>
+<span class='st_fblike_hcount' displayText='Facebook Like' st_url='http://lang-8.com/94819/journals/290778'></span>
+<span class='st_facebook_hcount' displayText='Facebook' st_url='http://lang-8.com/94819/journals/290778'></span>
+<span class='st_linkedin_hcount' displayText='LinkedIn' st_url='http://lang-8.com/94819/journals/290778'></span>
+</span>
+<a href='#' onclick="Evernote.doClip({styling:'full',providerName:'Lang-8',suggestTags:'Lang-8',suggestNotebook:'Lang-8',contentId:'entry_container'}); return false;" style='float:right;margin-right:5px;'>
+<img alt='Clip to Evernote' src='/static/images2/xarticle-clipper-fr.png.pagespeed.ic.BAKnLUGqIU.png'/>
+</a>
+</div>
+<div id='comments_and_corrections_field'>
+<div class='fukidashi comment_field' id='journal_comment_1115245'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/82591"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/2b58faa1e338e7a8949944b84742b939b0cb3222.jpg"/></a>
+<a href="/82591" class="user_name">Hanhie-kins</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Nov 22, 2009 05:46
+</span>
+</div>
+</div>
+<div class='correction_list corner-rounded_5 little-spaced'>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I&#39;am preparing the introduction for my term paper at British history.</li>
+<li class='corrected correct'>
+<p><span class="sline">I&#39;am</span> <span class="f_bold">I&#39;m </span>preparing the introduction for my <span class="f_bold">British history</span> term paper <span class="sline">at</span> <span class="sline">British history</span>.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607364'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>It totals a huge number of events and the persons, who anyhow influenced it.</li>
+<li class='corrected correct'>
+<p>It totals a huge number of events and the persons, who anyhow influenced it. <span class="f_bold">(A huge number of events and people influenced it.)</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607365'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>In each epoch there were key moments and figures about which it is possible to read a lot of the interesting.</li>
+<li class='corrected correct'>
+<p>In each epoch there were key moments and figures. <span class="f_bold">(about which it is possible to read a lot of the interesting.)&lt;--- I would consider revising this part, because I don&#39;t understanding what you are trying to say.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607366'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I consider that  one of the most ambiguous figures of   English history  is the representative of the Tudor dynasty,  daughter of king Henry VII  - Maria the First or as she is also named -  Bloody Mary.</li>
+<li class='corrected correct'>
+<p>I consider that  one of the most ambiguous figures of   English history  is the representative of the Tudor dynasty, <span class="f_bold">and </span>daughter of <span class="f_bold">K</span>ing Henry VII  - Maria the First or as she is also named -  Bloody Mary.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607367'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>This name is still shrouded by set of secrets and legends.</li>
+<li class='corrected correct'>
+<p>This name is still shrouded by <span class="f_bold">a </span>set of secrets and legends.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607368'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>There are no monuments put  in her  homeland, people associate the period of her reign  with bloody massacres; day of her death (and simultaneously day of accession to the throne  Elizabeth I) was marked in the country as a national holiday.</li>
+<li class='corrected correct'>
+<p>There are no monuments put  in her  homeland. <span class="f_bold">P</span>eople associate the period of her reign  with bloody massacres; <span class="f_bold">the</span> day of her death - also the simultaneous<span class="sline">ly</span> day of accession to the throne  Elizabeth I -  was marked <span class="sline">in the</span><span class="sline"> country</span> as a national holiday.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607369'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>We see the picture gloomy enough, but it has involved me in this historic figure.</li>
+<li class='corrected correct'>
+<p>We see the picture gloomy enough, but it has <span class="sline">involved</span> <span class="f_bold">interested </span>me in this historic figure.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607370'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Having read about the queen at a history lesson, I have started to search for the every possible information about her, to read various books, to see the films connected with her personality.</li>
+<li class='corrected correct'>
+<p>Having read about the queen at a history lesson, I have started to search for <span class="sline">the </span>every possible information about her. <span class="f_bold">For instance, I have read various</span><span class="f_bold"> books and watched films that are connected with her personality.</span> <span class="sline">to read various books, to see the films connected with her personality.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607371'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>When I have looked an English serial &quot;Tudors&quot;, about this great dynasty, I became assured that my term paper will be about Maria.</li>
+<li class='corrected correct'>
+<p>When I have looked <span class="sline">an</span> <span class="f_bold">in  </span>English serial &quot;Tudors&quot;, about this great dynasty, I became assured that my term paper will be about Maria.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607372'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I wanted to learn more about this strange, fanatical queen who has doomed to death a large quantity innocent people.</li>
+<li class='corrected correct'>
+<p>I wanted to learn more about this strange, fanatical queen who has <span class="f_bold">been</span> doomed to <span class="f_bold">give<span class="sline"> </span></span><span class="sline">death</span> a large quantity <span class="f_bold">of death to</span> innocent people.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607373'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>In my work I have tried to track Maria&#39;s life from a birth, to the death.</li>
+<li class='corrected correct'>
+<p>In my work I have tried to track Maria&#39;s life from <span class="sline">a</span> birth to <span class="sline">the </span>death.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607374'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I have collected every possible legends connected with her and the facts of her biography which prove that this person was historical and that it is noteworthy.</li>
+<li class='corrected correct'>
+<p>I have collected every possible legend<span class="sline">s</span> connected with her, and the facts of her biography, which prove that this person was historical and <span class="sline">that it is</span> noteworthy.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607375'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+Well to be honest this is a very weak intro for a paper. If this paper isn't due soon, would you like for me to help you with it?
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-1115245' style='padding-left:5px;'>
+    <div class='gray-font'>
+      <span class="thank_after">Thank you for your correction!</span>
+    </div>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_1115245'>
+
+</div>
+</div>
+</div>
+<div class='fukidashi comment_field' id='journal_comment_1115254'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/88714"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/no_image.gif"/></a>
+<a href="/88714" class="user_name"></a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Nov 22, 2009 05:51
+</span>
+</div>
+</div>
+<div class='correction_list corner-rounded_5 little-spaced'>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I&#39;am preparing the introduction for my term paper at British history.</li>
+<li class='corrected correct'>
+<p>I&#39;<span class="sline"><span class="f_red">a</span></span>m preparing the introduction for my term paper <span class="sline">at</span> <span class="f_red">in </span>British history.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607397'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>But i am afraid that i have a lot of mistakes..</li>
+<li class='corrected correct'>
+<p><span class="sline">But</span> <span class="sline">i</span> <span class="f_red">but I </span>am afraid that <span class="sline">i</span> <span class="f_red">I</span> have a lot of mistakes..</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607398'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>The History of England is very profound and many-sided.</li>
+<li class='corrected correct'>
+<p>The History of England is very profound and <span class="sline">many-sided</span> <span class="f_red">complex</span>.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607399'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>It totals a huge number of events and the persons, who anyhow influenced it.</li>
+<li class='corrected correct'>
+<p>It <span class="sline">totals</span> <span class="f_red">comprises</span> a huge number of events and the persons, who <span class="sline">anyhow</span> influenced <span class="sline">it</span>. <span class="f_red">them.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607400'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>In each epoch there were key moments and figures about which it is possible to read a lot of the interesting.</li>
+<li class='corrected correct'>
+<p>In each epoch there were key moments and <span class="f_red">interesting </span>figures about which it is possible to read <span class="sline">a lot of the interesting</span> <span class="f_red">volumes</span>.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607401'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I consider that  one of the most ambiguous figures of   English history  is the representative of the Tudor dynasty,  daughter of king Henry VII  - Maria the First or as she is also named -  Bloody Mary.</li>
+<li class='corrected correct'>
+<p>I consider that  one of the most ambiguous figures of   English history  is the representative of the Tudor dynasty,  <span class="f_red">the </span>daughter of <span class="sline">king</span> <span class="f_red">King </span>Henry VII  - Maria the First or as she is also named -  Bloody Mary.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607402'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>This name is still shrouded by set of secrets and legends.</li>
+<li class='corrected correct'>
+<p>This name is still shrouded by <span class="sline">set of</span> secrets and legends.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607403'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>There are no monuments put  in her  homeland, people associate the period of her reign  with bloody massacres; day of her death (and simultaneously day of accession to the throne  Elizabeth I) was marked in the country as a national holiday.</li>
+<li class='corrected correct'>
+<p>There are no monuments <span class="sline">put</span>  <span class="f_red">to her </span>in her  homeland<span class="sline">,</span><span class="f_red">.</span><span class="sline">people</span> People associate <span class="sline">the period of</span> her reign  with bloody massacres<span class="sline">;</span><span class="f_red">. The</span> day of her death (and simultaneously <span class="f_red">the </span>day of accession to the throne <span class="f_red">by </span>Elizabeth I) was <span class="sline">marked</span> <span class="f_red">celebrated </span>in <span class="sline">the</span> <span class="f_red">her </span>country as a national holiday.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607404'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>We see the picture gloomy enough, but it has involved me in this historic figure.</li>
+<li class='corrected correct'>
+<p><span class="sline">We see t</span> <span class="f_red">T</span>he picture <span class="f_red">was </span>gloomy enough, but <span class="sline">it has involved me in</span> <span class="f_red">I am intrigued with</span> this historic figure.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607405'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Having read about the queen at a history lesson, I have started to search for the every possible information about her, to read various books, to see the films connected with her personality.</li>
+<li class='corrected correct'>
+<p>Having <span class="f_red">first </span>read about <span class="sline">the queen</span> <span class="f_red">Bloody Mary </span><span class="sline">at</span> <span class="f_red">in </span>a history lesson, I <span class="sline">have</span> started to search for the every possible <span class="f_red">source of </span>information about her, to read various books, <span class="f_red">and </span>to see the films <span class="f_red">about</span> her.<span class="sline"> personality</span>.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607406'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>When I have looked an English serial &quot;Tudors&quot;, about this great dynasty, I became assured that my term paper will be about Maria.</li>
+<li class='corrected correct'>
+<p>When I <span class="sline">have looked</span> <span class="sline">an</span> <span class="f_red">watched the </span>English serial<span class="f_red">,</span> &quot;Tudors&quot;, about this great dynasty, I <span class="sline">became assured</span> <span class="f_red">decided </span>that my term paper <span class="sline">will</span> <span class="f_red">would </span>be about Maria.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607407'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I wanted to learn more about this strange, fanatical queen who has doomed to death a large quantity innocent people.</li>
+<li class='corrected correct'>
+<p>I wanted to learn more about this strange, fanatical queen who <span class="sline">has</span> doomed to death a large quantity innocent people.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607408'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>In my work I have tried to track Maria&#39;s life from a birth, to the death.</li>
+<li class='corrected correct'>
+<p>In my work I have tried to track Maria&#39;s life from a birth<span class="sline">,</span> to <span class="sline">the</span> death.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607409'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I have collected every possible legends connected with her and the facts of her biography which prove that this person was historical and that it is noteworthy.</li>
+<li class='corrected correct'>
+<p>I have collected every possible legend<span class="sline">s</span> connected with her and the facts of her <span class="sline">biography</span> <span class="f_red">life </span>which prove that this person was <span class="sline">historical and that it is</span> noteworthy <span class="f_red">and made a significant impact on history</span>.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607410'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+Your introduction was most interesting to read.  You have piqued my curiosity, and now I want to read more about Bloody Mary.  I remember from the movie, Elizabeth, how Mary was Catholic and determined to eliminate the Protestants and their influence on her country.  My husband just finished reading a biography of Queen Elizabeth I, so I have decided to read it as it will no doubt have much information about Mary, too.  <br/><br/>I hope I have been able to help you with your English.  If you have any questions about my corrections, please write to me.<br/><br/>Good luck with your term paper.<br/>Jacki
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-1115254' style='padding-left:5px;'>
+    <div class='gray-font'>
+      <span class="thank_after">Thank you for your correction!</span>
+    </div>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_1115254'>
+
+</div>
+</div>
+</div>
+<div class='fukidashi comment_field' id='journal_comment_1115255'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/95580"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/no_image.gif"/></a>
+<a href="/95580" class="user_name"></a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Nov 22, 2009 05:52
+</span>
+</div>
+</div>
+<div class='correction_list corner-rounded_5 little-spaced'>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>In each epoch there were key moments and figures about which it is possible to read a lot of the interesting.</li>
+<li class='corrected correct'>
+<p>In each epoch there were key moments and figures about which it is possible to read a lot of <span class="sline">the</span> interesting things.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607411'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Having read about the queen at a history lesson, I have started to search for the every possible information about her, to read various books, to see the films connected with her personality.</li>
+<li class='corrected correct'>
+<p>Having read about the queen at a history lesson, I have started to search for <span class="sline">the</span> every possible information about her, to read various books, to see <span class="sline">the</span> films connected with her personality.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607412'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>When I have looked an English serial &quot;Tudors&quot;, about this great dynasty, I became assured that my term paper will be about Maria.</li>
+<li class='corrected correct'>
+<p>When I have looked an English seri<span class="sline">al</span>es &quot;Tudors&quot;, about this great dynasty, I became assured that my term paper will be about Maria.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607413'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I wanted to learn more about this strange, fanatical queen who has doomed to death a large quantity innocent people.</li>
+<li class='corrected correct'>
+<p>I wanted to learn more about this strange, fanatical queen who has doomed to death a large quantity of innocent people.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607414'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>In my work I have tried to track Maria&#39;s life from a birth, to the death.</li>
+<li class='corrected correct'>
+<p>In my work I have tried to track Maria&#39;s life from <span class="sline">a</span> birth, to <span class="sline">the</span> death.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2607415'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+
+</div>
+</div>
+<div class='thankspoint thankscustom' id='s-1115255' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_1115255'>
+
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>//<![CDATA[
+var l8=jQuery.extend(l8,{authenticityToken:"lqde3Nqk1zMvsbkhq7v331a+woQMCxuOmYx4O+MWjwI=",showTutorial:false,label:"Description about correction.(You can write in any language.)",explanation:"Add a description or comment here.(Optional)",sentences:'VGVybSBwYXBlcgpEZWFyIGZyaWVuZHMsIEkgbmVlZCB5b3VyIGhlbHAhCkknYW0gcHJlcGFyaW5nIHRoZSBpbnRyb2R1Y3Rpb24gZm9yIG15IHRlcm0gcGFwZXIgYXQgQnJpdGlzaCBoaXN0b3J5LgpCdXQgaSBhbSBhZnJhaWQgdGhhdCBpIGhhdmUgYSBsb3Qgb2YgbWlzdGFrZXMuLgolKSkKSGVyZSBpdCBpczoKVGhlIEhpc3Rvcnkgb2YgRW5nbGFuZCBpcyB2ZXJ5IHByb2ZvdW5kIGFuZCBtYW55LXNpZGVkLgpJdCB0b3RhbHMgYSBodWdlIG51bWJlciBvZiBldmVudHMgYW5kIHRoZSBwZXJzb25zLCB3aG8gYW55aG93IGluZmx1ZW5jZWQgaXQuCkluIGVhY2ggZXBvY2ggdGhlcmUgd2VyZSBrZXkgbW9tZW50cyBhbmQgZmlndXJlcyBhYm91dCB3aGljaCBpdCBpcyBwb3NzaWJsZSB0byByZWFkIGEgbG90IG9mIHRoZSBpbnRlcmVzdGluZy4KSSBjb25zaWRlciB0aGF0ICBvbmUgb2YgdGhlIG1vc3QgYW1iaWd1b3VzIGZpZ3VyZXMgb2YgICBFbmdsaXNoIGhpc3RvcnkgIGlzIHRoZSByZXByZXNlbnRhdGl2ZSBvZiB0aGUgVHVkb3IgZHluYXN0eSwgIGRhdWdodGVyIG9mIGtpbmcgSGVucnkgVklJICAtIE1hcmlhIHRoZSBGaXJzdCBvciBhcyBzaGUgaXMgYWxzbyBuYW1lZCAtICBCbG9vZHkgTWFyeS4KVGhpcyBuYW1lIGlzIHN0aWxsIHNocm91ZGVkIGJ5IHNldCBvZiBzZWNyZXRzIGFuZCBsZWdlbmRzLgpUaGVyZSBhcmUgbm8gbW9udW1lbnRzIHB1dCAgaW4gaGVyICBob21lbGFuZCwgcGVvcGxlIGFzc29jaWF0ZSB0aGUgcGVyaW9kIG9mIGhlciByZWlnbiAgd2l0aCBibG9vZHkgbWFzc2FjcmVzOyBkYXkgb2YgaGVyIGRlYXRoIChhbmQgc2ltdWx0YW5lb3VzbHkgZGF5IG9mIGFjY2Vzc2lvbiB0byB0aGUgdGhyb25lICBFbGl6YWJldGggSSkgd2FzIG1hcmtlZCBpbiB0aGUgY291bnRyeSBhcyBhIG5hdGlvbmFsIGhvbGlkYXkuCldlIHNlZSB0aGUgcGljdHVyZSBnbG9vbXkgZW5vdWdoLCBidXQgaXQgaGFzIGludm9sdmVkIG1lIGluIHRoaXMgaGlzdG9yaWMgZmlndXJlLgpIYXZpbmcgcmVhZCBhYm91dCB0aGUgcXVlZW4gYXQgYSBoaXN0b3J5IGxlc3NvbiwgSSBoYXZlIHN0YXJ0ZWQgdG8gc2VhcmNoIGZvciB0aGUgZXZlcnkgcG9zc2libGUgaW5mb3JtYXRpb24gYWJvdXQgaGVyLCB0byByZWFkIHZhcmlvdXMgYm9va3MsIHRvIHNlZSB0aGUgZmlsbXMgY29ubmVjdGVkIHdpdGggaGVyIHBlcnNvbmFsaXR5LgpXaGVuIEkgaGF2ZSBsb29rZWQgYW4gRW5nbGlzaCBzZXJpYWwgIlR1ZG9ycyIsIGFib3V0IHRoaXMgZ3JlYXQgZHluYXN0eSwgSSBiZWNhbWUgYXNzdXJlZCB0aGF0IG15IHRlcm0gcGFwZXIgd2lsbCBiZSBhYm91dCBNYXJpYS4KSSB3YW50ZWQgdG8gbGVhcm4gbW9yZSBhYm91dCB0aGlzIHN0cmFuZ2UsIGZhbmF0aWNhbCBxdWVlbiB3aG8gaGFzIGRvb21lZCB0byBkZWF0aCBhIGxhcmdlIHF1YW50aXR5IGlubm9jZW50IHBlb3BsZS4KSW4gbXkgd29yayBJIGhhdmUgdHJpZWQgdG8gdHJhY2sgTWFyaWEncyBsaWZlIGZyb20gYSBiaXJ0aCwgdG8gdGhlIGRlYXRoLgpJIGhhdmUgY29sbGVjdGVkIGV2ZXJ5IHBvc3NpYmxlIGxlZ2VuZHMgY29ubmVjdGVkIHdpdGggaGVyIGFuZCB0aGUgZmFjdHMgb2YgaGVyIGJpb2dyYXBoeSB3aGljaCBwcm92ZSB0aGF0IHRoaXMgcGVyc29uIHdhcyBoaXN0b3JpY2FsIGFuZCB0aGF0IGl0IGlzIG5vdGV3b3J0aHku',corrections:[[],[],["[sline]I'am[/sline] [f-bold]I'm [/f-bold]preparing the introduction for my [f-bold]British history[/f-bold] term paper [sline]at[/sline] [sline]British history[/sline].","I'[sline][f-red]a[/f-red][/sline]m preparing the introduction for my term paper [sline]at[/sline] [f-red]in [/f-red]British history."],["[sline]But[/sline] [sline]i[/sline] [f-red]but I [/f-red]am afraid that [sline]i[/sline] [f-red]I[/f-red] have a lot of mistakes.."],[],[],["The History of England is very profound and [sline]many-sided[/sline] [f-red]complex[/f-red]."],["It totals a huge number of events and the persons, who anyhow influenced it. [f-bold](A huge number of events and people influenced it.)[/f-bold]","It [sline]totals[/sline] [f-red]comprises[/f-red] a huge number of events and the persons, who [sline]anyhow[/sline] influenced [sline]it[/sline]. [f-red]them.[/f-red]"],["In each epoch there were key moments and figures. [f-bold](about which it is possible to read a lot of the interesting.)<--- I would consider revising this part, because I don't understanding what you are trying to say.[/f-bold]","In each epoch there were key moments and [f-red]interesting [/f-red]figures about which it is possible to read [sline]a lot of the interesting[/sline] [f-red]volumes[/f-red].","In each epoch there were key moments and figures about which it is possible to read a lot of [sline]the[/sline] interesting things."],["I consider that  one of the most ambiguous figures of   English history  is the representative of the Tudor dynasty, [f-bold]and [/f-bold]daughter of [f-bold]K[/f-bold]ing Henry VII  - Maria the First or as she is also named -  Bloody Mary.","I consider that  one of the most ambiguous figures of   English history  is the representative of the Tudor dynasty,  [f-red]the [/f-red]daughter of [sline]king[/sline] [f-red]King [/f-red]Henry VII  - Maria the First or as she is also named -  Bloody Mary."],["This name is still shrouded by [f-bold]a [/f-bold]set of secrets and legends.","This name is still shrouded by [sline]set of[/sline] secrets and legends."],["There are no monuments put  in her  homeland. [f-bold]P[/f-bold]eople associate the period of her reign  with bloody massacres; [f-bold]the[/f-bold] day of her death - also the simultaneous[sline]ly[/sline] day of accession to the throne  Elizabeth I -  was marked [sline]in the[/sline][sline] country[/sline] as a national holiday.","There are no monuments [sline]put[/sline]  [f-red]to her [/f-red]in her  homeland[sline],[/sline][f-red].[/f-red][sline]people[/sline] People associate [sline]the period of[/sline] her reign  with bloody massacres[sline];[/sline][f-red]. The[/f-red] day of her death (and simultaneously [f-red]the [/f-red]day of accession to the throne [f-red]by [/f-red]Elizabeth I) was [sline]marked[/sline] [f-red]celebrated [/f-red]in [sline]the[/sline] [f-red]her [/f-red]country as a national holiday."],["We see the picture gloomy enough, but it has [sline]involved[/sline] [f-bold]interested [/f-bold]me in this historic figure.","[sline]We see t[/sline] [f-red]T[/f-red]he picture [f-red]was [/f-red]gloomy enough, but [sline]it has involved me in[/sline] [f-red]I am intrigued with[/f-red] this historic figure."],["Having read about the queen at a history lesson, I have started to search for [sline]the [/sline]every possible information about her. [f-bold]For instance, I have read various[/f-bold][f-bold] books and watched films that are connected with her personality.[/f-bold] [sline]to read various books, to see the films connected with her personality.[/sline]","Having [f-red]first [/f-red]read about [sline]the queen[/sline] [f-red]Bloody Mary [/f-red][sline]at[/sline] [f-red]in [/f-red]a history lesson, I [sline]have[/sline] started to search for the every possible [f-red]source of [/f-red]information about her, to read various books, [f-red]and [/f-red]to see the films [f-red]about[/f-red] her.[sline] personality[/sline].","Having read about the queen at a history lesson, I have started to search for [sline]the[/sline] every possible information about her, to read various books, to see [sline]the[/sline] films connected with her personality."],["When I have looked [sline]an[/sline] [f-bold]in  [/f-bold]English serial \"Tudors\", about this great dynasty, I became assured that my term paper will be about Maria.","When I [sline]have looked[/sline] [sline]an[/sline] [f-red]watched the [/f-red]English serial[f-red],[/f-red] \"Tudors\", about this great dynasty, I [sline]became assured[/sline] [f-red]decided [/f-red]that my term paper [sline]will[/sline] [f-red]would [/f-red]be about Maria.","When I have looked an English seri[sline]al[/sline]es \"Tudors\", about this great dynasty, I became assured that my term paper will be about Maria."],["I wanted to learn more about this strange, fanatical queen who has [f-bold]been[/f-bold] doomed to [f-bold]give[sline] [/sline][/f-bold][sline]death[/sline] a large quantity [f-bold]of death to[/f-bold] innocent people.","I wanted to learn more about this strange, fanatical queen who [sline]has[/sline] doomed to death a large quantity innocent people.","I wanted to learn more about this strange, fanatical queen who has doomed to death a large quantity of innocent people."],["In my work I have tried to track Maria's life from [sline]a[/sline] birth to [sline]the [/sline]death.","In my work I have tried to track Maria's life from a birth[sline],[/sline] to [sline]the[/sline] death.","In my work I have tried to track Maria's life from [sline]a[/sline] birth, to [sline]the[/sline] death."],["I have collected every possible legend[sline]s[/sline] connected with her, and the facts of her biography, which prove that this person was historical and [sline]that it is[/sline] noteworthy.","I have collected every possible legend[sline]s[/sline] connected with her and the facts of her [sline]biography[/sline] [f-red]life [/f-red]which prove that this person was [sline]historical and that it is[/sline] noteworthy [f-red]and made a significant impact on history[/f-red]."]],correctionComments:[[],[],[null,null],[null],[],[],[null],[null,null],[null,null,null],[null,null],[null,null],[null,null],[null,null],[null,null,null],[null,null,null],[null,null,null],[null,null,null],[null,null]],perfectSentences:[[],[],[null,null],[null],[],[],[null],[null,null],[null,null,null],[null,null],[null,null],[null,null],[null,null],[null,null,null],[null,null,null],[null,null,null],[null,null,null],[null,null]],urlForCreateComment:'/journals/create_comment/290778',isLogin:false});sentences='WyJUZXJtIHBhcGVyIiwiRGVhciBmcmllbmRzLCBJIG5lZWQgeW91ciBoZWxwISIsIkknYW0gcHJlcGFyaW5nIHRoZSBpbnRyb2R1Y3Rpb24gZm9yIG15IHRlcm0gcGFwZXIgYXQgQnJpdGlzaCBoaXN0b3J5LiIsIkJ1dCBpIGFtIGFmcmFpZCB0aGF0IGkgaGF2ZSBhIGxvdCBvZiBtaXN0YWtlcy4uIiwiJSkpIiwiSGVyZSBpdCBpczoiLCJUaGUgSGlzdG9yeSBvZiBFbmdsYW5kIGlzIHZlcnkgcHJvZm91bmQgYW5kIG1hbnktc2lkZWQuIiwiSXQgdG90YWxzIGEgaHVnZSBudW1iZXIgb2YgZXZlbnRzIGFuZCB0aGUgcGVyc29ucywgd2hvIGFueWhvdyBpbmZsdWVuY2VkIGl0LiIsIkluIGVhY2ggZXBvY2ggdGhlcmUgd2VyZSBrZXkgbW9tZW50cyBhbmQgZmlndXJlcyBhYm91dCB3aGljaCBpdCBpcyBwb3NzaWJsZSB0byByZWFkIGEgbG90IG9mIHRoZSBpbnRlcmVzdGluZy4iLCJJIGNvbnNpZGVyIHRoYXQgIG9uZSBvZiB0aGUgbW9zdCBhbWJpZ3VvdXMgZmlndXJlcyBvZiAgIEVuZ2xpc2ggaGlzdG9yeSAgaXMgdGhlIHJlcHJlc2VudGF0aXZlIG9mIHRoZSBUdWRvciBkeW5hc3R5LCAgZGF1Z2h0ZXIgb2Yga2luZyBIZW5yeSBWSUkgIC0gTWFyaWEgdGhlIEZpcnN0IG9yIGFzIHNoZSBpcyBhbHNvIG5hbWVkIC0gIEJsb29keSBNYXJ5LiIsIlRoaXMgbmFtZSBpcyBzdGlsbCBzaHJvdWRlZCBieSBzZXQgb2Ygc2VjcmV0cyBhbmQgbGVnZW5kcy4iLCJUaGVyZSBhcmUgbm8gbW9udW1lbnRzIHB1dCAgaW4gaGVyICBob21lbGFuZCwgcGVvcGxlIGFzc29jaWF0ZSB0aGUgcGVyaW9kIG9mIGhlciByZWlnbiAgd2l0aCBibG9vZHkgbWFzc2FjcmVzOyBkYXkgb2YgaGVyIGRlYXRoIChhbmQgc2ltdWx0YW5lb3VzbHkgZGF5IG9mIGFjY2Vzc2lvbiB0byB0aGUgdGhyb25lICBFbGl6YWJldGggSSkgd2FzIG1hcmtlZCBpbiB0aGUgY291bnRyeSBhcyBhIG5hdGlvbmFsIGhvbGlkYXkuIiwiV2Ugc2VlIHRoZSBwaWN0dXJlIGdsb29teSBlbm91Z2gsIGJ1dCBpdCBoYXMgaW52b2x2ZWQgbWUgaW4gdGhpcyBoaXN0b3JpYyBmaWd1cmUuIiwiSGF2aW5nIHJlYWQgYWJvdXQgdGhlIHF1ZWVuIGF0IGEgaGlzdG9yeSBsZXNzb24sIEkgaGF2ZSBzdGFydGVkIHRvIHNlYXJjaCBmb3IgdGhlIGV2ZXJ5IHBvc3NpYmxlIGluZm9ybWF0aW9uIGFib3V0IGhlciwgdG8gcmVhZCB2YXJpb3VzIGJvb2tzLCB0byBzZWUgdGhlIGZpbG1zIGNvbm5lY3RlZCB3aXRoIGhlciBwZXJzb25hbGl0eS4iLCJXaGVuIEkgaGF2ZSBsb29rZWQgYW4gRW5nbGlzaCBzZXJpYWwgXCJUdWRvcnNcIiwgYWJvdXQgdGhpcyBncmVhdCBkeW5hc3R5LCBJIGJlY2FtZSBhc3N1cmVkIHRoYXQgbXkgdGVybSBwYXBlciB3aWxsIGJlIGFib3V0IE1hcmlhLiIsIkkgd2FudGVkIHRvIGxlYXJuIG1vcmUgYWJvdXQgdGhpcyBzdHJhbmdlLCBmYW5hdGljYWwgcXVlZW4gd2hvIGhhcyBkb29tZWQgdG8gZGVhdGggYSBsYXJnZSBxdWFudGl0eSBpbm5vY2VudCBwZW9wbGUuIiwiSW4gbXkgd29yayBJIGhhdmUgdHJpZWQgdG8gdHJhY2sgTWFyaWEncyBsaWZlIGZyb20gYSBiaXJ0aCwgdG8gdGhlIGRlYXRoLiIsIkkgaGF2ZSBjb2xsZWN0ZWQgZXZlcnkgcG9zc2libGUgbGVnZW5kcyBjb25uZWN0ZWQgd2l0aCBoZXIgYW5kIHRoZSBmYWN0cyBvZiBoZXIgYmlvZ3JhcGh5IHdoaWNoIHByb3ZlIHRoYXQgdGhpcyBwZXJzb24gd2FzIGhpc3RvcmljYWwgYW5kIHRoYXQgaXQgaXMgbm90ZXdvcnRoeS4iXQ==';corrections='W1tdLFtdLFsiW3NsaW5lXUknYW1bL3NsaW5lXSBbZi1ib2xkXUknbSBbL2YtYm9sZF1wcmVwYXJpbmcgdGhlIGludHJvZHVjdGlvbiBmb3IgbXkgW2YtYm9sZF1Ccml0aXNoIGhpc3RvcnlbL2YtYm9sZF0gdGVybSBwYXBlciBbc2xpbmVdYXRbL3NsaW5lXSBbc2xpbmVdQnJpdGlzaCBoaXN0b3J5Wy9zbGluZV0uIiwiSSdbc2xpbmVdW2YtcmVkXWFbL2YtcmVkXVsvc2xpbmVdbSBwcmVwYXJpbmcgdGhlIGludHJvZHVjdGlvbiBmb3IgbXkgdGVybSBwYXBlciBbc2xpbmVdYXRbL3NsaW5lXSBbZi1yZWRdaW4gWy9mLXJlZF1Ccml0aXNoIGhpc3RvcnkuIl0sWyJbc2xpbmVdQnV0Wy9zbGluZV0gW3NsaW5lXWlbL3NsaW5lXSBbZi1yZWRdYnV0IEkgWy9mLXJlZF1hbSBhZnJhaWQgdGhhdCBbc2xpbmVdaVsvc2xpbmVdIFtmLXJlZF1JWy9mLXJlZF0gaGF2ZSBhIGxvdCBvZiBtaXN0YWtlcy4uIl0sW10sW10sWyJUaGUgSGlzdG9yeSBvZiBFbmdsYW5kIGlzIHZlcnkgcHJvZm91bmQgYW5kIFtzbGluZV1tYW55LXNpZGVkWy9zbGluZV0gW2YtcmVkXWNvbXBsZXhbL2YtcmVkXS4iXSxbIkl0IHRvdGFscyBhIGh1Z2UgbnVtYmVyIG9mIGV2ZW50cyBhbmQgdGhlIHBlcnNvbnMsIHdobyBhbnlob3cgaW5mbHVlbmNlZCBpdC4gW2YtYm9sZF0oQSBodWdlIG51bWJlciBvZiBldmVudHMgYW5kIHBlb3BsZSBpbmZsdWVuY2VkIGl0LilbL2YtYm9sZF0iLCJJdCBbc2xpbmVddG90YWxzWy9zbGluZV0gW2YtcmVkXWNvbXByaXNlc1svZi1yZWRdIGEgaHVnZSBudW1iZXIgb2YgZXZlbnRzIGFuZCB0aGUgcGVyc29ucywgd2hvIFtzbGluZV1hbnlob3dbL3NsaW5lXSBpbmZsdWVuY2VkIFtzbGluZV1pdFsvc2xpbmVdLiBbZi1yZWRddGhlbS5bL2YtcmVkXSJdLFsiSW4gZWFjaCBlcG9jaCB0aGVyZSB3ZXJlIGtleSBtb21lbnRzIGFuZCBmaWd1cmVzLiBbZi1ib2xkXShhYm91dCB3aGljaCBpdCBpcyBwb3NzaWJsZSB0byByZWFkIGEgbG90IG9mIHRoZSBpbnRlcmVzdGluZy4pPC0tLSBJIHdvdWxkIGNvbnNpZGVyIHJldmlzaW5nIHRoaXMgcGFydCwgYmVjYXVzZSBJIGRvbid0IHVuZGVyc3RhbmRpbmcgd2hhdCB5b3UgYXJlIHRyeWluZyB0byBzYXkuWy9mLWJvbGRdIiwiSW4gZWFjaCBlcG9jaCB0aGVyZSB3ZXJlIGtleSBtb21lbnRzIGFuZCBbZi1yZWRdaW50ZXJlc3RpbmcgWy9mLXJlZF1maWd1cmVzIGFib3V0IHdoaWNoIGl0IGlzIHBvc3NpYmxlIHRvIHJlYWQgW3NsaW5lXWEgbG90IG9mIHRoZSBpbnRlcmVzdGluZ1svc2xpbmVdIFtmLXJlZF12b2x1bWVzWy9mLXJlZF0uIiwiSW4gZWFjaCBlcG9jaCB0aGVyZSB3ZXJlIGtleSBtb21lbnRzIGFuZCBmaWd1cmVzIGFib3V0IHdoaWNoIGl0IGlzIHBvc3NpYmxlIHRvIHJlYWQgYSBsb3Qgb2YgW3NsaW5lXXRoZVsvc2xpbmVdIGludGVyZXN0aW5nIHRoaW5ncy4iXSxbIkkgY29uc2lkZXIgdGhhdCAgb25lIG9mIHRoZSBtb3N0IGFtYmlndW91cyBmaWd1cmVzIG9mICAgRW5nbGlzaCBoaXN0b3J5ICBpcyB0aGUgcmVwcmVzZW50YXRpdmUgb2YgdGhlIFR1ZG9yIGR5bmFzdHksIFtmLWJvbGRdYW5kIFsvZi1ib2xkXWRhdWdodGVyIG9mIFtmLWJvbGRdS1svZi1ib2xkXWluZyBIZW5yeSBWSUkgIC0gTWFyaWEgdGhlIEZpcnN0IG9yIGFzIHNoZSBpcyBhbHNvIG5hbWVkIC0gIEJsb29keSBNYXJ5LiIsIkkgY29uc2lkZXIgdGhhdCAgb25lIG9mIHRoZSBtb3N0IGFtYmlndW91cyBmaWd1cmVzIG9mICAgRW5nbGlzaCBoaXN0b3J5ICBpcyB0aGUgcmVwcmVzZW50YXRpdmUgb2YgdGhlIFR1ZG9yIGR5bmFzdHksICBbZi1yZWRddGhlIFsvZi1yZWRdZGF1Z2h0ZXIgb2YgW3NsaW5lXWtpbmdbL3NsaW5lXSBbZi1yZWRdS2luZyBbL2YtcmVkXUhlbnJ5IFZJSSAgLSBNYXJpYSB0aGUgRmlyc3Qgb3IgYXMgc2hlIGlzIGFsc28gbmFtZWQgLSAgQmxvb2R5IE1hcnkuIl0sWyJUaGlzIG5hbWUgaXMgc3RpbGwgc2hyb3VkZWQgYnkgW2YtYm9sZF1hIFsvZi1ib2xkXXNldCBvZiBzZWNyZXRzIGFuZCBsZWdlbmRzLiIsIlRoaXMgbmFtZSBpcyBzdGlsbCBzaHJvdWRlZCBieSBbc2xpbmVdc2V0IG9mWy9zbGluZV0gc2VjcmV0cyBhbmQgbGVnZW5kcy4iXSxbIlRoZXJlIGFyZSBubyBtb251bWVudHMgcHV0ICBpbiBoZXIgIGhvbWVsYW5kLiBbZi1ib2xkXVBbL2YtYm9sZF1lb3BsZSBhc3NvY2lhdGUgdGhlIHBlcmlvZCBvZiBoZXIgcmVpZ24gIHdpdGggYmxvb2R5IG1hc3NhY3JlczsgW2YtYm9sZF10aGVbL2YtYm9sZF0gZGF5IG9mIGhlciBkZWF0aCAtIGFsc28gdGhlIHNpbXVsdGFuZW91c1tzbGluZV1seVsvc2xpbmVdIGRheSBvZiBhY2Nlc3Npb24gdG8gdGhlIHRocm9uZSAgRWxpemFiZXRoIEkgLSAgd2FzIG1hcmtlZCBbc2xpbmVdaW4gdGhlWy9zbGluZV1bc2xpbmVdIGNvdW50cnlbL3NsaW5lXSBhcyBhIG5hdGlvbmFsIGhvbGlkYXkuIiwiVGhlcmUgYXJlIG5vIG1vbnVtZW50cyBbc2xpbmVdcHV0Wy9zbGluZV0gIFtmLXJlZF10byBoZXIgWy9mLXJlZF1pbiBoZXIgIGhvbWVsYW5kW3NsaW5lXSxbL3NsaW5lXVtmLXJlZF0uWy9mLXJlZF1bc2xpbmVdcGVvcGxlWy9zbGluZV0gUGVvcGxlIGFzc29jaWF0ZSBbc2xpbmVddGhlIHBlcmlvZCBvZlsvc2xpbmVdIGhlciByZWlnbiAgd2l0aCBibG9vZHkgbWFzc2FjcmVzW3NsaW5lXTtbL3NsaW5lXVtmLXJlZF0uIFRoZVsvZi1yZWRdIGRheSBvZiBoZXIgZGVhdGggKGFuZCBzaW11bHRhbmVvdXNseSBbZi1yZWRddGhlIFsvZi1yZWRdZGF5IG9mIGFjY2Vzc2lvbiB0byB0aGUgdGhyb25lIFtmLXJlZF1ieSBbL2YtcmVkXUVsaXphYmV0aCBJKSB3YXMgW3NsaW5lXW1hcmtlZFsvc2xpbmVdIFtmLXJlZF1jZWxlYnJhdGVkIFsvZi1yZWRdaW4gW3NsaW5lXXRoZVsvc2xpbmVdIFtmLXJlZF1oZXIgWy9mLXJlZF1jb3VudHJ5IGFzIGEgbmF0aW9uYWwgaG9saWRheS4iXSxbIldlIHNlZSB0aGUgcGljdHVyZSBnbG9vbXkgZW5vdWdoLCBidXQgaXQgaGFzIFtzbGluZV1pbnZvbHZlZFsvc2xpbmVdIFtmLWJvbGRdaW50ZXJlc3RlZCBbL2YtYm9sZF1tZSBpbiB0aGlzIGhpc3RvcmljIGZpZ3VyZS4iLCJbc2xpbmVdV2Ugc2VlIHRbL3NsaW5lXSBbZi1yZWRdVFsvZi1yZWRdaGUgcGljdHVyZSBbZi1yZWRdd2FzIFsvZi1yZWRdZ2xvb215IGVub3VnaCwgYnV0IFtzbGluZV1pdCBoYXMgaW52b2x2ZWQgbWUgaW5bL3NsaW5lXSBbZi1yZWRdSSBhbSBpbnRyaWd1ZWQgd2l0aFsvZi1yZWRdIHRoaXMgaGlzdG9yaWMgZmlndXJlLiJdLFsiSGF2aW5nIHJlYWQgYWJvdXQgdGhlIHF1ZWVuIGF0IGEgaGlzdG9yeSBsZXNzb24sIEkgaGF2ZSBzdGFydGVkIHRvIHNlYXJjaCBmb3IgW3NsaW5lXXRoZSBbL3NsaW5lXWV2ZXJ5IHBvc3NpYmxlIGluZm9ybWF0aW9uIGFib3V0IGhlci4gW2YtYm9sZF1Gb3IgaW5zdGFuY2UsIEkgaGF2ZSByZWFkIHZhcmlvdXNbL2YtYm9sZF1bZi1ib2xkXSBib29rcyBhbmQgd2F0Y2hlZCBmaWxtcyB0aGF0IGFyZSBjb25uZWN0ZWQgd2l0aCBoZXIgcGVyc29uYWxpdHkuWy9mLWJvbGRdIFtzbGluZV10byByZWFkIHZhcmlvdXMgYm9va3MsIHRvIHNlZSB0aGUgZmlsbXMgY29ubmVjdGVkIHdpdGggaGVyIHBlcnNvbmFsaXR5Llsvc2xpbmVdIiwiSGF2aW5nIFtmLXJlZF1maXJzdCBbL2YtcmVkXXJlYWQgYWJvdXQgW3NsaW5lXXRoZSBxdWVlblsvc2xpbmVdIFtmLXJlZF1CbG9vZHkgTWFyeSBbL2YtcmVkXVtzbGluZV1hdFsvc2xpbmVdIFtmLXJlZF1pbiBbL2YtcmVkXWEgaGlzdG9yeSBsZXNzb24sIEkgW3NsaW5lXWhhdmVbL3NsaW5lXSBzdGFydGVkIHRvIHNlYXJjaCBmb3IgdGhlIGV2ZXJ5IHBvc3NpYmxlIFtmLXJlZF1zb3VyY2Ugb2YgWy9mLXJlZF1pbmZvcm1hdGlvbiBhYm91dCBoZXIsIHRvIHJlYWQgdmFyaW91cyBib29rcywgW2YtcmVkXWFuZCBbL2YtcmVkXXRvIHNlZSB0aGUgZmlsbXMgW2YtcmVkXWFib3V0Wy9mLXJlZF0gaGVyLltzbGluZV0gcGVyc29uYWxpdHlbL3NsaW5lXS4iLCJIYXZpbmcgcmVhZCBhYm91dCB0aGUgcXVlZW4gYXQgYSBoaXN0b3J5IGxlc3NvbiwgSSBoYXZlIHN0YXJ0ZWQgdG8gc2VhcmNoIGZvciBbc2xpbmVddGhlWy9zbGluZV0gZXZlcnkgcG9zc2libGUgaW5mb3JtYXRpb24gYWJvdXQgaGVyLCB0byByZWFkIHZhcmlvdXMgYm9va3MsIHRvIHNlZSBbc2xpbmVddGhlWy9zbGluZV0gZmlsbXMgY29ubmVjdGVkIHdpdGggaGVyIHBlcnNvbmFsaXR5LiJdLFsiV2hlbiBJIGhhdmUgbG9va2VkIFtzbGluZV1hblsvc2xpbmVdIFtmLWJvbGRdaW4gIFsvZi1ib2xkXUVuZ2xpc2ggc2VyaWFsIFwiVHVkb3JzXCIsIGFib3V0IHRoaXMgZ3JlYXQgZHluYXN0eSwgSSBiZWNhbWUgYXNzdXJlZCB0aGF0IG15IHRlcm0gcGFwZXIgd2lsbCBiZSBhYm91dCBNYXJpYS4iLCJXaGVuIEkgW3NsaW5lXWhhdmUgbG9va2VkWy9zbGluZV0gW3NsaW5lXWFuWy9zbGluZV0gW2YtcmVkXXdhdGNoZWQgdGhlIFsvZi1yZWRdRW5nbGlzaCBzZXJpYWxbZi1yZWRdLFsvZi1yZWRdIFwiVHVkb3JzXCIsIGFib3V0IHRoaXMgZ3JlYXQgZHluYXN0eSwgSSBbc2xpbmVdYmVjYW1lIGFzc3VyZWRbL3NsaW5lXSBbZi1yZWRdZGVjaWRlZCBbL2YtcmVkXXRoYXQgbXkgdGVybSBwYXBlciBbc2xpbmVdd2lsbFsvc2xpbmVdIFtmLXJlZF13b3VsZCBbL2YtcmVkXWJlIGFib3V0IE1hcmlhLiIsIldoZW4gSSBoYXZlIGxvb2tlZCBhbiBFbmdsaXNoIHNlcmlbc2xpbmVdYWxbL3NsaW5lXWVzIFwiVHVkb3JzXCIsIGFib3V0IHRoaXMgZ3JlYXQgZHluYXN0eSwgSSBiZWNhbWUgYXNzdXJlZCB0aGF0IG15IHRlcm0gcGFwZXIgd2lsbCBiZSBhYm91dCBNYXJpYS4iXSxbIkkgd2FudGVkIHRvIGxlYXJuIG1vcmUgYWJvdXQgdGhpcyBzdHJhbmdlLCBmYW5hdGljYWwgcXVlZW4gd2hvIGhhcyBbZi1ib2xkXWJlZW5bL2YtYm9sZF0gZG9vbWVkIHRvIFtmLWJvbGRdZ2l2ZVtzbGluZV0gWy9zbGluZV1bL2YtYm9sZF1bc2xpbmVdZGVhdGhbL3NsaW5lXSBhIGxhcmdlIHF1YW50aXR5IFtmLWJvbGRdb2YgZGVhdGggdG9bL2YtYm9sZF0gaW5ub2NlbnQgcGVvcGxlLiIsIkkgd2FudGVkIHRvIGxlYXJuIG1vcmUgYWJvdXQgdGhpcyBzdHJhbmdlLCBmYW5hdGljYWwgcXVlZW4gd2hvIFtzbGluZV1oYXNbL3NsaW5lXSBkb29tZWQgdG8gZGVhdGggYSBsYXJnZSBxdWFudGl0eSBpbm5vY2VudCBwZW9wbGUuIiwiSSB3YW50ZWQgdG8gbGVhcm4gbW9yZSBhYm91dCB0aGlzIHN0cmFuZ2UsIGZhbmF0aWNhbCBxdWVlbiB3aG8gaGFzIGRvb21lZCB0byBkZWF0aCBhIGxhcmdlIHF1YW50aXR5IG9mIGlubm9jZW50IHBlb3BsZS4iXSxbIkluIG15IHdvcmsgSSBoYXZlIHRyaWVkIHRvIHRyYWNrIE1hcmlhJ3MgbGlmZSBmcm9tIFtzbGluZV1hWy9zbGluZV0gYmlydGggdG8gW3NsaW5lXXRoZSBbL3NsaW5lXWRlYXRoLiIsIkluIG15IHdvcmsgSSBoYXZlIHRyaWVkIHRvIHRyYWNrIE1hcmlhJ3MgbGlmZSBmcm9tIGEgYmlydGhbc2xpbmVdLFsvc2xpbmVdIHRvIFtzbGluZV10aGVbL3NsaW5lXSBkZWF0aC4iLCJJbiBteSB3b3JrIEkgaGF2ZSB0cmllZCB0byB0cmFjayBNYXJpYSdzIGxpZmUgZnJvbSBbc2xpbmVdYVsvc2xpbmVdIGJpcnRoLCB0byBbc2xpbmVddGhlWy9zbGluZV0gZGVhdGguIl0sWyJJIGhhdmUgY29sbGVjdGVkIGV2ZXJ5IHBvc3NpYmxlIGxlZ2VuZFtzbGluZV1zWy9zbGluZV0gY29ubmVjdGVkIHdpdGggaGVyLCBhbmQgdGhlIGZhY3RzIG9mIGhlciBiaW9ncmFwaHksIHdoaWNoIHByb3ZlIHRoYXQgdGhpcyBwZXJzb24gd2FzIGhpc3RvcmljYWwgYW5kIFtzbGluZV10aGF0IGl0IGlzWy9zbGluZV0gbm90ZXdvcnRoeS4iLCJJIGhhdmUgY29sbGVjdGVkIGV2ZXJ5IHBvc3NpYmxlIGxlZ2VuZFtzbGluZV1zWy9zbGluZV0gY29ubmVjdGVkIHdpdGggaGVyIGFuZCB0aGUgZmFjdHMgb2YgaGVyIFtzbGluZV1iaW9ncmFwaHlbL3NsaW5lXSBbZi1yZWRdbGlmZSBbL2YtcmVkXXdoaWNoIHByb3ZlIHRoYXQgdGhpcyBwZXJzb24gd2FzIFtzbGluZV1oaXN0b3JpY2FsIGFuZCB0aGF0IGl0IGlzWy9zbGluZV0gbm90ZXdvcnRoeSBbZi1yZWRdYW5kIG1hZGUgYSBzaWduaWZpY2FudCBpbXBhY3Qgb24gaGlzdG9yeVsvZi1yZWRdLiJdXQ==';var correction_comments=[[],[],[null,null],[null],[],[],[null],[null,null],[null,null,null],[null,null],[null,null],[null,null],[null,null],[null,null,null],[null,null,null],[null,null,null],[null,null,null],[null,null]];
+//]]></script>
+
+</div>
+<div id='right' style='padding-bottom:0'>
+<div class='mb_20' id='author_box'>
+<div class='cfx'>
+<a href="/94819"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w50_h0/99aaa491e9342c8beede7b010f34b989d7a182c6.jpg"/></a>
+<div class='author_information mb_10 cfx'>
+<a href="/94819" class="user_name">alexia</a>
+
+<div class='learning_languages'>
+<ul class='language_status'>
+<li class='speaking' data-title='Native language' rel='tooltip' title='Native language'>Russian</li>
+<li class='studying' data-title='Language of study' rel='tooltip' title='Language of study'>
+English, Italian
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class='bdbox'>
+<table class='entry_status'>
+<tr>
+<td class='l01'>
+<p><a href="/94819/journals">18</a></p>
+<span>Entries Written</span>
+</td>
+<td class='l02'>
+<p><a href="/94819/correction_logs/sent">1</a></p>
+<span>Corrections made</span>
+</td>
+<td class='l03'>
+<p><a href="/94819/correction_logs/received">24</a></p>
+<span>Corrections received</span>
+</td>
+</tr>
+</table>
+</div>
+
+</div>
+
+  
+    <script type="text/javascript">google_ad_client="ca-pub-6717840198266056";google_ad_slot="1415028544";google_ad_width=300;google_ad_height=250;</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+
+  
+
+
+<div class='box'>
+<div id='journals_calendar'>
+<div class='yui-skin-sam'>
+<div id='jour_cal'>
+    <div id="cal1Container"></div>
+    <script type="text/javascript">//<![CDATA[
+(function(){var cal1=null,popupHolder=[],cal_journal_dates={},str_dates='',date_info=[{"journal_id":"225629381027025060321696989726022173457","journal_date":1437393950},{"journal_id":1479575,"journal_date":1337170358},{"journal_id":1475234,"journal_date":1336959843},{"journal_id":1345838,"journal_date":1330812326},{"journal_id":1063900,"journal_date":1313972442},{"journal_id":1060823,"journal_date":1313768776},{"journal_id":1059749,"journal_date":1313708922},{"journal_id":1036855,"journal_date":1312242706},{"journal_id":1036838,"journal_date":1312240048},{"journal_id":1025877,"journal_date":1311551169},{"journal_id":1020680,"journal_date":1311199155},{"journal_id":1009601,"journal_date":1310503711},{"journal_id":1005585,"journal_date":1310224991},{"journal_id":973620,"journal_date":1308182612},{"journal_id":968839,"journal_date":1307892404},{"journal_id":296969,"journal_date":1259378950},{"journal_id":290778,"journal_date":1258833769}],now_server2local="11/2018",selected_date='',date_info_json=Object.toJSON(date_info),args=getArgsFromHref(location.href);if(args['begin']!=null){var begin_date_a=args['begin'].split('-');var page_date=begin_date_a[1]+'/'+begin_date_a[0];}else if(args['date']!=null){var date_a=args['date'].split('-');var page_date=date_a[1]+'/'+date_a[0];}else{var page_date=now_server2local;}var pathname=location.pathname.split('/');for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(parseInt(date_info[i].journal_date*1000)).toYAHOODateString();if(cal_journal_dates[tmp_date]){cal_journal_dates[tmp_date]=cal_journal_dates[tmp_date]+'/'+date_info[i].journal_id;}else{cal_journal_dates[tmp_date]=date_info[i].journal_id;str_dates=str_dates+','+tmp_date;}}function init(){cal1=new YAHOO.widget.Calendar('cal1','cal1Container',{LOCALE_MONTHS:'short',LOCALE_WEEKDAYS:'1char',pagedate:page_date});cal1.styleCellDefault=function(workingDate,cell){YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_OOB);}
+cal1.renderCellDefault=function(workingDate,cell){cell.innerHTML='<a class="'+cal1.Style.CSS_CELL_SELECTOR+'">'+cal1.buildDayLabel(workingDate)+"</a>";}
+cal1.renderCellHasJournals=function(workingDate,cell){cell.innerHTML='<a href="/'+'94819'+'/journals?date='+workingDate.toStringYYMMDD()+'" class="'+cal1.Style.CSS_CELL_SELECTABLE+'">'+cal1.buildDayLabel(workingDate)+"</a>";YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_SELECTABLE);YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_HIGHLIGHT1);if(workingDate.getDate()==cal1.today.getDate()&&workingDate.getMonth()==cal1.today.getMonth()&&workingDate.getFullYear()==cal1.today.getFullYear()){YAHOO.util.Dom.removeClass(cell,cal1.Style.CSS_CELL_TODAY);}return YAHOO.widget.Calendar.STOP_RENDER;}
+cal1.addRenderer(str_dates,cal1.renderCellHasJournals);cal1.render();}function getArgsFromHref(sHref){var args=sHref.split('?');var retargs={}
+if(args[0]==sHref){return"";}var str=args[1];args=str.split('&');for(var i=0;i<args.length;i++){str=args[i];var arg=str.split('=');if(arg.length<=1)continue;retargs[arg[0]]=arg[1];}return retargs;}YAHOO.util.Event.onAvailable('cal1Container',init);})();
+//]]></script>
+
+</div>
+</div>
+</div>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Journal Statistics</h3>
+</div>
+<div class='cfx' id='studying_status'>
+<table class='table side-bar table_statusstudy'>
+<tr>
+<th>Total</th>
+<th>This month</th>
+<th>This week</th>
+</tr>
+<tr>
+<td>
+<p><a href="/94819/journals">17</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/94819/journals" id="monthCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/94819/journals" id="todayCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<script type="text/javascript">//<![CDATA[
+(function(){var date_info=[{"journal_id":"225629381027025060321696989726022173457","journal_date":1437393950},{"journal_id":1479575,"journal_date":1337170358},{"journal_id":1475234,"journal_date":1336959843},{"journal_id":1345838,"journal_date":1330812326},{"journal_id":1063900,"journal_date":1313972442},{"journal_id":1060823,"journal_date":1313768776},{"journal_id":1059749,"journal_date":1313708922},{"journal_id":1036855,"journal_date":1312242706},{"journal_id":1036838,"journal_date":1312240048},{"journal_id":1025877,"journal_date":1311551169},{"journal_id":1020680,"journal_date":1311199155},{"journal_id":1009601,"journal_date":1310503711},{"journal_id":1005585,"journal_date":1310224991},{"journal_id":973620,"journal_date":1308182612},{"journal_id":968839,"journal_date":1307892404},{"journal_id":296969,"journal_date":1259378950},{"journal_id":290778,"journal_date":1258833769}],cur_month_counter=0,week_counter=0;var now_date=new Date(),DateMath=YAHOO.widget.DateMath;var now_date_week_begin=DateMath.getFirstDayOfWeek(now_date,0);var now_date_week_end=DateMath.add(now_date_week_begin,'D',6);for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(date_info[i].journal_date*1000);if(tmp_date.getFullYear()==now_date.getFullYear()){if(tmp_date.getMonth()==now_date.getMonth()){cur_month_counter+=1;if(DateMath.getWeekNumber(tmp_date,0)==DateMath.getWeekNumber(now_date,0)){week_counter+=1;}}}}if(week_counter!=0){$('todayCount').update(week_counter);$('todayCount').href=$('todayCount').href+'?begin='+now_date_week_begin.toStringYYMMDD()+'&end='+now_date_week_end.toStringYYMMDD();}else{$('todayCount').href="#";}if(cur_month_counter!=0){$('monthCount').update(cur_month_counter);$('monthCount').href=$('monthCount').href+'?begin='+DateMath.findMonthStart(now_date).toStringYYMMDD()+'&end='+DateMath.findMonthEnd(now_date).toStringYYMMDD();}else{$('monthCount').href="#";}})();
+//]]></script>
+
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest entries</h3>
+</div>
+<table class='table side-bar ar_icobox'>
+<tr>
+<td><a href="http://lang-8.com/94819/journals/225629381027025060321696989726022173457">Help me please with my English  (1) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/94819/journals/1479575">Please!!! I need your help with Italian! (0) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/94819/journals/1475234">Please!!! I need your help with Italian! (1) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/94819/journals/1345838">message (1) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/94819/journals/1063900">Influence (1) </a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/94819/journals" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest comments</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<td><a href="http://lang-8.com/94819/journals/225629381027025060321696989726022173457">Jul 24 hesam</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/94819/journals/1345838">Mar 4 アレックス</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/94819/journals/1063900">Aug 22 akinar</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/94819/journals/1060823">Aug 20 James</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/94819/journals/1036855">Aug 2 James</a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/94819/journals/comments" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box cfx' id='d_draft_list'>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Entries by Month</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<th class='year'>2015</th>
+</tr>
+<tr>
+<td>
+ <a href="/94819/journals?begin=2015-7-1&amp;end=2015-07-31">July (1)</a>
+</td>
+</tr>
+<tr>
+<th class='year'>2012</th>
+</tr>
+<tr>
+<td>
+ <a href="/94819/journals?begin=2012-5-1&amp;end=2012-05-31">May (2)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/94819/journals?begin=2012-3-1&amp;end=2012-03-31">March (1)</a>
+</td>
+</tr>
+<tr>
+<th class='year'>2011</th>
+</tr>
+<tr>
+<td>
+ <a href="/94819/journals?begin=2011-8-1&amp;end=2011-08-31">August (5)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/94819/journals?begin=2011-7-1&amp;end=2011-07-31">July (4)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/94819/journals?begin=2011-6-1&amp;end=2011-06-30">June (2)</a>
+</td>
+</tr>
+<tr>
+<th class='year'>2009</th>
+</tr>
+<tr>
+<td>
+ <a href="/94819/journals?begin=2009-11-1&amp;end=2009-11-30">November (2)</a>
+</td>
+</tr>
+</table>
+</div>
+
+<div style='height:20px;background-color:#ffffff'></div>
+<div id='eval_comment_form' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='form_to_edit_note' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='journal_comment_liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='eval_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+</div>
+<div class='yui-skin-sam' id='yui_panels'>
+<div id='wt_panel' style='visibility:hidden;'>
+<div class='hd' id='wt_title'></div>
+<div class='bd' id='wt_content'></div>
+<div class='ft'></div>
+</div>
+</div>
+<div id='modal'></div>
+<div id='confirm_box'>
+<div id='confirm_box_close'>
+<a onclick='hide_confirm_box();'>
+<img src='/static/images2/xico_closebt.png.pagespeed.ic.z-nUma7JBr.png'/>
+</a>
+</div>
+<div id='confirm_box_contents'></div>
+</div>
+</div>
+<div class='modal hide' id='report_spam_entry' tabindex='-1'>
+<div class='modal-header'>
+<btn class='close' data-dismiss='modal' type='button'>x</btn>
+<h4>Report this entry</h4>
+</div>
+<div class='modal-body'>
+<strong class='spaced'>Spam entry</strong>
+<p class='spaced'>Dear friends, I need your help!
+I&#39;am preparing the introduction for my term paper at British history. But i am afraid that i have a lot of mistakes.. %))
+
+Here it is:
+
+
+The History of England is very profound and many-sided. It totals a huge number of events and the persons, who anyhow influenc</p>
+<br/>
+<strong class='spaced'>Author</strong>
+<p class='spaced'>alexia</p>
+<br/>
+<strong class='spaced'>Reporter</strong>
+<p class='spaced'>0</p>
+</div>
+<div class='modal-footer'>
+<a class='btn' data-dismiss='modal' href='#'>Close</a>
+<a class="bt_lv1 bt_size_04" href="#" onclick="new Ajax.Request('/spam_reports/report_entry?entry_body=Dear+friends%2C+I+need+your+help%21%0D%0AI%27am+preparing+the+introduction+for+my+term+paper+at+British+history.+But+i+am+afraid+that+i+have+a+lot+of+mistakes..+%25%29%29%0D%0A%0D%0AHere+it+is%3A%0D%0A%0D%0A%0D%0AThe+History+of+England+is+very+profound+and+many-sided.+It+totals+a+huge+number+of+events+and+the+persons%2C+who+anyhow+influenc&amp;reporter_id=0&amp;spammer_id=94819&amp;url=http%3A%2F%2Flang-8.com%2F94819%2Fjournals%2F290778', {asynchronous:true, evalScripts:true, onLoading:function(request){$j('#report_spam_entry').html('&lt;p class=&quot;center&quot;&gt;&lt;br /&gt;&lt;img src=&quot;/static/images2/loading.gif&quot; class=&quot;center spaced vertical-margin&quot; /&gt;&lt;/p&gt;');}, onSuccess:function(request){$j(&quot;#report_spam_entry&quot;).modal(&quot;hide&quot;);$j(&quot;#alert-box&quot;).alerter(&quot;alertSuccess&quot;, &quot;&quot;, &quot;Report sent.&quot; );}, parameters:'authenticity_token=' + encodeURIComponent('lqde3Nqk1zMvsbkhq7v331a+woQMCxuOmYx4O+MWjwI=')}); return false;">Send</a>
+</div>
+</div>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show-5f9f69ded18eb0d1a8bef6040b599e7b.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show2-e52e094b14e0c5b5979f64d63309ab8a.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show3-eedb1c964407a61f34a56d6652b21722.js" type="text/javascript"></script>
+<script id="evernote-js" data-cjsexec="true" type="text/cjs" data-cjssrc="http://static.evernote.com/noteit.js"></script>
+<script id="twitter-wjs" data-cjsexec="true" type="text/cjs" data-cjssrc="https://platform.twitter.com/widgets.js"></script>
+<script type='text/javascript'></script>
+<script type='text/javascript'>//<![CDATA[
+jQuery(function($){new Lang8.Views.JournalShowView();});
+//]]></script>
+
+</div>
+</div>
+<div data-search_url='' id='footer'>
+<div class='inner'>
+<div class='box clearfix'>
+<ul class='ft_parts_list f_left'>
+<ul class='ft_parts_list f_left'></ul>
+</ul>
+</div>
+<div class='box02 clearfix'>
+<ul>
+
+</ul>
+<ul>
+<li>
+<p>
+Study
+</p>
+<ul>
+<li><a href="/profiles/search">Member Search</a></li>
+<li><a href="/hotentries">Popular Entries</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+View
+</p>
+<ul>
+<li><a href="/rankings">Rankings</a></li>
+<li>
+<a href="/groups">Groups</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+Help
+</p>
+<ul>
+<li><a href="/help/tumblr" target="_blank">Help</a></li>
+<li><a href="/register/term" target="_blank">Terms of Service</a></li>
+<li><a href="/register/privacy" target="_blank">Privacy Policy</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+About Lang-8
+</p>
+<ul>
+<li><a href="/help/law_1" target="_blank">特定商取引法に基づく表記</a></li>
+<li><a href="/help/donation" target="_blank">Donate</a></li>
+<li><a href="http://lang-8.jp/" target="_blank">Company</a></li>
+<li><a href="http://lang-8.jp/#recruit" target="_blank">Travailler pour Lang-8</a></li>
+<li>
+<a href='mailto:support@lang-8.com'>Contact us</a>
+</li>
+<li>&nbsp;</li>
+</ul>
+</li>
+</ul>
+<ul id='social_web_list'>
+<li class='icon_with twitter'>
+<a class='twitter-follow-button' data-show-count='false' href='https://twitter.com/lang8'>Follow @lang8</a>
+<script defer="defer" src="https://platform.twitter.com/widgets.js" type="text/javascript"></script>
+</li>
+<li class='icon_with facebook'><a href="http://www.facebook.com/lang8" target="_blank">Facebook page</a></li>
+<li class='icon_with rss'><a href="http://blog.lang-8.com" target="_blank">Lang-8 blog</a></li>
+</ul>
+</div>
+<div class='box03 clearfix'>
+<li class='f_left panel_list'>
+<a href='https://mixpanel.com/f/partner' target='_blank'>
+<img alt='Mobile and Web Analytics' src='https://mixpanel.com/site_media/images/partner/badge_light.png'/>
+</a>
+</li>
+<p class='copy f_right'>
+&copy; 2017 Lang-8, Inc. All rights reserved.
+</p>
+</div>
+</div>
+</div>
+
+
+<script type='text/javascript'>//<![CDATA[
+var gaJsHost=(("https:"==document.location.protocol)?"https://ssl.":"http://www.");document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var pageTracker;autoRetry(function(){pageTracker=_gat._getTracker("UA-452011-7");pageTracker._setDomainName("none");pageTracker._setAllowLinker(true);pageTracker._initData();pageTracker._trackPageview("/before/journals/show/290778");},2);
+//]]></script>
+
+
+<script type='text/javascript'>//<![CDATA[
+$j(function(){$j('[rel=tooltip]').tooltip();$j('[rel=popover]').popover();});
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var cjsscript=document.createElement('script');cjsscript.src="/static/javascripts/control_js.js";var cjssib=document.getElementsByTagName('script')[0];cjssib.parentNode.insertBefore(cjsscript,cjssib);
+//]]></script>
+<div id='fb-root'></div>
+<script type='text/javascript'>//<![CDATA[
+(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=138873442911";fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,1520 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir='ltr' itemscope='' itemtype='http://schema.org/Blog' xmlns:fb='http://www.facebook.com/2008/fbml' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"agent":"","applicationTime":693,"queueTime":0,"applicationID":"11814779","errorBeacon":"bam.nr-data.net","transactionName":"Jg4MFRNdCllURU4MXBATDAANQUlGWVgW","licenseKey":"240011c68f","beacon":"bam.nr-data.net"}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content='text/css' http-equiv='Content-Style-Type'/>
+<meta content='text/javascript' http-equiv='Content-Script-Type'/>
+<meta content='summary' name='twitter:card'/>
+<meta content='@lang8' name='twitter:site'/>
+<meta content='I need an aim' property='og:title'/>
+<meta content='blog' property='og:type'/>
+<meta content='http://lang-8.com/150234/journals/618627' property='og:url'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/58e4e4ac4c3244ca0a30023a2bc62b26a28803ab.jpg' property='og:image'/>
+<meta content="When i was young, i thought that i could be anyone i want&#x000A;I wanted to be a oriental medicine doctor while my mom was sick for a long time&#x000A;When i was taught by fair teacher that I intended to be a teacher &#x000A;I really wanted to be a copywriter when i got into a university&#x000A;But after graduating, i've w" property='og:description'/>
+<meta content='Lang-8' property='og:site_name'/>
+<meta content='138873442911' property='fb:app_id'/>
+<meta content='I need an aim' itemprop='name'/>
+<meta content="When i was young, i thought that i could be anyone i want&#x000A;I wanted to be a oriental medicine doctor while my mom was sick for a long time&#x000A;When i was taught by fair teacher that I intended to be a teacher &#x000A;I really wanted to be a copywriter when i got into a university&#x000A;But after graduating, i've w" itemprop='description'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/58e4e4ac4c3244ca0a30023a2bc62b26a28803ab.jpg' itemprop='image'/>
+
+<title>
+I need an aim | Lang-8: For learning foreign languages
+</title>
+<link href='/favicon.ico' rel='shortcut icon'/>
+<link href="http://dzhimp63a2tb1.cloudfront.net/assets/static/css/application-1b103989b91cc566c626a5030a5c0c04.css" media="screen" rel="stylesheet" type="text/css"/>
+<script type="text/cjs">
+var h = document.getElementsByTagName('head')[0];
+var link = document.createElement('link');
+link.href = 'https://fonts.googleapis.com/css?family=Telex';
+link.type = 'text/css';
+link.rel = 'stylesheet';
+link.media = 'screen'
+h.appendChild(link);
+</script>
+
+
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/application-462b56e1d78c3fb6374e9b344e47357a.js" type="text/javascript"></script>
+
+<script type='text/javascript'>//<![CDATA[
+var lang="2-2";var sessid="";
+//]]></script>
+
+<meta content='When i was young, i thought that i could be anyone i want  I wanted to be a oriental medicine doc...' name='description'/>
+<meta content='' name='keywords'/>
+
+<meta content='1NyOQgk3_D9-R1XWpjxkGinHxWufQzM-DTGssOLEIvs' name='google-site-verification'/>
+</head>
+<body data-device='pc' id='journals_show'>
+<script type="text/javascript">var langsData=[];langsData.push({key:'cjv',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'ckb',body:'Please correct some sentences or comments on this journal.'});langsData.push({key:'cka',body:'Corrections'});langsData.push({key:'cjz',body:'Comment'});langsData.push({key:'cjt',body:'Post'});langsData.push({key:'cju',body:'Back to correcting'});langsData.push({key:'cjw',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjx',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjy',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'D063',body:'There has been an internal system error.'});langsData.push({key:'chc',body:'Show corrections'});langsData.push({key:'chd',body:'Hide'});langsData.push({key:'xlw',body:'Do you really want to reset the data?'});langsData.push({key:'xlx',body:'You have already started to leave a comment on this journal. Do you want to continue with it?'});langsData.push({key:'xly',body:'Continue'});langsData.push({key:'xlz',body:'No'});langsData.push({key:'cix',body:'Red'});langsData.push({key:'ciy',body:'Blue'});langsData.push({key:'qag',body:'Gray'});langsData.push({key:'ciz',body:'Bold'});langsData.push({key:'cja',body:'Cross out'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjc',body:'Cancel'});langsData.push({key:'cjd',body:'Correct'});langsData.push({key:'cje',body:'Unformat'});langsData.push({key:'rgo',body:'This sentence is perfect! No correction needed!'});langsData.push({key:'xll',body:'This is the original post.'});langsData.push({key:'xlm',body:'To correct, click this button.'});langsData.push({key:'xln',body:'You can use the colored fonts and strikethrough feature to help you with your correction.'});langsData.push({key:'xlo',body:'After correcting, please press this button.'});langsData.push({key:'xlp',body:'Your corrections are displayed here.'});langsData.push({key:'xlq',body:'Press this button to complete the correction.'});langsData.push({key:'xmm',body:'Sending...'});langsData.push({key:'xmn',body:'done'});langsData.push({key:'ycs',body:'Success! A friend request will now be sent to your friend.'});langsData.push({key:'xog',body:'Failed to send the friend request. Please try again in a few minutes.'});langsData.push({key:'cit',body:'Comments on this correction'});langsData.push({key:'cir',body:'Add to /Edit My Notebook'});langsData.push({key:'rfv',body:'Vertical View'});langsData.push({key:'rfw',body:'Normal View'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjp',body:'Cancel'});langsData.push({key:'cjr',body:'Remove correction'});langsData.push({key:'ckc',body:'Description about correction.(You can write in any language.)'});langsData.push({key:'cjk',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'cjl',body:'There are not any comments or corrections.'});langsData.push({key:'cjh',body:'Correct this entry'});langsData.push({key:'cjf',body:'Comment'});langsData.push({key:'cjm',body:'There has been an internal system error. Please try again.'});langsData.push({key:'kbm',body:'Draft Saved'});var l8=l8||{};l8.t=l8.t||{};l8.t=new L8I18n(langsData);</script>
+
+<div class='navbar navbar-fixed-top mb_20' id='header'>
+<div class='navbar-inner'>
+<div class='container'>
+<a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</a>
+<div class='nav-collapse'>
+<ul class='nav' id='dropmenu03'>
+<li class='logoname'>
+<a class='brand' href='/'>
+<img alt="Header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0" id="logo" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0.gif"/>
+</a>
+</li>
+<li class='divider'></li>
+<li class='home'>
+<a href="/" class="a_home" title="Home"><img alt="Ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb.png" title="Home"/>
+</a></li>
+<li class='divider'></li>
+<li class='help'>
+<a href="/help/about" class="help" target="_blank" title="What is Lang-8?"><span>
+What is Lang-8?
+</span>
+</a></li>
+<li class='divider'></li>
+</ul>
+<ul class='nav pull-right' id='dropmenu02'>
+<li class='help'>
+<a href="/register/step1?from=header" class="help"><span>Sign up</span>
+</a></li>
+<li class='divider'></li>
+<li class='help' id='login'>
+<a href="https://lang-8.com/login?from=header" class="help"><span>Log in</span>
+</a></li>
+<li class='divider'></li>
+<li class='language_list'>
+<form action="" class="language_select" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="D/7dJqt9e89CqVQ1OhUswauABwlMHFy9oB4+tSl69pY="/></div>
+<select id="interface_lang" name="interface_lang" onchange="onChangeInterfaceLang()"><option value="2-2" selected="selected">English</option>
+<option value="2-5">Español</option>
+<option value="2-6">français</option>
+<option value="2-8">Deutsch</option>
+<option value="2-95">Portugais</option>
+<option value="2-10">Русский</option>
+<option value="2-59">Polski</option>
+<option value="2-78">Hrvatski</option>
+<option value="2-30">العربية</option>
+<option value="2-1">日本語</option>
+<option value="2-3">中文(简体)</option>
+<option value="2-300">中文(繁體)</option>
+<option value="2-4">한국어</option>
+<option value="2-20">ภาษาไทย</option>
+<option value="2-35">Svenska</option>
+<option value="2-47">Tagalog</option>
+<option value="2-65">Bahasa Melayu</option>
+<option value="2-58">Indonesian</option>
+<option value="2-7">Italiano</option></select>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class='alerter container alert fade in navbar-fixed-top' id='alert-top' style='top:60px;display:none;'>
+<a class='close' data-dismiss='alert' href='#'>
+&times;
+</a>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert Message here
+</span>
+</div>
+<div class='alerter alert fade in navbar-fixed-top' id='alert-box' style='left:40%;top:40%;width:200px;display:none;'>
+<div style='text-align:center;'>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert message here
+</span>
+</div>
+</div>
+
+
+
+
+      <div class="center" style="margin-bottom: 10px;">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- PC_Super_Before_Login -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6717840198266056" data-ad-slot="9171779343" data-ad-format="auto"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+
+      </div>
+
+
+
+
+<div id='page_content'>
+<div class='cfx' id='main_container'>
+<ul class="cfx" id="breadcrumbs"><li class="home"><a href="/">Home</a></li><li class=""><a href="/profiles/search">Member</a></li><li class=""><a href="/150234">ttasinbob</a></li><li class=""><a href="/150234/journals">ttasinbob's entries</a></li><li class=""><span>I need an aim</span></li></ul>
+<div>
+<div data-use_friend_request_popover='data-use_friend_request_popover' id='main'>
+<style type='text/css'>@font-face{font-family:"FontAwesome";src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot);src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot?#iefix) format('eot') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.woff) format('woff') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.ttf) format('truetype') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.svg#FontAwesome) format('svg');font-weight:normal;font-style:normal}</style>
+<div class='cfx' id='entry_detail'>
+<div class='show_report_spam_link cfx' id='entry_title_box'>
+<div class='tit_02'>
+<h1 id='subject_show'>I need an aim</h1>
+<div class='edit_links'>
+<ul class='cfx'>
+</ul>
+</div>
+</div>
+</div>
+<div class='clear_both'></div>
+<div class='cfx' id='tools_for_journal'>
+<ul class='journal_status floated_on_right'>
+<li class='privacy_level_5' data-original-title='Public' rel='tooltip'>&nbsp;</li>
+<li class='visiters' data-original-title='Views' rel='tooltip' title='Views'>510</li>
+<li class='comment_num' data-original-title='Comments' rel='tooltip' title='Comments'>1</li>
+<li class='corrections_num' data-original-title='Corrections' rel='tooltip' title='Corrections'>3</li>
+<li class='studying' data-original-title='The language that needs to be corrected' rel='tooltip'>English&nbsp;</li>
+</ul>
+<span class='journal_date floated_on_left'>
+Sep 12, 2010 01:51
+</span>
+<script type='text/javascript'>//<![CDATA[
+$j(function(){var journalCounterView=new Lang8.Views.JournalCounterView();});
+//]]></script>
+
+</div>
+<div id='show_buttons'>
+<input class='bt_lv3' data-original-title='Show corrections for sentences when you mouse-over.' id='showAndHide' rel='tooltip' title='' type='button' value='Show'/>
+<input class='bt_lv3' data-original-title='Show all corrections together in a pop-up window.' id='showAll' rel='tooltip' title='' type='button' value='Show All'/>
+</div>
+
+<div class='cfx' id='body_show'>
+<div id='body_show_ori'>
+<font onmouseover='emph_wt(this,"When")'>When</font> i <font onmouseover='emph_wt(this,"was")'>was</font> <font onmouseover='emph_wt(this,"young")'>young</font>, i <font onmouseover='emph_wt(this,"thought")'>thought</font> <font onmouseover='emph_wt(this,"that")'>that</font> i <font onmouseover='emph_wt(this,"could")'>could</font> <font onmouseover='emph_wt(this,"be")'>be</font> <font onmouseover='emph_wt(this,"anyone")'>anyone</font> i want<br/>I <font onmouseover='emph_wt(this,"wanted")'>wanted</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"be")'>be</font> a <font onmouseover='emph_wt(this,"oriental")'>oriental</font> <font onmouseover='emph_wt(this,"medicine")'>medicine</font> <font onmouseover='emph_wt(this,"doctor")'>doctor</font> <font onmouseover='emph_wt(this,"while")'>while</font> <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"mom")'>mom</font> <font onmouseover='emph_wt(this,"was")'>was</font> <font onmouseover='emph_wt(this,"sick")'>sick</font> <font onmouseover='emph_wt(this,"for")'>for</font> a <font onmouseover='emph_wt(this,"long")'>long</font> time<br/><font onmouseover='emph_wt(this,"When")'>When</font> i <font onmouseover='emph_wt(this,"was")'>was</font> <font onmouseover='emph_wt(this,"taught")'>taught</font> <font onmouseover='emph_wt(this,"by")'>by</font> <font onmouseover='emph_wt(this,"fair")'>fair</font> <font onmouseover='emph_wt(this,"teacher")'>teacher</font> <font onmouseover='emph_wt(this,"that")'>that</font> I <font onmouseover='emph_wt(this,"intended")'>intended</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"be")'>be</font> a <font onmouseover='emph_wt(this,"teacher")'>teacher</font> <br/>I <font onmouseover='emph_wt(this,"really")'>really</font> <font onmouseover='emph_wt(this,"wanted")'>wanted</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"be")'>be</font> a <font onmouseover='emph_wt(this,"copywriter")'>copywriter</font> <font onmouseover='emph_wt(this,"when")'>when</font> i <font onmouseover='emph_wt(this,"got")'>got</font> <font onmouseover='emph_wt(this,"into")'>into</font> a university<br/><font onmouseover='emph_wt(this,"But")'>But</font> <font onmouseover='emph_wt(this,"after")'>after</font> <font onmouseover='emph_wt(this,"graduating")'>graduating</font>, i'<font onmouseover='emph_wt(this,"ve")'>ve</font> <font onmouseover='emph_wt(this,"worked")'>worked</font> <font onmouseover='emph_wt(this,"in")'>in</font> a <font onmouseover='emph_wt(this,"news")'>news</font> <font onmouseover='emph_wt(this,"paper")'>paper</font> <font onmouseover='emph_wt(this,"for")'>for</font> 3 years<br/><font onmouseover='emph_wt(this,"There")'>There</font> <font onmouseover='emph_wt(this,"was")'>was</font> a <font onmouseover='emph_wt(this,"small")'>small</font> <font onmouseover='emph_wt(this,"newspaper")'>newspaper</font> <br/><font onmouseover='emph_wt(this,"Even")'>Even</font> i <font onmouseover='emph_wt(this,"had")'>had</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"work")'>work</font> <font onmouseover='emph_wt(this,"until")'>until</font> <font onmouseover='emph_wt(this,"midnight")'>midnight</font> <font onmouseover='emph_wt(this,"and")'>and</font> i <font onmouseover='emph_wt(this,"had")'>had</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"meet")'>meet</font> <font onmouseover='emph_wt(this,"new")'>new</font> <font onmouseover='emph_wt(this,"people")'>people</font> <font onmouseover='emph_wt(this,"every")'>every</font> <font onmouseover='emph_wt(this,"day")'>day</font> <font onmouseover='emph_wt(this,"furthermore")'>furthermore</font> <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"boss")'>boss</font> <font onmouseover='emph_wt(this,"always")'>always</font> <font onmouseover='emph_wt(this,"used")'>used</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"press")'>press</font> <font onmouseover='emph_wt(this,"me")'>me</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"find")'>find</font> a scoop<br/><font onmouseover='emph_wt(this,"It")'>It</font> <font onmouseover='emph_wt(this,"drove")'>drove</font> <font onmouseover='emph_wt(this,"me")'>me</font> crazy<br/>I couldn't <font onmouseover='emph_wt(this,"stop")'>stop</font> <font onmouseover='emph_wt(this,"thinking")'>thinking</font> <font onmouseover='emph_wt(this,"of")'>of</font> <font onmouseover='emph_wt(this,"escaping")'>escaping</font> <font onmouseover='emph_wt(this,"to")'>to</font> somewhere<br/><font onmouseover='emph_wt(this,"So")'>So</font> i <font onmouseover='emph_wt(this,"really")'>really</font> <font onmouseover='emph_wt(this,"ran")'>ran</font> <font onmouseover='emph_wt(this,"away")'>away</font> <font onmouseover='emph_wt(this,"from")'>from</font> <font onmouseover='emph_wt(this,"my")'>my</font> work<br/><font onmouseover='emph_wt(this,"At")'>At</font> <font onmouseover='emph_wt(this,"that")'>that</font> <font onmouseover='emph_wt(this,"time")'>time</font> i <font onmouseover='emph_wt(this,"had")'>had</font> <font onmouseover='emph_wt(this,"an")'>an</font> ambition<br/>I <font onmouseover='emph_wt(this,"never")'>never</font> <font onmouseover='emph_wt(this,"worried")'>worried</font> <font onmouseover='emph_wt(this,"about")'>about</font> <font onmouseover='emph_wt(this,"my")'>my</font> future<br/><font onmouseover='emph_wt(this,"But")'>But</font> <font onmouseover='emph_wt(this,"now")'>now</font>.. i <font onmouseover='emph_wt(this,"sometime")'>sometime</font> <font onmouseover='emph_wt(this,"think")'>think</font> <font onmouseover='emph_wt(this,"that")'>that</font> i shouldn't <font onmouseover='emph_wt(this,"have")'>have</font> <font onmouseover='emph_wt(this,"given")'>given</font> <font onmouseover='emph_wt(this,"up")'>up</font> <font onmouseover='emph_wt(this,"my")'>my</font> work<br/><font onmouseover='emph_wt(this,"Because")'>Because</font> i'm <font onmouseover='emph_wt(this,"getting")'>getting</font> <font onmouseover='emph_wt(this,"idle")'>idle</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"challange")'>challange</font> <font onmouseover='emph_wt(this,"for")'>for</font> <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"furture")'>furture</font> <br/><font onmouseover='emph_wt(this,"It")'>It</font> <font onmouseover='emph_wt(this,"make")'>make</font> <font onmouseover='emph_wt(this,"me")'>me</font> depressed<br/>I <font onmouseover='emph_wt(this,"promised")'>promised</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"do")'>do</font> <font onmouseover='emph_wt(this,"not")'>not</font> <font onmouseover='emph_wt(this,"regret")'>regret</font> <font onmouseover='emph_wt(this,"when")'>when</font> i <font onmouseover='emph_wt(this,"decided")'>decided</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"leave")'>leave</font> <font onmouseover='emph_wt(this,"from")'>from</font> <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"work")'>work</font>, <font onmouseover='emph_wt(this,"family")'>family</font>, <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"country")'>country</font>..<br/><font onmouseover='emph_wt(this,"However")'>However</font>, i <font onmouseover='emph_wt(this,"asked")'>asked</font> <font onmouseover='emph_wt(this,"myself")'>myself</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"have")'>have</font> a <font onmouseover='emph_wt(this,"right")'>right</font> <font onmouseover='emph_wt(this,"decision")'>decision</font> <font onmouseover='emph_wt(this,"when")'>when</font> i <font onmouseover='emph_wt(this,"heard")'>heard</font> <font onmouseover='emph_wt(this,"what")'>what</font> <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"friends")'>friends</font> <font onmouseover='emph_wt(this,"got")'>got</font> <font onmouseover='emph_wt(this,"married")'>married</font>, a <font onmouseover='emph_wt(this,"baby")'>baby</font>, <font onmouseover='emph_wt(this,"promoted")'>promoted</font>, <font onmouseover='emph_wt(this,"moved")'>moved</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"good")'>good</font> <font onmouseover='emph_wt(this,"house")'>house</font>..<br/>I don't <font onmouseover='emph_wt(this,"know")'>know</font> <font onmouseover='emph_wt(this,"what")'>what</font> <font onmouseover='emph_wt(this,"do")'>do</font> i <font onmouseover='emph_wt(this,"do")'>do</font> <font onmouseover='emph_wt(this,"for")'>for</font> <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"future")'>future</font>, <font onmouseover='emph_wt(this,"What")'>What</font> i <font onmouseover='emph_wt(this,"want")'>want</font> <font onmouseover='emph_wt(this,"to")'>to</font> be<br/><font onmouseover='emph_wt(this,"Should")'>Should</font> i <font onmouseover='emph_wt(this,"get")'>get</font> <font onmouseover='emph_wt(this,"married")'>married</font> <font onmouseover='emph_wt(this,"and")'>and</font> <font onmouseover='emph_wt(this,"have")'>have</font> a <font onmouseover='emph_wt(this,"family")'>family</font>, <font onmouseover='emph_wt(this,"bring")'>bring</font> <font onmouseover='emph_wt(this,"up")'>up</font> <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"baby")'>baby</font>, <font onmouseover='emph_wt(this,"find")'>find</font> a <font onmouseover='emph_wt(this,"happinese")'>happinese</font> <font onmouseover='emph_wt(this,"in")'>in</font> <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"daily")'>daily</font> <font onmouseover='emph_wt(this,"as")'>as</font> <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"friends")'>friends</font> <font onmouseover='emph_wt(this,"who")'>who</font> <font onmouseover='emph_wt(this,"look")'>look</font> <font onmouseover='emph_wt(this,"so")'>so</font> happy<br/>I <font onmouseover='emph_wt(this,"am")'>am</font> <font onmouseover='emph_wt(this,"in")'>in</font> a dillema<br/>I <font onmouseover='emph_wt(this,"need")'>need</font> <font onmouseover='emph_wt(this,"an")'>an</font> <font onmouseover='emph_wt(this,"aim")'>aim</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"make")'>make</font> <font onmouseover='emph_wt(this,"me")'>me</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"get")'>get</font> <font onmouseover='emph_wt(this,"up")'>up</font> early<br/>
+</div>
+<div class='box_like_button cfx' id='async_show_like'></div>
+<div class='ad_journal_center clear_both floated_on_left'>
+  
+    <div class="center" style="margin: 0 0 10px;">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- JournalCenter336_280 -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-6717840198266056" data-ad-slot="1360554540"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+
+    </div>
+  
+
+</div>
+</div>
+</div>
+<div class='little-spaced cfx' data-canonical_url='http://lang-8.com/150234/journals/618627' id='links_for_journal'>
+<span class='horizontal-spaced tw-btn'>
+<a class='twitter-share-button' data-hashtags='lang8' data-related='lang8' data-text='I need an aim' data-url='http://lang-8.com/150234/journals/618627' data-via='lang8' href='https://twitter.com/share'>Tweet</a>
+</span>
+<span class='horizontal-spaced fb-like' data-action='like' data-colorscheme='light' data-href='http://lang-8.com/150234/journals/618627' data-layout='button_count' data-show-faces='false' data-width='100'></span>
+<span class='horizontal-spaced gplus_btn'>
+<!-- %span.g-plusone{'data-size' => 'medium', :href => "#{@journal.canonical_url}"} -->
+</span>
+<span class='floated_on_left'>
+<span class='st_fblike_hcount' displayText='Facebook Like' st_url='http://lang-8.com/150234/journals/618627'></span>
+<span class='st_facebook_hcount' displayText='Facebook' st_url='http://lang-8.com/150234/journals/618627'></span>
+<span class='st_linkedin_hcount' displayText='LinkedIn' st_url='http://lang-8.com/150234/journals/618627'></span>
+</span>
+<a href='#' onclick="Evernote.doClip({styling:'full',providerName:'Lang-8',suggestTags:'Lang-8',suggestNotebook:'Lang-8',contentId:'entry_container'}); return false;" style='float:right;margin-right:5px;'>
+<img alt='Clip to Evernote' src='/static/images2/xarticle-clipper-fr.png.pagespeed.ic.BAKnLUGqIU.png'/>
+</a>
+</div>
+<div id='comments_and_corrections_field'>
+<div class='fukidashi comment_field' id='journal_comment_2215184'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/188379"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/f0a9ef4a20669c7a8b0ebe708e52b8d9ef04ede2.JPG"/></a>
+<a href="/188379" class="user_name">cnelson125</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Sep 12, 2010 02:09
+</span>
+</div>
+</div>
+<div class='correction_list corner-rounded_5 little-spaced'>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I need an aim</li>
+<li class='corrected correct'>
+<p>I need <span class="f_blue">a purpose</span> <span class="sline"><span class="f_red">an aim</span></span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583530'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>When i was taught by fair teacher that I intended to be a teacher </li>
+<li class='corrected correct'>
+<p>When i was taught by <span class="sline"><span class="f_red">fair</span></span> <span class="f_blue">good </span>teacher <span class="sline"><span class="f_red">that I intended</span></span> <span class="f_blue">I</span> <span class="f_blue">wanted </span>to be a teacher </p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583531'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>But after graduating, i&#39;ve worked in a news paper for 3 years</li>
+<li class='corrected correct'>
+<p>But after graduating, i&#39;ve worked in a <span class="f_red"><span class="sline">news paper</span></span> <span class="f_blue">newspaper </span>for 3 years</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583532'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>There was a small newspaper </li>
+<li class='corrected correct'>
+<p><span class="sline"><span class="f_red">There</span></span> <span class="f_blue">It </span>was a small newspaper </p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583533'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Even i had to work until midnight and i had to meet new people every day furthermore my boss always used to press me to find a scoop</li>
+<li class='corrected correct'>
+<p><span class="sline"><span class="f_red">Even</span></span> i had to work until midnight and i had to meet new people every day<span class="f_blue">.</span> furthermore my boss always used to <span class="sline"><span class="f_red">press</span></span> <span class="f_blue">pressure </span>me to find a scoop</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583534'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>i sometime think that i shouldn&#39;t have given up my work</li>
+<li class='corrected correct'>
+<p>i sometime<span class="f_blue">s</span> think that i shouldn&#39;t have given up my work</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583535'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Because i&#39;m getting idle to challange for my furture </li>
+<li class='corrected correct'>
+<p><span class="f_red">Because i&#39;m getting idle to challange for my furture</span><span class="f_red"></span>I would maybe say something like:<span class="f_blue"> I haven&#39;t been doing anything working towards a better future.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583536'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I promised to do not regret when i decided to leave from my work, family, my country..</li>
+<li class='corrected correct'>
+<p>I promised to <span class="f_blue">have no regrets</span> <span class="f_red"><span class="sline">do not</span></span><span class="f_red"><span class="sline"> regret</span></span> when i decided to leave from my work, family, my country..</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583537'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>However, i asked myself to have a right decision when i heard what my friends got married, a baby, promoted, moved to good house..</li>
+<li class='corrected correct'>
+<p>However, i asked myself <span class="sline"><span class="f_red">to have a</span></span> <span class="f_blue">if I had made the </span>right decision when i heard <span class="f_red"><span class="sline">what</span></span> <span class="f_blue">that </span>my friends <span class="f_blue">had </span>got<span class="f_blue">ten</span> married, <span class="f_blue">had </span>a baby, <span class="f_blue">had been </span>promoted, <span class="f_blue">had </span>moved to good house..</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583538'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Should i get married and have a family, bring up my baby, find a happinese in my daily as my friends who look so happy</li>
+<li class='corrected correct'>
+<p>Should i get married and have a family, <span class="sline"><span class="f_red">bring up my</span></span> <span class="f_blue">raise a* </span>baby, find <span class="sline"><span class="f_red">a happinese</span></span> <span class="f_blue">happiness </span>in my daily <span class="f_blue">life </span><span class="sline"><span class="f_red">as </span></span><span class="f_blue">just like</span> my friends who look so happy*I am assuming that you don&#39;t have a baby yet.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583539'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I need an aim to make me to get up early</li>
+<li class='corrected correct'>
+<p>I need <span class="sline"><span class="f_red">an aim</span></span> <span class="f_blue">a purpose </span>to make me <span class="sline"><span class="f_red">to</span></span> get up early<span class="f_red"></span>I might say something like this:<span class="f_red"> </span><span class="f_blue">I need a reason to get out of bed early every morning</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583540'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+Good luck!
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-2215184' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_2215184'>
+
+</div>
+</div>
+</div>
+<div class='fukidashi comment_field' id='journal_comment_2215195'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/188387"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/675c677d5e97ee21c63f72046b65d9cafcd4d990.png"/></a>
+<a href="/188387" class="user_name">Sancty</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Sep 12, 2010 02:14
+</span>
+</div>
+</div>
+<div class='correction_list corner-rounded_5 little-spaced'>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I need an aim</li>
+<li class='corrected correct'>
+<p>I need<span class="f_red"> a goal</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583557'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>When i was young, i thought that i could be anyone i want</li>
+<li class='corrected correct'>
+<p>When I was young, I thought that I could be<span class="f_red"> anything </span>I <span class="f_red">wanted.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583558'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I wanted to be a oriental medicine doctor while my mom was sick for a long time</li>
+<li class='corrected correct'>
+<p>I wanted to be a oriental medicine doctor <span class="f_red">when </span>my mom was sick for a long time</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583559'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>When i was taught by fair teacher that I intended to be a teacher </li>
+<li class='corrected correct'>
+<p>When I was taught by <span class="f_red">a nice</span> teacher, <span class="f_red">I wanted to be a teacher.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583560'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>But after graduating, i&#39;ve worked in a news paper for 3 years</li>
+<li class='corrected correct'>
+<p>But after graduating, i&#39;ve worked <span class="f_red">for </span>a <span class="f_red">newspaper </span>for 3 years</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583561'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>There was a small newspaper </li>
+<li class='corrected correct'>
+<p><span class="f_red">This was for a </span>small newspaper </p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583562'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Even i had to work until midnight and i had to meet new people every day furthermore my boss always used to press me to find a scoop</li>
+<li class='corrected correct'>
+<p>Even <span class="f_red">if I</span> had to work until midnight and I had to meet new people every day<span class="sline"> furthermore</span> my boss always used to press me to find a scoop</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583563'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>At that time i had an ambition</li>
+<li class='corrected correct'>
+<p>At that time i had <span class="sline">an</span> <span class="f_red">no</span> ambition</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583564'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>i sometime think that i shouldn&#39;t have given up my work</li>
+<li class='corrected correct'>
+<p>i <span class="f_red">sometimes </span>think that i shouldn&#39;t have given up <span class="f_red">on</span> my work</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583565'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Because i&#39;m getting idle to challange for my furture </li>
+<li class='corrected correct'>
+<p>Because I&#39;m <span class="f_red">becoming lazy about changing my future.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583566'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>It make me depressed</li>
+<li class='corrected correct'>
+<p>It make<span class="f_bold">s</span> me depressed</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583567'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I promised to do not regret when i decided to leave from my work, family, my country..</li>
+<li class='corrected correct'>
+<p>I promised<span class="f_red"> myself to not have regrets</span> when I decided to leave my work, family <span class="f_red">and </span>country..</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583568'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>However, i asked myself to have a right decision when i heard what my friends got married, a baby, promoted, moved to good house..</li>
+<li class='corrected correct'>
+<p>However, I asked <span class="f_red">myself have I made the</span> right decision when I heard <span class="f_red">that </span>my friends got married, a baby, promoted, moved to good house..</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583569'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I don&#39;t know what do i do for my future, What i want to be</li>
+<li class='corrected correct'>
+<p>I don&#39;t know w<span class="f_red">hat to do for my future</span>, what I want to be</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583570'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Should i get married and have a family, bring up my baby, find a happinese in my daily as my friends who look so happy</li>
+<li class='corrected correct'>
+<p>Should I get married and have a family, <span class="f_red">raise a child</span> <span class="f_red">or</span> find <span class="f_red">happiness </span>in my <span class="f_red">daily life</span> as my friends look so happy</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583571'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+I <font onmouseover='emph_wt(this,"wish")'>wish</font> <font onmouseover='emph_wt(this,"you")'>you</font> <font onmouseover='emph_wt(this,"good")'>good</font> <font onmouseover='emph_wt(this,"luck")'>luck</font> <font onmouseover='emph_wt(this,"in")'>in</font> <font onmouseover='emph_wt(this,"your")'>your</font> <font onmouseover='emph_wt(this,"future")'>future</font>! ^^
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-2215195' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_2215195'>
+
+</div>
+</div>
+</div>
+<div class='fukidashi comment_field' id='journal_comment_2215234'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/48539"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/6a15bc4fcacdc4dfb594d329eb9bf040cfff996f.jpeg"/></a>
+<a href="/48539" class="user_name">tony</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Sep 12, 2010 02:31
+</span>
+</div>
+</div>
+<div class='correction_list corner-rounded_5 little-spaced'>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I need an aim</li>
+<li class='corrected correct'>
+<p>I need <span class="f_blue">a goal</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583654'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>When i was young, i thought that i could be anyone i want</li>
+<li class='corrected correct'>
+<p>When <span class="f_red">I</span> was young, <span class="f_red">I </span>thought (that) <span class="f_red">I</span> could be anyone <span class="f_red">I </span>want<span class="f_red">ed to be. </span>[The first person singular pronoun &quot;I&quot; is always spelled with a capital letter. Every sentence must end in a period (.), unless it ends in another punctuation mark such as a question mark, an exclamation point, or a quotation mark.]<span class="f_red"></span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583655'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I wanted to be a oriental medicine doctor while my mom was sick for a long time</li>
+<li class='corrected correct'>
+<p>I wanted to be a<span class="f_red">n</span> oriental medicine doctor <span class="f_red">when</span> my mom was sick for a long time<span class="f_red">. </span>[&quot;A&quot; changes to &quot;an&quot; before a word starting with a vowel (a, e, i, o or u).]<span class="f_red"></span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583656'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>When i was taught by fair teacher that I intended to be a teacher </li>
+<li class='corrected correct'>
+<p>When <span class="f_red">I</span> was taught by <span class="f_red">a</span> fair teacher<span class="f_red">, I</span> intended/wanted to be<span class="f_blue">come</span> a teacher<span class="f_red">.</span> </p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583657'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I really wanted to be a copywriter when i got into a university</li>
+<li class='corrected correct'>
+<p>I really wanted to be a <span class="f_red">news reporter</span> when <span class="f_red">I</span> got into a university<span class="f_red">.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583658'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>But after graduating, i&#39;ve worked in a news paper for 3 years</li>
+<li class='corrected correct'>
+<p>But after graduating, I worked <span class="f_red">for/at</span> a <span class="f_red">newspaper</span> for <span class="f_blue">three</span> years.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583659'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>There was a small newspaper </li>
+<li class='corrected correct'>
+<p><span class="f_red">It</span> was a small newspaper<span class="f_red">.</span> </p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583660'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Even i had to work until midnight and i had to meet new people every day furthermore my boss always used to press me to find a scoop</li>
+<li class='corrected correct'>
+<p><span class="f_red">I even/often</span> had to work until midnight<span class="f_red">,</span> and <span class="f_red">I</span> had to meet new people every day<span class="f_red">.</span> <span class="f_red">F</span>urthermore<span class="f_red">,</span> my boss always used to press<span class="f_blue">ure</span> me to find a scoop<span class="f_red">.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583661'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>It drove me crazy</li>
+<li class='corrected correct'>
+<p>It drove me crazy<span class="f_red">.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583662'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I couldn&#39;t stop thinking of escaping to somewhere</li>
+<li class='corrected correct'>
+<p>I couldn&#39;t stop thinking of escaping <span class="f_blue">somehow<span class="f_red">.</span></span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583663'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>So i really ran away from my work</li>
+<li class='corrected correct'>
+<p>So <span class="f_red">I</span> really ran away from my work/job<span class="f_red">.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583664'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>At that time i had an ambition</li>
+<li class='corrected correct'>
+<p>At that time <span class="f_red">I</span> had ambitions<span class="f_red">.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583665'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I never worried about my future</li>
+<li class='corrected correct'>
+<p>I never worried about my future<span class="f_red">.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583666'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>i sometime think that i shouldn&#39;t have given up my work</li>
+<li class='corrected correct'>
+<p><span class="f_red">I</span> sometime<span class="f_red">s</span> think that <span class="f_red">I</span> shouldn&#39;t have <span class="f_blue">quit</span> my <span class="f_blue">job</span>, [Instead of starting the next sentence with the conjunction &quot;because,&quot; it is better to combine the two sentences by ending this with a comma and continuing the sentence with what is on the next line.]</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583667'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Because i&#39;m getting idle to challange for my furture </li>
+<li class='corrected correct'>
+<p><span class="f_red">I</span> sometime<span class="f_red">s</span> think that <span class="f_red">I</span> shouldn&#39;t have <span class="f_blue">quit</span> my <span class="f_blue">job</span>, <span class="f_red">b</span>ecause <span class="f_red">I</span>&#39;m getting <span class="f_red">lazy about</span> chall<span class="f_red">e</span>ng<span class="f_red">ing</span> <span class="f_red">myself.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583668'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>It make me depressed</li>
+<li class='corrected correct'>
+<p>It make<span class="f_red">s</span> me depressed<span class="f_red">. </span>[&quot;It&quot; is a third person, singular pronoun. Third person, singular subjects have different verb forms in the present tense, usually ending in the letter &quot;s.&quot;]<span class="f_red"></span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583669'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I promised to do not regret when i decided to leave from my work, family, my country..</li>
+<li class='corrected correct'>
+<p>I promised <span class="f_red">not to have any regrets</span> when <span class="f_red">I</span> decided to leave <span class="sline"><span class="f_red">from</span></span> my <span class="f_blue">job</span>, family, and country<span class="f_red">... </span>[You can use an ellipsis, which consists of three periods, at the end of a sentence, but not two periods.]<span class="f_red"></span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583670'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>However, i asked myself to have a right decision when i heard what my friends got married, a baby, promoted, moved to good house..</li>
+<li class='corrected correct'>
+<p>However, <span class="f_red">I </span>asked myself <span class="f_red">whether I had made the</span> right decision when <span class="f_red">I</span> heard <span class="f_red">that</span> my friends got married, <span class="f_red">had</span> bab<span class="f_red">ies</span>, <span class="f_red">got</span> promoted, <span class="f_red">and</span> moved to good house<span class="f_red">s...</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583671'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I don&#39;t know what do i do for my future, What i want to be</li>
+<li class='corrected correct'>
+<p>I don&#39;t know what <span class="f_red">I should do</span> <span class="sline">for my future</span>, <span class="f_red">w</span>hat <span class="f_red">I</span> want to be<span class="f_red">.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583672'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Should i get married and have a family, bring up my baby, find a happinese in my daily as my friends who look so happy</li>
+<li class='corrected correct'>
+<p>Should <span class="f_red">I</span> get married and have a family, bring up <span class="f_red">a</span> baby, <span class="f_red">and</span> find <span class="sline"><span class="f_red">a</span></span> happines<span class="f_red">s</span> in my daily life as my friends who look so happy <span class="f_red">do?</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583673'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I am in a dillema</li>
+<li class='corrected correct'>
+<p>I am in a <span class="f_red">dilemma.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583674'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I need an aim to make me to get up early</li>
+<li class='corrected correct'>
+<p>I need <span class="f_red">a</span> aim to make me to get up early <span class="f_blue">each day</span><span class="f_red">.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-5583675'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+I'<font onmouseover='emph_wt(this,"ve")'>ve</font> <font onmouseover='emph_wt(this,"been")'>been</font> <font onmouseover='emph_wt(this,"unemployed")'>unemployed</font> <font onmouseover='emph_wt(this,"since")'>since</font> 2007, <font onmouseover='emph_wt(this,"and")'>and</font> I <font onmouseover='emph_wt(this,"am")'>am</font> <font onmouseover='emph_wt(this,"also")'>also</font> <font onmouseover='emph_wt(this,"feeling")'>feeling</font> a <font onmouseover='emph_wt(this,"need")'>need</font> <font onmouseover='emph_wt(this,"for")'>for</font> <font onmouseover='emph_wt(this,"motivation")'>motivation</font>. <font onmouseover='emph_wt(this,"There")'>There</font> <font onmouseover='emph_wt(this,"are")'>are</font> <font onmouseover='emph_wt(this,"things")'>things</font> I <font onmouseover='emph_wt(this,"want")'>want</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"do")'>do</font> <font onmouseover='emph_wt(this,"with")'>with</font> <font onmouseover='emph_wt(this,"all")'>all</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"extra")'>extra</font> <font onmouseover='emph_wt(this,"time")'>time</font> I have-- <font onmouseover='emph_wt(this,"writing")'>writing</font>, <font onmouseover='emph_wt(this,"learning")'>learning</font> <font onmouseover='emph_wt(this,"languages")'>languages</font> <font onmouseover='emph_wt(this,"and")'>and</font> <font onmouseover='emph_wt(this,"playing")'>playing</font> <font onmouseover='emph_wt(this,"musical")'>musical</font> instruments-- <font onmouseover='emph_wt(this,"but")'>but</font> I <font onmouseover='emph_wt(this,"seem")'>seem</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"lack")'>lack</font> a <font onmouseover='emph_wt(this,"strong")'>strong</font> <font onmouseover='emph_wt(this,"will")'>will</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"work")'>work</font> <font onmouseover='emph_wt(this,"hard")'>hard</font> <font onmouseover='emph_wt(this,"on")'>on</font> <font onmouseover='emph_wt(this,"these")'>these</font> <font onmouseover='emph_wt(this,"goals")'>goals</font>.
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-2215234' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_2215234'>
+
+</div>
+</div>
+</div>
+<div class='fukidashi comment_field' id='journal_comment_2216865'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/150234"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/58e4e4ac4c3244ca0a30023a2bc62b26a28803ab.jpg"/></a>
+<a href="/150234" class="user_name">ttasinbob</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Sep 12, 2010 15:53
+</span>
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+<font onmouseover='emph_wt(this,"You")'>You</font> <font onmouseover='emph_wt(this,"guys")'>guys</font> <font onmouseover='emph_wt(this,"are")'>are</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"best")'>best</font>! <font onmouseover='emph_wt(this,"Thank")'>Thank</font> <font onmouseover='emph_wt(this,"you")'>you</font> <font onmouseover='emph_wt(this,"so")'>so</font> much^^<br/>
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-2216865' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_2216865'>
+
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>//<![CDATA[
+var l8=jQuery.extend(l8,{authenticityToken:"D/7dJqt9e89CqVQ1OhUswauABwlMHFy9oB4+tSl69pY=",showTutorial:false,label:"Description about correction.(You can write in any language.)",explanation:"Add a description or comment here.(Optional)",sentences:'SSBuZWVkIGFuIGFpbQpXaGVuIGkgd2FzIHlvdW5nLCBpIHRob3VnaHQgdGhhdCBpIGNvdWxkIGJlIGFueW9uZSBpIHdhbnQKSSB3YW50ZWQgdG8gYmUgYSBvcmllbnRhbCBtZWRpY2luZSBkb2N0b3Igd2hpbGUgbXkgbW9tIHdhcyBzaWNrIGZvciBhIGxvbmcgdGltZQpXaGVuIGkgd2FzIHRhdWdodCBieSBmYWlyIHRlYWNoZXIgdGhhdCBJIGludGVuZGVkIHRvIGJlIGEgdGVhY2hlciAKSSByZWFsbHkgd2FudGVkIHRvIGJlIGEgY29weXdyaXRlciB3aGVuIGkgZ290IGludG8gYSB1bml2ZXJzaXR5CkJ1dCBhZnRlciBncmFkdWF0aW5nLCBpJ3ZlIHdvcmtlZCBpbiBhIG5ld3MgcGFwZXIgZm9yIDMgeWVhcnMKVGhlcmUgd2FzIGEgc21hbGwgbmV3c3BhcGVyIApFdmVuIGkgaGFkIHRvIHdvcmsgdW50aWwgbWlkbmlnaHQgYW5kIGkgaGFkIHRvIG1lZXQgbmV3IHBlb3BsZSBldmVyeSBkYXkgZnVydGhlcm1vcmUgbXkgYm9zcyBhbHdheXMgdXNlZCB0byBwcmVzcyBtZSB0byBmaW5kIGEgc2Nvb3AKSXQgZHJvdmUgbWUgY3JhenkKSSBjb3VsZG4ndCBzdG9wIHRoaW5raW5nIG9mIGVzY2FwaW5nIHRvIHNvbWV3aGVyZQpTbyBpIHJlYWxseSByYW4gYXdheSBmcm9tIG15IHdvcmsKQXQgdGhhdCB0aW1lIGkgaGFkIGFuIGFtYml0aW9uCkkgbmV2ZXIgd29ycmllZCBhYm91dCBteSBmdXR1cmUKQnV0IG5vdy4uCmkgc29tZXRpbWUgdGhpbmsgdGhhdCBpIHNob3VsZG4ndCBoYXZlIGdpdmVuIHVwIG15IHdvcmsKQmVjYXVzZSBpJ20gZ2V0dGluZyBpZGxlIHRvIGNoYWxsYW5nZSBmb3IgbXkgZnVydHVyZSAKSXQgbWFrZSBtZSBkZXByZXNzZWQKSSBwcm9taXNlZCB0byBkbyBub3QgcmVncmV0IHdoZW4gaSBkZWNpZGVkIHRvIGxlYXZlIGZyb20gbXkgd29yaywgZmFtaWx5LCBteSBjb3VudHJ5Li4KSG93ZXZlciwgaSBhc2tlZCBteXNlbGYgdG8gaGF2ZSBhIHJpZ2h0IGRlY2lzaW9uIHdoZW4gaSBoZWFyZCB3aGF0IG15IGZyaWVuZHMgZ290IG1hcnJpZWQsIGEgYmFieSwgcHJvbW90ZWQsIG1vdmVkIHRvIGdvb2QgaG91c2UuLgpJIGRvbid0IGtub3cgd2hhdCBkbyBpIGRvIGZvciBteSBmdXR1cmUsIFdoYXQgaSB3YW50IHRvIGJlClNob3VsZCBpIGdldCBtYXJyaWVkIGFuZCBoYXZlIGEgZmFtaWx5LCBicmluZyB1cCBteSBiYWJ5LCBmaW5kIGEgaGFwcGluZXNlIGluIG15IGRhaWx5IGFzIG15IGZyaWVuZHMgd2hvIGxvb2sgc28gaGFwcHkKSSBhbSBpbiBhIGRpbGxlbWEKSSBuZWVkIGFuIGFpbSB0byBtYWtlIG1lIHRvIGdldCB1cCBlYXJseQ==',corrections:[["I need [f-blue]a purpose[/f-blue] [sline][f-red]an aim[/f-red][/sline]","I need[f-red] a goal[/f-red]","I need [f-blue]a goal[/f-blue]"],["When I was young, I thought that I could be[f-red] anything [/f-red]I [f-red]wanted.[/f-red]","When [f-red]I[/f-red] was young, [f-red]I [/f-red]thought (that) [f-red]I[/f-red] could be anyone [f-red]I [/f-red]want[f-red]ed to be. [/f-red][The first person singular pronoun \"I\" is always spelled with a capital letter. Every sentence must end in a period (.), unless it ends in another punctuation mark such as a question mark, an exclamation point, or a quotation mark.][f-red][/f-red]"],["I wanted to be a oriental medicine doctor [f-red]when [/f-red]my mom was sick for a long time","I wanted to be a[f-red]n[/f-red] oriental medicine doctor [f-red]when[/f-red] my mom was sick for a long time[f-red]. [/f-red][\"A\" changes to \"an\" before a word starting with a vowel (a, e, i, o or u).][f-red][/f-red]"],["When i was taught by [sline][f-red]fair[/f-red][/sline] [f-blue]good [/f-blue]teacher [sline][f-red]that I intended[/f-red][/sline] [f-blue]I[/f-blue] [f-blue]wanted [/f-blue]to be a teacher ","When I was taught by [f-red]a nice[/f-red] teacher, [f-red]I wanted to be a teacher.[/f-red]","When [f-red]I[/f-red] was taught by [f-red]a[/f-red] fair teacher[f-red], I[/f-red] intended/wanted to be[f-blue]come[/f-blue] a teacher[f-red].[/f-red] "],["I really wanted to be a [f-red]news reporter[/f-red] when [f-red]I[/f-red] got into a university[f-red].[/f-red]"],["But after graduating, i've worked in a [f-red][sline]news paper[/sline][/f-red] [f-blue]newspaper [/f-blue]for 3 years","But after graduating, i've worked [f-red]for [/f-red]a [f-red]newspaper [/f-red]for 3 years","But after graduating, I worked [f-red]for/at[/f-red] a [f-red]newspaper[/f-red] for [f-blue]three[/f-blue] years."],["[sline][f-red]There[/f-red][/sline] [f-blue]It [/f-blue]was a small newspaper ","[f-red]This was for a [/f-red]small newspaper ","[f-red]It[/f-red] was a small newspaper[f-red].[/f-red] "],["[sline][f-red]Even[/f-red][/sline] i had to work until midnight and i had to meet new people every day[f-blue].[/f-blue] furthermore my boss always used to [sline][f-red]press[/f-red][/sline] [f-blue]pressure [/f-blue]me to find a scoop","Even [f-red]if I[/f-red] had to work until midnight and I had to meet new people every day[sline] furthermore[/sline] my boss always used to press me to find a scoop","[f-red]I even/often[/f-red] had to work until midnight[f-red],[/f-red] and [f-red]I[/f-red] had to meet new people every day[f-red].[/f-red] [f-red]F[/f-red]urthermore[f-red],[/f-red] my boss always used to press[f-blue]ure[/f-blue] me to find a scoop[f-red].[/f-red]"],["It drove me crazy[f-red].[/f-red]"],["I couldn't stop thinking of escaping [f-blue]somehow[f-red].[/f-red][/f-blue]"],["So [f-red]I[/f-red] really ran away from my work/job[f-red].[/f-red]"],["At that time i had [sline]an[/sline] [f-red]no[/f-red] ambition","At that time [f-red]I[/f-red] had ambitions[f-red].[/f-red]"],["I never worried about my future[f-red].[/f-red]"],[],["i sometime[f-blue]s[/f-blue] think that i shouldn't have given up my work","i [f-red]sometimes [/f-red]think that i shouldn't have given up [f-red]on[/f-red] my work","[f-red]I[/f-red] sometime[f-red]s[/f-red] think that [f-red]I[/f-red] shouldn't have [f-blue]quit[/f-blue] my [f-blue]job[/f-blue], [Instead of starting the next sentence with the conjunction \"because,\" it is better to combine the two sentences by ending this with a comma and continuing the sentence with what is on the next line.]"],["[f-red]Because i'm getting idle to challange for my furture[/f-red][f-red][/f-red]I would maybe say something like:[f-blue] I haven't been doing anything working towards a better future.[/f-blue]","Because I'm [f-red]becoming lazy about changing my future.[/f-red]","[f-red]I[/f-red] sometime[f-red]s[/f-red] think that [f-red]I[/f-red] shouldn't have [f-blue]quit[/f-blue] my [f-blue]job[/f-blue], [f-red]b[/f-red]ecause [f-red]I[/f-red]'m getting [f-red]lazy about[/f-red] chall[f-red]e[/f-red]ng[f-red]ing[/f-red] [f-red]myself.[/f-red]"],["It make[f-bold]s[/f-bold] me depressed","It make[f-red]s[/f-red] me depressed[f-red]. [/f-red][\"It\" is a third person, singular pronoun. Third person, singular subjects have different verb forms in the present tense, usually ending in the letter \"s.\"][f-red][/f-red]"],["I promised to [f-blue]have no regrets[/f-blue] [f-red][sline]do not[/sline][/f-red][f-red][sline] regret[/sline][/f-red] when i decided to leave from my work, family, my country..","I promised[f-red] myself to not have regrets[/f-red] when I decided to leave my work, family [f-red]and [/f-red]country..","I promised [f-red]not to have any regrets[/f-red] when [f-red]I[/f-red] decided to leave [sline][f-red]from[/f-red][/sline] my [f-blue]job[/f-blue], family, and country[f-red]... [/f-red][You can use an ellipsis, which consists of three periods, at the end of a sentence, but not two periods.][f-red][/f-red]"],["However, i asked myself [sline][f-red]to have a[/f-red][/sline] [f-blue]if I had made the [/f-blue]right decision when i heard [f-red][sline]what[/sline][/f-red] [f-blue]that [/f-blue]my friends [f-blue]had [/f-blue]got[f-blue]ten[/f-blue] married, [f-blue]had [/f-blue]a baby, [f-blue]had been [/f-blue]promoted, [f-blue]had [/f-blue]moved to good house..","However, I asked [f-red]myself have I made the[/f-red] right decision when I heard [f-red]that [/f-red]my friends got married, a baby, promoted, moved to good house..","However, [f-red]I [/f-red]asked myself [f-red]whether I had made the[/f-red] right decision when [f-red]I[/f-red] heard [f-red]that[/f-red] my friends got married, [f-red]had[/f-red] bab[f-red]ies[/f-red], [f-red]got[/f-red] promoted, [f-red]and[/f-red] moved to good house[f-red]s...[/f-red]"],["I don't know w[f-red]hat to do for my future[/f-red], what I want to be","I don't know what [f-red]I should do[/f-red] [sline]for my future[/sline], [f-red]w[/f-red]hat [f-red]I[/f-red] want to be[f-red].[/f-red]"],["Should i get married and have a family, [sline][f-red]bring up my[/f-red][/sline] [f-blue]raise a* [/f-blue]baby, find [sline][f-red]a happinese[/f-red][/sline] [f-blue]happiness [/f-blue]in my daily [f-blue]life [/f-blue][sline][f-red]as [/f-red][/sline][f-blue]just like[/f-blue] my friends who look so happy*I am assuming that you don't have a baby yet.","Should I get married and have a family, [f-red]raise a child[/f-red] [f-red]or[/f-red] find [f-red]happiness [/f-red]in my [f-red]daily life[/f-red] as my friends look so happy","Should [f-red]I[/f-red] get married and have a family, bring up [f-red]a[/f-red] baby, [f-red]and[/f-red] find [sline][f-red]a[/f-red][/sline] happines[f-red]s[/f-red] in my daily life as my friends who look so happy [f-red]do?[/f-red]"],["I am in a [f-red]dilemma.[/f-red]"],["I need [sline][f-red]an aim[/f-red][/sline] [f-blue]a purpose [/f-blue]to make me [sline][f-red]to[/f-red][/sline] get up early[f-red][/f-red]I might say something like this:[f-red] [/f-red][f-blue]I need a reason to get out of bed early every morning[/f-blue]","I need [f-red]a[/f-red] aim to make me to get up early [f-blue]each day[/f-blue][f-red].[/f-red]"]],correctionComments:[[null,null,null],[null,null],[null,null],[null,null,null],[null],[null,null,null],[null,null,null],[null,null,null],[null],[null],[null],[null,null],[null],[],[null,null,null],[null,null,null],[null,null],[null,null,null],[null,null,null],[null,null],[null,null,null],[null],[null,null]],perfectSentences:[[null,null,null],[null,null],[null,null],[null,null,null],[null],[null,null,null],[null,null,null],[null,null,null],[null],[null],[null],[null,null],[null],[],[null,null,null],[null,null,null],[null,null],[null,null,null],[null,null,null],[null,null],[null,null,null],[null],[null,null]],urlForCreateComment:'/journals/create_comment/618627',isLogin:false});sentences='WyJJIG5lZWQgYW4gYWltIiwiV2hlbiBpIHdhcyB5b3VuZywgaSB0aG91Z2h0IHRoYXQgaSBjb3VsZCBiZSBhbnlvbmUgaSB3YW50IiwiSSB3YW50ZWQgdG8gYmUgYSBvcmllbnRhbCBtZWRpY2luZSBkb2N0b3Igd2hpbGUgbXkgbW9tIHdhcyBzaWNrIGZvciBhIGxvbmcgdGltZSIsIldoZW4gaSB3YXMgdGF1Z2h0IGJ5IGZhaXIgdGVhY2hlciB0aGF0IEkgaW50ZW5kZWQgdG8gYmUgYSB0ZWFjaGVyICIsIkkgcmVhbGx5IHdhbnRlZCB0byBiZSBhIGNvcHl3cml0ZXIgd2hlbiBpIGdvdCBpbnRvIGEgdW5pdmVyc2l0eSIsIkJ1dCBhZnRlciBncmFkdWF0aW5nLCBpJ3ZlIHdvcmtlZCBpbiBhIG5ld3MgcGFwZXIgZm9yIDMgeWVhcnMiLCJUaGVyZSB3YXMgYSBzbWFsbCBuZXdzcGFwZXIgIiwiRXZlbiBpIGhhZCB0byB3b3JrIHVudGlsIG1pZG5pZ2h0IGFuZCBpIGhhZCB0byBtZWV0IG5ldyBwZW9wbGUgZXZlcnkgZGF5IGZ1cnRoZXJtb3JlIG15IGJvc3MgYWx3YXlzIHVzZWQgdG8gcHJlc3MgbWUgdG8gZmluZCBhIHNjb29wIiwiSXQgZHJvdmUgbWUgY3JhenkiLCJJIGNvdWxkbid0IHN0b3AgdGhpbmtpbmcgb2YgZXNjYXBpbmcgdG8gc29tZXdoZXJlIiwiU28gaSByZWFsbHkgcmFuIGF3YXkgZnJvbSBteSB3b3JrIiwiQXQgdGhhdCB0aW1lIGkgaGFkIGFuIGFtYml0aW9uIiwiSSBuZXZlciB3b3JyaWVkIGFib3V0IG15IGZ1dHVyZSIsIkJ1dCBub3cuLiIsImkgc29tZXRpbWUgdGhpbmsgdGhhdCBpIHNob3VsZG4ndCBoYXZlIGdpdmVuIHVwIG15IHdvcmsiLCJCZWNhdXNlIGknbSBnZXR0aW5nIGlkbGUgdG8gY2hhbGxhbmdlIGZvciBteSBmdXJ0dXJlICIsIkl0IG1ha2UgbWUgZGVwcmVzc2VkIiwiSSBwcm9taXNlZCB0byBkbyBub3QgcmVncmV0IHdoZW4gaSBkZWNpZGVkIHRvIGxlYXZlIGZyb20gbXkgd29yaywgZmFtaWx5LCBteSBjb3VudHJ5Li4iLCJIb3dldmVyLCBpIGFza2VkIG15c2VsZiB0byBoYXZlIGEgcmlnaHQgZGVjaXNpb24gd2hlbiBpIGhlYXJkIHdoYXQgbXkgZnJpZW5kcyBnb3QgbWFycmllZCwgYSBiYWJ5LCBwcm9tb3RlZCwgbW92ZWQgdG8gZ29vZCBob3VzZS4uIiwiSSBkb24ndCBrbm93IHdoYXQgZG8gaSBkbyBmb3IgbXkgZnV0dXJlLCBXaGF0IGkgd2FudCB0byBiZSIsIlNob3VsZCBpIGdldCBtYXJyaWVkIGFuZCBoYXZlIGEgZmFtaWx5LCBicmluZyB1cCBteSBiYWJ5LCBmaW5kIGEgaGFwcGluZXNlIGluIG15IGRhaWx5IGFzIG15IGZyaWVuZHMgd2hvIGxvb2sgc28gaGFwcHkiLCJJIGFtIGluIGEgZGlsbGVtYSIsIkkgbmVlZCBhbiBhaW0gdG8gbWFrZSBtZSB0byBnZXQgdXAgZWFybHkiXQ==';corrections='W1siSSBuZWVkIFtmLWJsdWVdYSBwdXJwb3NlWy9mLWJsdWVdIFtzbGluZV1bZi1yZWRdYW4gYWltWy9mLXJlZF1bL3NsaW5lXSIsIkkgbmVlZFtmLXJlZF0gYSBnb2FsWy9mLXJlZF0iLCJJIG5lZWQgW2YtYmx1ZV1hIGdvYWxbL2YtYmx1ZV0iXSxbIldoZW4gSSB3YXMgeW91bmcsIEkgdGhvdWdodCB0aGF0IEkgY291bGQgYmVbZi1yZWRdIGFueXRoaW5nIFsvZi1yZWRdSSBbZi1yZWRdd2FudGVkLlsvZi1yZWRdIiwiV2hlbiBbZi1yZWRdSVsvZi1yZWRdIHdhcyB5b3VuZywgW2YtcmVkXUkgWy9mLXJlZF10aG91Z2h0ICh0aGF0KSBbZi1yZWRdSVsvZi1yZWRdIGNvdWxkIGJlIGFueW9uZSBbZi1yZWRdSSBbL2YtcmVkXXdhbnRbZi1yZWRdZWQgdG8gYmUuIFsvZi1yZWRdW1RoZSBmaXJzdCBwZXJzb24gc2luZ3VsYXIgcHJvbm91biBcIklcIiBpcyBhbHdheXMgc3BlbGxlZCB3aXRoIGEgY2FwaXRhbCBsZXR0ZXIuIEV2ZXJ5IHNlbnRlbmNlIG11c3QgZW5kIGluIGEgcGVyaW9kICguKSwgdW5sZXNzIGl0IGVuZHMgaW4gYW5vdGhlciBwdW5jdHVhdGlvbiBtYXJrIHN1Y2ggYXMgYSBxdWVzdGlvbiBtYXJrLCBhbiBleGNsYW1hdGlvbiBwb2ludCwgb3IgYSBxdW90YXRpb24gbWFyay5dW2YtcmVkXVsvZi1yZWRdIl0sWyJJIHdhbnRlZCB0byBiZSBhIG9yaWVudGFsIG1lZGljaW5lIGRvY3RvciBbZi1yZWRdd2hlbiBbL2YtcmVkXW15IG1vbSB3YXMgc2ljayBmb3IgYSBsb25nIHRpbWUiLCJJIHdhbnRlZCB0byBiZSBhW2YtcmVkXW5bL2YtcmVkXSBvcmllbnRhbCBtZWRpY2luZSBkb2N0b3IgW2YtcmVkXXdoZW5bL2YtcmVkXSBteSBtb20gd2FzIHNpY2sgZm9yIGEgbG9uZyB0aW1lW2YtcmVkXS4gWy9mLXJlZF1bXCJBXCIgY2hhbmdlcyB0byBcImFuXCIgYmVmb3JlIGEgd29yZCBzdGFydGluZyB3aXRoIGEgdm93ZWwgKGEsIGUsIGksIG8gb3IgdSkuXVtmLXJlZF1bL2YtcmVkXSJdLFsiV2hlbiBpIHdhcyB0YXVnaHQgYnkgW3NsaW5lXVtmLXJlZF1mYWlyWy9mLXJlZF1bL3NsaW5lXSBbZi1ibHVlXWdvb2QgWy9mLWJsdWVddGVhY2hlciBbc2xpbmVdW2YtcmVkXXRoYXQgSSBpbnRlbmRlZFsvZi1yZWRdWy9zbGluZV0gW2YtYmx1ZV1JWy9mLWJsdWVdIFtmLWJsdWVdd2FudGVkIFsvZi1ibHVlXXRvIGJlIGEgdGVhY2hlciAiLCJXaGVuIEkgd2FzIHRhdWdodCBieSBbZi1yZWRdYSBuaWNlWy9mLXJlZF0gdGVhY2hlciwgW2YtcmVkXUkgd2FudGVkIHRvIGJlIGEgdGVhY2hlci5bL2YtcmVkXSIsIldoZW4gW2YtcmVkXUlbL2YtcmVkXSB3YXMgdGF1Z2h0IGJ5IFtmLXJlZF1hWy9mLXJlZF0gZmFpciB0ZWFjaGVyW2YtcmVkXSwgSVsvZi1yZWRdIGludGVuZGVkL3dhbnRlZCB0byBiZVtmLWJsdWVdY29tZVsvZi1ibHVlXSBhIHRlYWNoZXJbZi1yZWRdLlsvZi1yZWRdICJdLFsiSSByZWFsbHkgd2FudGVkIHRvIGJlIGEgW2YtcmVkXW5ld3MgcmVwb3J0ZXJbL2YtcmVkXSB3aGVuIFtmLXJlZF1JWy9mLXJlZF0gZ290IGludG8gYSB1bml2ZXJzaXR5W2YtcmVkXS5bL2YtcmVkXSJdLFsiQnV0IGFmdGVyIGdyYWR1YXRpbmcsIGkndmUgd29ya2VkIGluIGEgW2YtcmVkXVtzbGluZV1uZXdzIHBhcGVyWy9zbGluZV1bL2YtcmVkXSBbZi1ibHVlXW5ld3NwYXBlciBbL2YtYmx1ZV1mb3IgMyB5ZWFycyIsIkJ1dCBhZnRlciBncmFkdWF0aW5nLCBpJ3ZlIHdvcmtlZCBbZi1yZWRdZm9yIFsvZi1yZWRdYSBbZi1yZWRdbmV3c3BhcGVyIFsvZi1yZWRdZm9yIDMgeWVhcnMiLCJCdXQgYWZ0ZXIgZ3JhZHVhdGluZywgSSB3b3JrZWQgW2YtcmVkXWZvci9hdFsvZi1yZWRdIGEgW2YtcmVkXW5ld3NwYXBlclsvZi1yZWRdIGZvciBbZi1ibHVlXXRocmVlWy9mLWJsdWVdIHllYXJzLiJdLFsiW3NsaW5lXVtmLXJlZF1UaGVyZVsvZi1yZWRdWy9zbGluZV0gW2YtYmx1ZV1JdCBbL2YtYmx1ZV13YXMgYSBzbWFsbCBuZXdzcGFwZXIgIiwiW2YtcmVkXVRoaXMgd2FzIGZvciBhIFsvZi1yZWRdc21hbGwgbmV3c3BhcGVyICIsIltmLXJlZF1JdFsvZi1yZWRdIHdhcyBhIHNtYWxsIG5ld3NwYXBlcltmLXJlZF0uWy9mLXJlZF0gIl0sWyJbc2xpbmVdW2YtcmVkXUV2ZW5bL2YtcmVkXVsvc2xpbmVdIGkgaGFkIHRvIHdvcmsgdW50aWwgbWlkbmlnaHQgYW5kIGkgaGFkIHRvIG1lZXQgbmV3IHBlb3BsZSBldmVyeSBkYXlbZi1ibHVlXS5bL2YtYmx1ZV0gZnVydGhlcm1vcmUgbXkgYm9zcyBhbHdheXMgdXNlZCB0byBbc2xpbmVdW2YtcmVkXXByZXNzWy9mLXJlZF1bL3NsaW5lXSBbZi1ibHVlXXByZXNzdXJlIFsvZi1ibHVlXW1lIHRvIGZpbmQgYSBzY29vcCIsIkV2ZW4gW2YtcmVkXWlmIElbL2YtcmVkXSBoYWQgdG8gd29yayB1bnRpbCBtaWRuaWdodCBhbmQgSSBoYWQgdG8gbWVldCBuZXcgcGVvcGxlIGV2ZXJ5IGRheVtzbGluZV0gZnVydGhlcm1vcmVbL3NsaW5lXSBteSBib3NzIGFsd2F5cyB1c2VkIHRvIHByZXNzIG1lIHRvIGZpbmQgYSBzY29vcCIsIltmLXJlZF1JIGV2ZW4vb2Z0ZW5bL2YtcmVkXSBoYWQgdG8gd29yayB1bnRpbCBtaWRuaWdodFtmLXJlZF0sWy9mLXJlZF0gYW5kIFtmLXJlZF1JWy9mLXJlZF0gaGFkIHRvIG1lZXQgbmV3IHBlb3BsZSBldmVyeSBkYXlbZi1yZWRdLlsvZi1yZWRdIFtmLXJlZF1GWy9mLXJlZF11cnRoZXJtb3JlW2YtcmVkXSxbL2YtcmVkXSBteSBib3NzIGFsd2F5cyB1c2VkIHRvIHByZXNzW2YtYmx1ZV11cmVbL2YtYmx1ZV0gbWUgdG8gZmluZCBhIHNjb29wW2YtcmVkXS5bL2YtcmVkXSJdLFsiSXQgZHJvdmUgbWUgY3JhenlbZi1yZWRdLlsvZi1yZWRdIl0sWyJJIGNvdWxkbid0IHN0b3AgdGhpbmtpbmcgb2YgZXNjYXBpbmcgW2YtYmx1ZV1zb21laG93W2YtcmVkXS5bL2YtcmVkXVsvZi1ibHVlXSJdLFsiU28gW2YtcmVkXUlbL2YtcmVkXSByZWFsbHkgcmFuIGF3YXkgZnJvbSBteSB3b3JrL2pvYltmLXJlZF0uWy9mLXJlZF0iXSxbIkF0IHRoYXQgdGltZSBpIGhhZCBbc2xpbmVdYW5bL3NsaW5lXSBbZi1yZWRdbm9bL2YtcmVkXSBhbWJpdGlvbiIsIkF0IHRoYXQgdGltZSBbZi1yZWRdSVsvZi1yZWRdIGhhZCBhbWJpdGlvbnNbZi1yZWRdLlsvZi1yZWRdIl0sWyJJIG5ldmVyIHdvcnJpZWQgYWJvdXQgbXkgZnV0dXJlW2YtcmVkXS5bL2YtcmVkXSJdLFtdLFsiaSBzb21ldGltZVtmLWJsdWVdc1svZi1ibHVlXSB0aGluayB0aGF0IGkgc2hvdWxkbid0IGhhdmUgZ2l2ZW4gdXAgbXkgd29yayIsImkgW2YtcmVkXXNvbWV0aW1lcyBbL2YtcmVkXXRoaW5rIHRoYXQgaSBzaG91bGRuJ3QgaGF2ZSBnaXZlbiB1cCBbZi1yZWRdb25bL2YtcmVkXSBteSB3b3JrIiwiW2YtcmVkXUlbL2YtcmVkXSBzb21ldGltZVtmLXJlZF1zWy9mLXJlZF0gdGhpbmsgdGhhdCBbZi1yZWRdSVsvZi1yZWRdIHNob3VsZG4ndCBoYXZlIFtmLWJsdWVdcXVpdFsvZi1ibHVlXSBteSBbZi1ibHVlXWpvYlsvZi1ibHVlXSwgW0luc3RlYWQgb2Ygc3RhcnRpbmcgdGhlIG5leHQgc2VudGVuY2Ugd2l0aCB0aGUgY29uanVuY3Rpb24gXCJiZWNhdXNlLFwiIGl0IGlzIGJldHRlciB0byBjb21iaW5lIHRoZSB0d28gc2VudGVuY2VzIGJ5IGVuZGluZyB0aGlzIHdpdGggYSBjb21tYSBhbmQgY29udGludWluZyB0aGUgc2VudGVuY2Ugd2l0aCB3aGF0IGlzIG9uIHRoZSBuZXh0IGxpbmUuXSJdLFsiW2YtcmVkXUJlY2F1c2UgaSdtIGdldHRpbmcgaWRsZSB0byBjaGFsbGFuZ2UgZm9yIG15IGZ1cnR1cmVbL2YtcmVkXVtmLXJlZF1bL2YtcmVkXUkgd291bGQgbWF5YmUgc2F5IHNvbWV0aGluZyBsaWtlOltmLWJsdWVdIEkgaGF2ZW4ndCBiZWVuIGRvaW5nIGFueXRoaW5nIHdvcmtpbmcgdG93YXJkcyBhIGJldHRlciBmdXR1cmUuWy9mLWJsdWVdIiwiQmVjYXVzZSBJJ20gW2YtcmVkXWJlY29taW5nIGxhenkgYWJvdXQgY2hhbmdpbmcgbXkgZnV0dXJlLlsvZi1yZWRdIiwiW2YtcmVkXUlbL2YtcmVkXSBzb21ldGltZVtmLXJlZF1zWy9mLXJlZF0gdGhpbmsgdGhhdCBbZi1yZWRdSVsvZi1yZWRdIHNob3VsZG4ndCBoYXZlIFtmLWJsdWVdcXVpdFsvZi1ibHVlXSBteSBbZi1ibHVlXWpvYlsvZi1ibHVlXSwgW2YtcmVkXWJbL2YtcmVkXWVjYXVzZSBbZi1yZWRdSVsvZi1yZWRdJ20gZ2V0dGluZyBbZi1yZWRdbGF6eSBhYm91dFsvZi1yZWRdIGNoYWxsW2YtcmVkXWVbL2YtcmVkXW5nW2YtcmVkXWluZ1svZi1yZWRdIFtmLXJlZF1teXNlbGYuWy9mLXJlZF0iXSxbIkl0IG1ha2VbZi1ib2xkXXNbL2YtYm9sZF0gbWUgZGVwcmVzc2VkIiwiSXQgbWFrZVtmLXJlZF1zWy9mLXJlZF0gbWUgZGVwcmVzc2VkW2YtcmVkXS4gWy9mLXJlZF1bXCJJdFwiIGlzIGEgdGhpcmQgcGVyc29uLCBzaW5ndWxhciBwcm9ub3VuLiBUaGlyZCBwZXJzb24sIHNpbmd1bGFyIHN1YmplY3RzIGhhdmUgZGlmZmVyZW50IHZlcmIgZm9ybXMgaW4gdGhlIHByZXNlbnQgdGVuc2UsIHVzdWFsbHkgZW5kaW5nIGluIHRoZSBsZXR0ZXIgXCJzLlwiXVtmLXJlZF1bL2YtcmVkXSJdLFsiSSBwcm9taXNlZCB0byBbZi1ibHVlXWhhdmUgbm8gcmVncmV0c1svZi1ibHVlXSBbZi1yZWRdW3NsaW5lXWRvIG5vdFsvc2xpbmVdWy9mLXJlZF1bZi1yZWRdW3NsaW5lXSByZWdyZXRbL3NsaW5lXVsvZi1yZWRdIHdoZW4gaSBkZWNpZGVkIHRvIGxlYXZlIGZyb20gbXkgd29yaywgZmFtaWx5LCBteSBjb3VudHJ5Li4iLCJJIHByb21pc2VkW2YtcmVkXSBteXNlbGYgdG8gbm90IGhhdmUgcmVncmV0c1svZi1yZWRdIHdoZW4gSSBkZWNpZGVkIHRvIGxlYXZlIG15IHdvcmssIGZhbWlseSBbZi1yZWRdYW5kIFsvZi1yZWRdY291bnRyeS4uIiwiSSBwcm9taXNlZCBbZi1yZWRdbm90IHRvIGhhdmUgYW55IHJlZ3JldHNbL2YtcmVkXSB3aGVuIFtmLXJlZF1JWy9mLXJlZF0gZGVjaWRlZCB0byBsZWF2ZSBbc2xpbmVdW2YtcmVkXWZyb21bL2YtcmVkXVsvc2xpbmVdIG15IFtmLWJsdWVdam9iWy9mLWJsdWVdLCBmYW1pbHksIGFuZCBjb3VudHJ5W2YtcmVkXS4uLiBbL2YtcmVkXVtZb3UgY2FuIHVzZSBhbiBlbGxpcHNpcywgd2hpY2ggY29uc2lzdHMgb2YgdGhyZWUgcGVyaW9kcywgYXQgdGhlIGVuZCBvZiBhIHNlbnRlbmNlLCBidXQgbm90IHR3byBwZXJpb2RzLl1bZi1yZWRdWy9mLXJlZF0iXSxbIkhvd2V2ZXIsIGkgYXNrZWQgbXlzZWxmIFtzbGluZV1bZi1yZWRddG8gaGF2ZSBhWy9mLXJlZF1bL3NsaW5lXSBbZi1ibHVlXWlmIEkgaGFkIG1hZGUgdGhlIFsvZi1ibHVlXXJpZ2h0IGRlY2lzaW9uIHdoZW4gaSBoZWFyZCBbZi1yZWRdW3NsaW5lXXdoYXRbL3NsaW5lXVsvZi1yZWRdIFtmLWJsdWVddGhhdCBbL2YtYmx1ZV1teSBmcmllbmRzIFtmLWJsdWVdaGFkIFsvZi1ibHVlXWdvdFtmLWJsdWVddGVuWy9mLWJsdWVdIG1hcnJpZWQsIFtmLWJsdWVdaGFkIFsvZi1ibHVlXWEgYmFieSwgW2YtYmx1ZV1oYWQgYmVlbiBbL2YtYmx1ZV1wcm9tb3RlZCwgW2YtYmx1ZV1oYWQgWy9mLWJsdWVdbW92ZWQgdG8gZ29vZCBob3VzZS4uIiwiSG93ZXZlciwgSSBhc2tlZCBbZi1yZWRdbXlzZWxmIGhhdmUgSSBtYWRlIHRoZVsvZi1yZWRdIHJpZ2h0IGRlY2lzaW9uIHdoZW4gSSBoZWFyZCBbZi1yZWRddGhhdCBbL2YtcmVkXW15IGZyaWVuZHMgZ290IG1hcnJpZWQsIGEgYmFieSwgcHJvbW90ZWQsIG1vdmVkIHRvIGdvb2QgaG91c2UuLiIsIkhvd2V2ZXIsIFtmLXJlZF1JIFsvZi1yZWRdYXNrZWQgbXlzZWxmIFtmLXJlZF13aGV0aGVyIEkgaGFkIG1hZGUgdGhlWy9mLXJlZF0gcmlnaHQgZGVjaXNpb24gd2hlbiBbZi1yZWRdSVsvZi1yZWRdIGhlYXJkIFtmLXJlZF10aGF0Wy9mLXJlZF0gbXkgZnJpZW5kcyBnb3QgbWFycmllZCwgW2YtcmVkXWhhZFsvZi1yZWRdIGJhYltmLXJlZF1pZXNbL2YtcmVkXSwgW2YtcmVkXWdvdFsvZi1yZWRdIHByb21vdGVkLCBbZi1yZWRdYW5kWy9mLXJlZF0gbW92ZWQgdG8gZ29vZCBob3VzZVtmLXJlZF1zLi4uWy9mLXJlZF0iXSxbIkkgZG9uJ3Qga25vdyB3W2YtcmVkXWhhdCB0byBkbyBmb3IgbXkgZnV0dXJlWy9mLXJlZF0sIHdoYXQgSSB3YW50IHRvIGJlIiwiSSBkb24ndCBrbm93IHdoYXQgW2YtcmVkXUkgc2hvdWxkIGRvWy9mLXJlZF0gW3NsaW5lXWZvciBteSBmdXR1cmVbL3NsaW5lXSwgW2YtcmVkXXdbL2YtcmVkXWhhdCBbZi1yZWRdSVsvZi1yZWRdIHdhbnQgdG8gYmVbZi1yZWRdLlsvZi1yZWRdIl0sWyJTaG91bGQgaSBnZXQgbWFycmllZCBhbmQgaGF2ZSBhIGZhbWlseSwgW3NsaW5lXVtmLXJlZF1icmluZyB1cCBteVsvZi1yZWRdWy9zbGluZV0gW2YtYmx1ZV1yYWlzZSBhKiBbL2YtYmx1ZV1iYWJ5LCBmaW5kIFtzbGluZV1bZi1yZWRdYSBoYXBwaW5lc2VbL2YtcmVkXVsvc2xpbmVdIFtmLWJsdWVdaGFwcGluZXNzIFsvZi1ibHVlXWluIG15IGRhaWx5IFtmLWJsdWVdbGlmZSBbL2YtYmx1ZV1bc2xpbmVdW2YtcmVkXWFzIFsvZi1yZWRdWy9zbGluZV1bZi1ibHVlXWp1c3QgbGlrZVsvZi1ibHVlXSBteSBmcmllbmRzIHdobyBsb29rIHNvIGhhcHB5KkkgYW0gYXNzdW1pbmcgdGhhdCB5b3UgZG9uJ3QgaGF2ZSBhIGJhYnkgeWV0LiIsIlNob3VsZCBJIGdldCBtYXJyaWVkIGFuZCBoYXZlIGEgZmFtaWx5LCBbZi1yZWRdcmFpc2UgYSBjaGlsZFsvZi1yZWRdIFtmLXJlZF1vclsvZi1yZWRdIGZpbmQgW2YtcmVkXWhhcHBpbmVzcyBbL2YtcmVkXWluIG15IFtmLXJlZF1kYWlseSBsaWZlWy9mLXJlZF0gYXMgbXkgZnJpZW5kcyBsb29rIHNvIGhhcHB5IiwiU2hvdWxkIFtmLXJlZF1JWy9mLXJlZF0gZ2V0IG1hcnJpZWQgYW5kIGhhdmUgYSBmYW1pbHksIGJyaW5nIHVwIFtmLXJlZF1hWy9mLXJlZF0gYmFieSwgW2YtcmVkXWFuZFsvZi1yZWRdIGZpbmQgW3NsaW5lXVtmLXJlZF1hWy9mLXJlZF1bL3NsaW5lXSBoYXBwaW5lc1tmLXJlZF1zWy9mLXJlZF0gaW4gbXkgZGFpbHkgbGlmZSBhcyBteSBmcmllbmRzIHdobyBsb29rIHNvIGhhcHB5IFtmLXJlZF1kbz9bL2YtcmVkXSJdLFsiSSBhbSBpbiBhIFtmLXJlZF1kaWxlbW1hLlsvZi1yZWRdIl0sWyJJIG5lZWQgW3NsaW5lXVtmLXJlZF1hbiBhaW1bL2YtcmVkXVsvc2xpbmVdIFtmLWJsdWVdYSBwdXJwb3NlIFsvZi1ibHVlXXRvIG1ha2UgbWUgW3NsaW5lXVtmLXJlZF10b1svZi1yZWRdWy9zbGluZV0gZ2V0IHVwIGVhcmx5W2YtcmVkXVsvZi1yZWRdSSBtaWdodCBzYXkgc29tZXRoaW5nIGxpa2UgdGhpczpbZi1yZWRdIFsvZi1yZWRdW2YtYmx1ZV1JIG5lZWQgYSByZWFzb24gdG8gZ2V0IG91dCBvZiBiZWQgZWFybHkgZXZlcnkgbW9ybmluZ1svZi1ibHVlXSIsIkkgbmVlZCBbZi1yZWRdYVsvZi1yZWRdIGFpbSB0byBtYWtlIG1lIHRvIGdldCB1cCBlYXJseSBbZi1ibHVlXWVhY2ggZGF5Wy9mLWJsdWVdW2YtcmVkXS5bL2YtcmVkXSJdXQ==';var correction_comments=[[null,null,null],[null,null],[null,null],[null,null,null],[null],[null,null,null],[null,null,null],[null,null,null],[null],[null],[null],[null,null],[null],[],[null,null,null],[null,null,null],[null,null],[null,null,null],[null,null,null],[null,null],[null,null,null],[null],[null,null]];
+//]]></script>
+
+</div>
+<div id='right' style='padding-bottom:0'>
+<div class='mb_20' id='author_box'>
+<div class='cfx'>
+<a href="/150234"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w50_h0/58e4e4ac4c3244ca0a30023a2bc62b26a28803ab.jpg"/></a>
+<div class='author_information mb_10 cfx'>
+<a href="/150234" class="user_name">ttasinbob</a>
+
+<div class='learning_languages'>
+<ul class='language_status'>
+<li class='speaking' data-title='Native language' rel='tooltip' title='Native language'>Korean</li>
+<li class='studying' data-title='Language of study' rel='tooltip' title='Language of study'>
+English, Mandarin
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class='bdbox'>
+<table class='entry_status'>
+<tr>
+<td class='l01'>
+<p><a href="/150234/journals">2</a></p>
+<span>Entries Written</span>
+</td>
+<td class='l02'>
+<p>0</p>
+<span>Corrections made</span>
+</td>
+<td class='l03'>
+<p><a href="/150234/correction_logs/received">4</a></p>
+<span>Corrections received</span>
+</td>
+</tr>
+</table>
+</div>
+
+</div>
+
+  
+    <script type="text/javascript">google_ad_client="ca-pub-6717840198266056";google_ad_slot="1415028544";google_ad_width=300;google_ad_height=250;</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+
+  
+
+
+<div class='box'>
+<div id='journals_calendar'>
+<div class='yui-skin-sam'>
+<div id='jour_cal'>
+    <div id="cal1Container"></div>
+    <script type="text/javascript">//<![CDATA[
+(function(){var cal1=null,popupHolder=[],cal_journal_dates={},str_dates='',date_info=[{"journal_date":1284490284,"journal_id":622268},{"journal_date":1284223882,"journal_id":618627}],now_server2local="11/2018",selected_date='',date_info_json=Object.toJSON(date_info),args=getArgsFromHref(location.href);if(args['begin']!=null){var begin_date_a=args['begin'].split('-');var page_date=begin_date_a[1]+'/'+begin_date_a[0];}else if(args['date']!=null){var date_a=args['date'].split('-');var page_date=date_a[1]+'/'+date_a[0];}else{var page_date=now_server2local;}var pathname=location.pathname.split('/');for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(parseInt(date_info[i].journal_date*1000)).toYAHOODateString();if(cal_journal_dates[tmp_date]){cal_journal_dates[tmp_date]=cal_journal_dates[tmp_date]+'/'+date_info[i].journal_id;}else{cal_journal_dates[tmp_date]=date_info[i].journal_id;str_dates=str_dates+','+tmp_date;}}function init(){cal1=new YAHOO.widget.Calendar('cal1','cal1Container',{LOCALE_MONTHS:'short',LOCALE_WEEKDAYS:'1char',pagedate:page_date});cal1.styleCellDefault=function(workingDate,cell){YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_OOB);}
+cal1.renderCellDefault=function(workingDate,cell){cell.innerHTML='<a class="'+cal1.Style.CSS_CELL_SELECTOR+'">'+cal1.buildDayLabel(workingDate)+"</a>";}
+cal1.renderCellHasJournals=function(workingDate,cell){cell.innerHTML='<a href="/'+'150234'+'/journals?date='+workingDate.toStringYYMMDD()+'" class="'+cal1.Style.CSS_CELL_SELECTABLE+'">'+cal1.buildDayLabel(workingDate)+"</a>";YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_SELECTABLE);YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_HIGHLIGHT1);if(workingDate.getDate()==cal1.today.getDate()&&workingDate.getMonth()==cal1.today.getMonth()&&workingDate.getFullYear()==cal1.today.getFullYear()){YAHOO.util.Dom.removeClass(cell,cal1.Style.CSS_CELL_TODAY);}return YAHOO.widget.Calendar.STOP_RENDER;}
+cal1.addRenderer(str_dates,cal1.renderCellHasJournals);cal1.render();}function getArgsFromHref(sHref){var args=sHref.split('?');var retargs={}
+if(args[0]==sHref){return"";}var str=args[1];args=str.split('&');for(var i=0;i<args.length;i++){str=args[i];var arg=str.split('=');if(arg.length<=1)continue;retargs[arg[0]]=arg[1];}return retargs;}YAHOO.util.Event.onAvailable('cal1Container',init);})();
+//]]></script>
+
+</div>
+</div>
+</div>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Journal Statistics</h3>
+</div>
+<div class='cfx' id='studying_status'>
+<table class='table side-bar table_statusstudy'>
+<tr>
+<th>Total</th>
+<th>This month</th>
+<th>This week</th>
+</tr>
+<tr>
+<td>
+<p><a href="/150234/journals">2</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/150234/journals" id="monthCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/150234/journals" id="todayCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<script type="text/javascript">//<![CDATA[
+(function(){var date_info=[{"journal_date":1284490284,"journal_id":622268},{"journal_date":1284223882,"journal_id":618627}],cur_month_counter=0,week_counter=0;var now_date=new Date(),DateMath=YAHOO.widget.DateMath;var now_date_week_begin=DateMath.getFirstDayOfWeek(now_date,0);var now_date_week_end=DateMath.add(now_date_week_begin,'D',6);for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(date_info[i].journal_date*1000);if(tmp_date.getFullYear()==now_date.getFullYear()){if(tmp_date.getMonth()==now_date.getMonth()){cur_month_counter+=1;if(DateMath.getWeekNumber(tmp_date,0)==DateMath.getWeekNumber(now_date,0)){week_counter+=1;}}}}if(week_counter!=0){$('todayCount').update(week_counter);$('todayCount').href=$('todayCount').href+'?begin='+now_date_week_begin.toStringYYMMDD()+'&end='+now_date_week_end.toStringYYMMDD();}else{$('todayCount').href="#";}if(cur_month_counter!=0){$('monthCount').update(cur_month_counter);$('monthCount').href=$('monthCount').href+'?begin='+DateMath.findMonthStart(now_date).toStringYYMMDD()+'&end='+DateMath.findMonthEnd(now_date).toStringYYMMDD();}else{$('monthCount').href="#";}})();
+//]]></script>
+
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest entries</h3>
+</div>
+<table class='table side-bar ar_icobox'>
+<tr>
+<td><a href="http://lang-8.com/150234/journals/622268">Going home (1) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/150234/journals/618627/I-need-an-aim">I need an aim (4) </a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/150234/journals" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest comments</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<td><a href="http://lang-8.com/150234/journals/618627/I-need-an-aim">Sep 12 ttasinbob</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/150234/journals/618627/I-need-an-aim">Sep 12 tony</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/150234/journals/618627/I-need-an-aim">Sep 12 Sancty</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/150234/journals/618627/I-need-an-aim">Sep 12 cnelson125</a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/150234/journals/comments" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box cfx' id='d_draft_list'>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Entries by Month</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<th class='year'>2010</th>
+</tr>
+<tr>
+<td>
+ <a href="/150234/journals?begin=2010-9-1&amp;end=2010-09-30">September (2)</a>
+</td>
+</tr>
+</table>
+</div>
+
+<div style='height:20px;background-color:#ffffff'></div>
+<div id='eval_comment_form' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='form_to_edit_note' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='journal_comment_liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='eval_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+</div>
+<div class='yui-skin-sam' id='yui_panels'>
+<div id='wt_panel' style='visibility:hidden;'>
+<div class='hd' id='wt_title'></div>
+<div class='bd' id='wt_content'></div>
+<div class='ft'></div>
+</div>
+</div>
+<div id='modal'></div>
+<div id='confirm_box'>
+<div id='confirm_box_close'>
+<a onclick='hide_confirm_box();'>
+<img src='/static/images2/xico_closebt.png.pagespeed.ic.z-nUma7JBr.png'/>
+</a>
+</div>
+<div id='confirm_box_contents'></div>
+</div>
+</div>
+<div class='modal hide' id='report_spam_entry' tabindex='-1'>
+<div class='modal-header'>
+<btn class='close' data-dismiss='modal' type='button'>x</btn>
+<h4>Report this entry</h4>
+</div>
+<div class='modal-body'>
+<strong class='spaced'>Spam entry</strong>
+<p class='spaced'>When i was young, i thought that i could be anyone i want
+I wanted to be a oriental medicine doctor while my mom was sick for a long time
+When i was taught by fair teacher that I intended to be a teacher 
+I really wanted to be a copywriter when i got into a university
+But after graduating, i&#39;ve w</p>
+<br/>
+<strong class='spaced'>Author</strong>
+<p class='spaced'>ttasinbob</p>
+<br/>
+<strong class='spaced'>Reporter</strong>
+<p class='spaced'>0</p>
+</div>
+<div class='modal-footer'>
+<a class='btn' data-dismiss='modal' href='#'>Close</a>
+<a class="bt_lv1 bt_size_04" href="#" onclick="new Ajax.Request('/spam_reports/report_entry?entry_body=When+i+was+young%2C+i+thought+that+i+could+be+anyone+i+want%0D%0AI+wanted+to+be+a+oriental+medicine+doctor+while+my+mom+was+sick+for+a+long+time%0D%0AWhen+i+was+taught+by+fair+teacher+that+I+intended+to+be+a+teacher+%0D%0AI+really+wanted+to+be+a+copywriter+when+i+got+into+a+university%0D%0ABut+after+graduating%2C+i%27ve+w&amp;reporter_id=0&amp;spammer_id=150234&amp;url=http%3A%2F%2Flang-8.com%2F150234%2Fjournals%2F618627', {asynchronous:true, evalScripts:true, onLoading:function(request){$j('#report_spam_entry').html('&lt;p class=&quot;center&quot;&gt;&lt;br /&gt;&lt;img src=&quot;/static/images2/loading.gif&quot; class=&quot;center spaced vertical-margin&quot; /&gt;&lt;/p&gt;');}, onSuccess:function(request){$j(&quot;#report_spam_entry&quot;).modal(&quot;hide&quot;);$j(&quot;#alert-box&quot;).alerter(&quot;alertSuccess&quot;, &quot;&quot;, &quot;Report sent.&quot; );}, parameters:'authenticity_token=' + encodeURIComponent('D/7dJqt9e89CqVQ1OhUswauABwlMHFy9oB4+tSl69pY=')}); return false;">Send</a>
+</div>
+</div>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show-5f9f69ded18eb0d1a8bef6040b599e7b.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show2-e52e094b14e0c5b5979f64d63309ab8a.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show3-eedb1c964407a61f34a56d6652b21722.js" type="text/javascript"></script>
+<script id="evernote-js" data-cjsexec="true" type="text/cjs" data-cjssrc="http://static.evernote.com/noteit.js"></script>
+<script id="twitter-wjs" data-cjsexec="true" type="text/cjs" data-cjssrc="https://platform.twitter.com/widgets.js"></script>
+<script type='text/javascript'></script>
+<script type='text/javascript'>//<![CDATA[
+jQuery(function($){new Lang8.Views.JournalShowView();});
+//]]></script>
+
+</div>
+</div>
+<div data-search_url='' id='footer'>
+<div class='inner'>
+<div class='box clearfix'>
+<ul class='ft_parts_list f_left'>
+<ul class='ft_parts_list f_left'></ul>
+</ul>
+</div>
+<div class='box02 clearfix'>
+<ul>
+
+</ul>
+<ul>
+<li>
+<p>
+Study
+</p>
+<ul>
+<li><a href="/profiles/search">Member Search</a></li>
+<li><a href="/hotentries">Popular Entries</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+View
+</p>
+<ul>
+<li><a href="/rankings">Rankings</a></li>
+<li>
+<a href="/groups">Groups</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+Help
+</p>
+<ul>
+<li><a href="/help/tumblr" target="_blank">Help</a></li>
+<li><a href="/register/term" target="_blank">Terms of Service</a></li>
+<li><a href="/register/privacy" target="_blank">Privacy Policy</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+About Lang-8
+</p>
+<ul>
+<li><a href="/help/law_1" target="_blank">特定商取引法に基づく表記</a></li>
+<li><a href="/help/donation" target="_blank">Donate</a></li>
+<li><a href="http://lang-8.jp/" target="_blank">Company</a></li>
+<li><a href="http://lang-8.jp/#recruit" target="_blank">Travailler pour Lang-8</a></li>
+<li>
+<a href='mailto:support@lang-8.com'>Contact us</a>
+</li>
+<li>&nbsp;</li>
+</ul>
+</li>
+</ul>
+<ul id='social_web_list'>
+<li class='icon_with twitter'>
+<a class='twitter-follow-button' data-show-count='false' href='https://twitter.com/lang8'>Follow @lang8</a>
+<script defer="defer" src="https://platform.twitter.com/widgets.js" type="text/javascript"></script>
+</li>
+<li class='icon_with facebook'><a href="http://www.facebook.com/lang8" target="_blank">Facebook page</a></li>
+<li class='icon_with rss'><a href="http://blog.lang-8.com" target="_blank">Lang-8 blog</a></li>
+</ul>
+</div>
+<div class='box03 clearfix'>
+<li class='f_left panel_list'>
+<a href='https://mixpanel.com/f/partner' target='_blank'>
+<img alt='Mobile and Web Analytics' src='https://mixpanel.com/site_media/images/partner/badge_light.png'/>
+</a>
+</li>
+<p class='copy f_right'>
+&copy; 2017 Lang-8, Inc. All rights reserved.
+</p>
+</div>
+</div>
+</div>
+
+
+<script type='text/javascript'>//<![CDATA[
+var gaJsHost=(("https:"==document.location.protocol)?"https://ssl.":"http://www.");document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var pageTracker;autoRetry(function(){pageTracker=_gat._getTracker("UA-452011-7");pageTracker._setDomainName("none");pageTracker._setAllowLinker(true);pageTracker._initData();pageTracker._trackPageview("/before/journals/show/618627");},2);
+//]]></script>
+
+
+<script type='text/javascript'>//<![CDATA[
+$j(function(){$j('[rel=tooltip]').tooltip();$j('[rel=popover]').popover();});
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var cjsscript=document.createElement('script');cjsscript.src="/static/javascripts/control_js.js";var cjssib=document.getElementsByTagName('script')[0];cjssib.parentNode.insertBefore(cjsscript,cjssib);
+//]]></script>
+<div id='fb-root'></div>
+<script type='text/javascript'>//<![CDATA[
+(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=138873442911";fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));
+//]]></script>
+</body>
+</html>

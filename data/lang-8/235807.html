@@ -1,0 +1,774 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir='ltr' itemscope='' itemtype='http://schema.org/Blog' xmlns:fb='http://www.facebook.com/2008/fbml' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"transactionName":"Jg4MFRNdCllURU4MXBATDAANQUlGWVgW","queueTime":0,"agent":"","errorBeacon":"bam.nr-data.net","applicationTime":342,"applicationID":"11814779","licenseKey":"240011c68f","beacon":"bam.nr-data.net"}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content='text/css' http-equiv='Content-Style-Type'/>
+<meta content='text/javascript' http-equiv='Content-Script-Type'/>
+<meta content='summary' name='twitter:card'/>
+<meta content='@lang8' name='twitter:site'/>
+<meta content='The very first post.' property='og:title'/>
+<meta content='blog' property='og:type'/>
+<meta content='http://lang-8.com/235807/journals/796691' property='og:url'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/0438f800cfab529554de01f4ffd43751a787b897.JPG' property='og:image'/>
+<meta content="Hi.. I'm Aly, I'm Russian. I don't really know what to write here! Haha&#x000A;It's m last year in high-school and I'm going to study English philology since next year. I have to pass a State English exam so i'll be very gratefull for your help and correcting me! " property='og:description'/>
+<meta content='Lang-8' property='og:site_name'/>
+<meta content='138873442911' property='fb:app_id'/>
+<meta content='The very first post.' itemprop='name'/>
+<meta content="Hi.. I'm Aly, I'm Russian. I don't really know what to write here! Haha&#x000A;It's m last year in high-school and I'm going to study English philology since next year. I have to pass a State English exam so i'll be very gratefull for your help and correcting me! " itemprop='description'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/0438f800cfab529554de01f4ffd43751a787b897.JPG' itemprop='image'/>
+
+<title>
+The very first post. | Lang-8: For learning foreign languages
+</title>
+<link href='/favicon.ico' rel='shortcut icon'/>
+<link href="http://dzhimp63a2tb1.cloudfront.net/assets/static/css/application-1b103989b91cc566c626a5030a5c0c04.css" media="screen" rel="stylesheet" type="text/css"/>
+<script type="text/cjs">
+var h = document.getElementsByTagName('head')[0];
+var link = document.createElement('link');
+link.href = 'https://fonts.googleapis.com/css?family=Telex';
+link.type = 'text/css';
+link.rel = 'stylesheet';
+link.media = 'screen'
+h.appendChild(link);
+</script>
+
+
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/application-462b56e1d78c3fb6374e9b344e47357a.js" type="text/javascript"></script>
+
+<script type='text/javascript'>//<![CDATA[
+var lang="2-2";var sessid="";
+//]]></script>
+
+<meta content='Hi.. I&amp;#39;m Aly, I&amp;#39;m Russian. I don&amp;#39;t really know what to write here! Haha  It&amp;#39;s m last year in high...' name='description'/>
+<meta content='Hello, Russian, English' name='keywords'/>
+
+<meta content='1NyOQgk3_D9-R1XWpjxkGinHxWufQzM-DTGssOLEIvs' name='google-site-verification'/>
+</head>
+<body data-device='pc' id='journals_show'>
+<script type="text/javascript">var langsData=[];langsData.push({key:'cjv',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'ckb',body:'Please correct some sentences or comments on this journal.'});langsData.push({key:'cka',body:'Corrections'});langsData.push({key:'cjz',body:'Comment'});langsData.push({key:'cjt',body:'Post'});langsData.push({key:'cju',body:'Back to correcting'});langsData.push({key:'cjw',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjx',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjy',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'D063',body:'There has been an internal system error.'});langsData.push({key:'chc',body:'Show corrections'});langsData.push({key:'chd',body:'Hide'});langsData.push({key:'xlw',body:'Do you really want to reset the data?'});langsData.push({key:'xlx',body:'You have already started to leave a comment on this journal. Do you want to continue with it?'});langsData.push({key:'xly',body:'Continue'});langsData.push({key:'xlz',body:'No'});langsData.push({key:'cix',body:'Red'});langsData.push({key:'ciy',body:'Blue'});langsData.push({key:'qag',body:'Gray'});langsData.push({key:'ciz',body:'Bold'});langsData.push({key:'cja',body:'Cross out'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjc',body:'Cancel'});langsData.push({key:'cjd',body:'Correct'});langsData.push({key:'cje',body:'Unformat'});langsData.push({key:'rgo',body:'This sentence is perfect! No correction needed!'});langsData.push({key:'xll',body:'This is the original post.'});langsData.push({key:'xlm',body:'To correct, click this button.'});langsData.push({key:'xln',body:'You can use the colored fonts and strikethrough feature to help you with your correction.'});langsData.push({key:'xlo',body:'After correcting, please press this button.'});langsData.push({key:'xlp',body:'Your corrections are displayed here.'});langsData.push({key:'xlq',body:'Press this button to complete the correction.'});langsData.push({key:'xmm',body:'Sending...'});langsData.push({key:'xmn',body:'done'});langsData.push({key:'ycs',body:'Success! A friend request will now be sent to your friend.'});langsData.push({key:'xog',body:'Failed to send the friend request. Please try again in a few minutes.'});langsData.push({key:'cit',body:'Comments on this correction'});langsData.push({key:'cir',body:'Add to /Edit My Notebook'});langsData.push({key:'rfv',body:'Vertical View'});langsData.push({key:'rfw',body:'Normal View'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjp',body:'Cancel'});langsData.push({key:'cjr',body:'Remove correction'});langsData.push({key:'ckc',body:'Description about correction.(You can write in any language.)'});langsData.push({key:'cjk',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'cjl',body:'There are not any comments or corrections.'});langsData.push({key:'cjh',body:'Correct this entry'});langsData.push({key:'cjf',body:'Comment'});langsData.push({key:'cjm',body:'There has been an internal system error. Please try again.'});langsData.push({key:'kbm',body:'Draft Saved'});var l8=l8||{};l8.t=l8.t||{};l8.t=new L8I18n(langsData);</script>
+
+<div class='navbar navbar-fixed-top mb_20' id='header'>
+<div class='navbar-inner'>
+<div class='container'>
+<a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</a>
+<div class='nav-collapse'>
+<ul class='nav' id='dropmenu03'>
+<li class='logoname'>
+<a class='brand' href='/'>
+<img alt="Header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0" id="logo" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0.gif"/>
+</a>
+</li>
+<li class='divider'></li>
+<li class='home'>
+<a href="/" class="a_home" title="Home"><img alt="Ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb.png" title="Home"/>
+</a></li>
+<li class='divider'></li>
+<li class='help'>
+<a href="/help/about" class="help" target="_blank" title="What is Lang-8?"><span>
+What is Lang-8?
+</span>
+</a></li>
+<li class='divider'></li>
+</ul>
+<ul class='nav pull-right' id='dropmenu02'>
+<li class='help'>
+<a href="/register/step1?from=header" class="help"><span>Sign up</span>
+</a></li>
+<li class='divider'></li>
+<li class='help' id='login'>
+<a href="https://lang-8.com/login?from=header" class="help"><span>Log in</span>
+</a></li>
+<li class='divider'></li>
+<li class='language_list'>
+<form action="" class="language_select" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="cYTvOatBIgI92jslrguvIvpST/eKSGREgjDAY8ZrLco="/></div>
+<select id="interface_lang" name="interface_lang" onchange="onChangeInterfaceLang()"><option value="2-2" selected="selected">English</option>
+<option value="2-5">Español</option>
+<option value="2-6">français</option>
+<option value="2-8">Deutsch</option>
+<option value="2-95">Português(Portugal)</option>
+<option value="2-10">Русский</option>
+<option value="2-59">Polski</option>
+<option value="2-78">Hrvatski</option>
+<option value="2-30">العربية</option>
+<option value="2-1">日本語</option>
+<option value="2-3">中文(简体)</option>
+<option value="2-300">中文(繁體)</option>
+<option value="2-4">한국어</option>
+<option value="2-20">ภาษาไทย</option>
+<option value="2-35">Svenska</option>
+<option value="2-47">Tagalog</option>
+<option value="2-65">Bahasa Melayu</option>
+<option value="2-58">Indonesian</option>
+<option value="2-7">Italiano</option></select>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class='alerter container alert fade in navbar-fixed-top' id='alert-top' style='top:60px;display:none;'>
+<a class='close' data-dismiss='alert' href='#'>
+&times;
+</a>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert Message here
+</span>
+</div>
+<div class='alerter alert fade in navbar-fixed-top' id='alert-box' style='left:40%;top:40%;width:200px;display:none;'>
+<div style='text-align:center;'>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert message here
+</span>
+</div>
+</div>
+
+
+
+<div id='page_content'>
+<div class='cfx' id='main_container'>
+<ul class="cfx" id="breadcrumbs"><li class="home"><a href="/">Home</a></li><li class=""><a href="/profiles/search">Member</a></li><li class=""><a href="/235807"> AlyonaS</a></li><li class=""><a href="/235807/journals"> AlyonaS's entries</a></li><li class=""><span>The very first post.</span></li></ul>
+<div>
+<div data-use_friend_request_popover='data-use_friend_request_popover' id='main'>
+<style type='text/css'>@font-face{font-family:"FontAwesome";src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot);src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot?#iefix) format('eot') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.woff) format('woff') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.ttf) format('truetype') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.svg#FontAwesome) format('svg');font-weight:normal;font-style:normal}</style>
+<div class='cfx' id='entry_detail'>
+<div class='show_report_spam_link cfx' id='entry_title_box'>
+<div class='tit_02'>
+<h1 id='subject_show'>The very first post.</h1>
+<div class='edit_links'>
+<ul class='cfx'>
+</ul>
+</div>
+</div>
+</div>
+<div class='clear_both'></div>
+<div class='cfx' id='tools_for_journal'>
+<ul class='journal_status floated_on_right'>
+<li class='privacy_level_5' data-original-title='Public' rel='tooltip'>&nbsp;</li>
+<li class='visiters' data-original-title='Views' rel='tooltip' title='Views'>373</li>
+<li class='comment_num' data-original-title='Comments' rel='tooltip' title='Comments'>1</li>
+<li class='corrections_num' data-original-title='Corrections' rel='tooltip' title='Corrections'>1</li>
+<li class='studying' data-original-title='The language that needs to be corrected' rel='tooltip'>English&nbsp;</li>
+</ul>
+<span class='journal_date floated_on_left'>
+Feb 6, 2011 05:56
+<a href="/journals/search?tag=Hello">Hello</a>
+
+<a href="/journals/search?tag=Russian">Russian</a>
+
+<a href="/journals/search?tag=English">English</a>
+
+</span>
+<script type='text/javascript'>//<![CDATA[
+$j(function(){var journalCounterView=new Lang8.Views.JournalCounterView();});
+//]]></script>
+
+</div>
+<div id='show_buttons'>
+<input class='bt_lv3' data-original-title='Show corrections for sentences when you mouse-over.' id='showAndHide' rel='tooltip' title='' type='button' value='Show'/>
+<input class='bt_lv3' data-original-title='Show all corrections together in a pop-up window.' id='showAll' rel='tooltip' title='' type='button' value='Show All'/>
+</div>
+
+<div class='cfx' id='body_show'>
+<div id='body_show_ori'>
+<font onmouseover='emph_wt(this,"Hi")'>Hi</font>.. I'm <font onmouseover='emph_wt(this,"Aly")'>Aly</font>, I'm <font onmouseover='emph_wt(this,"Russian")'>Russian</font>. I don't <font onmouseover='emph_wt(this,"really")'>really</font> <font onmouseover='emph_wt(this,"know")'>know</font> <font onmouseover='emph_wt(this,"what")'>what</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"write")'>write</font> <font onmouseover='emph_wt(this,"here")'>here</font>! Haha<br/>It's m <font onmouseover='emph_wt(this,"last")'>last</font> <font onmouseover='emph_wt(this,"year")'>year</font> <font onmouseover='emph_wt(this,"in")'>in</font> high-<font onmouseover='emph_wt(this,"school")'>school</font> <font onmouseover='emph_wt(this,"and")'>and</font> I'm <font onmouseover='emph_wt(this,"going")'>going</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"study")'>study</font> <font onmouseover='emph_wt(this,"English")'>English</font> <font onmouseover='emph_wt(this,"philology")'>philology</font> <font onmouseover='emph_wt(this,"since")'>since</font> <font onmouseover='emph_wt(this,"next")'>next</font> <font onmouseover='emph_wt(this,"year")'>year</font>. I <font onmouseover='emph_wt(this,"have")'>have</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"pass")'>pass</font> a <font onmouseover='emph_wt(this,"State")'>State</font> <font onmouseover='emph_wt(this,"English")'>English</font> <font onmouseover='emph_wt(this,"exam")'>exam</font> <font onmouseover='emph_wt(this,"so")'>so</font> i'<font onmouseover='emph_wt(this,"ll")'>ll</font> <font onmouseover='emph_wt(this,"be")'>be</font> <font onmouseover='emph_wt(this,"very")'>very</font> <font onmouseover='emph_wt(this,"gratefull")'>gratefull</font> <font onmouseover='emph_wt(this,"for")'>for</font> <font onmouseover='emph_wt(this,"your")'>your</font> <font onmouseover='emph_wt(this,"help")'>help</font> <font onmouseover='emph_wt(this,"and")'>and</font> <font onmouseover='emph_wt(this,"correcting")'>correcting</font> <font onmouseover='emph_wt(this,"me")'>me</font>! 
+</div>
+<div class='box_like_button cfx' id='async_show_like'></div>
+</div>
+</div>
+<div class='little-spaced cfx' data-canonical_url='http://lang-8.com/235807/journals/796691' id='links_for_journal'>
+<span class='horizontal-spaced tw-btn'>
+<a class='twitter-share-button' data-hashtags='lang8,Hello,Russian,English' data-related='lang8' data-text='The very first post.' data-url='http://lang-8.com/235807/journals/796691' data-via='lang8' href='https://twitter.com/share'>Tweet</a>
+</span>
+<span class='horizontal-spaced fb-like' data-action='like' data-colorscheme='light' data-href='http://lang-8.com/235807/journals/796691' data-layout='button_count' data-show-faces='false' data-width='100'></span>
+<span class='horizontal-spaced gplus_btn'>
+<!-- %span.g-plusone{'data-size' => 'medium', :href => "#{@journal.canonical_url}"} -->
+</span>
+<span class='floated_on_left'>
+<span class='st_fblike_hcount' displayText='Facebook Like' st_url='http://lang-8.com/235807/journals/796691'></span>
+<span class='st_facebook_hcount' displayText='Facebook' st_url='http://lang-8.com/235807/journals/796691'></span>
+<span class='st_linkedin_hcount' displayText='LinkedIn' st_url='http://lang-8.com/235807/journals/796691'></span>
+</span>
+<a href='#' onclick="Evernote.doClip({styling:'full',providerName:'Lang-8',suggestTags:'Lang-8',suggestNotebook:'Lang-8',contentId:'entry_container'}); return false;" style='float:right;margin-right:5px;'>
+<img alt='Clip to Evernote' src='/static/images2/xarticle-clipper-fr.png.pagespeed.ic.BAKnLUGqIU.png'/>
+</a>
+</div>
+<div id='comments_and_corrections_field'>
+<div class='fukidashi comment_field' id='journal_comment_2859643'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/49675"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/no_image.gif"/></a>
+<a href="/49675" class="user_name">Ray</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Feb 6, 2011 06:09
+</span>
+</div>
+</div>
+<div class='correction_list corner-rounded_5 little-spaced'>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>It&#39;s m last year in high-school and I&#39;m going to study English philology since next year.</li>
+<li class='corrected correct'>
+<p>It&#39;s <span class="f_blue">my</span> last year in high-school and I&#39;m going to study English philology <span class="f_blue">starting </span>next year.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7123607'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I have to pass a State English exam so i&#39;ll be very gratefull for your help and correcting me!</li>
+<li class='corrected correct'>
+<p>I have to pass a State English exam so <span class="f_blue">I</span>&#39;ll be very gratef<span class="f_blue">ul</span> for your help <span class="f_blue">and corrections</span>!</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7123608'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+Welcome :)<br/>Just write what you want! It's a diary!<br/>Regards.
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-2859643' style='padding-left:5px;'>
+    <div class='gray-font'>
+      <span class="thank_after">Thank you for your correction!</span>
+    </div>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_2859643'>
+<div class='cfx reply_commentblock journla_comment_wrapper' id='journal_comment_2859694'>
+<p class='f_left'><a href="/235807"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/0438f800cfab529554de01f4ffd43751a787b897.JPG"/></a></p>
+<div class='pos_relative f_right box_reply'>
+<div class='cfx comment_status_bar_body'>
+<div class='small_left_arrow f_left'>
+&nbsp;
+</div>
+<div class='spaced reply_comment_box show_report_spam_link f_right'>
+<div class='journal_comment_header'>
+<span class='f_right gray_text'>
+Feb 6, 2011 06:31
+</span>
+<a href="/235807" class="user_name"> AlyonaS</a>
+
+</div>
+<div class='comment_after_correction comment_normal'>
+<ul class='cfx'>
+<li class='journal_comment_text'>
+<font onmouseover='emph_wt(this,"Thank")'>Thank</font> <font onmouseover='emph_wt(this,"you")'>you</font>!<br/><font onmouseover='emph_wt(this,"Yes")'>Yes</font>, i <font onmouseover='emph_wt(this,"got")'>got</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"idea")'>idea</font>, I <font onmouseover='emph_wt(this,"just")'>just</font> <font onmouseover='emph_wt(this,"meant")'>meant</font> <font onmouseover='emph_wt(this,"keeping")'>keeping</font> a <font onmouseover='emph_wt(this,"diary")'>diary</font> isn't <font onmouseover='emph_wt(this,"common")'>common</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"me")'>me</font>, <font onmouseover='emph_wt(this,"so")'>so</font> I didn't <font onmouseover='emph_wt(this,"know")'>know</font> <font onmouseover='emph_wt(this,"what")'>what</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"tell")'>tell</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"world")'>world</font>. ^_^
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>//<![CDATA[
+var l8=jQuery.extend(l8,{authenticityToken:"cYTvOatBIgI92jslrguvIvpST/eKSGREgjDAY8ZrLco=",showTutorial:false,label:"Description about correction.(You can write in any language.)",explanation:"Add a description or comment here.(Optional)",sentences:'VGhlIHZlcnkgZmlyc3QgcG9zdC4KSGkuLgpJJ20gQWx5LCBJJ20gUnVzc2lhbi4KSSBkb24ndCByZWFsbHkga25vdyB3aGF0IHRvIHdyaXRlIGhlcmUhCkhhaGEKSXQncyBtIGxhc3QgeWVhciBpbiBoaWdoLXNjaG9vbCBhbmQgSSdtIGdvaW5nIHRvIHN0dWR5IEVuZ2xpc2ggcGhpbG9sb2d5IHNpbmNlIG5leHQgeWVhci4KSSBoYXZlIHRvIHBhc3MgYSBTdGF0ZSBFbmdsaXNoIGV4YW0gc28gaSdsbCBiZSB2ZXJ5IGdyYXRlZnVsbCBmb3IgeW91ciBoZWxwIGFuZCBjb3JyZWN0aW5nIG1lIQ==',corrections:[[],[],[],[],[],["It's [f-blue]my[/f-blue] last year in high-school and I'm going to study English philology [f-blue]starting [/f-blue]next year."],["I have to pass a State English exam so [f-blue]I[/f-blue]'ll be very gratef[f-blue]ul[/f-blue] for your help [f-blue]and corrections[/f-blue]!"]],correctionComments:[[],[],[],[],[],[null],[null]],perfectSentences:[[],[],[],[],[],[null],[null]],urlForCreateComment:'/journals/create_comment/796691',isLogin:false});sentences='WyJUaGUgdmVyeSBmaXJzdCBwb3N0LiIsIkhpLi4iLCJJJ20gQWx5LCBJJ20gUnVzc2lhbi4iLCJJIGRvbid0IHJlYWxseSBrbm93IHdoYXQgdG8gd3JpdGUgaGVyZSEiLCJIYWhhIiwiSXQncyBtIGxhc3QgeWVhciBpbiBoaWdoLXNjaG9vbCBhbmQgSSdtIGdvaW5nIHRvIHN0dWR5IEVuZ2xpc2ggcGhpbG9sb2d5IHNpbmNlIG5leHQgeWVhci4iLCJJIGhhdmUgdG8gcGFzcyBhIFN0YXRlIEVuZ2xpc2ggZXhhbSBzbyBpJ2xsIGJlIHZlcnkgZ3JhdGVmdWxsIGZvciB5b3VyIGhlbHAgYW5kIGNvcnJlY3RpbmcgbWUhIl0=';corrections='W1tdLFtdLFtdLFtdLFtdLFsiSXQncyBbZi1ibHVlXW15Wy9mLWJsdWVdIGxhc3QgeWVhciBpbiBoaWdoLXNjaG9vbCBhbmQgSSdtIGdvaW5nIHRvIHN0dWR5IEVuZ2xpc2ggcGhpbG9sb2d5IFtmLWJsdWVdc3RhcnRpbmcgWy9mLWJsdWVdbmV4dCB5ZWFyLiJdLFsiSSBoYXZlIHRvIHBhc3MgYSBTdGF0ZSBFbmdsaXNoIGV4YW0gc28gW2YtYmx1ZV1JWy9mLWJsdWVdJ2xsIGJlIHZlcnkgZ3JhdGVmW2YtYmx1ZV11bFsvZi1ibHVlXSBmb3IgeW91ciBoZWxwIFtmLWJsdWVdYW5kIGNvcnJlY3Rpb25zWy9mLWJsdWVdISJdXQ==';var correction_comments=[[],[],[],[],[],[null],[null]];
+//]]></script>
+
+</div>
+<div id='right' style='padding-bottom:0'>
+<div class='mb_20' id='author_box'>
+<div class='cfx'>
+<a href="/235807"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w50_h0/0438f800cfab529554de01f4ffd43751a787b897.JPG"/></a>
+<div class='author_information mb_10 cfx'>
+<a href="/235807" class="user_name"> AlyonaS</a>
+
+<div class='learning_languages'>
+<ul class='language_status'>
+<li class='speaking' data-title='Native language' rel='tooltip' title='Native language'>Russian</li>
+<li class='studying' data-title='Language of study' rel='tooltip' title='Language of study'>
+English, Swedish
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class='bdbox'>
+<table class='entry_status'>
+<tr>
+<td class='l01'>
+<p><a href="/235807/journals">95</a></p>
+<span>Entries Written</span>
+</td>
+<td class='l02'>
+<p><a href="/235807/correction_logs/sent">223</a></p>
+<span>Corrections made</span>
+</td>
+<td class='l03'>
+<p><a href="/235807/correction_logs/received">141</a></p>
+<span>Corrections received</span>
+</td>
+</tr>
+</table>
+</div>
+
+</div>
+<div class='box'>
+<div id='journals_calendar'>
+<div class='yui-skin-sam'>
+<div id='jour_cal'>
+    <div id="cal1Container"></div>
+    <script type="text/javascript">//<![CDATA[
+(function(){var cal1=null,popupHolder=[],cal_journal_dates={},str_dates='',date_info=[{"journal_id":"332957032300848483279250709483426186286","journal_date":1471897705},{"journal_id":"199005920137029624409656774444993960588","journal_date":1400105010},{"journal_id":"144774479629731428025280227147747646092","journal_date":1400092916},{"journal_id":"81368528501721002320403177559096757354","journal_date":1398632977},{"journal_id":"288784184120851256114640611379951634528","journal_date":1386796308},{"journal_id":"15125947989986257116376981909201160288","journal_date":1386625023},{"journal_id":"66043031545253922973860796711699969426","journal_date":1386455007},{"journal_id":"330785477248007048929937914074464493156","journal_date":1383076920},{"journal_id":"212164364823591035171124575781811887716","journal_date":1382874906},{"journal_id":"108357528335434871057892322491241569892","journal_date":1382795319},{"journal_id":"145295089896666804545539796104272777638","journal_date":1382727934},{"journal_id":"162962608378633320141903086250180289117","journal_date":1381689004},{"journal_id":"31092420222201848485472849537077845604","journal_date":1381352112},{"journal_id":"63879254793685945494709788517858254436","journal_date":1381078564},{"journal_id":"333170416698970706770783980798814778246","journal_date":1380457852},{"journal_id":"233099930436397072297664509935196369798","journal_date":1378655987},{"journal_id":"227291853917658534759977719572820291038","journal_date":1378581676},{"journal_id":"7674338413886746581780741360985284196","journal_date":1369486377},{"journal_id":"245728387462771517539216190236349406820","journal_date":1369140073},{"journal_id":"161737165673762118099337432479147099813","journal_date":1368646046},{"journal_id":"199258676822175695678774619051425138341","journal_date":1368555040},{"journal_id":"280215150833747221020107438348241672325","journal_date":1367325493},{"journal_id":"270813468197349053950803392087989395044","journal_date":1367258050},{"journal_id":"71588232055247683127395125896730511013","journal_date":1366839898},{"journal_id":"67324768142233258579660474208412999268","journal_date":1366030292},{"journal_id":"328444833650868967886550600657916266149","journal_date":1365360606},{"journal_id":"206257383540666241608479536594408834725","journal_date":1365098459},{"journal_id":"109063594061707631064128463615304900196","journal_date":1364993969},{"journal_id":"324639535269424838143565274096801390180","journal_date":1364990375},{"journal_id":"186679106465075559182381459079630397028","journal_date":1364414676},{"journal_id":"212302142308539878753989637819670857381","journal_date":1364408265},{"journal_id":"333547490969640952459156162424764761765","journal_date":1363792950},{"journal_id":"322834744977964403112391940881336895141","journal_date":1363614266},{"journal_id":"100979010693765973289732183155970907748","journal_date":1363206393},{"journal_id":"195610073985015361393247206600006567589","journal_date":1363189333},{"journal_id":"215220039311372824992656452350442812530","journal_date":1362605242},{"journal_id":"297616516553954119649112122346319065504","journal_date":1362427534},{"journal_id":"79257784696537739303712295453834845796","journal_date":1361997762},{"journal_id":"111821208842311268701062736772678524516","journal_date":1361426143},{"journal_id":"6845139928270608507654761679339464072","journal_date":1361392939},{"journal_id":"311327439703670641351787431903349049790","journal_date":1361212076},{"journal_id":"256108663539581233742639989171077908926","journal_date":1361212006},{"journal_id":"264906029878959136073996152208923508173","journal_date":1360780802},{"journal_id":"71527574956479204083161036393907095998","journal_date":1360605753},{"journal_id":"6856293666559425740340297681487923646","journal_date":1360529651},{"journal_id":"215430111193816588600566395043473656254","journal_date":1360509298},{"journal_id":1797200,"journal_date":1353940070},{"journal_id":1782264,"journal_date":1353013350},{"journal_id":1777349,"journal_date":1352754232},{"journal_id":1763960,"journal_date":1352048579},{"journal_id":1753866,"journal_date":1351512631},{"journal_id":1740805,"journal_date":1350851974},{"journal_id":1728342,"journal_date":1350223458},{"journal_id":1721572,"journal_date":1349882503},{"journal_id":1714677,"journal_date":1349550277},{"journal_id":1705822,"journal_date":1349097421},{"journal_id":1686008,"journal_date":1348070250},{"journal_id":1684270,"journal_date":1347986903},{"journal_id":1672770,"journal_date":1347390798},{"journal_id":1667110,"journal_date":1347116348},{"journal_id":1664269,"journal_date":1346961355},{"journal_id":1639718,"journal_date":1345666054},{"journal_id":1305817,"journal_date":1328715382},{"journal_id":1304360,"journal_date":1328644773},{"journal_id":1281211,"journal_date":1327350672},{"journal_id":1227894,"journal_date":1323983780},{"journal_id":1182376,"journal_date":1321201384},{"journal_id":1172259,"journal_date":1320599306},{"journal_id":1028523,"journal_date":1311701609},{"journal_id":1026384,"journal_date":1311587341},{"journal_id":1025558,"journal_date":1311522789},{"journal_id":1022991,"journal_date":1311347691},{"journal_id":1021390,"journal_date":1311248798},{"journal_id":920822,"journal_date":1304864058},{"journal_id":895023,"journal_date":1303224050},{"journal_id":886577,"journal_date":1302706512},{"journal_id":881965,"journal_date":1302435989},{"journal_id":866635,"journal_date":1301419541},{"journal_id":853819,"journal_date":1300551931},{"journal_id":835248,"journal_date":1299347120},{"journal_id":807859,"journal_date":1297598933},{"journal_id":800831,"journal_date":1297179692},{"journal_id":798135,"journal_date":1297026190},{"journal_id":796728,"journal_date":1296943198},{"journal_id":796691,"journal_date":1296939361}],now_server2local="11/2018",selected_date='',date_info_json=Object.toJSON(date_info),args=getArgsFromHref(location.href);if(args['begin']!=null){var begin_date_a=args['begin'].split('-');var page_date=begin_date_a[1]+'/'+begin_date_a[0];}else if(args['date']!=null){var date_a=args['date'].split('-');var page_date=date_a[1]+'/'+date_a[0];}else{var page_date=now_server2local;}var pathname=location.pathname.split('/');for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(parseInt(date_info[i].journal_date*1000)).toYAHOODateString();if(cal_journal_dates[tmp_date]){cal_journal_dates[tmp_date]=cal_journal_dates[tmp_date]+'/'+date_info[i].journal_id;}else{cal_journal_dates[tmp_date]=date_info[i].journal_id;str_dates=str_dates+','+tmp_date;}}function init(){cal1=new YAHOO.widget.Calendar('cal1','cal1Container',{LOCALE_MONTHS:'short',LOCALE_WEEKDAYS:'1char',pagedate:page_date});cal1.styleCellDefault=function(workingDate,cell){YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_OOB);}
+cal1.renderCellDefault=function(workingDate,cell){cell.innerHTML='<a class="'+cal1.Style.CSS_CELL_SELECTOR+'">'+cal1.buildDayLabel(workingDate)+"</a>";}
+cal1.renderCellHasJournals=function(workingDate,cell){cell.innerHTML='<a href="/'+'235807'+'/journals?date='+workingDate.toStringYYMMDD()+'" class="'+cal1.Style.CSS_CELL_SELECTABLE+'">'+cal1.buildDayLabel(workingDate)+"</a>";YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_SELECTABLE);YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_HIGHLIGHT1);if(workingDate.getDate()==cal1.today.getDate()&&workingDate.getMonth()==cal1.today.getMonth()&&workingDate.getFullYear()==cal1.today.getFullYear()){YAHOO.util.Dom.removeClass(cell,cal1.Style.CSS_CELL_TODAY);}return YAHOO.widget.Calendar.STOP_RENDER;}
+cal1.addRenderer(str_dates,cal1.renderCellHasJournals);cal1.render();}function getArgsFromHref(sHref){var args=sHref.split('?');var retargs={}
+if(args[0]==sHref){return"";}var str=args[1];args=str.split('&');for(var i=0;i<args.length;i++){str=args[i];var arg=str.split('=');if(arg.length<=1)continue;retargs[arg[0]]=arg[1];}return retargs;}YAHOO.util.Event.onAvailable('cal1Container',init);})();
+//]]></script>
+
+</div>
+</div>
+</div>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Journal Statistics</h3>
+</div>
+<div class='cfx' id='studying_status'>
+<table class='table side-bar table_statusstudy'>
+<tr>
+<th>Total</th>
+<th>This month</th>
+<th>This week</th>
+</tr>
+<tr>
+<td>
+<p><a href="/235807/journals">85</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/235807/journals" id="monthCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/235807/journals" id="todayCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<script type="text/javascript">//<![CDATA[
+(function(){var date_info=[{"journal_id":"332957032300848483279250709483426186286","journal_date":1471897705},{"journal_id":"199005920137029624409656774444993960588","journal_date":1400105010},{"journal_id":"144774479629731428025280227147747646092","journal_date":1400092916},{"journal_id":"81368528501721002320403177559096757354","journal_date":1398632977},{"journal_id":"288784184120851256114640611379951634528","journal_date":1386796308},{"journal_id":"15125947989986257116376981909201160288","journal_date":1386625023},{"journal_id":"66043031545253922973860796711699969426","journal_date":1386455007},{"journal_id":"330785477248007048929937914074464493156","journal_date":1383076920},{"journal_id":"212164364823591035171124575781811887716","journal_date":1382874906},{"journal_id":"108357528335434871057892322491241569892","journal_date":1382795319},{"journal_id":"145295089896666804545539796104272777638","journal_date":1382727934},{"journal_id":"162962608378633320141903086250180289117","journal_date":1381689004},{"journal_id":"31092420222201848485472849537077845604","journal_date":1381352112},{"journal_id":"63879254793685945494709788517858254436","journal_date":1381078564},{"journal_id":"333170416698970706770783980798814778246","journal_date":1380457852},{"journal_id":"233099930436397072297664509935196369798","journal_date":1378655987},{"journal_id":"227291853917658534759977719572820291038","journal_date":1378581676},{"journal_id":"7674338413886746581780741360985284196","journal_date":1369486377},{"journal_id":"245728387462771517539216190236349406820","journal_date":1369140073},{"journal_id":"161737165673762118099337432479147099813","journal_date":1368646046},{"journal_id":"199258676822175695678774619051425138341","journal_date":1368555040},{"journal_id":"280215150833747221020107438348241672325","journal_date":1367325493},{"journal_id":"270813468197349053950803392087989395044","journal_date":1367258050},{"journal_id":"71588232055247683127395125896730511013","journal_date":1366839898},{"journal_id":"67324768142233258579660474208412999268","journal_date":1366030292},{"journal_id":"328444833650868967886550600657916266149","journal_date":1365360606},{"journal_id":"206257383540666241608479536594408834725","journal_date":1365098459},{"journal_id":"109063594061707631064128463615304900196","journal_date":1364993969},{"journal_id":"324639535269424838143565274096801390180","journal_date":1364990375},{"journal_id":"186679106465075559182381459079630397028","journal_date":1364414676},{"journal_id":"212302142308539878753989637819670857381","journal_date":1364408265},{"journal_id":"333547490969640952459156162424764761765","journal_date":1363792950},{"journal_id":"322834744977964403112391940881336895141","journal_date":1363614266},{"journal_id":"100979010693765973289732183155970907748","journal_date":1363206393},{"journal_id":"195610073985015361393247206600006567589","journal_date":1363189333},{"journal_id":"215220039311372824992656452350442812530","journal_date":1362605242},{"journal_id":"297616516553954119649112122346319065504","journal_date":1362427534},{"journal_id":"79257784696537739303712295453834845796","journal_date":1361997762},{"journal_id":"111821208842311268701062736772678524516","journal_date":1361426143},{"journal_id":"6845139928270608507654761679339464072","journal_date":1361392939},{"journal_id":"311327439703670641351787431903349049790","journal_date":1361212076},{"journal_id":"256108663539581233742639989171077908926","journal_date":1361212006},{"journal_id":"264906029878959136073996152208923508173","journal_date":1360780802},{"journal_id":"71527574956479204083161036393907095998","journal_date":1360605753},{"journal_id":"6856293666559425740340297681487923646","journal_date":1360529651},{"journal_id":"215430111193816588600566395043473656254","journal_date":1360509298},{"journal_id":1797200,"journal_date":1353940070},{"journal_id":1782264,"journal_date":1353013350},{"journal_id":1777349,"journal_date":1352754232},{"journal_id":1763960,"journal_date":1352048579},{"journal_id":1753866,"journal_date":1351512631},{"journal_id":1740805,"journal_date":1350851974},{"journal_id":1728342,"journal_date":1350223458},{"journal_id":1721572,"journal_date":1349882503},{"journal_id":1714677,"journal_date":1349550277},{"journal_id":1705822,"journal_date":1349097421},{"journal_id":1686008,"journal_date":1348070250},{"journal_id":1684270,"journal_date":1347986903},{"journal_id":1672770,"journal_date":1347390798},{"journal_id":1667110,"journal_date":1347116348},{"journal_id":1664269,"journal_date":1346961355},{"journal_id":1639718,"journal_date":1345666054},{"journal_id":1305817,"journal_date":1328715382},{"journal_id":1304360,"journal_date":1328644773},{"journal_id":1281211,"journal_date":1327350672},{"journal_id":1227894,"journal_date":1323983780},{"journal_id":1182376,"journal_date":1321201384},{"journal_id":1172259,"journal_date":1320599306},{"journal_id":1028523,"journal_date":1311701609},{"journal_id":1026384,"journal_date":1311587341},{"journal_id":1025558,"journal_date":1311522789},{"journal_id":1022991,"journal_date":1311347691},{"journal_id":1021390,"journal_date":1311248798},{"journal_id":920822,"journal_date":1304864058},{"journal_id":895023,"journal_date":1303224050},{"journal_id":886577,"journal_date":1302706512},{"journal_id":881965,"journal_date":1302435989},{"journal_id":866635,"journal_date":1301419541},{"journal_id":853819,"journal_date":1300551931},{"journal_id":835248,"journal_date":1299347120},{"journal_id":807859,"journal_date":1297598933},{"journal_id":800831,"journal_date":1297179692},{"journal_id":798135,"journal_date":1297026190},{"journal_id":796728,"journal_date":1296943198},{"journal_id":796691,"journal_date":1296939361}],cur_month_counter=0,week_counter=0;var now_date=new Date(),DateMath=YAHOO.widget.DateMath;var now_date_week_begin=DateMath.getFirstDayOfWeek(now_date,0);var now_date_week_end=DateMath.add(now_date_week_begin,'D',6);for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(date_info[i].journal_date*1000);if(tmp_date.getFullYear()==now_date.getFullYear()){if(tmp_date.getMonth()==now_date.getMonth()){cur_month_counter+=1;if(DateMath.getWeekNumber(tmp_date,0)==DateMath.getWeekNumber(now_date,0)){week_counter+=1;}}}}if(week_counter!=0){$('todayCount').update(week_counter);$('todayCount').href=$('todayCount').href+'?begin='+now_date_week_begin.toStringYYMMDD()+'&end='+now_date_week_end.toStringYYMMDD();}else{$('todayCount').href="#";}if(cur_month_counter!=0){$('monthCount').update(cur_month_counter);$('monthCount').href=$('monthCount').href+'?begin='+DateMath.findMonthStart(now_date).toStringYYMMDD()+'&end='+DateMath.findMonthEnd(now_date).toStringYYMMDD();}else{$('monthCount').href="#";}})();
+//]]></script>
+
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest entries</h3>
+</div>
+<table class='table side-bar ar_icobox'>
+<tr>
+<td><a href="http://lang-8.com/235807/journals/332957032300848483279250709483426186286">Hejsan,  (1) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/235807/journals/199005920137029624409656774444993960588">24) Döddstraffet avskaffades i Sverige år 1921. (3) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/235807/journals/144774479629731428025280227147747646092">1) Promenerade i skogen träffade vi en gråtande flicka som gick vilse. (4) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/235807/journals/81368528501721002320403177559096757354">Piratpartier – politiska partier som vill reformera lagstiftning när det angår immaterialrätt, upphovsrätt och patent. (1) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/235807/journals/288784184120851256114640611379951634528">53) När planet hade äntligen landat, har pilot strykat svetten ur pannan. (2) </a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/235807/journals" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest comments</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<td><a href="http://lang-8.com/235807/journals/332957032300848483279250709483426186286">Aug 23 Rymdapan</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/235807/journals/796728">Oct 2 </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/235807/journals/144774479629731428025280227147747646092">May 15 RisibleRice</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/235807/journals/199005920137029624409656774444993960588">May 15 RisibleRice</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/235807/journals/199005920137029624409656774444993960588">May 15 LearningRob</a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/235807/journals/comments" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box cfx' id='d_draft_list'>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Entries by Month</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<th class='year'>2016</th>
+</tr>
+<tr>
+<td>
+ <a href="/235807/journals?begin=2016-8-1&amp;end=2016-08-31">August (1)</a>
+</td>
+</tr>
+<tr>
+<th class='year'>2014</th>
+</tr>
+<tr>
+<td>
+ <a href="/235807/journals?begin=2014-5-1&amp;end=2014-05-31">May (2)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/235807/journals?begin=2014-4-1&amp;end=2014-04-30">April (1)</a>
+</td>
+</tr>
+<tr>
+<th class='year'>2013</th>
+</tr>
+<tr>
+<td>
+ <a href="/235807/journals?begin=2013-12-1&amp;end=2013-12-31">December (3)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/235807/journals?begin=2013-10-1&amp;end=2013-10-31">October (7)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/235807/journals?begin=2013-9-1&amp;end=2013-09-30">September (3)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/235807/journals?begin=2013-5-1&amp;end=2013-05-31">May (4)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/235807/journals?begin=2013-4-1&amp;end=2013-04-30">April (8)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/235807/journals?begin=2013-3-1&amp;end=2013-03-31">March (8)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/235807/journals?begin=2013-2-1&amp;end=2013-02-28">February (9)</a>
+</td>
+</tr>
+<tr>
+<th class='year'>2012</th>
+</tr>
+<tr>
+<td>
+ <a href="/235807/journals?begin=2012-11-1&amp;end=2012-11-30">November (4)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/235807/journals?begin=2012-10-1&amp;end=2012-10-31">October (6)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/235807/journals?begin=2012-9-1&amp;end=2012-09-30">September (5)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/235807/journals?begin=2012-8-1&amp;end=2012-08-31">August (1)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/235807/journals?begin=2012-2-1&amp;end=2012-02-29">February (2)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/235807/journals?begin=2012-1-1&amp;end=2012-01-31">January (1)</a>
+</td>
+</tr>
+<tr>
+<th class='year'>2011</th>
+</tr>
+<tr>
+<td>
+ <a href="/235807/journals?begin=2011-12-1&amp;end=2011-12-31">December (1)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/235807/journals?begin=2011-11-1&amp;end=2011-11-30">November (2)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/235807/journals?begin=2011-7-1&amp;end=2011-07-31">July (5)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/235807/journals?begin=2011-5-1&amp;end=2011-05-31">May (1)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/235807/journals?begin=2011-4-1&amp;end=2011-04-30">April (3)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/235807/journals?begin=2011-3-1&amp;end=2011-03-31">March (3)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/235807/journals?begin=2011-2-1&amp;end=2011-02-28">February (5)</a>
+</td>
+</tr>
+</table>
+</div>
+
+<div id='eval_comment_form' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='form_to_edit_note' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='journal_comment_liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='eval_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+</div>
+<div class='yui-skin-sam' id='yui_panels'>
+<div id='wt_panel' style='visibility:hidden;'>
+<div class='hd' id='wt_title'></div>
+<div class='bd' id='wt_content'></div>
+<div class='ft'></div>
+</div>
+</div>
+<div id='modal'></div>
+<div id='confirm_box'>
+<div id='confirm_box_close'>
+<a onclick='hide_confirm_box();'>
+<img src='/static/images2/xico_closebt.png.pagespeed.ic.z-nUma7JBr.png'/>
+</a>
+</div>
+<div id='confirm_box_contents'></div>
+</div>
+</div>
+<div class='modal hide' id='report_spam_entry' tabindex='-1'>
+<div class='modal-header'>
+<btn class='close' data-dismiss='modal' type='button'>x</btn>
+<h4>Report this entry</h4>
+</div>
+<div class='modal-body'>
+<strong class='spaced'>Spam entry</strong>
+<p class='spaced'>Hi.. I&#39;m Aly, I&#39;m Russian. I don&#39;t really know what to write here! Haha
+It&#39;s m last year in high-school and I&#39;m going to study English philology since next year. I have to pass a State English exam so i&#39;ll be very gratefull for your help and correcting me! </p>
+<br/>
+<strong class='spaced'>Author</strong>
+<p class='spaced'> AlyonaS</p>
+<br/>
+<strong class='spaced'>Reporter</strong>
+<p class='spaced'>0</p>
+</div>
+<div class='modal-footer'>
+<a class='btn' data-dismiss='modal' href='#'>Close</a>
+<a class="bt_lv1 bt_size_04" href="#" onclick="new Ajax.Request('/spam_reports/report_entry?entry_body=Hi..+I%27m+Aly%2C+I%27m+Russian.+I+don%27t+really+know+what+to+write+here%21+Haha%0D%0AIt%27s+m+last+year+in+high-school+and+I%27m+going+to+study+English+philology+since+next+year.+I+have+to+pass+a+State+English+exam+so+i%27ll+be+very+gratefull+for+your+help+and+correcting+me%21+&amp;reporter_id=0&amp;spammer_id=235807&amp;url=http%3A%2F%2Flang-8.com%2F235807%2Fjournals%2F796691', {asynchronous:true, evalScripts:true, onLoading:function(request){$j('#report_spam_entry').html('&lt;p class=&quot;center&quot;&gt;&lt;br /&gt;&lt;img src=&quot;/static/images2/loading.gif&quot; class=&quot;center spaced vertical-margin&quot; /&gt;&lt;/p&gt;');}, onSuccess:function(request){$j(&quot;#report_spam_entry&quot;).modal(&quot;hide&quot;);$j(&quot;#alert-box&quot;).alerter(&quot;alertSuccess&quot;, &quot;&quot;, &quot;Report sent.&quot; );}, parameters:'authenticity_token=' + encodeURIComponent('cYTvOatBIgI92jslrguvIvpST/eKSGREgjDAY8ZrLco=')}); return false;">Send</a>
+</div>
+</div>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show-5f9f69ded18eb0d1a8bef6040b599e7b.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show2-e52e094b14e0c5b5979f64d63309ab8a.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show3-eedb1c964407a61f34a56d6652b21722.js" type="text/javascript"></script>
+<script id="evernote-js" data-cjsexec="true" type="text/cjs" data-cjssrc="http://static.evernote.com/noteit.js"></script>
+<script id="twitter-wjs" data-cjsexec="true" type="text/cjs" data-cjssrc="https://platform.twitter.com/widgets.js"></script>
+<script type='text/javascript'></script>
+<script type='text/javascript'>//<![CDATA[
+jQuery(function($){new Lang8.Views.JournalShowView();});
+//]]></script>
+
+</div>
+</div>
+<div data-search_url='' id='footer'>
+<div class='inner'>
+<div class='box clearfix'>
+<ul class='ft_parts_list f_left'>
+<ul class='ft_parts_list f_left'></ul>
+</ul>
+</div>
+<div class='box02 clearfix'>
+<ul>
+
+</ul>
+<ul>
+<li>
+<p>
+Study
+</p>
+<ul>
+<li><a href="/profiles/search">Member Search</a></li>
+<li><a href="/hotentries">Popular Entries</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+View
+</p>
+<ul>
+<li><a href="/rankings">Rankings</a></li>
+<li>
+<a href="/groups">Groups</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+Help
+</p>
+<ul>
+<li><a href="/help/tumblr" target="_blank">Help</a></li>
+<li><a href="/register/term" target="_blank">Terms of Service</a></li>
+<li><a href="/register/privacy" target="_blank">Privacy Policy</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+About Lang-8
+</p>
+<ul>
+<li><a href="/help/law_1" target="_blank">特定商取引法に基づく表記</a></li>
+<li><a href="/help/donation" target="_blank">Donate</a></li>
+<li><a href="http://lang-8.jp/" target="_blank">Company</a></li>
+<li><a href="http://lang-8.jp/#recruit" target="_blank">Travailler pour Lang-8</a></li>
+<li>
+<a href='mailto:support@lang-8.com'>Contact us</a>
+</li>
+<li>&nbsp;</li>
+</ul>
+</li>
+</ul>
+<ul id='social_web_list'>
+<li class='icon_with twitter'>
+<a class='twitter-follow-button' data-show-count='false' href='https://twitter.com/lang8'>Follow @lang8</a>
+<script defer="defer" src="https://platform.twitter.com/widgets.js" type="text/javascript"></script>
+</li>
+<li class='icon_with facebook'><a href="http://www.facebook.com/lang8" target="_blank">Facebook page</a></li>
+<li class='icon_with rss'><a href="http://blog.lang-8.com" target="_blank">Lang-8 blog</a></li>
+</ul>
+</div>
+<div class='box03 clearfix'>
+<li class='f_left panel_list'>
+<a href='https://mixpanel.com/f/partner' target='_blank'>
+<img alt='Mobile and Web Analytics' src='https://mixpanel.com/site_media/images/partner/badge_light.png'/>
+</a>
+</li>
+<p class='copy f_right'>
+&copy; 2017 Lang-8, Inc. All rights reserved.
+</p>
+</div>
+</div>
+</div>
+
+
+<script type='text/javascript'>//<![CDATA[
+var gaJsHost=(("https:"==document.location.protocol)?"https://ssl.":"http://www.");document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var pageTracker;autoRetry(function(){pageTracker=_gat._getTracker("UA-452011-7");pageTracker._setDomainName("none");pageTracker._setAllowLinker(true);pageTracker._initData();pageTracker._trackPageview("/before/journals/show/796691");},2);
+//]]></script>
+
+
+<script type='text/javascript'>//<![CDATA[
+$j(function(){$j('[rel=tooltip]').tooltip();$j('[rel=popover]').popover();});
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var cjsscript=document.createElement('script');cjsscript.src="/static/javascripts/control_js.js";var cjssib=document.getElementsByTagName('script')[0];cjssib.parentNode.insertBefore(cjsscript,cjssib);
+//]]></script>
+<div id='fb-root'></div>
+<script type='text/javascript'>//<![CDATA[
+(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=138873442911";fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));
+//]]></script>
+</body>
+</html>

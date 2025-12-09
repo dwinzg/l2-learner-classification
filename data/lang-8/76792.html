@@ -1,0 +1,673 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir='ltr' itemscope='' itemtype='http://schema.org/Blog' xmlns:fb='http://www.facebook.com/2008/fbml' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationTime":407,"transactionName":"Jg4MFRNdCllURU4MXBATDAANQUlGWVgW","errorBeacon":"bam.nr-data.net","licenseKey":"240011c68f","applicationID":"11814779","agent":"","queueTime":0,"beacon":"bam.nr-data.net"}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content='text/css' http-equiv='Content-Style-Type'/>
+<meta content='text/javascript' http-equiv='Content-Script-Type'/>
+<meta content='summary' name='twitter:card'/>
+<meta content='@lang8' name='twitter:site'/>
+<meta content='can you help me about the bible ?' property='og:title'/>
+<meta content='blog' property='og:type'/>
+<meta content='http://lang-8.com/76792/journals/236961' property='og:url'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/cd55da75305568d03db5e4199b8659c078c5551e.jpg' property='og:image'/>
+<meta content="hello~ nice to meet you all of you!&#x000A;Can I ask you something here?&#x000A;Well, these days i'm taking the religion class which teach about the bible in english. and we're going to discuss about some below questions.&#x000A;So, does anyone give me the model answers?&#x000A;&#x000A;First, the text which we're going to discuss" property='og:description'/>
+<meta content='Lang-8' property='og:site_name'/>
+<meta content='138873442911' property='fb:app_id'/>
+<meta content='can you help me about the bible ?' itemprop='name'/>
+<meta content="hello~ nice to meet you all of you!&#x000A;Can I ask you something here?&#x000A;Well, these days i'm taking the religion class which teach about the bible in english. and we're going to discuss about some below questions.&#x000A;So, does anyone give me the model answers?&#x000A;&#x000A;First, the text which we're going to discuss" itemprop='description'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/cd55da75305568d03db5e4199b8659c078c5551e.jpg' itemprop='image'/>
+
+<title>
+can you help me about the bible ? | Lang-8: For learning foreign languages
+</title>
+<link href='/favicon.ico' rel='shortcut icon'/>
+<link href="http://dzhimp63a2tb1.cloudfront.net/assets/static/css/application-1b103989b91cc566c626a5030a5c0c04.css" media="screen" rel="stylesheet" type="text/css"/>
+<script type="text/cjs">
+var h = document.getElementsByTagName('head')[0];
+var link = document.createElement('link');
+link.href = 'https://fonts.googleapis.com/css?family=Telex';
+link.type = 'text/css';
+link.rel = 'stylesheet';
+link.media = 'screen'
+h.appendChild(link);
+</script>
+
+
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/application-462b56e1d78c3fb6374e9b344e47357a.js" type="text/javascript"></script>
+
+<script type='text/javascript'>//<![CDATA[
+var lang="2-2";var sessid="";
+//]]></script>
+
+<meta content='hello~ nice to meet you all of you!  Can I ask you something here?  Well, these days i&amp;#39;m taking t...' name='description'/>
+<meta content='john, god, jesus, bible, mary, luke, joseph' name='keywords'/>
+
+<meta content='1NyOQgk3_D9-R1XWpjxkGinHxWufQzM-DTGssOLEIvs' name='google-site-verification'/>
+</head>
+<body data-device='pc' id='journals_show'>
+<script type="text/javascript">var langsData=[];langsData.push({key:'cjv',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'ckb',body:'Please correct some sentences or comments on this journal.'});langsData.push({key:'cka',body:'Corrections'});langsData.push({key:'cjz',body:'Comment'});langsData.push({key:'cjt',body:'Post'});langsData.push({key:'cju',body:'Back to correcting'});langsData.push({key:'cjw',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjx',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjy',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'D063',body:'There has been an internal system error.'});langsData.push({key:'chc',body:'Show corrections'});langsData.push({key:'chd',body:'Hide'});langsData.push({key:'xlw',body:'Do you really want to reset the data?'});langsData.push({key:'xlx',body:'You have already started to leave a comment on this journal. Do you want to continue with it?'});langsData.push({key:'xly',body:'Continue'});langsData.push({key:'xlz',body:'No'});langsData.push({key:'cix',body:'Red'});langsData.push({key:'ciy',body:'Blue'});langsData.push({key:'qag',body:'Gray'});langsData.push({key:'ciz',body:'Bold'});langsData.push({key:'cja',body:'Cross out'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjc',body:'Cancel'});langsData.push({key:'cjd',body:'Correct'});langsData.push({key:'cje',body:'Unformat'});langsData.push({key:'rgo',body:'This sentence is perfect! No correction needed!'});langsData.push({key:'xll',body:'This is the original post.'});langsData.push({key:'xlm',body:'To correct, click this button.'});langsData.push({key:'xln',body:'You can use the colored fonts and strikethrough feature to help you with your correction.'});langsData.push({key:'xlo',body:'After correcting, please press this button.'});langsData.push({key:'xlp',body:'Your corrections are displayed here.'});langsData.push({key:'xlq',body:'Press this button to complete the correction.'});langsData.push({key:'xmm',body:'Sending...'});langsData.push({key:'xmn',body:'done'});langsData.push({key:'ycs',body:'Success! A friend request will now be sent to your friend.'});langsData.push({key:'xog',body:'Failed to send the friend request. Please try again in a few minutes.'});langsData.push({key:'cit',body:'Comments on this correction'});langsData.push({key:'cir',body:'Add to /Edit My Notebook'});langsData.push({key:'rfv',body:'Vertical View'});langsData.push({key:'rfw',body:'Normal View'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjp',body:'Cancel'});langsData.push({key:'cjr',body:'Remove correction'});langsData.push({key:'ckc',body:'Description about correction.(You can write in any language.)'});langsData.push({key:'cjk',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'cjl',body:'There are not any comments or corrections.'});langsData.push({key:'cjh',body:'Correct this entry'});langsData.push({key:'cjf',body:'Comment'});langsData.push({key:'cjm',body:'There has been an internal system error. Please try again.'});langsData.push({key:'kbm',body:'Draft Saved'});var l8=l8||{};l8.t=l8.t||{};l8.t=new L8I18n(langsData);</script>
+
+<div class='navbar navbar-fixed-top mb_20' id='header'>
+<div class='navbar-inner'>
+<div class='container'>
+<a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</a>
+<div class='nav-collapse'>
+<ul class='nav' id='dropmenu03'>
+<li class='logoname'>
+<a class='brand' href='/'>
+<img alt="Header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0" id="logo" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0.gif"/>
+</a>
+</li>
+<li class='divider'></li>
+<li class='home'>
+<a href="/" class="a_home" title="Home"><img alt="Ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb.png" title="Home"/>
+</a></li>
+<li class='divider'></li>
+<li class='help'>
+<a href="/help/about" class="help" target="_blank" title="What is Lang-8?"><span>
+What is Lang-8?
+</span>
+</a></li>
+<li class='divider'></li>
+</ul>
+<ul class='nav pull-right' id='dropmenu02'>
+<li class='help'>
+<a href="/register/step1?from=header" class="help"><span>Sign up</span>
+</a></li>
+<li class='divider'></li>
+<li class='help' id='login'>
+<a href="https://lang-8.com/login?from=header" class="help"><span>Log in</span>
+</a></li>
+<li class='divider'></li>
+<li class='language_list'>
+<form action="" class="language_select" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="uIzTA4ulZZECIp4wvC0W8U5dVyARlu6b38+FOOpP5hQ="/></div>
+<select id="interface_lang" name="interface_lang" onchange="onChangeInterfaceLang()"><option value="2-2" selected="selected">English</option>
+<option value="2-5">Español</option>
+<option value="2-6">français</option>
+<option value="2-8">Deutsch</option>
+<option value="2-95">Português(Portugal)</option>
+<option value="2-10">Русский</option>
+<option value="2-59">Polski</option>
+<option value="2-78">Hrvatski</option>
+<option value="2-30">العربية</option>
+<option value="2-1">日本語</option>
+<option value="2-3">中文(简体)</option>
+<option value="2-300">中文(繁體)</option>
+<option value="2-4">한국어</option>
+<option value="2-20">ภาษาไทย</option>
+<option value="2-35">Svenska</option>
+<option value="2-47">Tagalog</option>
+<option value="2-65">Bahasa Melayu</option>
+<option value="2-58">Indonesian</option>
+<option value="2-7">Italiano</option></select>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class='alerter container alert fade in navbar-fixed-top' id='alert-top' style='top:60px;display:none;'>
+<a class='close' data-dismiss='alert' href='#'>
+&times;
+</a>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert Message here
+</span>
+</div>
+<div class='alerter alert fade in navbar-fixed-top' id='alert-box' style='left:40%;top:40%;width:200px;display:none;'>
+<div style='text-align:center;'>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert message here
+</span>
+</div>
+</div>
+
+
+
+
+      <div class="center" style="margin-bottom: 10px;">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- PC_Super_Before_Login -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6717840198266056" data-ad-slot="9171779343" data-ad-format="auto"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+
+      </div>
+
+
+
+
+<div id='page_content'>
+<div class='cfx' id='main_container'>
+<ul class="cfx" id="breadcrumbs"><li class="home"><a href="/">Home</a></li><li class=""><a href="/profiles/search">Member</a></li><li class=""><a href="/76792">Chahn</a></li><li class=""><a href="/76792/journals">Chahn's entries</a></li><li class=""><span>can you help me about the bible ?</span></li></ul>
+<div>
+<div data-use_friend_request_popover='data-use_friend_request_popover' id='main'>
+<style type='text/css'>@font-face{font-family:"FontAwesome";src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot);src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot?#iefix) format('eot') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.woff) format('woff') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.ttf) format('truetype') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.svg#FontAwesome) format('svg');font-weight:normal;font-style:normal}</style>
+<div class='cfx' id='entry_detail'>
+<div class='show_report_spam_link cfx' id='entry_title_box'>
+<div class='tit_02'>
+<h1 id='subject_show'>can you help me about the bible ?</h1>
+<div class='edit_links'>
+<ul class='cfx'>
+</ul>
+</div>
+</div>
+</div>
+<div class='clear_both'></div>
+<div class='cfx' id='tools_for_journal'>
+<ul class='journal_status floated_on_right'>
+<li class='privacy_level_5' data-original-title='Public' rel='tooltip'>&nbsp;</li>
+<li class='visiters' data-original-title='Views' rel='tooltip' title='Views'>126</li>
+<li class='comment_num' data-original-title='Comments' rel='tooltip' title='Comments'>0</li>
+<li class='corrections_num' data-original-title='Corrections' rel='tooltip' title='Corrections'>1</li>
+<li class='studying' data-original-title='The language that needs to be corrected' rel='tooltip'>English&nbsp;</li>
+</ul>
+<span class='journal_date floated_on_left'>
+Sep 15, 2009 14:51
+<a href="/journals/search?tag=john">john</a>
+
+<a href="/journals/search?tag=god">god</a>
+
+<a href="/journals/search?tag=jesus">jesus</a>
+
+<a href="/journals/search?tag=bible">bible</a>
+
+<a href="/journals/search?tag=mary">mary</a>
+
+<a href="/journals/search?tag=luke">luke</a>
+
+<a href="/journals/search?tag=joseph">joseph</a>
+
+</span>
+<script type='text/javascript'>//<![CDATA[
+$j(function(){var journalCounterView=new Lang8.Views.JournalCounterView();});
+//]]></script>
+
+</div>
+<div id='show_buttons'>
+<input class='bt_lv3' data-original-title='Show corrections for sentences when you mouse-over.' id='showAndHide' rel='tooltip' title='' type='button' value='Show'/>
+<input class='bt_lv3' data-original-title='Show all corrections together in a pop-up window.' id='showAll' rel='tooltip' title='' type='button' value='Show All'/>
+</div>
+
+<div class='cfx' id='body_show'>
+<div id='body_show_ori'>
+hello~ nice to meet you all of you!<br/>Can I ask you something here?<br/>Well, these days i'm taking the religion class which teach about the bible in english. and we're going to discuss about some below questions.<br/>So, does anyone give me the model answers?<br/><br/>First, the text which we're going to discuss is the part of the bible like this...<br/><br/>Luke 1:46-80, 2:1-20(I'm so sorry it's too long.)<br/>Mary's Song <br/> 46And Mary said: <br/>   &quot;My soul glorifies the Lord <br/>    47and my spirit rejoices in God my Savior, <br/> 48for he has been mindful <br/>      of the humble state of his servant. <br/>   From now on all generations will call me blessed, <br/>    49for the Mighty One has done great things for me— <br/>      holy is his name. <br/> 50His mercy extends to those who fear him, <br/>      from generation to generation. <br/> 51He has performed mighty deeds with his arm; <br/>      he has scattered those who are proud in their inmost thoughts. <br/> 52He has brought down rulers from their thrones <br/>      but has lifted up the humble. <br/> 53He has filled the hungry with good things <br/>      but has sent the rich away empty. <br/> 54He has helped his servant Israel, <br/>      remembering to be merciful <br/> 55to Abraham and his descendants forever, <br/>      even as he said to our fathers.&quot; <br/> 56Mary stayed with Elizabeth for about three months and then returned home. <br/>The Birth of John the Baptist <br/> 57When it was time for Elizabeth to have her baby, she gave birth to a son. 58Her neighbors and relatives heard that the Lord had shown her great mercy, and they shared her joy. <br/> 59On the eighth day they came to circumcise the child, and they were going to name him after his father Zechariah, 60but his mother spoke up and said, &quot;No! He is to be called John.&quot; <br/> 61They said to her, &quot;There is no one among your relatives who has that name.&quot; <br/> 62Then they made signs to his father, to find out what he would like to name the child. 63He asked for a writing tablet, and to everyone's astonishment he wrote, &quot;His name is John.&quot; 64Immediately his mouth was opened and his tongue was loosed, and he began to speak, praising God. 65The neighbors were all filled with awe, and throughout the hill country of Judea people were talking about all these things. 66Everyone who heard this wondered about it, asking, &quot;What then is this child going to be?&quot; For the Lord's hand was with him. <br/>Zechariah's Song <br/> 67His father Zechariah was filled with the Holy Spirit and prophesied: <br/> 68&quot;Praise be to the Lord, the God of Israel, <br/>      because he has come and has redeemed his people. <br/> 69He has raised up a horn[d] of salvation for us <br/>      in the house of his servant David <br/> 70(as he said through his holy prophets of long ago), <br/> 71salvation from our enemies <br/>      and from the hand of all who hate us— <br/> 72to show mercy to our fathers <br/>      and to remember his holy covenant, <br/> 73the oath he swore to our father Abraham: <br/> 74to rescue us from the hand of our enemies, <br/>      and to enable us to serve him without fear <br/> 75in holiness and righteousness before him all our days. <br/> 76And you, my child, will be called a prophet of the Most High; <br/>      for you will go on before the Lord to prepare the way for him, <br/> 77to give his people the knowledge of salvation <br/>      through the forgiveness of their sins, <br/> 78because of the tender mercy of our God, <br/>      by which the rising sun will come to us from heaven <br/> 79to shine on those living in darkness <br/>      and in the shadow of death, <br/>   to guide our feet into the path of peace.&quot; <br/> 80And the child grew and became strong in spirit; and he lived in the desert until he appeared publicly to Israel.<br/><br/>Luke 2<br/>The Birth of Jesus <br/> 1In those days Caesar Augustus issued a decree that a census should be taken of the entire Roman world. 2(This was the first census that took place while Quirinius was governor of Syria.) 3And everyone went to his own town to register. <br/> 4So Joseph also went up from the town of Nazareth in Galilee to Judea, to Bethlehem the town of David, because he belonged to the house and line of David. 5He went there to register with Mary, who was pledged to be married to him and was expecting a child. 6While they were there, the time came for the baby to be born, 7and she gave birth to her firstborn, a son. She wrapped him in cloths and placed him in a manger, because there was no room for them in the inn. <br/>The Shepherds and the Angels <br/> 8And there were shepherds living out in the fields nearby, keeping watch over their flocks at night. 9An angel of the Lord appeared to them, and the glory of the Lord shone around them, and they were terrified. 10But the angel said to them, &quot;Do not be afraid. I bring you good news of great joy that will be for all the people. 11Today in the town of David a Savior has been born to you; he is Christ[a] the Lord. 12This will be a sign to you: You will find a baby wrapped in cloths and lying in a manger.&quot; <br/> 13Suddenly a great company of the heavenly host appeared with the angel, praising God and saying, <br/> 14&quot;Glory to God in the highest, <br/>      and on earth peace to men on whom his favor rests.&quot; <br/> 15When the angels had left them and gone into heaven, the shepherds said to one another, &quot;Let's go to Bethlehem and see this thing that has happened, which the Lord has told us about.&quot; <br/> 16So they hurried off and found Mary and Joseph, and the baby, who was lying in the manger. 17When they had seen him, they spread the word concerning what had been told them about this child, 18and all who heard it were amazed at what the shepherds said to them. 19But Mary treasured up all these things and pondered them in her heart. 20The shepherds returned, glorifying and praising God for all the things they had heard and seen, which were just as they had been told. <br/><br/>and finally these are the discussion questions...<br/><br/>1. review Mary's song, what does her words say about her?<br/><br/>2. Zachariah said in verse 69 that 'God was sending salvation from the enemies and those who hated them; did he have a clear understanding of John and Jesus' mission?<br/><br/>3. Luke 1:66 says that the Lord was with John. Does that mean that John would be successful, healthy, smart etc.? explain.<br/><br/>4. In your opinion, what is success?<br/><br/>5. Is it possible to be successful and not be rich or powerful? explain.<br/><br/>I'm sure I'm just not going to copy your model answers. I'm just..<br/>I'm not good at english. So please help me...ㅜㅜ<br/>Anyway have a nice day and thank you~~<br/><br/><br/>
+</div>
+<div class='box_like_button cfx' id='async_show_like'></div>
+<div class='ad_journal_center clear_both floated_on_left'>
+  
+    <div class="center" style="margin: 0 0 10px;">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- JournalCenter336_280 -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-6717840198266056" data-ad-slot="1360554540"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+
+    </div>
+  
+
+</div>
+</div>
+</div>
+<div class='little-spaced cfx' data-canonical_url='http://lang-8.com/76792/journals/236961' id='links_for_journal'>
+<span class='horizontal-spaced tw-btn'>
+<a class='twitter-share-button' data-hashtags='lang8,john,god,jesus,bible,mary,luke,joseph' data-related='lang8' data-text='can you help me about the bible ?' data-url='http://lang-8.com/76792/journals/236961' data-via='lang8' href='https://twitter.com/share'>Tweet</a>
+</span>
+<span class='horizontal-spaced fb-like' data-action='like' data-colorscheme='light' data-href='http://lang-8.com/76792/journals/236961' data-layout='button_count' data-show-faces='false' data-width='100'></span>
+<span class='horizontal-spaced gplus_btn'>
+<!-- %span.g-plusone{'data-size' => 'medium', :href => "#{@journal.canonical_url}"} -->
+</span>
+<span class='floated_on_left'>
+<span class='st_fblike_hcount' displayText='Facebook Like' st_url='http://lang-8.com/76792/journals/236961'></span>
+<span class='st_facebook_hcount' displayText='Facebook' st_url='http://lang-8.com/76792/journals/236961'></span>
+<span class='st_linkedin_hcount' displayText='LinkedIn' st_url='http://lang-8.com/76792/journals/236961'></span>
+</span>
+<a href='#' onclick="Evernote.doClip({styling:'full',providerName:'Lang-8',suggestTags:'Lang-8',suggestNotebook:'Lang-8',contentId:'entry_container'}); return false;" style='float:right;margin-right:5px;'>
+<img alt='Clip to Evernote' src='/static/images2/xarticle-clipper-fr.png.pagespeed.ic.BAKnLUGqIU.png'/>
+</a>
+</div>
+<div id='comments_and_corrections_field'>
+<div class='fukidashi comment_field' id='journal_comment_928757'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/61055"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/f3f3a4b4c3b2a1ed5564ed64b90d87c86f8f5855.JPG"/></a>
+<a href="/61055" class="user_name">Nacho</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Sep 15, 2009 17:22
+</span>
+</div>
+</div>
+<div class='correction_list corner-rounded_5 little-spaced'>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>review Mary&#39;s song, what does her words say about her?</li>
+<li class='corrected correct'>
+<p>I think the correct answer is that she is faithful and fully trusts in god.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2083735'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Zachariah said in verse 69 that &#39;God was sending savation from the enemies and those who hated them; did he have a clear understanding of John and Jesus&#39; mission?</li>
+<li class='corrected correct'>
+<p>John and Jesus both ended up dead, but that opens a lot of ideas.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2083736'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>4.</li>
+<li class='corrected correct'>
+<p>4.This is I think what the former question is forshadowing, that maybe in Christianity and Islam they have started to add in Gangetic or Gnostic paradoxical philosophies. So being favored by God doesn&#39;t mean health and wealth and long life anymore, maybe </p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2083737'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+It's hard to answer these questions without knowing the teacher. What kind of class and school is it?
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-928757' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_928757'>
+
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>//<![CDATA[
+var l8=jQuery.extend(l8,{authenticityToken:"uIzTA4ulZZECIp4wvC0W8U5dVyARlu6b38+FOOpP5hQ=",showTutorial:false,label:"Description about correction.(You can write in any language.)",explanation:"Add a description or comment here.(Optional)",sentences:'Y2FuIHlvdSBoZWxwIG1lIGFib3V0IHRoZSBiaWJsZSA/CmhlbGxvfiBuaWNlIHRvIG1lZXQgeW91IGFsbCBvZiB5b3UhCkNhbiBJIGFzayB5b3Ugc29tZXRoaW5nIGhlcmU/CldlbGwsIHRoZXNlIGRheXMgaSdtIHRha2luZyB0aGUgcmVsaWdpb24gY2xhc3Mgd2hpY2ggdGVhY2ggYWJvdXQgdGhlIGJpYmxlIGluIGVuZ2xpc2guCmFuZCB3ZSdyZSBnb2luZyB0byBkaXNjdXNzIGFib3V0IHNvbWUgYmVsb3cgcXVlc3Rpb25zLgpTbywgZG9lcyBhbnlvbmUgZ2l2ZSBtZSB0aGUgbW9kZWwgYW5zd2Vycz8KRmlyc3QsIHRoZSB0ZXh0IHdoaWNoIHdlJ3JlIGdvaW5nIHRvIGRpc2N1c3MgaXMgdGhlIHBhcnQgb2YgdGhlIGJpYmxlIGxpa2UgdGhpcy4uLgpMdWtlIDE6NDYtODAsIDI6MS0yMChJJ20gc28gc29ycnkgaXQncyB0b28gbG9uZy4pCk1hcnkncyBTb25nIAo0NkFuZCBNYXJ5IHNhaWQ6IAoiTXkgc291bCBnbG9yaWZpZXMgdGhlIExvcmQgCjQ3YW5kIG15IHNwaXJpdCByZWpvaWNlcyBpbiBHb2QgbXkgU2F2aW9yLCAKNDhmb3IgaGUgaGFzIGJlZW4gbWluZGZ1bCAKb2YgdGhlIGh1bWJsZSBzdGF0ZSBvZiBoaXMgc2VydmFudC4KRnJvbSBub3cgb24gYWxsIGdlbmVyYXRpb25zIHdpbGwgY2FsbCBtZSBibGVzc2VkLCAKNDlmb3IgdGhlIE1pZ2h0eSBPbmUgaGFzIGRvbmUgZ3JlYXQgdGhpbmdzIGZvciBtZeKAlCAKaG9seSBpcyBoaXMgbmFtZS4KNTBIaXMgbWVyY3kgZXh0ZW5kcyB0byB0aG9zZSB3aG8gZmVhciBoaW0sIApmcm9tIGdlbmVyYXRpb24gdG8gZ2VuZXJhdGlvbi4KNTFIZSBoYXMgcGVyZm9ybWVkIG1pZ2h0eSBkZWVkcyB3aXRoIGhpcyBhcm07IApoZSBoYXMgc2NhdHRlcmVkIHRob3NlIHdobyBhcmUgcHJvdWQgaW4gdGhlaXIgaW5tb3N0IHRob3VnaHRzLgo1MkhlIGhhcyBicm91Z2h0IGRvd24gcnVsZXJzIGZyb20gdGhlaXIgdGhyb25lcyAKYnV0IGhhcyBsaWZ0ZWQgdXAgdGhlIGh1bWJsZS4KNTNIZSBoYXMgZmlsbGVkIHRoZSBodW5ncnkgd2l0aCBnb29kIHRoaW5ncyAKYnV0IGhhcyBzZW50IHRoZSByaWNoIGF3YXkgZW1wdHkuCjU0SGUgaGFzIGhlbHBlZCBoaXMgc2VydmFudCBJc3JhZWwsIApyZW1lbWJlcmluZyB0byBiZSBtZXJjaWZ1bCAKNTV0byBBYnJhaGFtIGFuZCBoaXMgZGVzY2VuZGFudHMgZm9yZXZlciwgCmV2ZW4gYXMgaGUgc2FpZCB0byBvdXIgZmF0aGVycy4iIAo1Nk1hcnkgc3RheWVkIHdpdGggRWxpemFiZXRoIGZvciBhYm91dCB0aHJlZSBtb250aHMgYW5kIHRoZW4gcmV0dXJuZWQgaG9tZS4KVGhlIEJpcnRoIG9mIEpvaG4gdGhlIEJhcHRpc3QgCjU3V2hlbiBpdCB3YXMgdGltZSBmb3IgRWxpemFiZXRoIHRvIGhhdmUgaGVyIGJhYnksIHNoZSBnYXZlIGJpcnRoIHRvIGEgc29uLgo1OEhlciBuZWlnaGJvcnMgYW5kIHJlbGF0aXZlcyBoZWFyZCB0aGF0IHRoZSBMb3JkIGhhZCBzaG93biBoZXIgZ3JlYXQgbWVyY3ksIGFuZCB0aGV5IHNoYXJlZCBoZXIgam95Lgo1OU9uIHRoZSBlaWdodGggZGF5IHRoZXkgY2FtZSB0byBjaXJjdW1jaXNlIHRoZSBjaGlsZCwgYW5kIHRoZXkgd2VyZSBnb2luZyB0byBuYW1lIGhpbSBhZnRlciBoaXMgZmF0aGVyIFplY2hhcmlhaCwgNjBidXQgaGlzIG1vdGhlciBzcG9rZSB1cCBhbmQgc2FpZCwgIk5vIQpIZSBpcyB0byBiZSBjYWxsZWQgSm9obi4iIAo2MVRoZXkgc2FpZCB0byBoZXIsICJUaGVyZSBpcyBubyBvbmUgYW1vbmcgeW91ciByZWxhdGl2ZXMgd2hvIGhhcyB0aGF0IG5hbWUuIiAKNjJUaGVuIHRoZXkgbWFkZSBzaWducyB0byBoaXMgZmF0aGVyLCB0byBmaW5kIG91dCB3aGF0IGhlIHdvdWxkIGxpa2UgdG8gbmFtZSB0aGUgY2hpbGQuCjYzSGUgYXNrZWQgZm9yIGEgd3JpdGluZyB0YWJsZXQsIGFuZCB0byBldmVyeW9uZSdzIGFzdG9uaXNobWVudCBoZSB3cm90ZSwgIkhpcyBuYW1lIGlzIEpvaG4uIiA2NEltbWVkaWF0ZWx5IGhpcyBtb3V0aCB3YXMgb3BlbmVkIGFuZCBoaXMgdG9uZ3VlIHdhcyBsb29zZWQsIGFuZCBoZSBiZWdhbiB0byBzcGVhaywgcHJhaXNpbmcgR29kLgo2NVRoZSBuZWlnaGJvcnMgd2VyZSBhbGwgZmlsbGVkIHdpdGggYXdlLCBhbmQgdGhyb3VnaG91dCB0aGUgaGlsbCBjb3VudHJ5IG9mIEp1ZGVhIHBlb3BsZSB3ZXJlIHRhbGtpbmcgYWJvdXQgYWxsIHRoZXNlIHRoaW5ncy4KNjZFdmVyeW9uZSB3aG8gaGVhcmQgdGhpcyB3b25kZXJlZCBhYm91dCBpdCwgYXNraW5nLCAiV2hhdCB0aGVuIGlzIHRoaXMgY2hpbGQgZ29pbmcgdG8gYmU/IiBGb3IgdGhlIExvcmQncyBoYW5kIHdhcyB3aXRoIGhpbS4KWmVjaGFyaWFoJ3MgU29uZyAKNjdIaXMgZmF0aGVyIFplY2hhcmlhaCB3YXMgZmlsbGVkIHdpdGggdGhlIEhvbHkgU3Bpcml0IGFuZCBwcm9waGVzaWVkOiAKNjgiUHJhaXNlIGJlIHRvIHRoZSBMb3JkLCB0aGUgR29kIG9mIElzcmFlbCwgCmJlY2F1c2UgaGUgaGFzIGNvbWUgYW5kIGhhcyByZWRlZW1lZCBoaXMgcGVvcGxlLgo2OUhlIGhhcyByYWlzZWQgdXAgYSBob3JuW2RdIG9mIHNhbHZhdGlvbiBmb3IgdXMgCmluIHRoZSBob3VzZSBvZiBoaXMgc2VydmFudCBEYXZpZCAKNzAoYXMgaGUgc2FpZCB0aHJvdWdoIGhpcyBob2x5IHByb3BoZXRzIG9mIGxvbmcgYWdvKSwgCjcxc2FsdmF0aW9uIGZyb20gb3VyIGVuZW1pZXMgCmFuZCBmcm9tIHRoZSBoYW5kIG9mIGFsbCB3aG8gaGF0ZSB1c+KAlCAKNzJ0byBzaG93IG1lcmN5IHRvIG91ciBmYXRoZXJzIAphbmQgdG8gcmVtZW1iZXIgaGlzIGhvbHkgY292ZW5hbnQsIAo3M3RoZSBvYXRoIGhlIHN3b3JlIHRvIG91ciBmYXRoZXIgQWJyYWhhbTogCjc0dG8gcmVzY3VlIHVzIGZyb20gdGhlIGhhbmQgb2Ygb3VyIGVuZW1pZXMsIAphbmQgdG8gZW5hYmxlIHVzIHRvIHNlcnZlIGhpbSB3aXRob3V0IGZlYXIgCjc1aW4gaG9saW5lc3MgYW5kIHJpZ2h0ZW91c25lc3MgYmVmb3JlIGhpbSBhbGwgb3VyIGRheXMuCjc2QW5kIHlvdSwgbXkgY2hpbGQsIHdpbGwgYmUgY2FsbGVkIGEgcHJvcGhldCBvZiB0aGUgTW9zdCBIaWdoOyAKZm9yIHlvdSB3aWxsIGdvIG9uIGJlZm9yZSB0aGUgTG9yZCB0byBwcmVwYXJlIHRoZSB3YXkgZm9yIGhpbSwgCjc3dG8gZ2l2ZSBoaXMgcGVvcGxlIHRoZSBrbm93bGVkZ2Ugb2Ygc2FsdmF0aW9uIAp0aHJvdWdoIHRoZSBmb3JnaXZlbmVzcyBvZiB0aGVpciBzaW5zLCAKNzhiZWNhdXNlIG9mIHRoZSB0ZW5kZXIgbWVyY3kgb2Ygb3VyIEdvZCwgCmJ5IHdoaWNoIHRoZSByaXNpbmcgc3VuIHdpbGwgY29tZSB0byB1cyBmcm9tIGhlYXZlbiAKNzl0byBzaGluZSBvbiB0aG9zZSBsaXZpbmcgaW4gZGFya25lc3MgCmFuZCBpbiB0aGUgc2hhZG93IG9mIGRlYXRoLCAKdG8gZ3VpZGUgb3VyIGZlZXQgaW50byB0aGUgcGF0aCBvZiBwZWFjZS4iIAo4MEFuZCB0aGUgY2hpbGQgZ3JldyBhbmQgYmVjYW1lIHN0cm9uZyBpbiBzcGlyaXQ7IGFuZCBoZSBsaXZlZCBpbiB0aGUgZGVzZXJ0IHVudGlsIGhlIGFwcGVhcmVkIHB1YmxpY2x5IHRvIElzcmFlbC4KTHVrZSAyClRoZSBCaXJ0aCBvZiBKZXN1cyAKMUluIHRob3NlIGRheXMgQ2Flc2FyIEF1Z3VzdHVzIGlzc3VlZCBhIGRlY3JlZSB0aGF0IGEgY2Vuc3VzIHNob3VsZCBiZSB0YWtlbiBvZiB0aGUgZW50aXJlIFJvbWFuIHdvcmxkLgoyKFRoaXMgd2FzIHRoZSBmaXJzdCBjZW5zdXMgdGhhdCB0b29rIHBsYWNlIHdoaWxlIFF1aXJpbml1cyB3YXMgZ292ZXJub3Igb2YgU3lyaWEuKSAzQW5kIGV2ZXJ5b25lIHdlbnQgdG8gaGlzIG93biB0b3duIHRvIHJlZ2lzdGVyLgo0U28gSm9zZXBoIGFsc28gd2VudCB1cCBmcm9tIHRoZSB0b3duIG9mIE5hemFyZXRoIGluIEdhbGlsZWUgdG8gSnVkZWEsIHRvIEJldGhsZWhlbSB0aGUgdG93biBvZiBEYXZpZCwgYmVjYXVzZSBoZSBiZWxvbmdlZCB0byB0aGUgaG91c2UgYW5kIGxpbmUgb2YgRGF2aWQuCjVIZSB3ZW50IHRoZXJlIHRvIHJlZ2lzdGVyIHdpdGggTWFyeSwgd2hvIHdhcyBwbGVkZ2VkIHRvIGJlIG1hcnJpZWQgdG8gaGltIGFuZCB3YXMgZXhwZWN0aW5nIGEgY2hpbGQuCjZXaGlsZSB0aGV5IHdlcmUgdGhlcmUsIHRoZSB0aW1lIGNhbWUgZm9yIHRoZSBiYWJ5IHRvIGJlIGJvcm4sIDdhbmQgc2hlIGdhdmUgYmlydGggdG8gaGVyIGZpcnN0Ym9ybiwgYSBzb24uClNoZSB3cmFwcGVkIGhpbSBpbiBjbG90aHMgYW5kIHBsYWNlZCBoaW0gaW4gYSBtYW5nZXIsIGJlY2F1c2UgdGhlcmUgd2FzIG5vIHJvb20gZm9yIHRoZW0gaW4gdGhlIGlubi4KVGhlIFNoZXBoZXJkcyBhbmQgdGhlIEFuZ2VscyAKOEFuZCB0aGVyZSB3ZXJlIHNoZXBoZXJkcyBsaXZpbmcgb3V0IGluIHRoZSBmaWVsZHMgbmVhcmJ5LCBrZWVwaW5nIHdhdGNoIG92ZXIgdGhlaXIgZmxvY2tzIGF0IG5pZ2h0Lgo5QW4gYW5nZWwgb2YgdGhlIExvcmQgYXBwZWFyZWQgdG8gdGhlbSwgYW5kIHRoZSBnbG9yeSBvZiB0aGUgTG9yZCBzaG9uZSBhcm91bmQgdGhlbSwgYW5kIHRoZXkgd2VyZSB0ZXJyaWZpZWQuCjEwQnV0IHRoZSBhbmdlbCBzYWlkIHRvIHRoZW0sICJEbyBub3QgYmUgYWZyYWlkLgpJIGJyaW5nIHlvdSBnb29kIG5ld3Mgb2YgZ3JlYXQgam95IHRoYXQgd2lsbCBiZSBmb3IgYWxsIHRoZSBwZW9wbGUuCjExVG9kYXkgaW4gdGhlIHRvd24gb2YgRGF2aWQgYSBTYXZpb3IgaGFzIGJlZW4gYm9ybiB0byB5b3U7IGhlIGlzIENocmlzdFthXSB0aGUgTG9yZC4KMTJUaGlzIHdpbGwgYmUgYSBzaWduIHRvIHlvdTogWW91IHdpbGwgZmluZCBhIGJhYnkgd3JhcHBlZCBpbiBjbG90aHMgYW5kIGx5aW5nIGluIGEgbWFuZ2VyLiIgCjEzU3VkZGVubHkgYSBncmVhdCBjb21wYW55IG9mIHRoZSBoZWF2ZW5seSBob3N0IGFwcGVhcmVkIHdpdGggdGhlIGFuZ2VsLCBwcmFpc2luZyBHb2QgYW5kIHNheWluZywgCjE0Ikdsb3J5IHRvIEdvZCBpbiB0aGUgaGlnaGVzdCwgCmFuZCBvbiBlYXJ0aCBwZWFjZSB0byBtZW4gb24gd2hvbSBoaXMgZmF2b3IgcmVzdHMuIiAKMTVXaGVuIHRoZSBhbmdlbHMgaGFkIGxlZnQgdGhlbSBhbmQgZ29uZSBpbnRvIGhlYXZlbiwgdGhlIHNoZXBoZXJkcyBzYWlkIHRvIG9uZSBhbm90aGVyLCAiTGV0J3MgZ28gdG8gQmV0aGxlaGVtIGFuZCBzZWUgdGhpcyB0aGluZyB0aGF0IGhhcyBoYXBwZW5lZCwgd2hpY2ggdGhlIExvcmQgaGFzIHRvbGQgdXMgYWJvdXQuIiAKMTZTbyB0aGV5IGh1cnJpZWQgb2ZmIGFuZCBmb3VuZCBNYXJ5IGFuZCBKb3NlcGgsIGFuZCB0aGUgYmFieSwgd2hvIHdhcyBseWluZyBpbiB0aGUgbWFuZ2VyLgoxN1doZW4gdGhleSBoYWQgc2VlbiBoaW0sIHRoZXkgc3ByZWFkIHRoZSB3b3JkIGNvbmNlcm5pbmcgd2hhdCBoYWQgYmVlbiB0b2xkIHRoZW0gYWJvdXQgdGhpcyBjaGlsZCwgMThhbmQgYWxsIHdobyBoZWFyZCBpdCB3ZXJlIGFtYXplZCBhdCB3aGF0IHRoZSBzaGVwaGVyZHMgc2FpZCB0byB0aGVtLgoxOUJ1dCBNYXJ5IHRyZWFzdXJlZCB1cCBhbGwgdGhlc2UgdGhpbmdzIGFuZCBwb25kZXJlZCB0aGVtIGluIGhlciBoZWFydC4KMjBUaGUgc2hlcGhlcmRzIHJldHVybmVkLCBnbG9yaWZ5aW5nIGFuZCBwcmFpc2luZyBHb2QgZm9yIGFsbCB0aGUgdGhpbmdzIHRoZXkgaGFkIGhlYXJkIGFuZCBzZWVuLCB3aGljaCB3ZXJlIGp1c3QgYXMgdGhleSBoYWQgYmVlbiB0b2xkLgphbmQgZmluYWxseSB0aGVzZSBhcmUgdGhlIGRpc2N1c3Npb24gcXVlc3Rpb25zLi4uCjEuCnJldmlldyBNYXJ5J3Mgc29uZywgd2hhdCBkb2VzIGhlciB3b3JkcyBzYXkgYWJvdXQgaGVyPwoyLgpaYWNoYXJpYWggc2FpZCBpbiB2ZXJzZSA2OSB0aGF0ICdHb2Qgd2FzIHNlbmRpbmcgc2FsdmF0aW9uIGZyb20gdGhlIGVuZW1pZXMgYW5kIHRob3NlIHdobyBoYXRlZCB0aGVtOyBkaWQgaGUgaGF2ZSBhIGNsZWFyIHVuZGVyc3RhbmRpbmcgb2YgSm9obiBhbmQgSmVzdXMnIG1pc3Npb24/CjMuCkx1a2UgMTo2NiBzYXlzIHRoYXQgdGhlIExvcmQgd2FzIHdpdGggSm9obi4KRG9lcyB0aGF0IG1lYW4gdGhhdCBKb2huIHdvdWxkIGJlIHN1Y2Nlc3NmdWwsIGhlYWx0aHksIHNtYXJ0IGV0Yy4/CmV4cGxhaW4uCjQuCkluIHlvdXIgb3Bpbmlvbiwgd2hhdCBpcyBzdWNjZXNzPwo1LgpJcyBpdCBwb3NzaWJsZSB0byBiZSBzdWNjZXNzZnVsIGFuZCBub3QgYmUgcmljaCBvciBwb3dlcmZ1bD8KZXhwbGFpbi4KSSdtIHN1cmUgSSdtIGp1c3Qgbm90IGdvaW5nIHRvIGNvcHkgeW91ciBtb2RlbCBhbnN3ZXJzLgpJJ20ganVzdC4uCkknbSBub3QgZ29vZCBhdCBlbmdsaXNoLgpTbyBwbGVhc2UgaGVscCBtZS4uLuOFnOOFnApBbnl3YXkgaGF2ZSBhIG5pY2UgZGF5IGFuZCB0aGFuayB5b3V+fg==',corrections:[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],["I think the correct answer is that she is faithful and fully trusts in god."],[],[],[],[],[],[],["4.This is I think what the former question is forshadowing, that maybe in Christianity and Islam they have started to add in Gangetic or Gnostic paradoxical philosophies. So being favored by God doesn't mean health and wealth and long life anymore, maybe "],[],[],[],[],[],[],[],[],[]],correctionComments:[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[null],[],[],[],[],[],[],[null],[],[],[],[],[],[],[],[],[]],perfectSentences:[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[null],[],[],[],[],[],[],[null],[],[],[],[],[],[],[],[],[]],urlForCreateComment:'/journals/create_comment/236961',isLogin:false});sentences='WyJjYW4geW91IGhlbHAgbWUgYWJvdXQgdGhlIGJpYmxlID8iLCJoZWxsb34gbmljZSB0byBtZWV0IHlvdSBhbGwgb2YgeW91ISIsIkNhbiBJIGFzayB5b3Ugc29tZXRoaW5nIGhlcmU/IiwiV2VsbCwgdGhlc2UgZGF5cyBpJ20gdGFraW5nIHRoZSByZWxpZ2lvbiBjbGFzcyB3aGljaCB0ZWFjaCBhYm91dCB0aGUgYmlibGUgaW4gZW5nbGlzaC4iLCJhbmQgd2UncmUgZ29pbmcgdG8gZGlzY3VzcyBhYm91dCBzb21lIGJlbG93IHF1ZXN0aW9ucy4iLCJTbywgZG9lcyBhbnlvbmUgZ2l2ZSBtZSB0aGUgbW9kZWwgYW5zd2Vycz8iLCJGaXJzdCwgdGhlIHRleHQgd2hpY2ggd2UncmUgZ29pbmcgdG8gZGlzY3VzcyBpcyB0aGUgcGFydCBvZiB0aGUgYmlibGUgbGlrZSB0aGlzLi4uIiwiTHVrZSAxOjQ2LTgwLCAyOjEtMjAoSSdtIHNvIHNvcnJ5IGl0J3MgdG9vIGxvbmcuKSIsIk1hcnkncyBTb25nICIsIjQ2QW5kIE1hcnkgc2FpZDogIiwiXCJNeSBzb3VsIGdsb3JpZmllcyB0aGUgTG9yZCAiLCI0N2FuZCBteSBzcGlyaXQgcmVqb2ljZXMgaW4gR29kIG15IFNhdmlvciwgIiwiNDhmb3IgaGUgaGFzIGJlZW4gbWluZGZ1bCAiLCJvZiB0aGUgaHVtYmxlIHN0YXRlIG9mIGhpcyBzZXJ2YW50LiIsIkZyb20gbm93IG9uIGFsbCBnZW5lcmF0aW9ucyB3aWxsIGNhbGwgbWUgYmxlc3NlZCwgIiwiNDlmb3IgdGhlIE1pZ2h0eSBPbmUgaGFzIGRvbmUgZ3JlYXQgdGhpbmdzIGZvciBtZeKAlCAiLCJob2x5IGlzIGhpcyBuYW1lLiIsIjUwSGlzIG1lcmN5IGV4dGVuZHMgdG8gdGhvc2Ugd2hvIGZlYXIgaGltLCAiLCJmcm9tIGdlbmVyYXRpb24gdG8gZ2VuZXJhdGlvbi4iLCI1MUhlIGhhcyBwZXJmb3JtZWQgbWlnaHR5IGRlZWRzIHdpdGggaGlzIGFybTsgIiwiaGUgaGFzIHNjYXR0ZXJlZCB0aG9zZSB3aG8gYXJlIHByb3VkIGluIHRoZWlyIGlubW9zdCB0aG91Z2h0cy4iLCI1MkhlIGhhcyBicm91Z2h0IGRvd24gcnVsZXJzIGZyb20gdGhlaXIgdGhyb25lcyAiLCJidXQgaGFzIGxpZnRlZCB1cCB0aGUgaHVtYmxlLiIsIjUzSGUgaGFzIGZpbGxlZCB0aGUgaHVuZ3J5IHdpdGggZ29vZCB0aGluZ3MgIiwiYnV0IGhhcyBzZW50IHRoZSByaWNoIGF3YXkgZW1wdHkuIiwiNTRIZSBoYXMgaGVscGVkIGhpcyBzZXJ2YW50IElzcmFlbCwgIiwicmVtZW1iZXJpbmcgdG8gYmUgbWVyY2lmdWwgIiwiNTV0byBBYnJhaGFtIGFuZCBoaXMgZGVzY2VuZGFudHMgZm9yZXZlciwgIiwiZXZlbiBhcyBoZSBzYWlkIHRvIG91ciBmYXRoZXJzLlwiICIsIjU2TWFyeSBzdGF5ZWQgd2l0aCBFbGl6YWJldGggZm9yIGFib3V0IHRocmVlIG1vbnRocyBhbmQgdGhlbiByZXR1cm5lZCBob21lLiIsIlRoZSBCaXJ0aCBvZiBKb2huIHRoZSBCYXB0aXN0ICIsIjU3V2hlbiBpdCB3YXMgdGltZSBmb3IgRWxpemFiZXRoIHRvIGhhdmUgaGVyIGJhYnksIHNoZSBnYXZlIGJpcnRoIHRvIGEgc29uLiIsIjU4SGVyIG5laWdoYm9ycyBhbmQgcmVsYXRpdmVzIGhlYXJkIHRoYXQgdGhlIExvcmQgaGFkIHNob3duIGhlciBncmVhdCBtZXJjeSwgYW5kIHRoZXkgc2hhcmVkIGhlciBqb3kuIiwiNTlPbiB0aGUgZWlnaHRoIGRheSB0aGV5IGNhbWUgdG8gY2lyY3VtY2lzZSB0aGUgY2hpbGQsIGFuZCB0aGV5IHdlcmUgZ29pbmcgdG8gbmFtZSBoaW0gYWZ0ZXIgaGlzIGZhdGhlciBaZWNoYXJpYWgsIDYwYnV0IGhpcyBtb3RoZXIgc3Bva2UgdXAgYW5kIHNhaWQsIFwiTm8hIiwiSGUgaXMgdG8gYmUgY2FsbGVkIEpvaG4uXCIgIiwiNjFUaGV5IHNhaWQgdG8gaGVyLCBcIlRoZXJlIGlzIG5vIG9uZSBhbW9uZyB5b3VyIHJlbGF0aXZlcyB3aG8gaGFzIHRoYXQgbmFtZS5cIiAiLCI2MlRoZW4gdGhleSBtYWRlIHNpZ25zIHRvIGhpcyBmYXRoZXIsIHRvIGZpbmQgb3V0IHdoYXQgaGUgd291bGQgbGlrZSB0byBuYW1lIHRoZSBjaGlsZC4iLCI2M0hlIGFza2VkIGZvciBhIHdyaXRpbmcgdGFibGV0LCBhbmQgdG8gZXZlcnlvbmUncyBhc3RvbmlzaG1lbnQgaGUgd3JvdGUsIFwiSGlzIG5hbWUgaXMgSm9obi5cIiA2NEltbWVkaWF0ZWx5IGhpcyBtb3V0aCB3YXMgb3BlbmVkIGFuZCBoaXMgdG9uZ3VlIHdhcyBsb29zZWQsIGFuZCBoZSBiZWdhbiB0byBzcGVhaywgcHJhaXNpbmcgR29kLiIsIjY1VGhlIG5laWdoYm9ycyB3ZXJlIGFsbCBmaWxsZWQgd2l0aCBhd2UsIGFuZCB0aHJvdWdob3V0IHRoZSBoaWxsIGNvdW50cnkgb2YgSnVkZWEgcGVvcGxlIHdlcmUgdGFsa2luZyBhYm91dCBhbGwgdGhlc2UgdGhpbmdzLiIsIjY2RXZlcnlvbmUgd2hvIGhlYXJkIHRoaXMgd29uZGVyZWQgYWJvdXQgaXQsIGFza2luZywgXCJXaGF0IHRoZW4gaXMgdGhpcyBjaGlsZCBnb2luZyB0byBiZT9cIiBGb3IgdGhlIExvcmQncyBoYW5kIHdhcyB3aXRoIGhpbS4iLCJaZWNoYXJpYWgncyBTb25nICIsIjY3SGlzIGZhdGhlciBaZWNoYXJpYWggd2FzIGZpbGxlZCB3aXRoIHRoZSBIb2x5IFNwaXJpdCBhbmQgcHJvcGhlc2llZDogIiwiNjhcIlByYWlzZSBiZSB0byB0aGUgTG9yZCwgdGhlIEdvZCBvZiBJc3JhZWwsICIsImJlY2F1c2UgaGUgaGFzIGNvbWUgYW5kIGhhcyByZWRlZW1lZCBoaXMgcGVvcGxlLiIsIjY5SGUgaGFzIHJhaXNlZCB1cCBhIGhvcm5bZF0gb2Ygc2FsdmF0aW9uIGZvciB1cyAiLCJpbiB0aGUgaG91c2Ugb2YgaGlzIHNlcnZhbnQgRGF2aWQgIiwiNzAoYXMgaGUgc2FpZCB0aHJvdWdoIGhpcyBob2x5IHByb3BoZXRzIG9mIGxvbmcgYWdvKSwgIiwiNzFzYWx2YXRpb24gZnJvbSBvdXIgZW5lbWllcyAiLCJhbmQgZnJvbSB0aGUgaGFuZCBvZiBhbGwgd2hvIGhhdGUgdXPigJQgIiwiNzJ0byBzaG93IG1lcmN5IHRvIG91ciBmYXRoZXJzICIsImFuZCB0byByZW1lbWJlciBoaXMgaG9seSBjb3ZlbmFudCwgIiwiNzN0aGUgb2F0aCBoZSBzd29yZSB0byBvdXIgZmF0aGVyIEFicmFoYW06ICIsIjc0dG8gcmVzY3VlIHVzIGZyb20gdGhlIGhhbmQgb2Ygb3VyIGVuZW1pZXMsICIsImFuZCB0byBlbmFibGUgdXMgdG8gc2VydmUgaGltIHdpdGhvdXQgZmVhciAiLCI3NWluIGhvbGluZXNzIGFuZCByaWdodGVvdXNuZXNzIGJlZm9yZSBoaW0gYWxsIG91ciBkYXlzLiIsIjc2QW5kIHlvdSwgbXkgY2hpbGQsIHdpbGwgYmUgY2FsbGVkIGEgcHJvcGhldCBvZiB0aGUgTW9zdCBIaWdoOyAiLCJmb3IgeW91IHdpbGwgZ28gb24gYmVmb3JlIHRoZSBMb3JkIHRvIHByZXBhcmUgdGhlIHdheSBmb3IgaGltLCAiLCI3N3RvIGdpdmUgaGlzIHBlb3BsZSB0aGUga25vd2xlZGdlIG9mIHNhbHZhdGlvbiAiLCJ0aHJvdWdoIHRoZSBmb3JnaXZlbmVzcyBvZiB0aGVpciBzaW5zLCAiLCI3OGJlY2F1c2Ugb2YgdGhlIHRlbmRlciBtZXJjeSBvZiBvdXIgR29kLCAiLCJieSB3aGljaCB0aGUgcmlzaW5nIHN1biB3aWxsIGNvbWUgdG8gdXMgZnJvbSBoZWF2ZW4gIiwiNzl0byBzaGluZSBvbiB0aG9zZSBsaXZpbmcgaW4gZGFya25lc3MgIiwiYW5kIGluIHRoZSBzaGFkb3cgb2YgZGVhdGgsICIsInRvIGd1aWRlIG91ciBmZWV0IGludG8gdGhlIHBhdGggb2YgcGVhY2UuXCIgIiwiODBBbmQgdGhlIGNoaWxkIGdyZXcgYW5kIGJlY2FtZSBzdHJvbmcgaW4gc3Bpcml0OyBhbmQgaGUgbGl2ZWQgaW4gdGhlIGRlc2VydCB1bnRpbCBoZSBhcHBlYXJlZCBwdWJsaWNseSB0byBJc3JhZWwuIiwiTHVrZSAyIiwiVGhlIEJpcnRoIG9mIEplc3VzICIsIjFJbiB0aG9zZSBkYXlzIENhZXNhciBBdWd1c3R1cyBpc3N1ZWQgYSBkZWNyZWUgdGhhdCBhIGNlbnN1cyBzaG91bGQgYmUgdGFrZW4gb2YgdGhlIGVudGlyZSBSb21hbiB3b3JsZC4iLCIyKFRoaXMgd2FzIHRoZSBmaXJzdCBjZW5zdXMgdGhhdCB0b29rIHBsYWNlIHdoaWxlIFF1aXJpbml1cyB3YXMgZ292ZXJub3Igb2YgU3lyaWEuKSAzQW5kIGV2ZXJ5b25lIHdlbnQgdG8gaGlzIG93biB0b3duIHRvIHJlZ2lzdGVyLiIsIjRTbyBKb3NlcGggYWxzbyB3ZW50IHVwIGZyb20gdGhlIHRvd24gb2YgTmF6YXJldGggaW4gR2FsaWxlZSB0byBKdWRlYSwgdG8gQmV0aGxlaGVtIHRoZSB0b3duIG9mIERhdmlkLCBiZWNhdXNlIGhlIGJlbG9uZ2VkIHRvIHRoZSBob3VzZSBhbmQgbGluZSBvZiBEYXZpZC4iLCI1SGUgd2VudCB0aGVyZSB0byByZWdpc3RlciB3aXRoIE1hcnksIHdobyB3YXMgcGxlZGdlZCB0byBiZSBtYXJyaWVkIHRvIGhpbSBhbmQgd2FzIGV4cGVjdGluZyBhIGNoaWxkLiIsIjZXaGlsZSB0aGV5IHdlcmUgdGhlcmUsIHRoZSB0aW1lIGNhbWUgZm9yIHRoZSBiYWJ5IHRvIGJlIGJvcm4sIDdhbmQgc2hlIGdhdmUgYmlydGggdG8gaGVyIGZpcnN0Ym9ybiwgYSBzb24uIiwiU2hlIHdyYXBwZWQgaGltIGluIGNsb3RocyBhbmQgcGxhY2VkIGhpbSBpbiBhIG1hbmdlciwgYmVjYXVzZSB0aGVyZSB3YXMgbm8gcm9vbSBmb3IgdGhlbSBpbiB0aGUgaW5uLiIsIlRoZSBTaGVwaGVyZHMgYW5kIHRoZSBBbmdlbHMgIiwiOEFuZCB0aGVyZSB3ZXJlIHNoZXBoZXJkcyBsaXZpbmcgb3V0IGluIHRoZSBmaWVsZHMgbmVhcmJ5LCBrZWVwaW5nIHdhdGNoIG92ZXIgdGhlaXIgZmxvY2tzIGF0IG5pZ2h0LiIsIjlBbiBhbmdlbCBvZiB0aGUgTG9yZCBhcHBlYXJlZCB0byB0aGVtLCBhbmQgdGhlIGdsb3J5IG9mIHRoZSBMb3JkIHNob25lIGFyb3VuZCB0aGVtLCBhbmQgdGhleSB3ZXJlIHRlcnJpZmllZC4iLCIxMEJ1dCB0aGUgYW5nZWwgc2FpZCB0byB0aGVtLCBcIkRvIG5vdCBiZSBhZnJhaWQuIiwiSSBicmluZyB5b3UgZ29vZCBuZXdzIG9mIGdyZWF0IGpveSB0aGF0IHdpbGwgYmUgZm9yIGFsbCB0aGUgcGVvcGxlLiIsIjExVG9kYXkgaW4gdGhlIHRvd24gb2YgRGF2aWQgYSBTYXZpb3IgaGFzIGJlZW4gYm9ybiB0byB5b3U7IGhlIGlzIENocmlzdFthXSB0aGUgTG9yZC4iLCIxMlRoaXMgd2lsbCBiZSBhIHNpZ24gdG8geW91OiBZb3Ugd2lsbCBmaW5kIGEgYmFieSB3cmFwcGVkIGluIGNsb3RocyBhbmQgbHlpbmcgaW4gYSBtYW5nZXIuXCIgIiwiMTNTdWRkZW5seSBhIGdyZWF0IGNvbXBhbnkgb2YgdGhlIGhlYXZlbmx5IGhvc3QgYXBwZWFyZWQgd2l0aCB0aGUgYW5nZWwsIHByYWlzaW5nIEdvZCBhbmQgc2F5aW5nLCAiLCIxNFwiR2xvcnkgdG8gR29kIGluIHRoZSBoaWdoZXN0LCAiLCJhbmQgb24gZWFydGggcGVhY2UgdG8gbWVuIG9uIHdob20gaGlzIGZhdm9yIHJlc3RzLlwiICIsIjE1V2hlbiB0aGUgYW5nZWxzIGhhZCBsZWZ0IHRoZW0gYW5kIGdvbmUgaW50byBoZWF2ZW4sIHRoZSBzaGVwaGVyZHMgc2FpZCB0byBvbmUgYW5vdGhlciwgXCJMZXQncyBnbyB0byBCZXRobGVoZW0gYW5kIHNlZSB0aGlzIHRoaW5nIHRoYXQgaGFzIGhhcHBlbmVkLCB3aGljaCB0aGUgTG9yZCBoYXMgdG9sZCB1cyBhYm91dC5cIiAiLCIxNlNvIHRoZXkgaHVycmllZCBvZmYgYW5kIGZvdW5kIE1hcnkgYW5kIEpvc2VwaCwgYW5kIHRoZSBiYWJ5LCB3aG8gd2FzIGx5aW5nIGluIHRoZSBtYW5nZXIuIiwiMTdXaGVuIHRoZXkgaGFkIHNlZW4gaGltLCB0aGV5IHNwcmVhZCB0aGUgd29yZCBjb25jZXJuaW5nIHdoYXQgaGFkIGJlZW4gdG9sZCB0aGVtIGFib3V0IHRoaXMgY2hpbGQsIDE4YW5kIGFsbCB3aG8gaGVhcmQgaXQgd2VyZSBhbWF6ZWQgYXQgd2hhdCB0aGUgc2hlcGhlcmRzIHNhaWQgdG8gdGhlbS4iLCIxOUJ1dCBNYXJ5IHRyZWFzdXJlZCB1cCBhbGwgdGhlc2UgdGhpbmdzIGFuZCBwb25kZXJlZCB0aGVtIGluIGhlciBoZWFydC4iLCIyMFRoZSBzaGVwaGVyZHMgcmV0dXJuZWQsIGdsb3JpZnlpbmcgYW5kIHByYWlzaW5nIEdvZCBmb3IgYWxsIHRoZSB0aGluZ3MgdGhleSBoYWQgaGVhcmQgYW5kIHNlZW4sIHdoaWNoIHdlcmUganVzdCBhcyB0aGV5IGhhZCBiZWVuIHRvbGQuIiwiYW5kIGZpbmFsbHkgdGhlc2UgYXJlIHRoZSBkaXNjdXNzaW9uIHF1ZXN0aW9ucy4uLiIsIjEuIiwicmV2aWV3IE1hcnkncyBzb25nLCB3aGF0IGRvZXMgaGVyIHdvcmRzIHNheSBhYm91dCBoZXI/IiwiMi4iLCJaYWNoYXJpYWggc2FpZCBpbiB2ZXJzZSA2OSB0aGF0ICdHb2Qgd2FzIHNlbmRpbmcgc2FsdmF0aW9uIGZyb20gdGhlIGVuZW1pZXMgYW5kIHRob3NlIHdobyBoYXRlZCB0aGVtOyBkaWQgaGUgaGF2ZSBhIGNsZWFyIHVuZGVyc3RhbmRpbmcgb2YgSm9obiBhbmQgSmVzdXMnIG1pc3Npb24/IiwiMy4iLCJMdWtlIDE6NjYgc2F5cyB0aGF0IHRoZSBMb3JkIHdhcyB3aXRoIEpvaG4uIiwiRG9lcyB0aGF0IG1lYW4gdGhhdCBKb2huIHdvdWxkIGJlIHN1Y2Nlc3NmdWwsIGhlYWx0aHksIHNtYXJ0IGV0Yy4/IiwiZXhwbGFpbi4iLCI0LiIsIkluIHlvdXIgb3Bpbmlvbiwgd2hhdCBpcyBzdWNjZXNzPyIsIjUuIiwiSXMgaXQgcG9zc2libGUgdG8gYmUgc3VjY2Vzc2Z1bCBhbmQgbm90IGJlIHJpY2ggb3IgcG93ZXJmdWw/IiwiZXhwbGFpbi4iLCJJJ20gc3VyZSBJJ20ganVzdCBub3QgZ29pbmcgdG8gY29weSB5b3VyIG1vZGVsIGFuc3dlcnMuIiwiSSdtIGp1c3QuLiIsIkknbSBub3QgZ29vZCBhdCBlbmdsaXNoLiIsIlNvIHBsZWFzZSBoZWxwIG1lLi4u44Wc44WcIiwiQW55d2F5IGhhdmUgYSBuaWNlIGRheSBhbmQgdGhhbmsgeW91fn4iXQ==';corrections='W1tdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFsiSSB0aGluayB0aGUgY29ycmVjdCBhbnN3ZXIgaXMgdGhhdCBzaGUgaXMgZmFpdGhmdWwgYW5kIGZ1bGx5IHRydXN0cyBpbiBnb2QuIl0sW10sW10sW10sW10sW10sW10sWyI0LlRoaXMgaXMgSSB0aGluayB3aGF0IHRoZSBmb3JtZXIgcXVlc3Rpb24gaXMgZm9yc2hhZG93aW5nLCB0aGF0IG1heWJlIGluIENocmlzdGlhbml0eSBhbmQgSXNsYW0gdGhleSBoYXZlIHN0YXJ0ZWQgdG8gYWRkIGluIEdhbmdldGljIG9yIEdub3N0aWMgcGFyYWRveGljYWwgcGhpbG9zb3BoaWVzLiBTbyBiZWluZyBmYXZvcmVkIGJ5IEdvZCBkb2Vzbid0IG1lYW4gaGVhbHRoIGFuZCB3ZWFsdGggYW5kIGxvbmcgbGlmZSBhbnltb3JlLCBtYXliZSAiXSxbXSxbXSxbXSxbXSxbXSxbXSxbXSxbXSxbXV0=';var correction_comments=[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[null],[],[],[],[],[],[],[null],[],[],[],[],[],[],[],[],[]];
+//]]></script>
+
+</div>
+<div id='right' style='padding-bottom:0'>
+<div class='mb_20' id='author_box'>
+<div class='cfx'>
+<a href="/76792"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w50_h0/no_image.gif"/></a>
+<div class='author_information mb_10 cfx'>
+<a href="/76792" class="user_name">Chahn</a>
+
+<div class='learning_languages'>
+<ul class='language_status'>
+<li class='speaking' data-title='Native language' rel='tooltip' title='Native language'>Korean</li>
+<li class='studying' data-title='Language of study' rel='tooltip' title='Language of study'>
+English, French
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class='bdbox'>
+<table class='entry_status'>
+<tr>
+<td class='l01'>
+<p><a href="/76792/journals">3</a></p>
+<span>Entries Written</span>
+</td>
+<td class='l02'>
+<p>0</p>
+<span>Corrections made</span>
+</td>
+<td class='l03'>
+<p><a href="/76792/correction_logs/received">1</a></p>
+<span>Corrections received</span>
+</td>
+</tr>
+</table>
+</div>
+
+</div>
+
+  
+    <script type="text/javascript">google_ad_client="ca-pub-6717840198266056";google_ad_slot="1415028544";google_ad_width=300;google_ad_height=250;</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+
+  
+
+
+<div class='box'>
+<div id='journals_calendar'>
+<div class='yui-skin-sam'>
+<div id='jour_cal'>
+    <div id="cal1Container"></div>
+    <script type="text/javascript">//<![CDATA[
+(function(){var cal1=null,popupHolder=[],cal_journal_dates={},str_dates='',date_info=[{"journal_id":241426,"journal_date":1253544655},{"journal_id":238461,"journal_date":1253170842},{"journal_id":236961,"journal_date":1252993869}],now_server2local="11/2018",selected_date='',date_info_json=Object.toJSON(date_info),args=getArgsFromHref(location.href);if(args['begin']!=null){var begin_date_a=args['begin'].split('-');var page_date=begin_date_a[1]+'/'+begin_date_a[0];}else if(args['date']!=null){var date_a=args['date'].split('-');var page_date=date_a[1]+'/'+date_a[0];}else{var page_date=now_server2local;}var pathname=location.pathname.split('/');for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(parseInt(date_info[i].journal_date*1000)).toYAHOODateString();if(cal_journal_dates[tmp_date]){cal_journal_dates[tmp_date]=cal_journal_dates[tmp_date]+'/'+date_info[i].journal_id;}else{cal_journal_dates[tmp_date]=date_info[i].journal_id;str_dates=str_dates+','+tmp_date;}}function init(){cal1=new YAHOO.widget.Calendar('cal1','cal1Container',{LOCALE_MONTHS:'short',LOCALE_WEEKDAYS:'1char',pagedate:page_date});cal1.styleCellDefault=function(workingDate,cell){YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_OOB);}
+cal1.renderCellDefault=function(workingDate,cell){cell.innerHTML='<a class="'+cal1.Style.CSS_CELL_SELECTOR+'">'+cal1.buildDayLabel(workingDate)+"</a>";}
+cal1.renderCellHasJournals=function(workingDate,cell){cell.innerHTML='<a href="/'+'76792'+'/journals?date='+workingDate.toStringYYMMDD()+'" class="'+cal1.Style.CSS_CELL_SELECTABLE+'">'+cal1.buildDayLabel(workingDate)+"</a>";YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_SELECTABLE);YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_HIGHLIGHT1);if(workingDate.getDate()==cal1.today.getDate()&&workingDate.getMonth()==cal1.today.getMonth()&&workingDate.getFullYear()==cal1.today.getFullYear()){YAHOO.util.Dom.removeClass(cell,cal1.Style.CSS_CELL_TODAY);}return YAHOO.widget.Calendar.STOP_RENDER;}
+cal1.addRenderer(str_dates,cal1.renderCellHasJournals);cal1.render();}function getArgsFromHref(sHref){var args=sHref.split('?');var retargs={}
+if(args[0]==sHref){return"";}var str=args[1];args=str.split('&');for(var i=0;i<args.length;i++){str=args[i];var arg=str.split('=');if(arg.length<=1)continue;retargs[arg[0]]=arg[1];}return retargs;}YAHOO.util.Event.onAvailable('cal1Container',init);})();
+//]]></script>
+
+</div>
+</div>
+</div>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Journal Statistics</h3>
+</div>
+<div class='cfx' id='studying_status'>
+<table class='table side-bar table_statusstudy'>
+<tr>
+<th>Total</th>
+<th>This month</th>
+<th>This week</th>
+</tr>
+<tr>
+<td>
+<p><a href="/76792/journals">3</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/76792/journals" id="monthCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/76792/journals" id="todayCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<script type="text/javascript">//<![CDATA[
+(function(){var date_info=[{"journal_id":241426,"journal_date":1253544655},{"journal_id":238461,"journal_date":1253170842},{"journal_id":236961,"journal_date":1252993869}],cur_month_counter=0,week_counter=0;var now_date=new Date(),DateMath=YAHOO.widget.DateMath;var now_date_week_begin=DateMath.getFirstDayOfWeek(now_date,0);var now_date_week_end=DateMath.add(now_date_week_begin,'D',6);for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(date_info[i].journal_date*1000);if(tmp_date.getFullYear()==now_date.getFullYear()){if(tmp_date.getMonth()==now_date.getMonth()){cur_month_counter+=1;if(DateMath.getWeekNumber(tmp_date,0)==DateMath.getWeekNumber(now_date,0)){week_counter+=1;}}}}if(week_counter!=0){$('todayCount').update(week_counter);$('todayCount').href=$('todayCount').href+'?begin='+now_date_week_begin.toStringYYMMDD()+'&end='+now_date_week_end.toStringYYMMDD();}else{$('todayCount').href="#";}if(cur_month_counter!=0){$('monthCount').update(cur_month_counter);$('monthCount').href=$('monthCount').href+'?begin='+DateMath.findMonthStart(now_date).toStringYYMMDD()+'&end='+DateMath.findMonthEnd(now_date).toStringYYMMDD();}else{$('monthCount').href="#";}})();
+//]]></script>
+
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest entries</h3>
+</div>
+<table class='table side-bar ar_icobox'>
+<tr>
+<td><a href="http://lang-8.com/76792/journals/241426">could you help with these? (1) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/76792/journals/238461">which one is correct expression, i am not christian or i am not &quot;a&quot; christian? (1) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/76792/journals/236961">can you help me about the bible ? (1) </a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/76792/journals" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest comments</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<td><a href="http://lang-8.com/76792/journals/238461">Sep 3 Snow Doll</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/76792/journals/241426">Sep 23 </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/76792/journals/236961">Sep 15 Nacho</a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/76792/journals/comments" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box cfx' id='d_draft_list'>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Entries by Month</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<th class='year'>2009</th>
+</tr>
+<tr>
+<td>
+ <a href="/76792/journals?begin=2009-9-1&amp;end=2009-09-30">September (3)</a>
+</td>
+</tr>
+</table>
+</div>
+
+<div style='height:20px;background-color:#ffffff'></div>
+<div id='eval_comment_form' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='form_to_edit_note' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='journal_comment_liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='eval_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+</div>
+<div class='yui-skin-sam' id='yui_panels'>
+<div id='wt_panel' style='visibility:hidden;'>
+<div class='hd' id='wt_title'></div>
+<div class='bd' id='wt_content'></div>
+<div class='ft'></div>
+</div>
+</div>
+<div id='modal'></div>
+<div id='confirm_box'>
+<div id='confirm_box_close'>
+<a onclick='hide_confirm_box();'>
+<img src='/static/images2/xico_closebt.png.pagespeed.ic.z-nUma7JBr.png'/>
+</a>
+</div>
+<div id='confirm_box_contents'></div>
+</div>
+</div>
+<div class='modal hide' id='report_spam_entry' tabindex='-1'>
+<div class='modal-header'>
+<btn class='close' data-dismiss='modal' type='button'>x</btn>
+<h4>Report this entry</h4>
+</div>
+<div class='modal-body'>
+<strong class='spaced'>Spam entry</strong>
+<p class='spaced'>hello~ nice to meet you all of you!
+Can I ask you something here?
+Well, these days i&#39;m taking the religion class which teach about the bible in english. and we&#39;re going to discuss about some below questions.
+So, does anyone give me the model answers?
+
+First, the text which we&#39;re going to discuss</p>
+<br/>
+<strong class='spaced'>Author</strong>
+<p class='spaced'>Chahn</p>
+<br/>
+<strong class='spaced'>Reporter</strong>
+<p class='spaced'>0</p>
+</div>
+<div class='modal-footer'>
+<a class='btn' data-dismiss='modal' href='#'>Close</a>
+<a class="bt_lv1 bt_size_04" href="#" onclick="new Ajax.Request('/spam_reports/report_entry?entry_body=hello%7E+nice+to+meet+you+all+of+you%21%0D%0ACan+I+ask+you+something+here%3F%0D%0AWell%2C+these+days+i%27m+taking+the+religion+class+which+teach+about+the+bible+in+english.+and+we%27re+going+to+discuss+about+some+below+questions.%0D%0ASo%2C+does+anyone+give+me+the+model+answers%3F%0D%0A%0D%0AFirst%2C+the+text+which+we%27re+going+to+discuss&amp;reporter_id=0&amp;spammer_id=76792&amp;url=http%3A%2F%2Flang-8.com%2F76792%2Fjournals%2F236961', {asynchronous:true, evalScripts:true, onLoading:function(request){$j('#report_spam_entry').html('&lt;p class=&quot;center&quot;&gt;&lt;br /&gt;&lt;img src=&quot;/static/images2/loading.gif&quot; class=&quot;center spaced vertical-margin&quot; /&gt;&lt;/p&gt;');}, onSuccess:function(request){$j(&quot;#report_spam_entry&quot;).modal(&quot;hide&quot;);$j(&quot;#alert-box&quot;).alerter(&quot;alertSuccess&quot;, &quot;&quot;, &quot;Report sent.&quot; );}, parameters:'authenticity_token=' + encodeURIComponent('uIzTA4ulZZECIp4wvC0W8U5dVyARlu6b38+FOOpP5hQ=')}); return false;">Send</a>
+</div>
+</div>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show-5f9f69ded18eb0d1a8bef6040b599e7b.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show2-e52e094b14e0c5b5979f64d63309ab8a.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show3-eedb1c964407a61f34a56d6652b21722.js" type="text/javascript"></script>
+<script id="evernote-js" data-cjsexec="true" type="text/cjs" data-cjssrc="http://static.evernote.com/noteit.js"></script>
+<script id="twitter-wjs" data-cjsexec="true" type="text/cjs" data-cjssrc="https://platform.twitter.com/widgets.js"></script>
+<script type='text/javascript'></script>
+<script type='text/javascript'>//<![CDATA[
+jQuery(function($){new Lang8.Views.JournalShowView();});
+//]]></script>
+
+</div>
+</div>
+<div data-search_url='' id='footer'>
+<div class='inner'>
+<div class='box clearfix'>
+<ul class='ft_parts_list f_left'>
+<ul class='ft_parts_list f_left'></ul>
+</ul>
+</div>
+<div class='box02 clearfix'>
+<ul>
+
+</ul>
+<ul>
+<li>
+<p>
+Study
+</p>
+<ul>
+<li><a href="/profiles/search">Member Search</a></li>
+<li><a href="/hotentries">Popular Entries</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+View
+</p>
+<ul>
+<li><a href="/rankings">Rankings</a></li>
+<li>
+<a href="/groups">Groups</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+Help
+</p>
+<ul>
+<li><a href="/help/tumblr" target="_blank">Help</a></li>
+<li><a href="/register/term" target="_blank">Terms of Service</a></li>
+<li><a href="/register/privacy" target="_blank">Privacy Policy</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+About Lang-8
+</p>
+<ul>
+<li><a href="/help/law_1" target="_blank">特定商取引法に基づく表記</a></li>
+<li><a href="/help/donation" target="_blank">Donate</a></li>
+<li><a href="http://lang-8.jp/" target="_blank">Company</a></li>
+<li><a href="http://lang-8.jp/#recruit" target="_blank">Travailler pour Lang-8</a></li>
+<li>
+<a href='mailto:support@lang-8.com'>Contact us</a>
+</li>
+<li>&nbsp;</li>
+</ul>
+</li>
+</ul>
+<ul id='social_web_list'>
+<li class='icon_with twitter'>
+<a class='twitter-follow-button' data-show-count='false' href='https://twitter.com/lang8'>Follow @lang8</a>
+<script defer="defer" src="https://platform.twitter.com/widgets.js" type="text/javascript"></script>
+</li>
+<li class='icon_with facebook'><a href="http://www.facebook.com/lang8" target="_blank">Facebook page</a></li>
+<li class='icon_with rss'><a href="http://blog.lang-8.com" target="_blank">Lang-8 blog</a></li>
+</ul>
+</div>
+<div class='box03 clearfix'>
+<li class='f_left panel_list'>
+<a href='https://mixpanel.com/f/partner' target='_blank'>
+<img alt='Mobile and Web Analytics' src='https://mixpanel.com/site_media/images/partner/badge_light.png'/>
+</a>
+</li>
+<p class='copy f_right'>
+&copy; 2017 Lang-8, Inc. All rights reserved.
+</p>
+</div>
+</div>
+</div>
+
+
+<script type='text/javascript'>//<![CDATA[
+var gaJsHost=(("https:"==document.location.protocol)?"https://ssl.":"http://www.");document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var pageTracker;autoRetry(function(){pageTracker=_gat._getTracker("UA-452011-7");pageTracker._setDomainName("none");pageTracker._setAllowLinker(true);pageTracker._initData();pageTracker._trackPageview("/before/journals/show/236961");},2);
+//]]></script>
+
+
+<script type='text/javascript'>//<![CDATA[
+$j(function(){$j('[rel=tooltip]').tooltip();$j('[rel=popover]').popover();});
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var cjsscript=document.createElement('script');cjsscript.src="/static/javascripts/control_js.js";var cjssib=document.getElementsByTagName('script')[0];cjssib.parentNode.insertBefore(cjsscript,cjssib);
+//]]></script>
+<div id='fb-root'></div>
+<script type='text/javascript'>//<![CDATA[
+(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=138873442911";fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));
+//]]></script>
+</body>
+</html>

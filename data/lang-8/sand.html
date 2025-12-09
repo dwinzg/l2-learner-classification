@@ -1,0 +1,1251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir='ltr' itemscope='' itemtype='http://schema.org/Blog' xmlns:fb='http://www.facebook.com/2008/fbml' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"agent":"","applicationTime":613,"queueTime":0,"applicationID":"11814779","errorBeacon":"bam.nr-data.net","transactionName":"Jg4MFRNdCllURU4MXBATDAANQUlGWVgW","licenseKey":"240011c68f","beacon":"bam.nr-data.net"}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content='text/css' http-equiv='Content-Style-Type'/>
+<meta content='text/javascript' http-equiv='Content-Script-Type'/>
+<meta content='summary' name='twitter:card'/>
+<meta content='@lang8' name='twitter:site'/>
+<meta content='About my job history - 3/3' property='og:title'/>
+<meta content='blog' property='og:type'/>
+<meta content='http://lang-8.com/14470/journals/47770' property='og:url'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/m_14470_f3e3e37da80089eac42bb0ebc590b4ff.jpg' property='og:image'/>
+<meta content="#=#=# Practicing talking about myself in English #=#=#&#x000A;Topic 1: About my job history - 3/3&#x000A;&#x000A;Oops, it's too long... I hope you aren't fed up with it.&#x000A;&#x000A;--------------------&#x000A;The next is the 3rd phase; I started working as a freelance training consultant. Since then, I have shifted my specialty fro" property='og:description'/>
+<meta content='Lang-8' property='og:site_name'/>
+<meta content='138873442911' property='fb:app_id'/>
+<meta content='About my job history - 3/3' itemprop='name'/>
+<meta content="#=#=# Practicing talking about myself in English #=#=#&#x000A;Topic 1: About my job history - 3/3&#x000A;&#x000A;Oops, it's too long... I hope you aren't fed up with it.&#x000A;&#x000A;--------------------&#x000A;The next is the 3rd phase; I started working as a freelance training consultant. Since then, I have shifted my specialty fro" itemprop='description'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/m_14470_f3e3e37da80089eac42bb0ebc590b4ff.jpg' itemprop='image'/>
+
+<title>
+About my job history - 3/3 | Lang-8: For learning foreign languages
+</title>
+<link href='/favicon.ico' rel='shortcut icon'/>
+<link href="http://dzhimp63a2tb1.cloudfront.net/assets/static/css/application-1b103989b91cc566c626a5030a5c0c04.css" media="screen" rel="stylesheet" type="text/css"/>
+<script type="text/cjs">
+var h = document.getElementsByTagName('head')[0];
+var link = document.createElement('link');
+link.href = 'https://fonts.googleapis.com/css?family=Telex';
+link.type = 'text/css';
+link.rel = 'stylesheet';
+link.media = 'screen'
+h.appendChild(link);
+</script>
+
+
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/application-462b56e1d78c3fb6374e9b344e47357a.js" type="text/javascript"></script>
+
+<script type='text/javascript'>//<![CDATA[
+var lang="2-2";var sessid="";
+//]]></script>
+
+<meta content='#=#=# Practicing talking about myself in English #=#=#  Topic 1: About my job history - 3/3    Oo...' name='description'/>
+<meta content='' name='keywords'/>
+
+<meta content='1NyOQgk3_D9-R1XWpjxkGinHxWufQzM-DTGssOLEIvs' name='google-site-verification'/>
+</head>
+<body data-device='pc' id='journals_show'>
+<script type="text/javascript">var langsData=[];langsData.push({key:'cjv',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'ckb',body:'Please correct some sentences or comments on this journal.'});langsData.push({key:'cka',body:'Corrections'});langsData.push({key:'cjz',body:'Comment'});langsData.push({key:'cjt',body:'Post'});langsData.push({key:'cju',body:'Back to correcting'});langsData.push({key:'cjw',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjx',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjy',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'D063',body:'There has been an internal system error.'});langsData.push({key:'chc',body:'Show corrections'});langsData.push({key:'chd',body:'Hide'});langsData.push({key:'xlw',body:'Do you really want to reset the data?'});langsData.push({key:'xlx',body:'You have already started to leave a comment on this journal. Do you want to continue with it?'});langsData.push({key:'xly',body:'Continue'});langsData.push({key:'xlz',body:'No'});langsData.push({key:'cix',body:'Red'});langsData.push({key:'ciy',body:'Blue'});langsData.push({key:'qag',body:'Gray'});langsData.push({key:'ciz',body:'Bold'});langsData.push({key:'cja',body:'Cross out'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjc',body:'Cancel'});langsData.push({key:'cjd',body:'Correct'});langsData.push({key:'cje',body:'Unformat'});langsData.push({key:'rgo',body:'This sentence is perfect! No correction needed!'});langsData.push({key:'xll',body:'This is the original post.'});langsData.push({key:'xlm',body:'To correct, click this button.'});langsData.push({key:'xln',body:'You can use the colored fonts and strikethrough feature to help you with your correction.'});langsData.push({key:'xlo',body:'After correcting, please press this button.'});langsData.push({key:'xlp',body:'Your corrections are displayed here.'});langsData.push({key:'xlq',body:'Press this button to complete the correction.'});langsData.push({key:'xmm',body:'Sending...'});langsData.push({key:'xmn',body:'done'});langsData.push({key:'ycs',body:'Success! A friend request will now be sent to your friend.'});langsData.push({key:'xog',body:'Failed to send the friend request. Please try again in a few minutes.'});langsData.push({key:'cit',body:'Comments on this correction'});langsData.push({key:'cir',body:'Add to /Edit My Notebook'});langsData.push({key:'rfv',body:'Vertical View'});langsData.push({key:'rfw',body:'Normal View'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjp',body:'Cancel'});langsData.push({key:'cjr',body:'Remove correction'});langsData.push({key:'ckc',body:'Description about correction.(You can write in any language.)'});langsData.push({key:'cjk',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'cjl',body:'There are not any comments or corrections.'});langsData.push({key:'cjh',body:'Correct this entry'});langsData.push({key:'cjf',body:'Comment'});langsData.push({key:'cjm',body:'There has been an internal system error. Please try again.'});langsData.push({key:'kbm',body:'Draft Saved'});var l8=l8||{};l8.t=l8.t||{};l8.t=new L8I18n(langsData);</script>
+
+<div class='navbar navbar-fixed-top mb_20' id='header'>
+<div class='navbar-inner'>
+<div class='container'>
+<a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</a>
+<div class='nav-collapse'>
+<ul class='nav' id='dropmenu03'>
+<li class='logoname'>
+<a class='brand' href='/'>
+<img alt="Header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0" id="logo" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0.gif"/>
+</a>
+</li>
+<li class='divider'></li>
+<li class='home'>
+<a href="/" class="a_home" title="Home"><img alt="Ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb.png" title="Home"/>
+</a></li>
+<li class='divider'></li>
+<li class='help'>
+<a href="/help/about" class="help" target="_blank" title="What is Lang-8?"><span>
+What is Lang-8?
+</span>
+</a></li>
+<li class='divider'></li>
+</ul>
+<ul class='nav pull-right' id='dropmenu02'>
+<li class='help'>
+<a href="/register/step1?from=header" class="help"><span>Sign up</span>
+</a></li>
+<li class='divider'></li>
+<li class='help' id='login'>
+<a href="https://lang-8.com/login?from=header" class="help"><span>Log in</span>
+</a></li>
+<li class='divider'></li>
+<li class='language_list'>
+<form action="" class="language_select" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="wQfJQ77fXemeRLWHVRl12G/I5ETO2+xkE0RjM+gBj14="/></div>
+<select id="interface_lang" name="interface_lang" onchange="onChangeInterfaceLang()"><option value="2-2" selected="selected">English</option>
+<option value="2-5">Español</option>
+<option value="2-6">français</option>
+<option value="2-8">Deutsch</option>
+<option value="2-95">Português(Portugal)</option>
+<option value="2-10">Русский</option>
+<option value="2-59">Polski</option>
+<option value="2-78">Hrvatski</option>
+<option value="2-30">العربية</option>
+<option value="2-1">日本語</option>
+<option value="2-3">中文(简体)</option>
+<option value="2-300">中文(繁體)</option>
+<option value="2-4">한국어</option>
+<option value="2-20">ภาษาไทย</option>
+<option value="2-35">Svenska</option>
+<option value="2-47">Tagalog</option>
+<option value="2-65">Bahasa Melayu</option>
+<option value="2-58">Indonesian</option>
+<option value="2-7">Italiano</option></select>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class='alerter container alert fade in navbar-fixed-top' id='alert-top' style='top:60px;display:none;'>
+<a class='close' data-dismiss='alert' href='#'>
+&times;
+</a>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert Message here
+</span>
+</div>
+<div class='alerter alert fade in navbar-fixed-top' id='alert-box' style='left:40%;top:40%;width:200px;display:none;'>
+<div style='text-align:center;'>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert message here
+</span>
+</div>
+</div>
+
+
+
+
+      <div class="center" style="margin-bottom: 10px;">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- PC_Super_Before_Login -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6717840198266056" data-ad-slot="9171779343" data-ad-format="auto"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+
+      </div>
+
+
+
+
+<div id='page_content'>
+<div class='cfx' id='main_container'>
+<ul class="cfx" id="breadcrumbs"><li class="home"><a href="/">Home</a></li><li class=""><a href="/profiles/search">Member</a></li><li class=""><a href="/sand">Sand</a></li><li class=""><a href="/sand/journals">Sand's entries</a></li><li class=""><span>About my job history - 3/3</span></li></ul>
+<div>
+<div data-use_friend_request_popover='data-use_friend_request_popover' id='main'>
+<style type='text/css'>@font-face{font-family:"FontAwesome";src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot);src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot?#iefix) format('eot') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.woff) format('woff') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.ttf) format('truetype') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.svg#FontAwesome) format('svg');font-weight:normal;font-style:normal}</style>
+<div class='cfx' id='entry_detail'>
+<div class='show_report_spam_link cfx' id='entry_title_box'>
+<div class='tit_02'>
+<h1 id='subject_show'>About my job history - 3/3</h1>
+<div class='edit_links'>
+<ul class='cfx'>
+</ul>
+</div>
+</div>
+</div>
+<div class='clear_both'></div>
+<div class='cfx' id='tools_for_journal'>
+<ul class='journal_status floated_on_right'>
+<li class='privacy_level_5' data-original-title='Public' rel='tooltip'>&nbsp;</li>
+<li class='visiters' data-original-title='Views' rel='tooltip' title='Views'>322</li>
+<li class='comment_num' data-original-title='Comments' rel='tooltip' title='Comments'>6</li>
+<li class='corrections_num' data-original-title='Corrections' rel='tooltip' title='Corrections'>2</li>
+<li class='studying' data-original-title='The language that needs to be corrected' rel='tooltip'>English&nbsp;</li>
+</ul>
+<span class='journal_date floated_on_left'>
+Nov 24, 2008 16:26
+</span>
+<script type='text/javascript'>//<![CDATA[
+$j(function(){var journalCounterView=new Lang8.Views.JournalCounterView();});
+//]]></script>
+
+</div>
+<div id='show_buttons'>
+<input class='bt_lv3' data-original-title='Show corrections for sentences when you mouse-over.' id='showAndHide' rel='tooltip' title='' type='button' value='Show'/>
+<input class='bt_lv3' data-original-title='Show all corrections together in a pop-up window.' id='showAll' rel='tooltip' title='' type='button' value='Show All'/>
+</div>
+
+<div class='cfx' id='body_show'>
+<div id='body_show_ori'>
+#=#=# Practicing talking about myself in English #=#=#<br/>Topic 1: About my job history - 3/3<br/><br/>Oops, it's too long... I hope you aren't fed up with it.<br/><br/>--------------------<br/>The next is the 3rd phase; I started working as a freelance training consultant. Since then, I have shifted my specialty from IT to human resource development training gradually, because most companies' requirement for training has been changed. I conducted various training such as leadership training, manager skill traning, training for new graduates/mid-career workers, and so on.  <br/>As a training consultant, I join a company at longest one year, so I work almost the same as regular employees. And what I do is, of course, it depends on each project, but basically it's simple.<br/>1st; look into current situation and requirement, and analyze training needs properly<br/>2nd, Plan, design and develop appropriate, effective and efficient training,<br/>or localize global/headquarters training<br/>3rd, deliver training effectively<br/>The last, review and measure the effectiveness. According to those result, change something if it's needed. It's cycle.<br/>I conduct those roles with my team. So as a project manager, I do schedule management, budget control and so on.<br/>And the one of the most important things is that I discuss or negotiate with various departments or positions, such as managers, directors, CEO, ranks of employees, and people overseas on regular conference call or business trip, to develop as much appropriate training as possible.<br/><br/>That’s it.*<br/>--------------------<br/>* new-graduate/mid-career workers<br/>What do you say &quot;新入社員&quot; and &quot;中途（入社）社員&quot; in English?<br/>&quot;新入社員&quot; is a new employee who just graduated from Univercity/college/school.<br/>&quot;中途（入社）社員&quot; is a new employee who worked for other company and has much experience.<br/><br/>*That’s it.<br/>I want to say &quot;以上です&quot;. Is &quot;That's it&quot; appropriate and polite? Or &quot;That's all&quot;?
+</div>
+<div class='box_like_button cfx' id='async_show_like'></div>
+<div class='ad_journal_center clear_both floated_on_left'>
+  
+    <div class="center" style="margin: 0 0 10px;">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- JournalCenter336_280 -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-6717840198266056" data-ad-slot="1360554540"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+
+    </div>
+  
+
+</div>
+</div>
+</div>
+<div class='little-spaced cfx' data-canonical_url='http://lang-8.com/14470/journals/47770' id='links_for_journal'>
+<span class='horizontal-spaced tw-btn'>
+<a class='twitter-share-button' data-hashtags='lang8' data-related='lang8' data-text='About my job history - 3/3' data-url='http://lang-8.com/14470/journals/47770' data-via='lang8' href='https://twitter.com/share'>Tweet</a>
+</span>
+<span class='horizontal-spaced fb-like' data-action='like' data-colorscheme='light' data-href='http://lang-8.com/14470/journals/47770' data-layout='button_count' data-show-faces='false' data-width='100'></span>
+<span class='horizontal-spaced gplus_btn'>
+<!-- %span.g-plusone{'data-size' => 'medium', :href => "#{@journal.canonical_url}"} -->
+</span>
+<span class='floated_on_left'>
+<span class='st_fblike_hcount' displayText='Facebook Like' st_url='http://lang-8.com/14470/journals/47770'></span>
+<span class='st_facebook_hcount' displayText='Facebook' st_url='http://lang-8.com/14470/journals/47770'></span>
+<span class='st_linkedin_hcount' displayText='LinkedIn' st_url='http://lang-8.com/14470/journals/47770'></span>
+</span>
+<a href='#' onclick="Evernote.doClip({styling:'full',providerName:'Lang-8',suggestTags:'Lang-8',suggestNotebook:'Lang-8',contentId:'entry_container'}); return false;" style='float:right;margin-right:5px;'>
+<img alt='Clip to Evernote' src='/static/images2/xarticle-clipper-fr.png.pagespeed.ic.BAKnLUGqIU.png'/>
+</a>
+</div>
+<div id='comments_and_corrections_field'>
+<div class='fukidashi comment_field' id='journal_comment_202231'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/hermblog"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/ea3fe82a9b2e3a4443463977a632599b46930564.jpg"/></a>
+<a href="/hermblog" class="user_name">Herman</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Nov 24, 2008 19:59
+</span>
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+For &quot;中途（入社）社員&quot; perhaps &quot;lateral hire&quot; is the best phrase.  I am not sure if there is an exact phrase for &quot;新入社員,&quot; but people who do not have any relevant experience are called &quot;entry level employees.&quot;  But I don't think that term conveys that the person has recently graduated college . . .
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-202231' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_202231'>
+
+</div>
+</div>
+</div>
+<div class='fukidashi comment_field' id='journal_comment_202249'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/hermblog"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/ea3fe82a9b2e3a4443463977a632599b46930564.jpg"/></a>
+<a href="/hermblog" class="user_name">Herman</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Nov 24, 2008 20:13
+</span>
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+As far as &quot;以上です&quot; my teacher always gets mad if I give a speech and don't say that at the end.  But I am not sure if we have a real equivalent of that.  I am not sure, but I feel like &quot;以上です&quot; has kind of a polite connotation to it.  &quot;That's it&quot; may literally translate into &quot;以上です&quot; but just ending by writing &quot;That's it&quot; could come off as too abrupt depending on the situation.<br/><br/>If you were giving a formal speech you would want to say something like &quot;This concludes my remarks.&quot;  But if you are writing to or speaking to friends &quot;That's it&quot; sounds OK to me.  I might write something like &quot;Well that is all I wanted to write . . .&quot;
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-202249' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_202249'>
+
+</div>
+</div>
+</div>
+<div class='fukidashi comment_field' id='journal_comment_202332'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/sand"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/m_14470_f3e3e37da80089eac42bb0ebc590b4ff.jpg"/></a>
+<a href="/sand" class="user_name">Sand</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Nov 24, 2008 21:16
+</span>
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+Herm,<br/><br/>Thank you for answering my questions.<br/>Almost all of the time, Japanese say &quot;以上です&quot; when they finish their speech or talking their opinions, in business. I wonder what English speakers say at the end of their speech or talking.
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-202332' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_202332'>
+
+</div>
+</div>
+</div>
+<div class='fukidashi comment_field' id='journal_comment_202522'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/cjk"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/m_15465_1225197936.gif"/></a>
+<a href="/cjk" class="user_name">CJK</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Nov 24, 2008 23:34
+</span>
+</div>
+</div>
+<div class='correction_list corner-rounded_5 little-spaced'>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Since then, I have shifted my specialty from IT to human resource development training gradually, because most companies&#39; requirement for training has been changed.</li>
+<li class='corrected correct'>
+<p>Since then, I have <span class="f_red">gradually</span> shifted my specialty from IT to human resource development training <span class="sline">gradually</span>, because most companies&#39; requirement<span class="f_blue">s</span> for training <span class="sline">has been</span> have changed.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-356856'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I conducted various training such as leadership training, manager skill traning, training for new graduates/mid-career workers, and so on.</li>
+<li class='corrected correct'>
+<p>I <span class="f_blue">have</span> conducted various training <span class="f_blue">classes</span> (?) such as leadership training, manager<span class="f_blue">ial</span> skill tra<span class="f_blue">i</span>ning, training for new graduates/mid-career workers, and so on.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-356857'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>As a training consultant, I join a company at longest one year, so I work almost the same as regular employees.</li>
+<li class='corrected correct'>
+<p>As a training consultant, I join a company <span class="f_blue">for</span> at <span class="f_bold">most</span> (longest makes sense, but most sounds more natural) one year, so I work almost the same <span class="f_bold">(a noun is needed here)</span> as regular employees.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-356858'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>And what I do is, of course, it depends on each project, but basically it&#39;s simple.</li>
+<li class='corrected correct'>
+<p>And what I do <span class="sline">is</span>, of course, <span class="sline">it</span> depends on <span class="sline">each</span> the project, but basically it&#39;s simple.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-356859'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>1st; look into current situation and requirement, and analyze training needs properly</li>
+<li class='corrected correct'>
+<p>1st<span class="f_red">:</span> look into current situation and requirement<span class="f_blue">s</span>, and analyze training needs properly</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-356860'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>2nd, Plan, design and develop appropriate, effective and efficient training,</li>
+<li class='corrected correct'>
+<p>2nd<span class="f_red">:</span> Plan, design and develop appropriate, effective and efficient training,</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-356861'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>or localize global/headquarters training</li>
+<li class='corrected correct'>
+<p>(???)</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-356862'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>3rd, deliver training effectively</li>
+<li class='corrected correct'>
+<p>3rd<span class="f_red">:</span> deliver training effectively</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-356863'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>The last, review and measure the effectiveness.</li>
+<li class='corrected correct'>
+<p><span class="sline">The</span> Last<span class="f_blue">ly</span>, review and measure the effectiveness <span class="f_blue">of the training</span>.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-356864'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>According to those result, change something if it&#39;s needed.</li>
+<li class='corrected correct'>
+<p>According to <span class="sline">those</span> the result<span class="f_blue">s</span>, change something if it&#39;s needed.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-356865'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>It&#39;s cycle.</li>
+<li class='corrected correct'>
+<p>It&#39;s <span class="f_blue">a</span> cycle.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-356866'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I conduct those roles with my team.</li>
+<li class='corrected correct'>
+<p>I conduct th<span class="f_red">e</span>se <span class="sline">roles</span> tasks with my team.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-356867'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>And the one of the most important things is that I discuss or negotiate with various departments or positions, such as managers, directors, CEO, ranks of employees, and people overseas on regular conference call or business trip, to develop as much appropriate training as possible.</li>
+<li class='corrected correct'>
+<p>And <span class="sline">the</span> one of the most important things is that I discuss or negotiate with various departments <span class="sline">or</span> and positions, such as managers, directors, CEO, ranks of employees (??? rank and file employees?), and people overseas on regular conference call<span class="f_blue">s</span> or business trip<span class="f_blue">s</span>, to develop as much appropriate training as possible.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-356868'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+&quot;graduate&quot; can be used to refer to a person straight out of university.<br/><br/>There is no universal way of ending a speech or section of text in English. For speeches, the final sentence is often &quot;In conclusion, (main point in 1 sentence)&quot; but there is no requirement for that. &quot;Thanks for reading/listening&quot; is sometimes used, but uncommon.<br/><br/>You are doing really well. Plenty of the mistakes you have made are ones I have corrected in writing by native English speakers.
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-202522' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_202522'>
+
+</div>
+</div>
+</div>
+<div class='fukidashi comment_field' id='journal_comment_202620'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/havarlan"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/31ddbe81574c6da066682bbd2f7520311b254bbe.gif"/></a>
+<a href="/havarlan" class="user_name">havarlan</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Nov 25, 2008 00:30
+</span>
+</div>
+</div>
+<div class='correction_list corner-rounded_5 little-spaced'>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>As a training consultant, I join a company at longest one year, so I work almost the same as regular employees.</li>
+<li class='corrected correct'>
+<p>As a training consultant, I join a company <span class="f_blue">for</span> one year <span class="f_blue">at most</span>, so I work almost the same <span class="f_blue">(amount ?)</span> as regular employees.  <span class="f_red">( <span class="f_blue">I&#39;m pretty sure &quot;at longest&quot; is entirely grammatically incorrect. </span> )</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-357052'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>And what I do is, of course, it depends on each project, but basically it&#39;s simple.</li>
+<li class='corrected correct'>
+<p><span class="f_blue">W</span>hat I do, of course, depends on each project, but <span class="f_blue">it basically breaks down like this.</span>. <span class="f_red">(<span class="f_blue"> I thought &quot;basically it&#39;s simple&quot; was a little awkward, so I rewrote it to flow better.</span>  )</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-357053'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>1st; look into current situation and requirement, and analyze training needs properly</li>
+<li class='corrected correct'>
+<p>1st: look into <span class="f_blue">the</span> current situation and <span class="f_blue">its</span> requirement<span class="f_blue">s</span>, and analyze training needs properly</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-357054'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>2nd, Plan, design and develop appropriate, effective and efficient training,</li>
+<li class='corrected correct'>
+<p>2nd: Plan, design and develop appropriate, effective and efficient training, or localize <span class="f_blue">the established</span> global/headquarters training</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-357055'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>or localize global/headquarters training</li>
+<li class='corrected correct'>
+<p><span class="sline">or localize global/headquarters training</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-357056'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>3rd, deliver training effectively</li>
+<li class='corrected correct'>
+<p>3rd: deliver training effectively</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-357057'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>And the one of the most important things is that I discuss or negotiate with various departments or positions, such as managers, directors, CEO, ranks of employees, and people overseas on regular conference call or business trip, to develop as much appropriate training as possible.</li>
+<li class='corrected correct'>
+<p><span class="f_blue">O</span>ne of the most important things <span class="f_blue">I do is</span> discuss or negotiate with various departments <span class="f_blue">and</span> positions, such as managers, directors, CEO, <span class="f_blue">rank and file</span> employees, and people overseas on regular conference call<span class="f_blue">s</span> or business trip<span class="f_blue">s</span>, to develop as much appropriate training as possible.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-357058'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+As mentioned before, in a formal setting, &quot;That's it&quot; is very brusque.  Informally it is fine.  <br/>Also, as CJK notes, many of the mistakes corrected here are very common.  Maybe that speaks to the effectiveness of our various education systems, or perhaps the language itself.  Hmm!
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-202620' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_202620'>
+
+</div>
+</div>
+</div>
+<div class='fukidashi comment_field' id='journal_comment_203251'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/sand"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/m_14470_f3e3e37da80089eac42bb0ebc590b4ff.jpg"/></a>
+<a href="/sand" class="user_name">Sand</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Nov 25, 2008 10:42
+</span>
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+CJK,<br/><br/>Thank you for correcting and comments.<br/>I see. There is no universal way in English like Japanese word  &quot;以上です&quot;. So I need to think about what I should say depending on the situation.<br/><br/>Havarlan,<br/><br/>Thank you for correcting and comments.<br/>&gt; it basically breaks down like this.. ( I thought &quot;basically it's simple&quot; was a little awkward, so I rewrote it to flow better. )<br/>Oh, &quot;break down&quot;. I see. The meaning of &quot;break down &quot; I knew was just one. It's like &quot;My car broke down.<br/><br/>-------------------<br/>From corrections by two of you, I learned new things.<br/><br/>- I often miss &quot;s&quot; for plural.<br/>- &quot;The most&quot; --&gt; I didn't know this word!!<br/>- &quot;Rank and file employees&quot; --&gt; I see. But I wonder what &quot;file&quot; means in this case...<br/><br/>Thank you, CJK and Havarlan!!<br/>(And I'm really thankful for correcting such a long journal.)
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-203251' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_203251'>
+
+</div>
+</div>
+</div>
+<div class='fukidashi comment_field' id='journal_comment_203329'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/cjk"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/m_15465_1225197936.gif"/></a>
+<a href="/cjk" class="user_name">CJK</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Nov 25, 2008 11:33
+</span>
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+&quot;Rank and file&quot; is an idiom. It means &quot;low level&quot;. Employees with not much responsibility and a clearly defined role. &quot;Front line&quot; is a similar idiom.<br/><br/>Oh, and one other thing - Starting sentences with &quot;And&quot; is considered wrong. However, it is common for English speakers, especially in speech. Normally I would say it doesn't matter, but if you are trying to impress with your English ability it would be worth fixing.
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-203329' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_203329'>
+
+</div>
+</div>
+</div>
+<div class='fukidashi comment_field' id='journal_comment_203346'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/sand"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/m_14470_f3e3e37da80089eac42bb0ebc590b4ff.jpg"/></a>
+<a href="/sand" class="user_name">Sand</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Nov 25, 2008 11:48
+</span>
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+CJK,<br/><br/>I see, it's an idiom which means low level.<br/><br/>Oh!! So I will avoid starting sentences with &quot;And&quot;!<br/><br/>Thank you!
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-203346' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_203346'>
+
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>//<![CDATA[
+var l8=jQuery.extend(l8,{authenticityToken:"wQfJQ77fXemeRLWHVRl12G/I5ETO2+xkE0RjM+gBj14=",showTutorial:false,label:"Description about correction.(You can write in any language.)",explanation:"Add a description or comment here.(Optional)",sentences:'QWJvdXQgbXkgam9iIGhpc3RvcnkgLSAzLzMKIz0jPSMgUHJhY3RpY2luZyB0YWxraW5nIGFib3V0IG15c2VsZiBpbiBFbmdsaXNoICM9Iz0jClRvcGljIDE6IEFib3V0IG15IGpvYiBoaXN0b3J5IC0gMy8zCk9vcHMsIGl0J3MgdG9vIGxvbmcuLi4KSSBob3BlIHlvdSBhcmVuJ3QgZmVkIHVwIHdpdGggaXQuCi0tLS0tLS0tLS0tLS0tLS0tLS0tClRoZSBuZXh0IGlzIHRoZSAzcmQgcGhhc2U7IEkgc3RhcnRlZCB3b3JraW5nIGFzIGEgZnJlZWxhbmNlIHRyYWluaW5nIGNvbnN1bHRhbnQuClNpbmNlIHRoZW4sIEkgaGF2ZSBzaGlmdGVkIG15IHNwZWNpYWx0eSBmcm9tIElUIHRvIGh1bWFuIHJlc291cmNlIGRldmVsb3BtZW50IHRyYWluaW5nIGdyYWR1YWxseSwgYmVjYXVzZSBtb3N0IGNvbXBhbmllcycgcmVxdWlyZW1lbnQgZm9yIHRyYWluaW5nIGhhcyBiZWVuIGNoYW5nZWQuCkkgY29uZHVjdGVkIHZhcmlvdXMgdHJhaW5pbmcgc3VjaCBhcyBsZWFkZXJzaGlwIHRyYWluaW5nLCBtYW5hZ2VyIHNraWxsIHRyYW5pbmcsIHRyYWluaW5nIGZvciBuZXcgZ3JhZHVhdGVzL21pZC1jYXJlZXIgd29ya2VycywgYW5kIHNvIG9uLgpBcyBhIHRyYWluaW5nIGNvbnN1bHRhbnQsIEkgam9pbiBhIGNvbXBhbnkgYXQgbG9uZ2VzdCBvbmUgeWVhciwgc28gSSB3b3JrIGFsbW9zdCB0aGUgc2FtZSBhcyByZWd1bGFyIGVtcGxveWVlcy4KQW5kIHdoYXQgSSBkbyBpcywgb2YgY291cnNlLCBpdCBkZXBlbmRzIG9uIGVhY2ggcHJvamVjdCwgYnV0IGJhc2ljYWxseSBpdCdzIHNpbXBsZS4KMXN0OyBsb29rIGludG8gY3VycmVudCBzaXR1YXRpb24gYW5kIHJlcXVpcmVtZW50LCBhbmQgYW5hbHl6ZSB0cmFpbmluZyBuZWVkcyBwcm9wZXJseQoybmQsIFBsYW4sIGRlc2lnbiBhbmQgZGV2ZWxvcCBhcHByb3ByaWF0ZSwgZWZmZWN0aXZlIGFuZCBlZmZpY2llbnQgdHJhaW5pbmcsCm9yIGxvY2FsaXplIGdsb2JhbC9oZWFkcXVhcnRlcnMgdHJhaW5pbmcKM3JkLCBkZWxpdmVyIHRyYWluaW5nIGVmZmVjdGl2ZWx5ClRoZSBsYXN0LCByZXZpZXcgYW5kIG1lYXN1cmUgdGhlIGVmZmVjdGl2ZW5lc3MuCkFjY29yZGluZyB0byB0aG9zZSByZXN1bHQsIGNoYW5nZSBzb21ldGhpbmcgaWYgaXQncyBuZWVkZWQuCkl0J3MgY3ljbGUuCkkgY29uZHVjdCB0aG9zZSByb2xlcyB3aXRoIG15IHRlYW0uClNvIGFzIGEgcHJvamVjdCBtYW5hZ2VyLCBJIGRvIHNjaGVkdWxlIG1hbmFnZW1lbnQsIGJ1ZGdldCBjb250cm9sIGFuZCBzbyBvbi4KQW5kIHRoZSBvbmUgb2YgdGhlIG1vc3QgaW1wb3J0YW50IHRoaW5ncyBpcyB0aGF0IEkgZGlzY3VzcyBvciBuZWdvdGlhdGUgd2l0aCB2YXJpb3VzIGRlcGFydG1lbnRzIG9yIHBvc2l0aW9ucywgc3VjaCBhcyBtYW5hZ2VycywgZGlyZWN0b3JzLCBDRU8sIHJhbmtzIG9mIGVtcGxveWVlcywgYW5kIHBlb3BsZSBvdmVyc2VhcyBvbiByZWd1bGFyIGNvbmZlcmVuY2UgY2FsbCBvciBidXNpbmVzcyB0cmlwLCB0byBkZXZlbG9wIGFzIG11Y2ggYXBwcm9wcmlhdGUgdHJhaW5pbmcgYXMgcG9zc2libGUuClRoYXTigJlzIGl0LioKLS0tLS0tLS0tLS0tLS0tLS0tLS0KKiBuZXctZ3JhZHVhdGUvbWlkLWNhcmVlciB3b3JrZXJzCldoYXQgZG8geW91IHNheSAi5paw5YWl56S+5ZOhIiBhbmQgIuS4remAlO+8iOWFpeekvu+8ieekvuWToSIgaW4gRW5nbGlzaD8KIuaWsOWFpeekvuWToSIgaXMgYSBuZXcgZW1wbG95ZWUgd2hvIGp1c3QgZ3JhZHVhdGVkIGZyb20gVW5pdmVyY2l0eS9jb2xsZWdlL3NjaG9vbC4KIuS4remAlO+8iOWFpeekvu+8ieekvuWToSIgaXMgYSBuZXcgZW1wbG95ZWUgd2hvIHdvcmtlZCBmb3Igb3RoZXIgY29tcGFueSBhbmQgaGFzIG11Y2ggZXhwZXJpZW5jZS4KKlRoYXTigJlzIGl0LgpJIHdhbnQgdG8gc2F5ICLku6XkuIrjgafjgZkiLgpJcyAiVGhhdCdzIGl0IiBhcHByb3ByaWF0ZSBhbmQgcG9saXRlPwpPciAiVGhhdCdzIGFsbCI/',corrections:[[],[],[],[],[],[],[],["Since then, I have [f-red]gradually[/f-red] shifted my specialty from IT to human resource development training [sline]gradually[/sline], because most companies' requirement[f-blue]s[/f-blue] for training [sline]has been[/sline] have changed."],["I [f-blue]have[/f-blue] conducted various training [f-blue]classes[/f-blue] (?) such as leadership training, manager[f-blue]ial[/f-blue] skill tra[f-blue]i[/f-blue]ning, training for new graduates/mid-career workers, and so on."],["As a training consultant, I join a company [f-blue]for[/f-blue] at [f-bold]most[/f-bold] (longest makes sense, but most sounds more natural) one year, so I work almost the same [f-bold](a noun is needed here)[/f-bold] as regular employees.","As a training consultant, I join a company [f-blue]for[/f-blue] one year [f-blue]at most[/f-blue], so I work almost the same [f-blue](amount ?)[/f-blue] as regular employees.  [f-red]( [f-blue]I'm pretty sure \"at longest\" is entirely grammatically incorrect. [/f-blue] )[/f-red]"],["And what I do [sline]is[/sline], of course, [sline]it[/sline] depends on [sline]each[/sline] the project, but basically it's simple.","[f-blue]W[/f-blue]hat I do, of course, depends on each project, but [f-blue]it basically breaks down like this.[/f-blue]. [f-red]([f-blue] I thought \"basically it's simple\" was a little awkward, so I rewrote it to flow better.[/f-blue]  )[/f-red]"],["1st[f-red]:[/f-red] look into current situation and requirement[f-blue]s[/f-blue], and analyze training needs properly","1st: look into [f-blue]the[/f-blue] current situation and [f-blue]its[/f-blue] requirement[f-blue]s[/f-blue], and analyze training needs properly"],["2nd[f-red]:[/f-red] Plan, design and develop appropriate, effective and efficient training,","2nd: Plan, design and develop appropriate, effective and efficient training, or localize [f-blue]the established[/f-blue] global/headquarters training"],["(???)","[sline]or localize global/headquarters training[/sline]"],["3rd[f-red]:[/f-red] deliver training effectively","3rd: deliver training effectively"],["[sline]The[/sline] Last[f-blue]ly[/f-blue], review and measure the effectiveness [f-blue]of the training[/f-blue]."],["According to [sline]those[/sline] the result[f-blue]s[/f-blue], change something if it's needed."],["It's [f-blue]a[/f-blue] cycle."],["I conduct th[f-red]e[/f-red]se [sline]roles[/sline] tasks with my team."],[],["And [sline]the[/sline] one of the most important things is that I discuss or negotiate with various departments [sline]or[/sline] and positions, such as managers, directors, CEO, ranks of employees (??? rank and file employees?), and people overseas on regular conference call[f-blue]s[/f-blue] or business trip[f-blue]s[/f-blue], to develop as much appropriate training as possible.","[f-blue]O[/f-blue]ne of the most important things [f-blue]I do is[/f-blue] discuss or negotiate with various departments [f-blue]and[/f-blue] positions, such as managers, directors, CEO, [f-blue]rank and file[/f-blue] employees, and people overseas on regular conference call[f-blue]s[/f-blue] or business trip[f-blue]s[/f-blue], to develop as much appropriate training as possible."],[],[],[],[],[],[],[],[],[],[]],correctionComments:[[],[],[],[],[],[],[],[null],[null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null],[null],[null],[null],[],[null,null],[],[],[],[],[],[],[],[],[],[]],perfectSentences:[[],[],[],[],[],[],[],[null],[null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null],[null],[null],[null],[],[null,null],[],[],[],[],[],[],[],[],[],[]],urlForCreateComment:'/journals/create_comment/47770',isLogin:false});sentences='WyJBYm91dCBteSBqb2IgaGlzdG9yeSAtIDMvMyIsIiM9Iz0jIFByYWN0aWNpbmcgdGFsa2luZyBhYm91dCBteXNlbGYgaW4gRW5nbGlzaCAjPSM9IyIsIlRvcGljIDE6IEFib3V0IG15IGpvYiBoaXN0b3J5IC0gMy8zIiwiT29wcywgaXQncyB0b28gbG9uZy4uLiIsIkkgaG9wZSB5b3UgYXJlbid0IGZlZCB1cCB3aXRoIGl0LiIsIi0tLS0tLS0tLS0tLS0tLS0tLS0tIiwiVGhlIG5leHQgaXMgdGhlIDNyZCBwaGFzZTsgSSBzdGFydGVkIHdvcmtpbmcgYXMgYSBmcmVlbGFuY2UgdHJhaW5pbmcgY29uc3VsdGFudC4iLCJTaW5jZSB0aGVuLCBJIGhhdmUgc2hpZnRlZCBteSBzcGVjaWFsdHkgZnJvbSBJVCB0byBodW1hbiByZXNvdXJjZSBkZXZlbG9wbWVudCB0cmFpbmluZyBncmFkdWFsbHksIGJlY2F1c2UgbW9zdCBjb21wYW5pZXMnIHJlcXVpcmVtZW50IGZvciB0cmFpbmluZyBoYXMgYmVlbiBjaGFuZ2VkLiIsIkkgY29uZHVjdGVkIHZhcmlvdXMgdHJhaW5pbmcgc3VjaCBhcyBsZWFkZXJzaGlwIHRyYWluaW5nLCBtYW5hZ2VyIHNraWxsIHRyYW5pbmcsIHRyYWluaW5nIGZvciBuZXcgZ3JhZHVhdGVzL21pZC1jYXJlZXIgd29ya2VycywgYW5kIHNvIG9uLiIsIkFzIGEgdHJhaW5pbmcgY29uc3VsdGFudCwgSSBqb2luIGEgY29tcGFueSBhdCBsb25nZXN0IG9uZSB5ZWFyLCBzbyBJIHdvcmsgYWxtb3N0IHRoZSBzYW1lIGFzIHJlZ3VsYXIgZW1wbG95ZWVzLiIsIkFuZCB3aGF0IEkgZG8gaXMsIG9mIGNvdXJzZSwgaXQgZGVwZW5kcyBvbiBlYWNoIHByb2plY3QsIGJ1dCBiYXNpY2FsbHkgaXQncyBzaW1wbGUuIiwiMXN0OyBsb29rIGludG8gY3VycmVudCBzaXR1YXRpb24gYW5kIHJlcXVpcmVtZW50LCBhbmQgYW5hbHl6ZSB0cmFpbmluZyBuZWVkcyBwcm9wZXJseSIsIjJuZCwgUGxhbiwgZGVzaWduIGFuZCBkZXZlbG9wIGFwcHJvcHJpYXRlLCBlZmZlY3RpdmUgYW5kIGVmZmljaWVudCB0cmFpbmluZywiLCJvciBsb2NhbGl6ZSBnbG9iYWwvaGVhZHF1YXJ0ZXJzIHRyYWluaW5nIiwiM3JkLCBkZWxpdmVyIHRyYWluaW5nIGVmZmVjdGl2ZWx5IiwiVGhlIGxhc3QsIHJldmlldyBhbmQgbWVhc3VyZSB0aGUgZWZmZWN0aXZlbmVzcy4iLCJBY2NvcmRpbmcgdG8gdGhvc2UgcmVzdWx0LCBjaGFuZ2Ugc29tZXRoaW5nIGlmIGl0J3MgbmVlZGVkLiIsIkl0J3MgY3ljbGUuIiwiSSBjb25kdWN0IHRob3NlIHJvbGVzIHdpdGggbXkgdGVhbS4iLCJTbyBhcyBhIHByb2plY3QgbWFuYWdlciwgSSBkbyBzY2hlZHVsZSBtYW5hZ2VtZW50LCBidWRnZXQgY29udHJvbCBhbmQgc28gb24uIiwiQW5kIHRoZSBvbmUgb2YgdGhlIG1vc3QgaW1wb3J0YW50IHRoaW5ncyBpcyB0aGF0IEkgZGlzY3VzcyBvciBuZWdvdGlhdGUgd2l0aCB2YXJpb3VzIGRlcGFydG1lbnRzIG9yIHBvc2l0aW9ucywgc3VjaCBhcyBtYW5hZ2VycywgZGlyZWN0b3JzLCBDRU8sIHJhbmtzIG9mIGVtcGxveWVlcywgYW5kIHBlb3BsZSBvdmVyc2VhcyBvbiByZWd1bGFyIGNvbmZlcmVuY2UgY2FsbCBvciBidXNpbmVzcyB0cmlwLCB0byBkZXZlbG9wIGFzIG11Y2ggYXBwcm9wcmlhdGUgdHJhaW5pbmcgYXMgcG9zc2libGUuIiwiVGhhdOKAmXMgaXQuKiIsIi0tLS0tLS0tLS0tLS0tLS0tLS0tIiwiKiBuZXctZ3JhZHVhdGUvbWlkLWNhcmVlciB3b3JrZXJzIiwiV2hhdCBkbyB5b3Ugc2F5IFwi5paw5YWl56S+5ZOhXCIgYW5kIFwi5Lit6YCU77yI5YWl56S+77yJ56S+5ZOhXCIgaW4gRW5nbGlzaD8iLCJcIuaWsOWFpeekvuWToVwiIGlzIGEgbmV3IGVtcGxveWVlIHdobyBqdXN0IGdyYWR1YXRlZCBmcm9tIFVuaXZlcmNpdHkvY29sbGVnZS9zY2hvb2wuIiwiXCLkuK3pgJTvvIjlhaXnpL7vvInnpL7lk6FcIiBpcyBhIG5ldyBlbXBsb3llZSB3aG8gd29ya2VkIGZvciBvdGhlciBjb21wYW55IGFuZCBoYXMgbXVjaCBleHBlcmllbmNlLiIsIipUaGF04oCZcyBpdC4iLCJJIHdhbnQgdG8gc2F5IFwi5Lul5LiK44Gn44GZXCIuIiwiSXMgXCJUaGF0J3MgaXRcIiBhcHByb3ByaWF0ZSBhbmQgcG9saXRlPyIsIk9yIFwiVGhhdCdzIGFsbFwiPyJd';corrections='W1tdLFtdLFtdLFtdLFtdLFtdLFtdLFsiU2luY2UgdGhlbiwgSSBoYXZlIFtmLXJlZF1ncmFkdWFsbHlbL2YtcmVkXSBzaGlmdGVkIG15IHNwZWNpYWx0eSBmcm9tIElUIHRvIGh1bWFuIHJlc291cmNlIGRldmVsb3BtZW50IHRyYWluaW5nIFtzbGluZV1ncmFkdWFsbHlbL3NsaW5lXSwgYmVjYXVzZSBtb3N0IGNvbXBhbmllcycgcmVxdWlyZW1lbnRbZi1ibHVlXXNbL2YtYmx1ZV0gZm9yIHRyYWluaW5nIFtzbGluZV1oYXMgYmVlblsvc2xpbmVdIGhhdmUgY2hhbmdlZC4iXSxbIkkgW2YtYmx1ZV1oYXZlWy9mLWJsdWVdIGNvbmR1Y3RlZCB2YXJpb3VzIHRyYWluaW5nIFtmLWJsdWVdY2xhc3Nlc1svZi1ibHVlXSAoPykgc3VjaCBhcyBsZWFkZXJzaGlwIHRyYWluaW5nLCBtYW5hZ2VyW2YtYmx1ZV1pYWxbL2YtYmx1ZV0gc2tpbGwgdHJhW2YtYmx1ZV1pWy9mLWJsdWVdbmluZywgdHJhaW5pbmcgZm9yIG5ldyBncmFkdWF0ZXMvbWlkLWNhcmVlciB3b3JrZXJzLCBhbmQgc28gb24uIl0sWyJBcyBhIHRyYWluaW5nIGNvbnN1bHRhbnQsIEkgam9pbiBhIGNvbXBhbnkgW2YtYmx1ZV1mb3JbL2YtYmx1ZV0gYXQgW2YtYm9sZF1tb3N0Wy9mLWJvbGRdIChsb25nZXN0IG1ha2VzIHNlbnNlLCBidXQgbW9zdCBzb3VuZHMgbW9yZSBuYXR1cmFsKSBvbmUgeWVhciwgc28gSSB3b3JrIGFsbW9zdCB0aGUgc2FtZSBbZi1ib2xkXShhIG5vdW4gaXMgbmVlZGVkIGhlcmUpWy9mLWJvbGRdIGFzIHJlZ3VsYXIgZW1wbG95ZWVzLiIsIkFzIGEgdHJhaW5pbmcgY29uc3VsdGFudCwgSSBqb2luIGEgY29tcGFueSBbZi1ibHVlXWZvclsvZi1ibHVlXSBvbmUgeWVhciBbZi1ibHVlXWF0IG1vc3RbL2YtYmx1ZV0sIHNvIEkgd29yayBhbG1vc3QgdGhlIHNhbWUgW2YtYmx1ZV0oYW1vdW50ID8pWy9mLWJsdWVdIGFzIHJlZ3VsYXIgZW1wbG95ZWVzLiAgW2YtcmVkXSggW2YtYmx1ZV1JJ20gcHJldHR5IHN1cmUgXCJhdCBsb25nZXN0XCIgaXMgZW50aXJlbHkgZ3JhbW1hdGljYWxseSBpbmNvcnJlY3QuIFsvZi1ibHVlXSApWy9mLXJlZF0iXSxbIkFuZCB3aGF0IEkgZG8gW3NsaW5lXWlzWy9zbGluZV0sIG9mIGNvdXJzZSwgW3NsaW5lXWl0Wy9zbGluZV0gZGVwZW5kcyBvbiBbc2xpbmVdZWFjaFsvc2xpbmVdIHRoZSBwcm9qZWN0LCBidXQgYmFzaWNhbGx5IGl0J3Mgc2ltcGxlLiIsIltmLWJsdWVdV1svZi1ibHVlXWhhdCBJIGRvLCBvZiBjb3Vyc2UsIGRlcGVuZHMgb24gZWFjaCBwcm9qZWN0LCBidXQgW2YtYmx1ZV1pdCBiYXNpY2FsbHkgYnJlYWtzIGRvd24gbGlrZSB0aGlzLlsvZi1ibHVlXS4gW2YtcmVkXShbZi1ibHVlXSBJIHRob3VnaHQgXCJiYXNpY2FsbHkgaXQncyBzaW1wbGVcIiB3YXMgYSBsaXR0bGUgYXdrd2FyZCwgc28gSSByZXdyb3RlIGl0IHRvIGZsb3cgYmV0dGVyLlsvZi1ibHVlXSAgKVsvZi1yZWRdIl0sWyIxc3RbZi1yZWRdOlsvZi1yZWRdIGxvb2sgaW50byBjdXJyZW50IHNpdHVhdGlvbiBhbmQgcmVxdWlyZW1lbnRbZi1ibHVlXXNbL2YtYmx1ZV0sIGFuZCBhbmFseXplIHRyYWluaW5nIG5lZWRzIHByb3Blcmx5IiwiMXN0OiBsb29rIGludG8gW2YtYmx1ZV10aGVbL2YtYmx1ZV0gY3VycmVudCBzaXR1YXRpb24gYW5kIFtmLWJsdWVdaXRzWy9mLWJsdWVdIHJlcXVpcmVtZW50W2YtYmx1ZV1zWy9mLWJsdWVdLCBhbmQgYW5hbHl6ZSB0cmFpbmluZyBuZWVkcyBwcm9wZXJseSJdLFsiMm5kW2YtcmVkXTpbL2YtcmVkXSBQbGFuLCBkZXNpZ24gYW5kIGRldmVsb3AgYXBwcm9wcmlhdGUsIGVmZmVjdGl2ZSBhbmQgZWZmaWNpZW50IHRyYWluaW5nLCIsIjJuZDogUGxhbiwgZGVzaWduIGFuZCBkZXZlbG9wIGFwcHJvcHJpYXRlLCBlZmZlY3RpdmUgYW5kIGVmZmljaWVudCB0cmFpbmluZywgb3IgbG9jYWxpemUgW2YtYmx1ZV10aGUgZXN0YWJsaXNoZWRbL2YtYmx1ZV0gZ2xvYmFsL2hlYWRxdWFydGVycyB0cmFpbmluZyJdLFsiKD8/PykiLCJbc2xpbmVdb3IgbG9jYWxpemUgZ2xvYmFsL2hlYWRxdWFydGVycyB0cmFpbmluZ1svc2xpbmVdIl0sWyIzcmRbZi1yZWRdOlsvZi1yZWRdIGRlbGl2ZXIgdHJhaW5pbmcgZWZmZWN0aXZlbHkiLCIzcmQ6IGRlbGl2ZXIgdHJhaW5pbmcgZWZmZWN0aXZlbHkiXSxbIltzbGluZV1UaGVbL3NsaW5lXSBMYXN0W2YtYmx1ZV1seVsvZi1ibHVlXSwgcmV2aWV3IGFuZCBtZWFzdXJlIHRoZSBlZmZlY3RpdmVuZXNzIFtmLWJsdWVdb2YgdGhlIHRyYWluaW5nWy9mLWJsdWVdLiJdLFsiQWNjb3JkaW5nIHRvIFtzbGluZV10aG9zZVsvc2xpbmVdIHRoZSByZXN1bHRbZi1ibHVlXXNbL2YtYmx1ZV0sIGNoYW5nZSBzb21ldGhpbmcgaWYgaXQncyBuZWVkZWQuIl0sWyJJdCdzIFtmLWJsdWVdYVsvZi1ibHVlXSBjeWNsZS4iXSxbIkkgY29uZHVjdCB0aFtmLXJlZF1lWy9mLXJlZF1zZSBbc2xpbmVdcm9sZXNbL3NsaW5lXSB0YXNrcyB3aXRoIG15IHRlYW0uIl0sW10sWyJBbmQgW3NsaW5lXXRoZVsvc2xpbmVdIG9uZSBvZiB0aGUgbW9zdCBpbXBvcnRhbnQgdGhpbmdzIGlzIHRoYXQgSSBkaXNjdXNzIG9yIG5lZ290aWF0ZSB3aXRoIHZhcmlvdXMgZGVwYXJ0bWVudHMgW3NsaW5lXW9yWy9zbGluZV0gYW5kIHBvc2l0aW9ucywgc3VjaCBhcyBtYW5hZ2VycywgZGlyZWN0b3JzLCBDRU8sIHJhbmtzIG9mIGVtcGxveWVlcyAoPz8/IHJhbmsgYW5kIGZpbGUgZW1wbG95ZWVzPyksIGFuZCBwZW9wbGUgb3ZlcnNlYXMgb24gcmVndWxhciBjb25mZXJlbmNlIGNhbGxbZi1ibHVlXXNbL2YtYmx1ZV0gb3IgYnVzaW5lc3MgdHJpcFtmLWJsdWVdc1svZi1ibHVlXSwgdG8gZGV2ZWxvcCBhcyBtdWNoIGFwcHJvcHJpYXRlIHRyYWluaW5nIGFzIHBvc3NpYmxlLiIsIltmLWJsdWVdT1svZi1ibHVlXW5lIG9mIHRoZSBtb3N0IGltcG9ydGFudCB0aGluZ3MgW2YtYmx1ZV1JIGRvIGlzWy9mLWJsdWVdIGRpc2N1c3Mgb3IgbmVnb3RpYXRlIHdpdGggdmFyaW91cyBkZXBhcnRtZW50cyBbZi1ibHVlXWFuZFsvZi1ibHVlXSBwb3NpdGlvbnMsIHN1Y2ggYXMgbWFuYWdlcnMsIGRpcmVjdG9ycywgQ0VPLCBbZi1ibHVlXXJhbmsgYW5kIGZpbGVbL2YtYmx1ZV0gZW1wbG95ZWVzLCBhbmQgcGVvcGxlIG92ZXJzZWFzIG9uIHJlZ3VsYXIgY29uZmVyZW5jZSBjYWxsW2YtYmx1ZV1zWy9mLWJsdWVdIG9yIGJ1c2luZXNzIHRyaXBbZi1ibHVlXXNbL2YtYmx1ZV0sIHRvIGRldmVsb3AgYXMgbXVjaCBhcHByb3ByaWF0ZSB0cmFpbmluZyBhcyBwb3NzaWJsZS4iXSxbXSxbXSxbXSxbXSxbXSxbXSxbXSxbXSxbXSxbXV0=';var correction_comments=[[],[],[],[],[],[],[],[null],[null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null],[null],[null],[null],[],[null,null],[],[],[],[],[],[],[],[],[],[]];
+//]]></script>
+
+</div>
+<div id='right' style='padding-bottom:0'>
+<div class='mb_20' id='author_box'>
+<div class='cfx'>
+<a href="/sand"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w50_h0/m_14470_f3e3e37da80089eac42bb0ebc590b4ff.jpg"/></a>
+<div class='author_information mb_10 cfx'>
+<a href="/sand" class="user_name">Sand</a>
+
+<div class='learning_languages'>
+<ul class='language_status'>
+<li class='speaking' data-title='Native language' rel='tooltip' title='Native language'>Japanese</li>
+<li class='studying' data-title='Language of study' rel='tooltip' title='Language of study'>
+English
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class='bdbox'>
+<table class='entry_status'>
+<tr>
+<td class='l01'>
+<p><a href="/sand/journals">181</a></p>
+<span>Entries Written</span>
+</td>
+<td class='l02'>
+<p><a href="/sand/correction_logs/sent">1,888</a></p>
+<span>Corrections made</span>
+</td>
+<td class='l03'>
+<p><a href="/sand/correction_logs/received">529</a></p>
+<span>Corrections received</span>
+</td>
+</tr>
+</table>
+</div>
+
+</div>
+
+  
+    <script type="text/javascript">google_ad_client="ca-pub-6717840198266056";google_ad_slot="1415028544";google_ad_width=300;google_ad_height=250;</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+
+  
+
+
+<div class='box'>
+<div id='journals_calendar'>
+<div class='yui-skin-sam'>
+<div id='jour_cal'>
+    <div id="cal1Container"></div>
+    <script type="text/javascript">//<![CDATA[
+(function(){var cal1=null,popupHolder=[],cal_journal_dates={},str_dates='',date_info=[{"journal_date":1275946988,"journal_id":512255},{"journal_date":1261145103,"journal_id":315887},{"journal_date":1261053343,"journal_id":314866},{"journal_date":1260845826,"journal_id":312607},{"journal_date":1260685416,"journal_id":310842},{"journal_date":1260526621,"journal_id":309279},{"journal_date":1260436359,"journal_id":308280},{"journal_date":1260286614,"journal_id":306822},{"journal_date":1260121500,"journal_id":305008},{"journal_date":1260044891,"journal_id":304202},{"journal_date":1259953890,"journal_id":303376},{"journal_date":1259868854,"journal_id":302501},{"journal_date":1259813591,"journal_id":301819},{"journal_date":1259781474,"journal_id":301568},{"journal_date":1259696552,"journal_id":300599},{"journal_date":1259589571,"journal_id":299275},{"journal_date":1259502142,"journal_id":298293},{"journal_date":1259326449,"journal_id":296468},{"journal_date":1258982342,"journal_id":292456},{"journal_date":1258883860,"journal_id":291219},{"journal_date":1258806451,"journal_id":290403},{"journal_date":1258710558,"journal_id":289266},{"journal_date":1258208502,"journal_id":283734},{"journal_date":1258184683,"journal_id":283484},{"journal_date":1258088228,"journal_id":282672},{"journal_date":1258005266,"journal_id":281861},{"journal_date":1257662476,"journal_id":278321},{"journal_date":1257592015,"journal_id":277772},{"journal_date":1257515474,"journal_id":277152},{"journal_date":1257261191,"journal_id":274766},{"journal_date":1257174092,"journal_id":273806},{"journal_date":1256918950,"journal_id":271906},{"journal_date":1256836698,"journal_id":271158},{"journal_date":1256752944,"journal_id":270279},{"journal_date":1256640350,"journal_id":269006},{"journal_date":1256487539,"journal_id":267504},{"journal_date":1256230962,"journal_id":265034},{"journal_date":1256068258,"journal_id":263499},{"journal_date":1255872423,"journal_id":261704},{"journal_date":1255774827,"journal_id":260872},{"journal_date":1255625393,"journal_id":259718},{"journal_date":1255438009,"journal_id":257845},{"journal_date":1255187874,"journal_id":255611},{"journal_date":1254931464,"journal_id":253425},{"journal_date":1254762749,"journal_id":251869},{"journal_date":1254582914,"journal_id":250263},{"journal_date":1254504621,"journal_id":249715},{"journal_date":1254482825,"journal_id":249429},{"journal_date":1254063858,"journal_id":245720},{"journal_date":1254056561,"journal_id":245600},{"journal_date":1253965082,"journal_id":244788},{"journal_date":1251815231,"journal_id":226767},{"journal_date":1251086328,"journal_id":219833},{"journal_date":1251019985,"journal_id":219154},{"journal_date":1250846545,"journal_id":217864},{"journal_date":1250653629,"journal_id":216266},{"journal_date":1250392821,"journal_id":214257},{"journal_date":1250323340,"journal_id":213792},{"journal_date":1250022959,"journal_id":211577},{"journal_date":1249940254,"journal_id":210889},{"journal_date":1249844401,"journal_id":210166},{"journal_date":1249751418,"journal_id":209502},{"journal_date":1249507129,"journal_id":207591},{"journal_date":1249475841,"journal_id":207295},{"journal_date":1249417770,"journal_id":206836},{"journal_date":1248985551,"journal_id":203521},{"journal_date":1248811912,"journal_id":202159},{"journal_date":1248721949,"journal_id":201418},{"journal_date":1248635214,"journal_id":200730},{"journal_date":1248462801,"journal_id":199550},{"journal_date":1248363188,"journal_id":198777},{"journal_date":1248275777,"journal_id":198028},{"journal_date":1248028047,"journal_id":195796},{"journal_date":1247846453,"journal_id":194395},{"journal_date":1247685811,"journal_id":193064},{"journal_date":1246863051,"journal_id":186650},{"journal_date":1246465727,"journal_id":183684},{"journal_date":1246413197,"journal_id":183200},{"journal_date":1246299322,"journal_id":182324},{"journal_date":1246160655,"journal_id":181113},{"journal_date":1246101863,"journal_id":180704},{"journal_date":1246068406,"journal_id":180483},{"journal_date":1245972753,"journal_id":179724},{"journal_date":1245800109,"journal_id":178464},{"journal_date":1245585267,"journal_id":176506},{"journal_date":1245547708,"journal_id":176182},{"journal_date":1245462206,"journal_id":175566},{"journal_date":1245438965,"journal_id":175465},{"journal_date":1245364086,"journal_id":174863},{"journal_date":1244989249,"journal_id":171884},{"journal_date":1244923288,"journal_id":171385},{"journal_date":1244751461,"journal_id":170036},{"journal_date":1243368606,"journal_id":157462},{"journal_date":1243267795,"journal_id":156603},{"journal_date":1243065921,"journal_id":154740},{"journal_date":1243012873,"journal_id":154374},{"journal_date":1242673121,"journal_id":151253},{"journal_date":1242587418,"journal_id":150434},{"journal_date":1242493912,"journal_id":149595},{"journal_date":1242402152,"journal_id":148674},{"journal_date":1242318562,"journal_id":147948},{"journal_date":1242065759,"journal_id":145515},{"journal_date":1241884690,"journal_id":143794},{"journal_date":1241790758,"journal_id":142784},{"journal_date":1241528200,"journal_id":140013},{"journal_date":1241505386,"journal_id":139798},{"journal_date":1240585753,"journal_id":131845},{"journal_date":1240413392,"journal_id":130376},{"journal_date":1239945712,"journal_id":126204},{"journal_date":1239661812,"journal_id":123754},{"journal_date":1239498957,"journal_id":122299},{"journal_date":1239402694,"journal_id":121599},{"journal_date":1239317350,"journal_id":120969},{"journal_date":1232627044,"journal_id":74704},{"journal_date":1232395919,"journal_id":73169},{"journal_date":1232292423,"journal_id":72497},{"journal_date":1232170287,"journal_id":71776},{"journal_date":1232035098,"journal_id":71065},{"journal_date":1231946701,"journal_id":70584},{"journal_date":1231605155,"journal_id":68556},{"journal_date":1231422189,"journal_id":67433},{"journal_date":1231323413,"journal_id":66827},{"journal_date":1231216981,"journal_id":66240},{"journal_date":1231084969,"journal_id":65642},{"journal_date":1231002703,"journal_id":65255},{"journal_date":1230911083,"journal_id":64851},{"journal_date":1230822237,"journal_id":64490},{"journal_date":1230777251,"journal_id":64276},{"journal_date":1230709340,"journal_id":63987},{"journal_date":1230554180,"journal_id":63340},{"journal_date":1230448281,"journal_id":62899},{"journal_date":1230352556,"journal_id":62500},{"journal_date":1230218818,"journal_id":61973},{"journal_date":1230133432,"journal_id":61622},{"journal_date":1230043478,"journal_id":61160},{"journal_date":1229951726,"journal_id":60672},{"journal_date":1229871008,"journal_id":60312},{"journal_date":1229780932,"journal_id":59889},{"journal_date":1229697289,"journal_id":59559},{"journal_date":1229611486,"journal_id":59152},{"journal_date":1229523536,"journal_id":58682},{"journal_date":1229446235,"journal_id":58281},{"journal_date":1229352686,"journal_id":57755},{"journal_date":1229268226,"journal_id":57321},{"journal_date":1229198934,"journal_id":56982},{"journal_date":1229092732,"journal_id":56506},{"journal_date":1229009764,"journal_id":56094},{"journal_date":1228940846,"journal_id":55696},{"journal_date":1228872701,"journal_id":55294},{"journal_date":1228774676,"journal_id":54763},{"journal_date":1228692573,"journal_id":54291},{"journal_date":1228647286,"journal_id":54057},{"journal_date":1228553732,"journal_id":53583},{"journal_date":1228469144,"journal_id":53137},{"journal_date":1228385752,"journal_id":52635},{"journal_date":1228326788,"journal_id":52375},{"journal_date":1228296398,"journal_id":52155},{"journal_date":1228139577,"journal_id":51275},{"journal_date":1227982312,"journal_id":50476},{"journal_date":1227865961,"journal_id":49858},{"journal_date":1227809205,"journal_id":49549},{"journal_date":1227615770,"journal_id":48429},{"journal_date":1227511564,"journal_id":47770},{"journal_date":1227354143,"journal_id":46980},{"journal_date":1227259775,"journal_id":46596},{"journal_date":1226662609,"journal_id":43828},{"journal_date":1226580870,"journal_id":43372},{"journal_date":1226324611,"journal_id":42158},{"journal_date":1226094416,"journal_id":41161},{"journal_date":1225404621,"journal_id":38225},{"journal_date":1225320178,"journal_id":37800},{"journal_date":1225029546,"journal_id":36141},{"journal_date":1224857542,"journal_id":35415},{"journal_date":1224842954,"journal_id":35337},{"journal_date":1224687812,"journal_id":34788},{"journal_date":1224616537,"journal_id":34535},{"journal_date":1224582475,"journal_id":34407},{"journal_date":1224478202,"journal_id":34048},{"journal_date":1224337072,"journal_id":33586},{"journal_date":1224256818,"journal_id":33321}],now_server2local="11/2018",selected_date='',date_info_json=Object.toJSON(date_info),args=getArgsFromHref(location.href);if(args['begin']!=null){var begin_date_a=args['begin'].split('-');var page_date=begin_date_a[1]+'/'+begin_date_a[0];}else if(args['date']!=null){var date_a=args['date'].split('-');var page_date=date_a[1]+'/'+date_a[0];}else{var page_date=now_server2local;}var pathname=location.pathname.split('/');for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(parseInt(date_info[i].journal_date*1000)).toYAHOODateString();if(cal_journal_dates[tmp_date]){cal_journal_dates[tmp_date]=cal_journal_dates[tmp_date]+'/'+date_info[i].journal_id;}else{cal_journal_dates[tmp_date]=date_info[i].journal_id;str_dates=str_dates+','+tmp_date;}}function init(){cal1=new YAHOO.widget.Calendar('cal1','cal1Container',{LOCALE_MONTHS:'short',LOCALE_WEEKDAYS:'1char',pagedate:page_date});cal1.styleCellDefault=function(workingDate,cell){YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_OOB);}
+cal1.renderCellDefault=function(workingDate,cell){cell.innerHTML='<a class="'+cal1.Style.CSS_CELL_SELECTOR+'">'+cal1.buildDayLabel(workingDate)+"</a>";}
+cal1.renderCellHasJournals=function(workingDate,cell){cell.innerHTML='<a href="/'+'sand'+'/journals?date='+workingDate.toStringYYMMDD()+'" class="'+cal1.Style.CSS_CELL_SELECTABLE+'">'+cal1.buildDayLabel(workingDate)+"</a>";YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_SELECTABLE);YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_HIGHLIGHT1);if(workingDate.getDate()==cal1.today.getDate()&&workingDate.getMonth()==cal1.today.getMonth()&&workingDate.getFullYear()==cal1.today.getFullYear()){YAHOO.util.Dom.removeClass(cell,cal1.Style.CSS_CELL_TODAY);}return YAHOO.widget.Calendar.STOP_RENDER;}
+cal1.addRenderer(str_dates,cal1.renderCellHasJournals);cal1.render();}function getArgsFromHref(sHref){var args=sHref.split('?');var retargs={}
+if(args[0]==sHref){return"";}var str=args[1];args=str.split('&');for(var i=0;i<args.length;i++){str=args[i];var arg=str.split('=');if(arg.length<=1)continue;retargs[arg[0]]=arg[1];}return retargs;}YAHOO.util.Event.onAvailable('cal1Container',init);})();
+//]]></script>
+
+</div>
+</div>
+</div>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Journal Statistics</h3>
+</div>
+<div class='cfx' id='studying_status'>
+<table class='table side-bar table_statusstudy'>
+<tr>
+<th>Total</th>
+<th>This month</th>
+<th>This week</th>
+</tr>
+<tr>
+<td>
+<p><a href="/sand/journals">180</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/sand/journals" id="monthCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/sand/journals" id="todayCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<script type="text/javascript">//<![CDATA[
+(function(){var date_info=[{"journal_date":1275946988,"journal_id":512255},{"journal_date":1261145103,"journal_id":315887},{"journal_date":1261053343,"journal_id":314866},{"journal_date":1260845826,"journal_id":312607},{"journal_date":1260685416,"journal_id":310842},{"journal_date":1260526621,"journal_id":309279},{"journal_date":1260436359,"journal_id":308280},{"journal_date":1260286614,"journal_id":306822},{"journal_date":1260121500,"journal_id":305008},{"journal_date":1260044891,"journal_id":304202},{"journal_date":1259953890,"journal_id":303376},{"journal_date":1259868854,"journal_id":302501},{"journal_date":1259813591,"journal_id":301819},{"journal_date":1259781474,"journal_id":301568},{"journal_date":1259696552,"journal_id":300599},{"journal_date":1259589571,"journal_id":299275},{"journal_date":1259502142,"journal_id":298293},{"journal_date":1259326449,"journal_id":296468},{"journal_date":1258982342,"journal_id":292456},{"journal_date":1258883860,"journal_id":291219},{"journal_date":1258806451,"journal_id":290403},{"journal_date":1258710558,"journal_id":289266},{"journal_date":1258208502,"journal_id":283734},{"journal_date":1258184683,"journal_id":283484},{"journal_date":1258088228,"journal_id":282672},{"journal_date":1258005266,"journal_id":281861},{"journal_date":1257662476,"journal_id":278321},{"journal_date":1257592015,"journal_id":277772},{"journal_date":1257515474,"journal_id":277152},{"journal_date":1257261191,"journal_id":274766},{"journal_date":1257174092,"journal_id":273806},{"journal_date":1256918950,"journal_id":271906},{"journal_date":1256836698,"journal_id":271158},{"journal_date":1256752944,"journal_id":270279},{"journal_date":1256640350,"journal_id":269006},{"journal_date":1256487539,"journal_id":267504},{"journal_date":1256230962,"journal_id":265034},{"journal_date":1256068258,"journal_id":263499},{"journal_date":1255872423,"journal_id":261704},{"journal_date":1255774827,"journal_id":260872},{"journal_date":1255625393,"journal_id":259718},{"journal_date":1255438009,"journal_id":257845},{"journal_date":1255187874,"journal_id":255611},{"journal_date":1254931464,"journal_id":253425},{"journal_date":1254762749,"journal_id":251869},{"journal_date":1254582914,"journal_id":250263},{"journal_date":1254504621,"journal_id":249715},{"journal_date":1254482825,"journal_id":249429},{"journal_date":1254063858,"journal_id":245720},{"journal_date":1254056561,"journal_id":245600},{"journal_date":1253965082,"journal_id":244788},{"journal_date":1251815231,"journal_id":226767},{"journal_date":1251086328,"journal_id":219833},{"journal_date":1251019985,"journal_id":219154},{"journal_date":1250846545,"journal_id":217864},{"journal_date":1250653629,"journal_id":216266},{"journal_date":1250392821,"journal_id":214257},{"journal_date":1250323340,"journal_id":213792},{"journal_date":1250022959,"journal_id":211577},{"journal_date":1249940254,"journal_id":210889},{"journal_date":1249844401,"journal_id":210166},{"journal_date":1249751418,"journal_id":209502},{"journal_date":1249507129,"journal_id":207591},{"journal_date":1249475841,"journal_id":207295},{"journal_date":1249417770,"journal_id":206836},{"journal_date":1248985551,"journal_id":203521},{"journal_date":1248811912,"journal_id":202159},{"journal_date":1248721949,"journal_id":201418},{"journal_date":1248635214,"journal_id":200730},{"journal_date":1248462801,"journal_id":199550},{"journal_date":1248363188,"journal_id":198777},{"journal_date":1248275777,"journal_id":198028},{"journal_date":1248028047,"journal_id":195796},{"journal_date":1247846453,"journal_id":194395},{"journal_date":1247685811,"journal_id":193064},{"journal_date":1246863051,"journal_id":186650},{"journal_date":1246465727,"journal_id":183684},{"journal_date":1246413197,"journal_id":183200},{"journal_date":1246299322,"journal_id":182324},{"journal_date":1246160655,"journal_id":181113},{"journal_date":1246101863,"journal_id":180704},{"journal_date":1246068406,"journal_id":180483},{"journal_date":1245972753,"journal_id":179724},{"journal_date":1245800109,"journal_id":178464},{"journal_date":1245585267,"journal_id":176506},{"journal_date":1245547708,"journal_id":176182},{"journal_date":1245462206,"journal_id":175566},{"journal_date":1245438965,"journal_id":175465},{"journal_date":1245364086,"journal_id":174863},{"journal_date":1244989249,"journal_id":171884},{"journal_date":1244923288,"journal_id":171385},{"journal_date":1244751461,"journal_id":170036},{"journal_date":1243368606,"journal_id":157462},{"journal_date":1243267795,"journal_id":156603},{"journal_date":1243065921,"journal_id":154740},{"journal_date":1243012873,"journal_id":154374},{"journal_date":1242673121,"journal_id":151253},{"journal_date":1242587418,"journal_id":150434},{"journal_date":1242493912,"journal_id":149595},{"journal_date":1242402152,"journal_id":148674},{"journal_date":1242318562,"journal_id":147948},{"journal_date":1242065759,"journal_id":145515},{"journal_date":1241884690,"journal_id":143794},{"journal_date":1241790758,"journal_id":142784},{"journal_date":1241528200,"journal_id":140013},{"journal_date":1241505386,"journal_id":139798},{"journal_date":1240585753,"journal_id":131845},{"journal_date":1240413392,"journal_id":130376},{"journal_date":1239945712,"journal_id":126204},{"journal_date":1239661812,"journal_id":123754},{"journal_date":1239498957,"journal_id":122299},{"journal_date":1239402694,"journal_id":121599},{"journal_date":1239317350,"journal_id":120969},{"journal_date":1232627044,"journal_id":74704},{"journal_date":1232395919,"journal_id":73169},{"journal_date":1232292423,"journal_id":72497},{"journal_date":1232170287,"journal_id":71776},{"journal_date":1232035098,"journal_id":71065},{"journal_date":1231946701,"journal_id":70584},{"journal_date":1231605155,"journal_id":68556},{"journal_date":1231422189,"journal_id":67433},{"journal_date":1231323413,"journal_id":66827},{"journal_date":1231216981,"journal_id":66240},{"journal_date":1231084969,"journal_id":65642},{"journal_date":1231002703,"journal_id":65255},{"journal_date":1230911083,"journal_id":64851},{"journal_date":1230822237,"journal_id":64490},{"journal_date":1230777251,"journal_id":64276},{"journal_date":1230709340,"journal_id":63987},{"journal_date":1230554180,"journal_id":63340},{"journal_date":1230448281,"journal_id":62899},{"journal_date":1230352556,"journal_id":62500},{"journal_date":1230218818,"journal_id":61973},{"journal_date":1230133432,"journal_id":61622},{"journal_date":1230043478,"journal_id":61160},{"journal_date":1229951726,"journal_id":60672},{"journal_date":1229871008,"journal_id":60312},{"journal_date":1229780932,"journal_id":59889},{"journal_date":1229697289,"journal_id":59559},{"journal_date":1229611486,"journal_id":59152},{"journal_date":1229523536,"journal_id":58682},{"journal_date":1229446235,"journal_id":58281},{"journal_date":1229352686,"journal_id":57755},{"journal_date":1229268226,"journal_id":57321},{"journal_date":1229198934,"journal_id":56982},{"journal_date":1229092732,"journal_id":56506},{"journal_date":1229009764,"journal_id":56094},{"journal_date":1228940846,"journal_id":55696},{"journal_date":1228872701,"journal_id":55294},{"journal_date":1228774676,"journal_id":54763},{"journal_date":1228692573,"journal_id":54291},{"journal_date":1228647286,"journal_id":54057},{"journal_date":1228553732,"journal_id":53583},{"journal_date":1228469144,"journal_id":53137},{"journal_date":1228385752,"journal_id":52635},{"journal_date":1228326788,"journal_id":52375},{"journal_date":1228296398,"journal_id":52155},{"journal_date":1228139577,"journal_id":51275},{"journal_date":1227982312,"journal_id":50476},{"journal_date":1227865961,"journal_id":49858},{"journal_date":1227809205,"journal_id":49549},{"journal_date":1227615770,"journal_id":48429},{"journal_date":1227511564,"journal_id":47770},{"journal_date":1227354143,"journal_id":46980},{"journal_date":1227259775,"journal_id":46596},{"journal_date":1226662609,"journal_id":43828},{"journal_date":1226580870,"journal_id":43372},{"journal_date":1226324611,"journal_id":42158},{"journal_date":1226094416,"journal_id":41161},{"journal_date":1225404621,"journal_id":38225},{"journal_date":1225320178,"journal_id":37800},{"journal_date":1225029546,"journal_id":36141},{"journal_date":1224857542,"journal_id":35415},{"journal_date":1224842954,"journal_id":35337},{"journal_date":1224687812,"journal_id":34788},{"journal_date":1224616537,"journal_id":34535},{"journal_date":1224582475,"journal_id":34407},{"journal_date":1224478202,"journal_id":34048},{"journal_date":1224337072,"journal_id":33586},{"journal_date":1224256818,"journal_id":33321}],cur_month_counter=0,week_counter=0;var now_date=new Date(),DateMath=YAHOO.widget.DateMath;var now_date_week_begin=DateMath.getFirstDayOfWeek(now_date,0);var now_date_week_end=DateMath.add(now_date_week_begin,'D',6);for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(date_info[i].journal_date*1000);if(tmp_date.getFullYear()==now_date.getFullYear()){if(tmp_date.getMonth()==now_date.getMonth()){cur_month_counter+=1;if(DateMath.getWeekNumber(tmp_date,0)==DateMath.getWeekNumber(now_date,0)){week_counter+=1;}}}}if(week_counter!=0){$('todayCount').update(week_counter);$('todayCount').href=$('todayCount').href+'?begin='+now_date_week_begin.toStringYYMMDD()+'&end='+now_date_week_end.toStringYYMMDD();}else{$('todayCount').href="#";}if(cur_month_counter!=0){$('monthCount').update(cur_month_counter);$('monthCount').href=$('monthCount').href+'?begin='+DateMath.findMonthStart(now_date).toStringYYMMDD()+'&end='+DateMath.findMonthEnd(now_date).toStringYYMMDD();}else{$('monthCount').href="#";}})();
+//]]></script>
+
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest entries</h3>
+</div>
+<table class='table side-bar ar_icobox'>
+<tr>
+<td><a href="http://lang-8.com/sand/journals/512255">Long long time no see! (11) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/sand/journals/315887">The future progressive form (14) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/sand/journals/314866">「ちゃっちい」 「ちんけな」 (14) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/sand/journals/312607">A Christmas Carol (14) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/sand/journals/310842">Meatware?? (12) </a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/sand/journals" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest comments</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<td><a href="http://lang-8.com/sand/journals/151253">Feb 2 Sapienoid</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/sand/journals/43828">Jun 14 </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/sand/journals/41161">Mar 26 Brendan </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/sand/journals/314866">Jan 5 </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/sand/journals/314866">Nov 1 </a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/sand/journals/comments" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box cfx' id='d_draft_list'>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Entries by Month</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<th class='year'>2010</th>
+</tr>
+<tr>
+<td>
+ <a href="/sand/journals?begin=2010-6-1&amp;end=2010-06-30">June (1)</a>
+</td>
+</tr>
+<tr>
+<th class='year'>2009</th>
+</tr>
+<tr>
+<td>
+ <a href="/sand/journals?begin=2009-12-1&amp;end=2009-12-31">December (14)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/sand/journals?begin=2009-11-1&amp;end=2009-11-30">November (16)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/sand/journals?begin=2009-10-1&amp;end=2009-10-31">October (17)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/sand/journals?begin=2009-9-1&amp;end=2009-09-30">September (4)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/sand/journals?begin=2009-8-1&amp;end=2009-08-31">August (13)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/sand/journals?begin=2009-7-1&amp;end=2009-07-31">July (13)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/sand/journals?begin=2009-6-1&amp;end=2009-06-30">June (14)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/sand/journals?begin=2009-5-1&amp;end=2009-05-31">May (14)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/sand/journals?begin=2009-4-1&amp;end=2009-04-30">April (7)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/sand/journals?begin=2009-1-1&amp;end=2009-01-31">January (15)</a>
+</td>
+</tr>
+<tr>
+<th class='year'>2008</th>
+</tr>
+<tr>
+<td>
+ <a href="/sand/journals?begin=2008-12-1&amp;end=2008-12-31">December (30)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/sand/journals?begin=2008-11-1&amp;end=2008-11-30">November (11)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/sand/journals?begin=2008-10-1&amp;end=2008-10-31">October (11)</a>
+</td>
+</tr>
+</table>
+</div>
+
+<div style='height:20px;background-color:#ffffff'></div>
+<div id='eval_comment_form' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='form_to_edit_note' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='journal_comment_liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='eval_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+</div>
+<div class='yui-skin-sam' id='yui_panels'>
+<div id='wt_panel' style='visibility:hidden;'>
+<div class='hd' id='wt_title'></div>
+<div class='bd' id='wt_content'></div>
+<div class='ft'></div>
+</div>
+</div>
+<div id='modal'></div>
+<div id='confirm_box'>
+<div id='confirm_box_close'>
+<a onclick='hide_confirm_box();'>
+<img src='/static/images2/xico_closebt.png.pagespeed.ic.z-nUma7JBr.png'/>
+</a>
+</div>
+<div id='confirm_box_contents'></div>
+</div>
+</div>
+<div class='modal hide' id='report_spam_entry' tabindex='-1'>
+<div class='modal-header'>
+<btn class='close' data-dismiss='modal' type='button'>x</btn>
+<h4>Report this entry</h4>
+</div>
+<div class='modal-body'>
+<strong class='spaced'>Spam entry</strong>
+<p class='spaced'>#=#=# Practicing talking about myself in English #=#=#
+Topic 1: About my job history - 3/3
+
+Oops, it&#39;s too long... I hope you aren&#39;t fed up with it.
+
+--------------------
+The next is the 3rd phase; I started working as a freelance training consultant. Since then, I have shifted my specialty fro</p>
+<br/>
+<strong class='spaced'>Author</strong>
+<p class='spaced'>Sand</p>
+<br/>
+<strong class='spaced'>Reporter</strong>
+<p class='spaced'>0</p>
+</div>
+<div class='modal-footer'>
+<a class='btn' data-dismiss='modal' href='#'>Close</a>
+<a class="bt_lv1 bt_size_04" href="#" onclick="new Ajax.Request('/spam_reports/report_entry?entry_body=%23%3D%23%3D%23+Practicing+talking+about+myself+in+English+%23%3D%23%3D%23%0D%0ATopic+1%3A+About+my+job+history+-+3%2F3%0D%0A%0D%0AOops%2C+it%27s+too+long...+I+hope+you+aren%27t+fed+up+with+it.%0D%0A%0D%0A--------------------%0D%0AThe+next+is+the+3rd+phase%3B+I+started+working+as+a+freelance+training+consultant.+Since+then%2C+I+have+shifted+my+specialty+fro&amp;reporter_id=0&amp;spammer_id=14470&amp;url=http%3A%2F%2Flang-8.com%2F14470%2Fjournals%2F47770', {asynchronous:true, evalScripts:true, onLoading:function(request){$j('#report_spam_entry').html('&lt;p class=&quot;center&quot;&gt;&lt;br /&gt;&lt;img src=&quot;/static/images2/loading.gif&quot; class=&quot;center spaced vertical-margin&quot; /&gt;&lt;/p&gt;');}, onSuccess:function(request){$j(&quot;#report_spam_entry&quot;).modal(&quot;hide&quot;);$j(&quot;#alert-box&quot;).alerter(&quot;alertSuccess&quot;, &quot;&quot;, &quot;Report sent.&quot; );}, parameters:'authenticity_token=' + encodeURIComponent('wQfJQ77fXemeRLWHVRl12G/I5ETO2+xkE0RjM+gBj14=')}); return false;">Send</a>
+</div>
+</div>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show-5f9f69ded18eb0d1a8bef6040b599e7b.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show2-e52e094b14e0c5b5979f64d63309ab8a.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show3-eedb1c964407a61f34a56d6652b21722.js" type="text/javascript"></script>
+<script id="evernote-js" data-cjsexec="true" type="text/cjs" data-cjssrc="http://static.evernote.com/noteit.js"></script>
+<script id="twitter-wjs" data-cjsexec="true" type="text/cjs" data-cjssrc="https://platform.twitter.com/widgets.js"></script>
+<script type='text/javascript'></script>
+<script type='text/javascript'>//<![CDATA[
+jQuery(function($){new Lang8.Views.JournalShowView();});
+//]]></script>
+
+</div>
+</div>
+<div data-search_url='' id='footer'>
+<div class='inner'>
+<div class='box clearfix'>
+<ul class='ft_parts_list f_left'>
+<ul class='ft_parts_list f_left'></ul>
+</ul>
+</div>
+<div class='box02 clearfix'>
+<ul>
+
+</ul>
+<ul>
+<li>
+<p>
+Study
+</p>
+<ul>
+<li><a href="/profiles/search">Member Search</a></li>
+<li><a href="/hotentries">Popular Entries</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+View
+</p>
+<ul>
+<li><a href="/rankings">Rankings</a></li>
+<li>
+<a href="/groups">Groups</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+Help
+</p>
+<ul>
+<li><a href="/help/tumblr" target="_blank">Help</a></li>
+<li><a href="/register/term" target="_blank">Terms of Service</a></li>
+<li><a href="/register/privacy" target="_blank">Privacy Policy</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+About Lang-8
+</p>
+<ul>
+<li><a href="/help/law_1" target="_blank">特定商取引法に基づく表記</a></li>
+<li><a href="/help/donation" target="_blank">Donate</a></li>
+<li><a href="http://lang-8.jp/" target="_blank">Company</a></li>
+<li><a href="http://lang-8.jp/#recruit" target="_blank">Travailler pour Lang-8</a></li>
+<li>
+<a href='mailto:support@lang-8.com'>Contact us</a>
+</li>
+<li>&nbsp;</li>
+</ul>
+</li>
+</ul>
+<ul id='social_web_list'>
+<li class='icon_with twitter'>
+<a class='twitter-follow-button' data-show-count='false' href='https://twitter.com/lang8'>Follow @lang8</a>
+<script defer="defer" src="https://platform.twitter.com/widgets.js" type="text/javascript"></script>
+</li>
+<li class='icon_with facebook'><a href="http://www.facebook.com/lang8" target="_blank">Facebook page</a></li>
+<li class='icon_with rss'><a href="http://blog.lang-8.com" target="_blank">Lang-8 blog</a></li>
+</ul>
+</div>
+<div class='box03 clearfix'>
+<li class='f_left panel_list'>
+<a href='https://mixpanel.com/f/partner' target='_blank'>
+<img alt='Mobile and Web Analytics' src='https://mixpanel.com/site_media/images/partner/badge_light.png'/>
+</a>
+</li>
+<p class='copy f_right'>
+&copy; 2017 Lang-8, Inc. All rights reserved.
+</p>
+</div>
+</div>
+</div>
+
+
+<script type='text/javascript'>//<![CDATA[
+var gaJsHost=(("https:"==document.location.protocol)?"https://ssl.":"http://www.");document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var pageTracker;autoRetry(function(){pageTracker=_gat._getTracker("UA-452011-7");pageTracker._setDomainName("none");pageTracker._setAllowLinker(true);pageTracker._initData();pageTracker._trackPageview("/before/journals/show/47770");},2);
+//]]></script>
+
+
+<script type='text/javascript'>//<![CDATA[
+$j(function(){$j('[rel=tooltip]').tooltip();$j('[rel=popover]').popover();});
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var cjsscript=document.createElement('script');cjsscript.src="/static/javascripts/control_js.js";var cjssib=document.getElementsByTagName('script')[0];cjssib.parentNode.insertBefore(cjsscript,cjssib);
+//]]></script>
+<div id='fb-root'></div>
+<script type='text/javascript'>//<![CDATA[
+(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=138873442911";fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));
+//]]></script>
+</body>
+</html>
