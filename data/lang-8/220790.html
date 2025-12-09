@@ -1,0 +1,923 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir='ltr' itemscope='' itemtype='http://schema.org/Blog' xmlns:fb='http://www.facebook.com/2008/fbml' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"agent":"","applicationTime":477,"queueTime":0,"applicationID":"11814779","errorBeacon":"bam.nr-data.net","transactionName":"Jg4MFRNdCllURU4MXBATDAANQUlGWVgW","licenseKey":"240011c68f","beacon":"bam.nr-data.net"}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content='text/css' http-equiv='Content-Style-Type'/>
+<meta content='text/javascript' http-equiv='Content-Script-Type'/>
+<meta content='summary' name='twitter:card'/>
+<meta content='@lang8' name='twitter:site'/>
+<meta content='I&amp;#39;m happy to make many friends here :)' property='og:title'/>
+<meta content='blog' property='og:type'/>
+<meta content='http://lang-8.com/220790/journals/739583' property='og:url'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/ad4531b9ef418734264e4277a47249fdbfc95f9c.jpg' property='og:image'/>
+<meta content="(In order to know from each other ,now let me introduce myself to you)&#x000A;My name is WangHuan. I'm from Xi'an International University.I am a junior studennt major in Japanese.&#x000A;After graduated from high school in June, 2008 ,I have studied japanese for neary  two years since August ,2008.&#x000A;With my har" property='og:description'/>
+<meta content='Lang-8' property='og:site_name'/>
+<meta content='138873442911' property='fb:app_id'/>
+<meta content='I&amp;#39;m happy to make many friends here :)' itemprop='name'/>
+<meta content="(In order to know from each other ,now let me introduce myself to you)&#x000A;My name is WangHuan. I'm from Xi'an International University.I am a junior studennt major in Japanese.&#x000A;After graduated from high school in June, 2008 ,I have studied japanese for neary  two years since August ,2008.&#x000A;With my har" itemprop='description'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/ad4531b9ef418734264e4277a47249fdbfc95f9c.jpg' itemprop='image'/>
+
+<title>
+I&#39;m happy to make many friends here :) | Lang-8: For learning foreign languages
+</title>
+<link href='/favicon.ico' rel='shortcut icon'/>
+<link href="http://dzhimp63a2tb1.cloudfront.net/assets/static/css/application-1b103989b91cc566c626a5030a5c0c04.css" media="screen" rel="stylesheet" type="text/css"/>
+<script type="text/cjs">
+var h = document.getElementsByTagName('head')[0];
+var link = document.createElement('link');
+link.href = 'https://fonts.googleapis.com/css?family=Telex';
+link.type = 'text/css';
+link.rel = 'stylesheet';
+link.media = 'screen'
+h.appendChild(link);
+</script>
+
+
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/application-462b56e1d78c3fb6374e9b344e47357a.js" type="text/javascript"></script>
+
+<script type='text/javascript'>//<![CDATA[
+var lang="2-2";var sessid="";
+//]]></script>
+
+<meta content='(In order to know from each other ,now let me introduce myself to you)  My name is WangHuan. I&amp;#39;m ...' name='description'/>
+<meta content='' name='keywords'/>
+
+<meta content='1NyOQgk3_D9-R1XWpjxkGinHxWufQzM-DTGssOLEIvs' name='google-site-verification'/>
+</head>
+<body data-device='pc' id='journals_show'>
+<script type="text/javascript">var langsData=[];langsData.push({key:'cjv',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'ckb',body:'Please correct some sentences or comments on this journal.'});langsData.push({key:'cka',body:'Corrections'});langsData.push({key:'cjz',body:'Comment'});langsData.push({key:'cjt',body:'Post'});langsData.push({key:'cju',body:'Back to correcting'});langsData.push({key:'cjw',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjx',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjy',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'D063',body:'There has been an internal system error.'});langsData.push({key:'chc',body:'Show corrections'});langsData.push({key:'chd',body:'Hide'});langsData.push({key:'xlw',body:'Do you really want to reset the data?'});langsData.push({key:'xlx',body:'You have already started to leave a comment on this journal. Do you want to continue with it?'});langsData.push({key:'xly',body:'Continue'});langsData.push({key:'xlz',body:'No'});langsData.push({key:'cix',body:'Red'});langsData.push({key:'ciy',body:'Blue'});langsData.push({key:'qag',body:'Gray'});langsData.push({key:'ciz',body:'Bold'});langsData.push({key:'cja',body:'Cross out'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjc',body:'Cancel'});langsData.push({key:'cjd',body:'Correct'});langsData.push({key:'cje',body:'Unformat'});langsData.push({key:'rgo',body:'This sentence is perfect! No correction needed!'});langsData.push({key:'xll',body:'This is the original post.'});langsData.push({key:'xlm',body:'To correct, click this button.'});langsData.push({key:'xln',body:'You can use the colored fonts and strikethrough feature to help you with your correction.'});langsData.push({key:'xlo',body:'After correcting, please press this button.'});langsData.push({key:'xlp',body:'Your corrections are displayed here.'});langsData.push({key:'xlq',body:'Press this button to complete the correction.'});langsData.push({key:'xmm',body:'Sending...'});langsData.push({key:'xmn',body:'done'});langsData.push({key:'ycs',body:'Success! A friend request will now be sent to your friend.'});langsData.push({key:'xog',body:'Failed to send the friend request. Please try again in a few minutes.'});langsData.push({key:'cit',body:'Comments on this correction'});langsData.push({key:'cir',body:'Add to /Edit My Notebook'});langsData.push({key:'rfv',body:'Vertical View'});langsData.push({key:'rfw',body:'Normal View'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjp',body:'Cancel'});langsData.push({key:'cjr',body:'Remove correction'});langsData.push({key:'ckc',body:'Description about correction.(You can write in any language.)'});langsData.push({key:'cjk',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'cjl',body:'There are not any comments or corrections.'});langsData.push({key:'cjh',body:'Correct this entry'});langsData.push({key:'cjf',body:'Comment'});langsData.push({key:'cjm',body:'There has been an internal system error. Please try again.'});langsData.push({key:'kbm',body:'Draft Saved'});var l8=l8||{};l8.t=l8.t||{};l8.t=new L8I18n(langsData);</script>
+
+<div class='navbar navbar-fixed-top mb_20' id='header'>
+<div class='navbar-inner'>
+<div class='container'>
+<a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</a>
+<div class='nav-collapse'>
+<ul class='nav' id='dropmenu03'>
+<li class='logoname'>
+<a class='brand' href='/'>
+<img alt="Header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0" id="logo" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0.gif"/>
+</a>
+</li>
+<li class='divider'></li>
+<li class='home'>
+<a href="/" class="a_home" title="Home"><img alt="Ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb.png" title="Home"/>
+</a></li>
+<li class='divider'></li>
+<li class='help'>
+<a href="/help/about" class="help" target="_blank" title="What is Lang-8?"><span>
+What is Lang-8?
+</span>
+</a></li>
+<li class='divider'></li>
+</ul>
+<ul class='nav pull-right' id='dropmenu02'>
+<li class='help'>
+<a href="/register/step1?from=header" class="help"><span>Sign up</span>
+</a></li>
+<li class='divider'></li>
+<li class='help' id='login'>
+<a href="https://lang-8.com/login?from=header" class="help"><span>Log in</span>
+</a></li>
+<li class='divider'></li>
+<li class='language_list'>
+<form action="" class="language_select" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="yJvlNDllYdIGHS4qlBKvacfQttzmv6d/2/9nnOvpeD4="/></div>
+<select id="interface_lang" name="interface_lang" onchange="onChangeInterfaceLang()"><option value="2-2" selected="selected">English</option>
+<option value="2-5">Español</option>
+<option value="2-6">français</option>
+<option value="2-8">Deutsch</option>
+<option value="2-95">Português(Portugal)</option>
+<option value="2-10">Русский</option>
+<option value="2-59">Polski</option>
+<option value="2-78">Hrvatski</option>
+<option value="2-30">العربية</option>
+<option value="2-1">日本語</option>
+<option value="2-3">中文(简体)</option>
+<option value="2-300">中文(繁體)</option>
+<option value="2-4">한국어</option>
+<option value="2-20">ภาษาไทย</option>
+<option value="2-35">Svenska</option>
+<option value="2-47">Tagalog</option>
+<option value="2-65">Bahasa Melayu</option>
+<option value="2-58">Indonesian</option>
+<option value="2-7">Italiano</option></select>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class='alerter container alert fade in navbar-fixed-top' id='alert-top' style='top:60px;display:none;'>
+<a class='close' data-dismiss='alert' href='#'>
+&times;
+</a>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert Message here
+</span>
+</div>
+<div class='alerter alert fade in navbar-fixed-top' id='alert-box' style='left:40%;top:40%;width:200px;display:none;'>
+<div style='text-align:center;'>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert message here
+</span>
+</div>
+</div>
+
+
+
+
+      <div class="center" style="margin-bottom: 10px;">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- PC_Super_Before_Login -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6717840198266056" data-ad-slot="9171779343" data-ad-format="auto"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+
+      </div>
+
+
+
+
+<div id='page_content'>
+<div class='cfx' id='main_container'>
+<ul class="cfx" id="breadcrumbs"><li class="home"><a href="/">Home</a></li><li class=""><a href="/profiles/search">Member</a></li><li class=""><a href="/220790">happyflame</a></li><li class=""><a href="/220790/journals">happyflame's entries</a></li><li class=""><span>I&#39;m happy to make many friends here :)</span></li></ul>
+<div>
+<div data-use_friend_request_popover='data-use_friend_request_popover' id='main'>
+<style type='text/css'>@font-face{font-family:"FontAwesome";src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot);src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot?#iefix) format('eot') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.woff) format('woff') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.ttf) format('truetype') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.svg#FontAwesome) format('svg');font-weight:normal;font-style:normal}</style>
+<div class='cfx' id='entry_detail'>
+<div class='show_report_spam_link cfx' id='entry_title_box'>
+<div class='tit_02'>
+<h1 id='subject_show'>I&#39;m happy to make many friends here :)</h1>
+<div class='edit_links'>
+<ul class='cfx'>
+</ul>
+</div>
+</div>
+</div>
+<div class='clear_both'></div>
+<div class='cfx' id='tools_for_journal'>
+<ul class='journal_status floated_on_right'>
+<li class='privacy_level_5' data-original-title='Public' rel='tooltip'>&nbsp;</li>
+<li class='visiters' data-original-title='Views' rel='tooltip' title='Views'>162</li>
+<li class='comment_num' data-original-title='Comments' rel='tooltip' title='Comments'>3</li>
+<li class='corrections_num' data-original-title='Corrections' rel='tooltip' title='Corrections'>1</li>
+<li class='studying' data-original-title='The language that needs to be corrected' rel='tooltip'>English&nbsp;</li>
+</ul>
+<span class='journal_date floated_on_left'>
+Dec 24, 2010 17:34
+</span>
+<script type='text/javascript'>//<![CDATA[
+$j(function(){var journalCounterView=new Lang8.Views.JournalCounterView();});
+//]]></script>
+
+</div>
+<div id='show_buttons'>
+<input class='bt_lv3' data-original-title='Show corrections for sentences when you mouse-over.' id='showAndHide' rel='tooltip' title='' type='button' value='Show'/>
+<input class='bt_lv3' data-original-title='Show all corrections together in a pop-up window.' id='showAll' rel='tooltip' title='' type='button' value='Show All'/>
+</div>
+
+<div class='cfx' id='body_show'>
+<div id='body_show_ori'>
+(In order to know from each other ,now let me introduce myself to you)<br/>My name is WangHuan. I'm from Xi'an International University.I am a junior studennt major in Japanese.<br/>After graduated from high school in June, 2008 ,I have studied japanese for neary  two years since August ,2008.<br/>With my hardwork and teacher's instruction, I have grasped daily conversation and English and Japanese Writing.At present I am learning computer by myself. I can use computer to deal with some graph and data statistics and so on.I am not good at communicating with people before,but during the living at University,a Classes cadre as i am,my ability of communication has been increased.Im frank and has the patience to any matter and the sense of responsibility. Although I have not graduated, but noing can question my will and I have the confidence to the future. I will well prepared  to accept future challenge.Finally, best wishes for my friend.<br/>(I wound like you to correct my error)
+</div>
+<div class='box_like_button cfx' id='async_show_like'></div>
+<div class='ad_journal_center clear_both floated_on_left'>
+  
+    <div class="center" style="margin: 0 0 10px;">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- JournalCenter336_280 -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-6717840198266056" data-ad-slot="1360554540"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+
+    </div>
+  
+
+</div>
+</div>
+</div>
+<div class='little-spaced cfx' data-canonical_url='http://lang-8.com/220790/journals/739583' id='links_for_journal'>
+<span class='horizontal-spaced tw-btn'>
+<a class='twitter-share-button' data-hashtags='lang8' data-related='lang8' data-text='I&amp;#39;m happy to make many friends here :)' data-url='http://lang-8.com/220790/journals/739583' data-via='lang8' href='https://twitter.com/share'>Tweet</a>
+</span>
+<span class='horizontal-spaced fb-like' data-action='like' data-colorscheme='light' data-href='http://lang-8.com/220790/journals/739583' data-layout='button_count' data-show-faces='false' data-width='100'></span>
+<span class='horizontal-spaced gplus_btn'>
+<!-- %span.g-plusone{'data-size' => 'medium', :href => "#{@journal.canonical_url}"} -->
+</span>
+<span class='floated_on_left'>
+<span class='st_fblike_hcount' displayText='Facebook Like' st_url='http://lang-8.com/220790/journals/739583'></span>
+<span class='st_facebook_hcount' displayText='Facebook' st_url='http://lang-8.com/220790/journals/739583'></span>
+<span class='st_linkedin_hcount' displayText='LinkedIn' st_url='http://lang-8.com/220790/journals/739583'></span>
+</span>
+<a href='#' onclick="Evernote.doClip({styling:'full',providerName:'Lang-8',suggestTags:'Lang-8',suggestNotebook:'Lang-8',contentId:'entry_container'}); return false;" style='float:right;margin-right:5px;'>
+<img alt='Clip to Evernote' src='/static/images2/xarticle-clipper-fr.png.pagespeed.ic.BAKnLUGqIU.png'/>
+</a>
+</div>
+<div id='comments_and_corrections_field'>
+<div class='fukidashi comment_field' id='journal_comment_2600006'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/rsail"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/daa9f37ef12fa0736d2f7e6cbb66f552b62b3a88.jpg"/></a>
+<a href="/rsail" class="user_name">rsail</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Dec 24, 2010 21:45
+</span>
+</div>
+</div>
+<div class='correction_list corner-rounded_5 little-spaced'>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>(In order to know from each other ,now let me introduce myself to you)</li>
+<li class='corrected correct'>
+<p><span class="sline">(</span>In order <span class="f_blue">to get to know</span> <span class="sline">from</span> each other, now let me introduce myself to you<span class="sline">)</span> <span class="f_blue">(get to know each other = 结识彼此）</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-6636943'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>My name is WangHuan.</li>
+<li class='corrected correct'>
+<p>My name is Wang Huan.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-6636944'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I am a junior studennt major in Japanese.</li>
+<li class='corrected correct'>
+<p>I am a junior studen<span class="sline">n</span>t <span class="f_blue">majoring</span> in Japanese.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-6636945'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>After graduated from high school in June, 2008 ,I have studied japanese for neary  two years since August ,2008.</li>
+<li class='corrected correct'>
+<p>After graduat<span class="f_red">ing</span> from high school in June, 2008, I have studied <span class="f_red">J</span>apanese for near<span class="f_red">l</span>y two years since August ,2008.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-6636946'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>At present I am learning computer by myself.</li>
+<li class='corrected correct'>
+<p>At present I am learning <span class="f_blue">to use a</span> computer by myself.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-6636947'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I can use computer to deal with some graph and data statistics and so on.</li>
+<li class='corrected correct'>
+<p>I can use <span class="f_blue">the</span> computer to deal with <span class="sline">some</span> graph and data statistics and so on.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-6636948'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I am not good at communicating with people before,but during the living at University,a Classes cadre as i am,my ability of communication has been increased.</li>
+<li class='corrected correct'>
+<p>I <span class="f_red">was</span> not good at communicating with people before, but <span class="f_red">while</span> living at University <span class="f_blue">as a class cadre</span> <span class="sline">a Classes cadre as i am,</span>my ability <span class="f_red">to communicate</span> has <span class="sline">been</span> increased.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-6636949'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Im frank and has the patience to any matter and the sense of responsibility.</li>
+<li class='corrected correct'>
+<p>I<span class="f_red">&#39;m</span> frank and<span class="f_red"> have</span> the patience <span class="f_blue">to deal with</span> any matter. <span class="f_blue">I also have a strong</span> sense of responsibility.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-6636950'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Although I have not graduated, but noing can question my will and I have the confidence to the future.</li>
+<li class='corrected correct'>
+<p>Although I have not graduated <span class="f_blue">yet</span>, <span class="sline">but noing can question my will and</span> I have <span class="sline">the</span> confidence <span class="f_red">in</span> the future.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-6636951'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I will well prepared  to accept future challenge.</li>
+<li class='corrected correct'>
+<p>I will <span class="f_red">be</span> well prepared to accept future challenge<span class="sline">s</span>.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-6636952'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Finally, best wishes for my friend.</li>
+<li class='corrected correct'>
+<p>Finally, best wishes for my friend<span class="f_red">s</span>.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-6636953'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>(I wound like you to correct my error)</li>
+<li class='corrected correct'>
+<p>(I wou<span class="f_red">l</span>d like you to correct my error<span class="f_red">s</span>)</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-6636954'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+你好!
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-2600006' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_2600006'>
+<div class='cfx reply_commentblock journla_comment_wrapper' id='journal_comment_2600101'>
+<p class='f_left'><a href="/220790"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/2c6bcdfa5b33ce0bad2a4b9cc59184878ddabf93.jpg"/></a></p>
+<div class='pos_relative f_right box_reply'>
+<div class='cfx comment_status_bar_body'>
+<div class='small_left_arrow f_left'>
+&nbsp;
+</div>
+<div class='spaced reply_comment_box show_report_spam_link f_right'>
+<div class='journal_comment_header'>
+<span class='f_right gray_text'>
+Dec 24, 2010 22:05
+</span>
+<a href="/220790" class="user_name">happyflame</a>
+
+</div>
+<div class='comment_after_correction comment_normal'>
+<ul class='cfx'>
+<li class='journal_comment_text'>
+你好，谢谢你的修改，你就像老师一样认真，我会好好学习英语的。Thank you very much for correcting my errors,you're as careful as a good teacher and I'll do my best to learn English well. 
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='cfx reply_commentblock journla_comment_wrapper' id='journal_comment_2600298'>
+<p class='f_left'><a href="/rsail"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/no_image.gif"/></a></p>
+<div class='pos_relative f_right box_reply'>
+<div class='cfx comment_status_bar_body'>
+<div class='small_left_arrow f_left'>
+&nbsp;
+</div>
+<div class='spaced reply_comment_box show_report_spam_link f_right'>
+<div class='journal_comment_header'>
+<span class='f_right gray_text'>
+Dec 24, 2010 22:53
+</span>
+<a href="/rsail" class="user_name">rsail</a>
+
+</div>
+<div class='comment_after_correction comment_normal'>
+<ul class='cfx'>
+<li class='journal_comment_text'>
+How do you write your name in Chinese, is it 王欢?
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='cfx reply_commentblock journla_comment_wrapper' id='journal_comment_2602085'>
+<p class='f_left'><a href="/220790"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/2c6bcdfa5b33ce0bad2a4b9cc59184878ddabf93.jpg"/></a></p>
+<div class='pos_relative f_right box_reply'>
+<div class='cfx comment_status_bar_body'>
+<div class='small_left_arrow f_left'>
+&nbsp;
+</div>
+<div class='spaced reply_comment_box show_report_spam_link f_right'>
+<div class='journal_comment_header'>
+<span class='f_right gray_text'>
+Dec 25, 2010 11:00
+</span>
+<a href="/220790" class="user_name">happyflame</a>
+
+</div>
+<div class='comment_after_correction comment_normal'>
+<ul class='cfx'>
+<li class='journal_comment_text'>
+Yes it is.You know &quot;王&quot; is my family name and &quot;欢&quot;is my given name.&quot;欢&quot;in Chinese means &quot;happiness&quot; . 
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>//<![CDATA[
+var l8=jQuery.extend(l8,{authenticityToken:"yJvlNDllYdIGHS4qlBKvacfQttzmv6d/2/9nnOvpeD4=",showTutorial:false,label:"Description about correction.(You can write in any language.)",explanation:"Add a description or comment here.(Optional)",sentences:'SSdtIGhhcHB5IHRvIG1ha2UgbWFueSBmcmllbmRzIGhlcmUgOikKKEluIG9yZGVyIHRvIGtub3cgZnJvbSBlYWNoIG90aGVyICxub3cgbGV0IG1lIGludHJvZHVjZSBteXNlbGYgdG8geW91KQpNeSBuYW1lIGlzIFdhbmdIdWFuLgpJJ20gZnJvbSBYaSdhbiBJbnRlcm5hdGlvbmFsIFVuaXZlcnNpdHkuCkkgYW0gYSBqdW5pb3Igc3R1ZGVubnQgbWFqb3IgaW4gSmFwYW5lc2UuCkFmdGVyIGdyYWR1YXRlZCBmcm9tIGhpZ2ggc2Nob29sIGluIEp1bmUsIDIwMDggLEkgaGF2ZSBzdHVkaWVkIGphcGFuZXNlIGZvciBuZWFyeSAgdHdvIHllYXJzIHNpbmNlIEF1Z3VzdCAsMjAwOC4KV2l0aCBteSBoYXJkd29yayBhbmQgdGVhY2hlcidzIGluc3RydWN0aW9uLCBJIGhhdmUgZ3Jhc3BlZCBkYWlseSBjb252ZXJzYXRpb24gYW5kIEVuZ2xpc2ggYW5kIEphcGFuZXNlIFdyaXRpbmcuCkF0IHByZXNlbnQgSSBhbSBsZWFybmluZyBjb21wdXRlciBieSBteXNlbGYuCkkgY2FuIHVzZSBjb21wdXRlciB0byBkZWFsIHdpdGggc29tZSBncmFwaCBhbmQgZGF0YSBzdGF0aXN0aWNzIGFuZCBzbyBvbi4KSSBhbSBub3QgZ29vZCBhdCBjb21tdW5pY2F0aW5nIHdpdGggcGVvcGxlIGJlZm9yZSxidXQgZHVyaW5nIHRoZSBsaXZpbmcgYXQgVW5pdmVyc2l0eSxhIENsYXNzZXMgY2FkcmUgYXMgaSBhbSxteSBhYmlsaXR5IG9mIGNvbW11bmljYXRpb24gaGFzIGJlZW4gaW5jcmVhc2VkLgpJbSBmcmFuayBhbmQgaGFzIHRoZSBwYXRpZW5jZSB0byBhbnkgbWF0dGVyIGFuZCB0aGUgc2Vuc2Ugb2YgcmVzcG9uc2liaWxpdHkuCkFsdGhvdWdoIEkgaGF2ZSBub3QgZ3JhZHVhdGVkLCBidXQgbm9pbmcgY2FuIHF1ZXN0aW9uIG15IHdpbGwgYW5kIEkgaGF2ZSB0aGUgY29uZmlkZW5jZSB0byB0aGUgZnV0dXJlLgpJIHdpbGwgd2VsbCBwcmVwYXJlZCAgdG8gYWNjZXB0IGZ1dHVyZSBjaGFsbGVuZ2UuCkZpbmFsbHksIGJlc3Qgd2lzaGVzIGZvciBteSBmcmllbmQuCihJIHdvdW5kIGxpa2UgeW91IHRvIGNvcnJlY3QgbXkgZXJyb3Ip',corrections:[[],["[sline]([/sline]In order [f-blue]to get to know[/f-blue] [sline]from[/sline] each other, now let me introduce myself to you[sline])[/sline] [f-blue](get to know each other = 结识彼此）[/f-blue]"],["My name is Wang Huan."],[],["I am a junior studen[sline]n[/sline]t [f-blue]majoring[/f-blue] in Japanese."],["After graduat[f-red]ing[/f-red] from high school in June, 2008, I have studied [f-red]J[/f-red]apanese for near[f-red]l[/f-red]y two years since August ,2008."],[],["At present I am learning [f-blue]to use a[/f-blue] computer by myself."],["I can use [f-blue]the[/f-blue] computer to deal with [sline]some[/sline] graph and data statistics and so on."],["I [f-red]was[/f-red] not good at communicating with people before, but [f-red]while[/f-red] living at University [f-blue]as a class cadre[/f-blue] [sline]a Classes cadre as i am,[/sline]my ability [f-red]to communicate[/f-red] has [sline]been[/sline] increased."],["I[f-red]'m[/f-red] frank and[f-red] have[/f-red] the patience [f-blue]to deal with[/f-blue] any matter. [f-blue]I also have a strong[/f-blue] sense of responsibility."],["Although I have not graduated [f-blue]yet[/f-blue], [sline]but noing can question my will and[/sline] I have [sline]the[/sline] confidence [f-red]in[/f-red] the future."],["I will [f-red]be[/f-red] well prepared to accept future challenge[sline]s[/sline]."],["Finally, best wishes for my friend[f-red]s[/f-red]."],["(I wou[f-red]l[/f-red]d like you to correct my error[f-red]s[/f-red])"]],correctionComments:[[],[null],[null],[],[null],[null],[],[null],[null],[null],[null],[null],[null],[null],[null]],perfectSentences:[[],[null],[null],[],[null],[null],[],[null],[null],[null],[null],[null],[null],[null],[null]],urlForCreateComment:'/journals/create_comment/739583',isLogin:false});sentences='WyJJJ20gaGFwcHkgdG8gbWFrZSBtYW55IGZyaWVuZHMgaGVyZSA6KSIsIihJbiBvcmRlciB0byBrbm93IGZyb20gZWFjaCBvdGhlciAsbm93IGxldCBtZSBpbnRyb2R1Y2UgbXlzZWxmIHRvIHlvdSkiLCJNeSBuYW1lIGlzIFdhbmdIdWFuLiIsIkknbSBmcm9tIFhpJ2FuIEludGVybmF0aW9uYWwgVW5pdmVyc2l0eS4iLCJJIGFtIGEganVuaW9yIHN0dWRlbm50IG1ham9yIGluIEphcGFuZXNlLiIsIkFmdGVyIGdyYWR1YXRlZCBmcm9tIGhpZ2ggc2Nob29sIGluIEp1bmUsIDIwMDggLEkgaGF2ZSBzdHVkaWVkIGphcGFuZXNlIGZvciBuZWFyeSAgdHdvIHllYXJzIHNpbmNlIEF1Z3VzdCAsMjAwOC4iLCJXaXRoIG15IGhhcmR3b3JrIGFuZCB0ZWFjaGVyJ3MgaW5zdHJ1Y3Rpb24sIEkgaGF2ZSBncmFzcGVkIGRhaWx5IGNvbnZlcnNhdGlvbiBhbmQgRW5nbGlzaCBhbmQgSmFwYW5lc2UgV3JpdGluZy4iLCJBdCBwcmVzZW50IEkgYW0gbGVhcm5pbmcgY29tcHV0ZXIgYnkgbXlzZWxmLiIsIkkgY2FuIHVzZSBjb21wdXRlciB0byBkZWFsIHdpdGggc29tZSBncmFwaCBhbmQgZGF0YSBzdGF0aXN0aWNzIGFuZCBzbyBvbi4iLCJJIGFtIG5vdCBnb29kIGF0IGNvbW11bmljYXRpbmcgd2l0aCBwZW9wbGUgYmVmb3JlLGJ1dCBkdXJpbmcgdGhlIGxpdmluZyBhdCBVbml2ZXJzaXR5LGEgQ2xhc3NlcyBjYWRyZSBhcyBpIGFtLG15IGFiaWxpdHkgb2YgY29tbXVuaWNhdGlvbiBoYXMgYmVlbiBpbmNyZWFzZWQuIiwiSW0gZnJhbmsgYW5kIGhhcyB0aGUgcGF0aWVuY2UgdG8gYW55IG1hdHRlciBhbmQgdGhlIHNlbnNlIG9mIHJlc3BvbnNpYmlsaXR5LiIsIkFsdGhvdWdoIEkgaGF2ZSBub3QgZ3JhZHVhdGVkLCBidXQgbm9pbmcgY2FuIHF1ZXN0aW9uIG15IHdpbGwgYW5kIEkgaGF2ZSB0aGUgY29uZmlkZW5jZSB0byB0aGUgZnV0dXJlLiIsIkkgd2lsbCB3ZWxsIHByZXBhcmVkICB0byBhY2NlcHQgZnV0dXJlIGNoYWxsZW5nZS4iLCJGaW5hbGx5LCBiZXN0IHdpc2hlcyBmb3IgbXkgZnJpZW5kLiIsIihJIHdvdW5kIGxpa2UgeW91IHRvIGNvcnJlY3QgbXkgZXJyb3IpIl0=';corrections='W1tdLFsiW3NsaW5lXShbL3NsaW5lXUluIG9yZGVyIFtmLWJsdWVddG8gZ2V0IHRvIGtub3dbL2YtYmx1ZV0gW3NsaW5lXWZyb21bL3NsaW5lXSBlYWNoIG90aGVyLCBub3cgbGV0IG1lIGludHJvZHVjZSBteXNlbGYgdG8geW91W3NsaW5lXSlbL3NsaW5lXSBbZi1ibHVlXShnZXQgdG8ga25vdyBlYWNoIG90aGVyID0g57uT6K+G5b285q2k77yJWy9mLWJsdWVdIl0sWyJNeSBuYW1lIGlzIFdhbmcgSHVhbi4iXSxbXSxbIkkgYW0gYSBqdW5pb3Igc3R1ZGVuW3NsaW5lXW5bL3NsaW5lXXQgW2YtYmx1ZV1tYWpvcmluZ1svZi1ibHVlXSBpbiBKYXBhbmVzZS4iXSxbIkFmdGVyIGdyYWR1YXRbZi1yZWRdaW5nWy9mLXJlZF0gZnJvbSBoaWdoIHNjaG9vbCBpbiBKdW5lLCAyMDA4LCBJIGhhdmUgc3R1ZGllZCBbZi1yZWRdSlsvZi1yZWRdYXBhbmVzZSBmb3IgbmVhcltmLXJlZF1sWy9mLXJlZF15IHR3byB5ZWFycyBzaW5jZSBBdWd1c3QgLDIwMDguIl0sW10sWyJBdCBwcmVzZW50IEkgYW0gbGVhcm5pbmcgW2YtYmx1ZV10byB1c2UgYVsvZi1ibHVlXSBjb21wdXRlciBieSBteXNlbGYuIl0sWyJJIGNhbiB1c2UgW2YtYmx1ZV10aGVbL2YtYmx1ZV0gY29tcHV0ZXIgdG8gZGVhbCB3aXRoIFtzbGluZV1zb21lWy9zbGluZV0gZ3JhcGggYW5kIGRhdGEgc3RhdGlzdGljcyBhbmQgc28gb24uIl0sWyJJIFtmLXJlZF13YXNbL2YtcmVkXSBub3QgZ29vZCBhdCBjb21tdW5pY2F0aW5nIHdpdGggcGVvcGxlIGJlZm9yZSwgYnV0IFtmLXJlZF13aGlsZVsvZi1yZWRdIGxpdmluZyBhdCBVbml2ZXJzaXR5IFtmLWJsdWVdYXMgYSBjbGFzcyBjYWRyZVsvZi1ibHVlXSBbc2xpbmVdYSBDbGFzc2VzIGNhZHJlIGFzIGkgYW0sWy9zbGluZV1teSBhYmlsaXR5IFtmLXJlZF10byBjb21tdW5pY2F0ZVsvZi1yZWRdIGhhcyBbc2xpbmVdYmVlblsvc2xpbmVdIGluY3JlYXNlZC4iXSxbIklbZi1yZWRdJ21bL2YtcmVkXSBmcmFuayBhbmRbZi1yZWRdIGhhdmVbL2YtcmVkXSB0aGUgcGF0aWVuY2UgW2YtYmx1ZV10byBkZWFsIHdpdGhbL2YtYmx1ZV0gYW55IG1hdHRlci4gW2YtYmx1ZV1JIGFsc28gaGF2ZSBhIHN0cm9uZ1svZi1ibHVlXSBzZW5zZSBvZiByZXNwb25zaWJpbGl0eS4iXSxbIkFsdGhvdWdoIEkgaGF2ZSBub3QgZ3JhZHVhdGVkIFtmLWJsdWVdeWV0Wy9mLWJsdWVdLCBbc2xpbmVdYnV0IG5vaW5nIGNhbiBxdWVzdGlvbiBteSB3aWxsIGFuZFsvc2xpbmVdIEkgaGF2ZSBbc2xpbmVddGhlWy9zbGluZV0gY29uZmlkZW5jZSBbZi1yZWRdaW5bL2YtcmVkXSB0aGUgZnV0dXJlLiJdLFsiSSB3aWxsIFtmLXJlZF1iZVsvZi1yZWRdIHdlbGwgcHJlcGFyZWQgdG8gYWNjZXB0IGZ1dHVyZSBjaGFsbGVuZ2Vbc2xpbmVdc1svc2xpbmVdLiJdLFsiRmluYWxseSwgYmVzdCB3aXNoZXMgZm9yIG15IGZyaWVuZFtmLXJlZF1zWy9mLXJlZF0uIl0sWyIoSSB3b3VbZi1yZWRdbFsvZi1yZWRdZCBsaWtlIHlvdSB0byBjb3JyZWN0IG15IGVycm9yW2YtcmVkXXNbL2YtcmVkXSkiXV0=';var correction_comments=[[],[null],[null],[],[null],[null],[],[null],[null],[null],[null],[null],[null],[null],[null]];
+//]]></script>
+
+</div>
+<div id='right' style='padding-bottom:0'>
+<div class='mb_20' id='author_box'>
+<div class='cfx'>
+<a href="/220790"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w50_h0/2c6bcdfa5b33ce0bad2a4b9cc59184878ddabf93.jpg"/></a>
+<div class='author_information mb_10 cfx'>
+<a href="/220790" class="user_name">happyflame</a>
+
+<div class='learning_languages'>
+<ul class='language_status'>
+<li class='speaking' data-title='Native language' rel='tooltip' title='Native language'>Mandarin</li>
+<li class='studying' data-title='Language of study' rel='tooltip' title='Language of study'>
+Japanese, English
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class='bdbox'>
+<table class='entry_status'>
+<tr>
+<td class='l01'>
+<p><a href="/220790/journals">50</a></p>
+<span>Entries Written</span>
+</td>
+<td class='l02'>
+<p><a href="/220790/correction_logs/sent">37</a></p>
+<span>Corrections made</span>
+</td>
+<td class='l03'>
+<p><a href="/220790/correction_logs/received">142</a></p>
+<span>Corrections received</span>
+</td>
+</tr>
+</table>
+</div>
+
+</div>
+
+  
+    <script type="text/javascript">google_ad_client="ca-pub-6717840198266056";google_ad_slot="1415028544";google_ad_width=300;google_ad_height=250;</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+
+  
+
+
+<div class='box'>
+<div id='journals_calendar'>
+<div class='yui-skin-sam'>
+<div id='jour_cal'>
+    <div id="cal1Container"></div>
+    <script type="text/javascript">//<![CDATA[
+(function(){var cal1=null,popupHolder=[],cal_journal_dates={},str_dates='',date_info=[{"journal_date":1301915694,"journal_id":873831},{"journal_date":1301486061,"journal_id":867564},{"journal_date":1301198843,"journal_id":863058},{"journal_date":1299648705,"journal_id":839942},{"journal_date":1298201633,"journal_id":818120},{"journal_date":1298023406,"journal_id":815233},{"journal_date":1297928713,"journal_id":813612},{"journal_date":1297595081,"journal_id":807780},{"journal_date":1297425236,"journal_id":804883},{"journal_date":1297255310,"journal_id":801930},{"journal_date":1297173435,"journal_id":800626},{"journal_date":1297084864,"journal_id":799047},{"journal_date":1296997210,"journal_id":797508},{"journal_date":1296738080,"journal_id":793563},{"journal_date":1296551331,"journal_id":790576},{"journal_date":1296397446,"journal_id":788235},{"journal_date":1296300477,"journal_id":786515},{"journal_date":1296211040,"journal_id":785104},{"journal_date":1296122919,"journal_id":783620},{"journal_date":1296040057,"journal_id":782197},{"journal_date":1295951123,"journal_id":780665},{"journal_date":1295771299,"journal_id":777532},{"journal_date":1295765733,"journal_id":777423},{"journal_date":1295703147,"journal_id":776493},{"journal_date":1295664852,"journal_id":775897},{"journal_date":1295529983,"journal_id":773793},{"journal_date":1295440809,"journal_id":772246},{"journal_date":1295341758,"journal_id":770521},{"journal_date":1295266409,"journal_id":769265},{"journal_date":1295181252,"journal_id":767857},{"journal_date":1295013477,"journal_id":765240},{"journal_date":1294918856,"journal_id":763705},{"journal_date":1294829274,"journal_id":762170},{"journal_date":1294741825,"journal_id":760755},{"journal_date":1294568001,"journal_id":757858},{"journal_date":1294480105,"journal_id":756528},{"journal_date":1294394655,"journal_id":755323},{"journal_date":1294220552,"journal_id":752564},{"journal_date":1294142458,"journal_id":751353},{"journal_date":1294052072,"journal_id":750041},{"journal_date":1293891356,"journal_id":748024},{"journal_date":1293783757,"journal_id":746698},{"journal_date":1293703878,"journal_id":745677},{"journal_date":1293621859,"journal_id":744734},{"journal_date":1293523605,"journal_id":743557},{"journal_date":1293437966,"journal_id":742501},{"journal_date":1293348428,"journal_id":741469},{"journal_date":1293270282,"journal_id":740634},{"journal_date":1293179656,"journal_id":739583},{"journal_date":1293178648,"journal_id":739574}],now_server2local="11/2018",selected_date='',date_info_json=Object.toJSON(date_info),args=getArgsFromHref(location.href);if(args['begin']!=null){var begin_date_a=args['begin'].split('-');var page_date=begin_date_a[1]+'/'+begin_date_a[0];}else if(args['date']!=null){var date_a=args['date'].split('-');var page_date=date_a[1]+'/'+date_a[0];}else{var page_date=now_server2local;}var pathname=location.pathname.split('/');for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(parseInt(date_info[i].journal_date*1000)).toYAHOODateString();if(cal_journal_dates[tmp_date]){cal_journal_dates[tmp_date]=cal_journal_dates[tmp_date]+'/'+date_info[i].journal_id;}else{cal_journal_dates[tmp_date]=date_info[i].journal_id;str_dates=str_dates+','+tmp_date;}}function init(){cal1=new YAHOO.widget.Calendar('cal1','cal1Container',{LOCALE_MONTHS:'short',LOCALE_WEEKDAYS:'1char',pagedate:page_date});cal1.styleCellDefault=function(workingDate,cell){YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_OOB);}
+cal1.renderCellDefault=function(workingDate,cell){cell.innerHTML='<a class="'+cal1.Style.CSS_CELL_SELECTOR+'">'+cal1.buildDayLabel(workingDate)+"</a>";}
+cal1.renderCellHasJournals=function(workingDate,cell){cell.innerHTML='<a href="/'+'220790'+'/journals?date='+workingDate.toStringYYMMDD()+'" class="'+cal1.Style.CSS_CELL_SELECTABLE+'">'+cal1.buildDayLabel(workingDate)+"</a>";YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_SELECTABLE);YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_HIGHLIGHT1);if(workingDate.getDate()==cal1.today.getDate()&&workingDate.getMonth()==cal1.today.getMonth()&&workingDate.getFullYear()==cal1.today.getFullYear()){YAHOO.util.Dom.removeClass(cell,cal1.Style.CSS_CELL_TODAY);}return YAHOO.widget.Calendar.STOP_RENDER;}
+cal1.addRenderer(str_dates,cal1.renderCellHasJournals);cal1.render();}function getArgsFromHref(sHref){var args=sHref.split('?');var retargs={}
+if(args[0]==sHref){return"";}var str=args[1];args=str.split('&');for(var i=0;i<args.length;i++){str=args[i];var arg=str.split('=');if(arg.length<=1)continue;retargs[arg[0]]=arg[1];}return retargs;}YAHOO.util.Event.onAvailable('cal1Container',init);})();
+//]]></script>
+
+</div>
+</div>
+</div>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Journal Statistics</h3>
+</div>
+<div class='cfx' id='studying_status'>
+<table class='table side-bar table_statusstudy'>
+<tr>
+<th>Total</th>
+<th>This month</th>
+<th>This week</th>
+</tr>
+<tr>
+<td>
+<p><a href="/220790/journals">50</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/220790/journals" id="monthCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/220790/journals" id="todayCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<script type="text/javascript">//<![CDATA[
+(function(){var date_info=[{"journal_date":1301915694,"journal_id":873831},{"journal_date":1301486061,"journal_id":867564},{"journal_date":1301198843,"journal_id":863058},{"journal_date":1299648705,"journal_id":839942},{"journal_date":1298201633,"journal_id":818120},{"journal_date":1298023406,"journal_id":815233},{"journal_date":1297928713,"journal_id":813612},{"journal_date":1297595081,"journal_id":807780},{"journal_date":1297425236,"journal_id":804883},{"journal_date":1297255310,"journal_id":801930},{"journal_date":1297173435,"journal_id":800626},{"journal_date":1297084864,"journal_id":799047},{"journal_date":1296997210,"journal_id":797508},{"journal_date":1296738080,"journal_id":793563},{"journal_date":1296551331,"journal_id":790576},{"journal_date":1296397446,"journal_id":788235},{"journal_date":1296300477,"journal_id":786515},{"journal_date":1296211040,"journal_id":785104},{"journal_date":1296122919,"journal_id":783620},{"journal_date":1296040057,"journal_id":782197},{"journal_date":1295951123,"journal_id":780665},{"journal_date":1295771299,"journal_id":777532},{"journal_date":1295765733,"journal_id":777423},{"journal_date":1295703147,"journal_id":776493},{"journal_date":1295664852,"journal_id":775897},{"journal_date":1295529983,"journal_id":773793},{"journal_date":1295440809,"journal_id":772246},{"journal_date":1295341758,"journal_id":770521},{"journal_date":1295266409,"journal_id":769265},{"journal_date":1295181252,"journal_id":767857},{"journal_date":1295013477,"journal_id":765240},{"journal_date":1294918856,"journal_id":763705},{"journal_date":1294829274,"journal_id":762170},{"journal_date":1294741825,"journal_id":760755},{"journal_date":1294568001,"journal_id":757858},{"journal_date":1294480105,"journal_id":756528},{"journal_date":1294394655,"journal_id":755323},{"journal_date":1294220552,"journal_id":752564},{"journal_date":1294142458,"journal_id":751353},{"journal_date":1294052072,"journal_id":750041},{"journal_date":1293891356,"journal_id":748024},{"journal_date":1293783757,"journal_id":746698},{"journal_date":1293703878,"journal_id":745677},{"journal_date":1293621859,"journal_id":744734},{"journal_date":1293523605,"journal_id":743557},{"journal_date":1293437966,"journal_id":742501},{"journal_date":1293348428,"journal_id":741469},{"journal_date":1293270282,"journal_id":740634},{"journal_date":1293179656,"journal_id":739583},{"journal_date":1293178648,"journal_id":739574}],cur_month_counter=0,week_counter=0;var now_date=new Date(),DateMath=YAHOO.widget.DateMath;var now_date_week_begin=DateMath.getFirstDayOfWeek(now_date,0);var now_date_week_end=DateMath.add(now_date_week_begin,'D',6);for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(date_info[i].journal_date*1000);if(tmp_date.getFullYear()==now_date.getFullYear()){if(tmp_date.getMonth()==now_date.getMonth()){cur_month_counter+=1;if(DateMath.getWeekNumber(tmp_date,0)==DateMath.getWeekNumber(now_date,0)){week_counter+=1;}}}}if(week_counter!=0){$('todayCount').update(week_counter);$('todayCount').href=$('todayCount').href+'?begin='+now_date_week_begin.toStringYYMMDD()+'&end='+now_date_week_end.toStringYYMMDD();}else{$('todayCount').href="#";}if(cur_month_counter!=0){$('monthCount').update(cur_month_counter);$('monthCount').href=$('monthCount').href+'?begin='+DateMath.findMonthStart(now_date).toStringYYMMDD()+'&end='+DateMath.findMonthEnd(now_date).toStringYYMMDD();}else{$('monthCount').href="#";}})();
+//]]></script>
+
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest entries</h3>
+</div>
+<table class='table side-bar ar_icobox'>
+<tr>
+<td><a href="http://lang-8.com/220790/journals/873831">周りの日本製品 (7) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/220790/journals/867564">ごみ (4) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/220790/journals/863058">沈黙の世界 (4) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/220790/journals/839942">携帯電話 (5) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/220790/journals/818120">もうすぐ 学校に帰ります (6) </a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/220790/journals" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest comments</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<td><a href="http://lang-8.com/220790/journals/873831">May 1 Ryo</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/220790/journals/873831">Apr 5 SAKURA☆</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/220790/journals/873831">Apr 5 TRM</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/220790/journals/873831">Apr 4 Pon</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/220790/journals/873831">Apr 4 onbrs</a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/220790/journals/comments" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box cfx' id='d_draft_list'>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Entries by Month</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<th class='year'>2011</th>
+</tr>
+<tr>
+<td>
+ <a href="/220790/journals?begin=2011-4-1&amp;end=2011-04-30">April (1)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/220790/journals?begin=2011-3-1&amp;end=2011-03-31">March (3)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/220790/journals?begin=2011-2-1&amp;end=2011-02-28">February (11)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/220790/journals?begin=2011-1-1&amp;end=2011-01-31">January (26)</a>
+</td>
+</tr>
+<tr>
+<th class='year'>2010</th>
+</tr>
+<tr>
+<td>
+ <a href="/220790/journals?begin=2010-12-1&amp;end=2010-12-31">December (9)</a>
+</td>
+</tr>
+</table>
+</div>
+
+<div style='height:20px;background-color:#ffffff'></div>
+<div id='eval_comment_form' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='form_to_edit_note' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='journal_comment_liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='eval_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+</div>
+<div class='yui-skin-sam' id='yui_panels'>
+<div id='wt_panel' style='visibility:hidden;'>
+<div class='hd' id='wt_title'></div>
+<div class='bd' id='wt_content'></div>
+<div class='ft'></div>
+</div>
+</div>
+<div id='modal'></div>
+<div id='confirm_box'>
+<div id='confirm_box_close'>
+<a onclick='hide_confirm_box();'>
+<img src='/static/images2/xico_closebt.png.pagespeed.ic.z-nUma7JBr.png'/>
+</a>
+</div>
+<div id='confirm_box_contents'></div>
+</div>
+</div>
+<div class='modal hide' id='report_spam_entry' tabindex='-1'>
+<div class='modal-header'>
+<btn class='close' data-dismiss='modal' type='button'>x</btn>
+<h4>Report this entry</h4>
+</div>
+<div class='modal-body'>
+<strong class='spaced'>Spam entry</strong>
+<p class='spaced'>(In order to know from each other ,now let me introduce myself to you)
+My name is WangHuan. I&#39;m from Xi&#39;an International University.I am a junior studennt major in Japanese.
+After graduated from high school in June, 2008 ,I have studied japanese for neary  two years since August ,2008.
+With my har</p>
+<br/>
+<strong class='spaced'>Author</strong>
+<p class='spaced'>happyflame</p>
+<br/>
+<strong class='spaced'>Reporter</strong>
+<p class='spaced'>0</p>
+</div>
+<div class='modal-footer'>
+<a class='btn' data-dismiss='modal' href='#'>Close</a>
+<a class="bt_lv1 bt_size_04" href="#" onclick="new Ajax.Request('/spam_reports/report_entry?entry_body=%28In+order+to+know+from+each+other+%2Cnow+let+me+introduce+myself+to+you%29%0D%0AMy+name+is+WangHuan.+I%27m+from+Xi%27an+International+University.I+am+a+junior+studennt+major+in+Japanese.%0D%0AAfter+graduated+from+high+school+in+June%2C+2008+%2CI+have+studied+japanese+for+neary++two+years+since+August+%2C2008.%0D%0AWith+my+har&amp;reporter_id=0&amp;spammer_id=220790&amp;url=http%3A%2F%2Flang-8.com%2F220790%2Fjournals%2F739583', {asynchronous:true, evalScripts:true, onLoading:function(request){$j('#report_spam_entry').html('&lt;p class=&quot;center&quot;&gt;&lt;br /&gt;&lt;img src=&quot;/static/images2/loading.gif&quot; class=&quot;center spaced vertical-margin&quot; /&gt;&lt;/p&gt;');}, onSuccess:function(request){$j(&quot;#report_spam_entry&quot;).modal(&quot;hide&quot;);$j(&quot;#alert-box&quot;).alerter(&quot;alertSuccess&quot;, &quot;&quot;, &quot;Report sent.&quot; );}, parameters:'authenticity_token=' + encodeURIComponent('yJvlNDllYdIGHS4qlBKvacfQttzmv6d/2/9nnOvpeD4=')}); return false;">Send</a>
+</div>
+</div>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show-5f9f69ded18eb0d1a8bef6040b599e7b.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show2-e52e094b14e0c5b5979f64d63309ab8a.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show3-eedb1c964407a61f34a56d6652b21722.js" type="text/javascript"></script>
+<script id="evernote-js" data-cjsexec="true" type="text/cjs" data-cjssrc="http://static.evernote.com/noteit.js"></script>
+<script id="twitter-wjs" data-cjsexec="true" type="text/cjs" data-cjssrc="https://platform.twitter.com/widgets.js"></script>
+<script type='text/javascript'></script>
+<script type='text/javascript'>//<![CDATA[
+jQuery(function($){new Lang8.Views.JournalShowView();});
+//]]></script>
+
+</div>
+</div>
+<div data-search_url='' id='footer'>
+<div class='inner'>
+<div class='box clearfix'>
+<ul class='ft_parts_list f_left'>
+<ul class='ft_parts_list f_left'></ul>
+</ul>
+</div>
+<div class='box02 clearfix'>
+<ul>
+
+</ul>
+<ul>
+<li>
+<p>
+Study
+</p>
+<ul>
+<li><a href="/profiles/search">Member Search</a></li>
+<li><a href="/hotentries">Popular Entries</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+View
+</p>
+<ul>
+<li><a href="/rankings">Rankings</a></li>
+<li>
+<a href="/groups">Groups</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+Help
+</p>
+<ul>
+<li><a href="/help/tumblr" target="_blank">Help</a></li>
+<li><a href="/register/term" target="_blank">Terms of Service</a></li>
+<li><a href="/register/privacy" target="_blank">Privacy Policy</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+About Lang-8
+</p>
+<ul>
+<li><a href="/help/law_1" target="_blank">特定商取引法に基づく表記</a></li>
+<li><a href="/help/donation" target="_blank">Donate</a></li>
+<li><a href="http://lang-8.jp/" target="_blank">Company</a></li>
+<li><a href="http://lang-8.jp/#recruit" target="_blank">Travailler pour Lang-8</a></li>
+<li>
+<a href='mailto:support@lang-8.com'>Contact us</a>
+</li>
+<li>&nbsp;</li>
+</ul>
+</li>
+</ul>
+<ul id='social_web_list'>
+<li class='icon_with twitter'>
+<a class='twitter-follow-button' data-show-count='false' href='https://twitter.com/lang8'>Follow @lang8</a>
+<script defer="defer" src="https://platform.twitter.com/widgets.js" type="text/javascript"></script>
+</li>
+<li class='icon_with facebook'><a href="http://www.facebook.com/lang8" target="_blank">Facebook page</a></li>
+<li class='icon_with rss'><a href="http://blog.lang-8.com" target="_blank">Lang-8 blog</a></li>
+</ul>
+</div>
+<div class='box03 clearfix'>
+<li class='f_left panel_list'>
+<a href='https://mixpanel.com/f/partner' target='_blank'>
+<img alt='Mobile and Web Analytics' src='https://mixpanel.com/site_media/images/partner/badge_light.png'/>
+</a>
+</li>
+<p class='copy f_right'>
+&copy; 2017 Lang-8, Inc. All rights reserved.
+</p>
+</div>
+</div>
+</div>
+
+
+<script type='text/javascript'>//<![CDATA[
+var gaJsHost=(("https:"==document.location.protocol)?"https://ssl.":"http://www.");document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var pageTracker;autoRetry(function(){pageTracker=_gat._getTracker("UA-452011-7");pageTracker._setDomainName("none");pageTracker._setAllowLinker(true);pageTracker._initData();pageTracker._trackPageview("/before/journals/show/739583");},2);
+//]]></script>
+
+
+<script type='text/javascript'>//<![CDATA[
+$j(function(){$j('[rel=tooltip]').tooltip();$j('[rel=popover]').popover();});
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var cjsscript=document.createElement('script');cjsscript.src="/static/javascripts/control_js.js";var cjssib=document.getElementsByTagName('script')[0];cjssib.parentNode.insertBefore(cjsscript,cjssib);
+//]]></script>
+<div id='fb-root'></div>
+<script type='text/javascript'>//<![CDATA[
+(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=138873442911";fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,1162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir='ltr' itemscope='' itemtype='http://schema.org/Blog' xmlns:fb='http://www.facebook.com/2008/fbml' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"agent":"","applicationTime":400,"queueTime":0,"applicationID":"11814779","errorBeacon":"bam.nr-data.net","transactionName":"Jg4MFRNdCllURU4MXBATDAANQUlGWVgW","licenseKey":"240011c68f","beacon":"bam.nr-data.net"}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content='text/css' http-equiv='Content-Style-Type'/>
+<meta content='text/javascript' http-equiv='Content-Script-Type'/>
+<meta content='summary' name='twitter:card'/>
+<meta content='@lang8' name='twitter:site'/>
+<meta content='story about Amy' property='og:title'/>
+<meta content='blog' property='og:type'/>
+<meta content='http://lang-8.com/38826/journals/133398' property='og:url'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/m_38826_56079ddc8efecc89cbf12cd7c712a278.jpg' property='og:image'/>
+<meta content='Little Amy was fearfull. She afraided of darkness, insect, black color (she belived that if she watch long time to black, from there come monster of Black Kindom), touch frightful picture (it strike to her that if she touch their, they bite her),snake, knifes( it always strike to her that they always' property='og:description'/>
+<meta content='Lang-8' property='og:site_name'/>
+<meta content='138873442911' property='fb:app_id'/>
+<meta content='story about Amy' itemprop='name'/>
+<meta content='Little Amy was fearfull. She afraided of darkness, insect, black color (she belived that if she watch long time to black, from there come monster of Black Kindom), touch frightful picture (it strike to her that if she touch their, they bite her),snake, knifes( it always strike to her that they always' itemprop='description'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/m_38826_56079ddc8efecc89cbf12cd7c712a278.jpg' itemprop='image'/>
+
+<title>
+story about Amy | Lang-8: For learning foreign languages
+</title>
+<link href='/favicon.ico' rel='shortcut icon'/>
+<link href="http://dzhimp63a2tb1.cloudfront.net/assets/static/css/application-1b103989b91cc566c626a5030a5c0c04.css" media="screen" rel="stylesheet" type="text/css"/>
+<script type="text/cjs">
+var h = document.getElementsByTagName('head')[0];
+var link = document.createElement('link');
+link.href = 'https://fonts.googleapis.com/css?family=Telex';
+link.type = 'text/css';
+link.rel = 'stylesheet';
+link.media = 'screen'
+h.appendChild(link);
+</script>
+
+
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/application-462b56e1d78c3fb6374e9b344e47357a.js" type="text/javascript"></script>
+
+<script type='text/javascript'>//<![CDATA[
+var lang="2-2";var sessid="";
+//]]></script>
+
+<meta content='Little Amy was fearfull. She afraided of darkness, insect, black color (she belived that if she w...' name='description'/>
+<meta content='' name='keywords'/>
+
+<meta content='1NyOQgk3_D9-R1XWpjxkGinHxWufQzM-DTGssOLEIvs' name='google-site-verification'/>
+</head>
+<body data-device='pc' id='journals_show'>
+<script type="text/javascript">var langsData=[];langsData.push({key:'cjv',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'ckb',body:'Please correct some sentences or comments on this journal.'});langsData.push({key:'cka',body:'Corrections'});langsData.push({key:'cjz',body:'Comment'});langsData.push({key:'cjt',body:'Post'});langsData.push({key:'cju',body:'Back to correcting'});langsData.push({key:'cjw',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjx',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjy',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'D063',body:'There has been an internal system error.'});langsData.push({key:'chc',body:'Show corrections'});langsData.push({key:'chd',body:'Hide'});langsData.push({key:'xlw',body:'Do you really want to reset the data?'});langsData.push({key:'xlx',body:'You have already started to leave a comment on this journal. Do you want to continue with it?'});langsData.push({key:'xly',body:'Continue'});langsData.push({key:'xlz',body:'No'});langsData.push({key:'cix',body:'Red'});langsData.push({key:'ciy',body:'Blue'});langsData.push({key:'qag',body:'Gray'});langsData.push({key:'ciz',body:'Bold'});langsData.push({key:'cja',body:'Cross out'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjc',body:'Cancel'});langsData.push({key:'cjd',body:'Correct'});langsData.push({key:'cje',body:'Unformat'});langsData.push({key:'rgo',body:'This sentence is perfect! No correction needed!'});langsData.push({key:'xll',body:'This is the original post.'});langsData.push({key:'xlm',body:'To correct, click this button.'});langsData.push({key:'xln',body:'You can use the colored fonts and strikethrough feature to help you with your correction.'});langsData.push({key:'xlo',body:'After correcting, please press this button.'});langsData.push({key:'xlp',body:'Your corrections are displayed here.'});langsData.push({key:'xlq',body:'Press this button to complete the correction.'});langsData.push({key:'xmm',body:'Sending...'});langsData.push({key:'xmn',body:'done'});langsData.push({key:'ycs',body:'Success! A friend request will now be sent to your friend.'});langsData.push({key:'xog',body:'Failed to send the friend request. Please try again in a few minutes.'});langsData.push({key:'cit',body:'Comments on this correction'});langsData.push({key:'cir',body:'Add to /Edit My Notebook'});langsData.push({key:'rfv',body:'Vertical View'});langsData.push({key:'rfw',body:'Normal View'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjp',body:'Cancel'});langsData.push({key:'cjr',body:'Remove correction'});langsData.push({key:'ckc',body:'Description about correction.(You can write in any language.)'});langsData.push({key:'cjk',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'cjl',body:'There are not any comments or corrections.'});langsData.push({key:'cjh',body:'Correct this entry'});langsData.push({key:'cjf',body:'Comment'});langsData.push({key:'cjm',body:'There has been an internal system error. Please try again.'});langsData.push({key:'kbm',body:'Draft Saved'});var l8=l8||{};l8.t=l8.t||{};l8.t=new L8I18n(langsData);</script>
+
+<div class='navbar navbar-fixed-top mb_20' id='header'>
+<div class='navbar-inner'>
+<div class='container'>
+<a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</a>
+<div class='nav-collapse'>
+<ul class='nav' id='dropmenu03'>
+<li class='logoname'>
+<a class='brand' href='/'>
+<img alt="Header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0" id="logo" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0.gif"/>
+</a>
+</li>
+<li class='divider'></li>
+<li class='home'>
+<a href="/" class="a_home" title="Home"><img alt="Ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb.png" title="Home"/>
+</a></li>
+<li class='divider'></li>
+<li class='help'>
+<a href="/help/about" class="help" target="_blank" title="What is Lang-8?"><span>
+What is Lang-8?
+</span>
+</a></li>
+<li class='divider'></li>
+</ul>
+<ul class='nav pull-right' id='dropmenu02'>
+<li class='help'>
+<a href="/register/step1?from=header" class="help"><span>Sign up</span>
+</a></li>
+<li class='divider'></li>
+<li class='help' id='login'>
+<a href="https://lang-8.com/login?from=header" class="help"><span>Log in</span>
+</a></li>
+<li class='divider'></li>
+<li class='language_list'>
+<form action="" class="language_select" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="qXcSMQc7oVouqB2ZgfQpR4j76FNoE4UoWNpZqZYnHYo="/></div>
+<select id="interface_lang" name="interface_lang" onchange="onChangeInterfaceLang()"><option value="2-2" selected="selected">English</option>
+<option value="2-5">Español</option>
+<option value="2-6">français</option>
+<option value="2-8">Deutsch</option>
+<option value="2-95">Português(Portugal)</option>
+<option value="2-10">Русский</option>
+<option value="2-59">Polski</option>
+<option value="2-78">Hrvatski</option>
+<option value="2-30">العربية</option>
+<option value="2-1">日本語</option>
+<option value="2-3">中文(简体)</option>
+<option value="2-300">中文(繁體)</option>
+<option value="2-4">한국어</option>
+<option value="2-20">ภาษาไทย</option>
+<option value="2-35">Svenska</option>
+<option value="2-47">Tagalog</option>
+<option value="2-65">Bahasa Melayu</option>
+<option value="2-58">Indonesian</option>
+<option value="2-7">Italiano</option></select>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class='alerter container alert fade in navbar-fixed-top' id='alert-top' style='top:60px;display:none;'>
+<a class='close' data-dismiss='alert' href='#'>
+&times;
+</a>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert Message here
+</span>
+</div>
+<div class='alerter alert fade in navbar-fixed-top' id='alert-box' style='left:40%;top:40%;width:200px;display:none;'>
+<div style='text-align:center;'>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert message here
+</span>
+</div>
+</div>
+
+
+
+
+      <div class="center" style="margin-bottom: 10px;">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- PC_Super_Before_Login -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6717840198266056" data-ad-slot="9171779343" data-ad-format="auto"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+
+      </div>
+
+
+
+
+<div id='page_content'>
+<div class='cfx' id='main_container'>
+<ul class="cfx" id="breadcrumbs"><li class="home"><a href="/">Home</a></li><li class=""><a href="/profiles/search">Member</a></li><li class=""><a href="/38826">Lunnie</a></li><li class=""><a href="/38826/journals">Lunnie's entries</a></li><li class=""><span>story about Amy</span></li></ul>
+<div>
+<div data-use_friend_request_popover='data-use_friend_request_popover' id='main'>
+<style type='text/css'>@font-face{font-family:"FontAwesome";src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot);src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot?#iefix) format('eot') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.woff) format('woff') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.ttf) format('truetype') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.svg#FontAwesome) format('svg');font-weight:normal;font-style:normal}</style>
+<div class='cfx' id='entry_detail'>
+<div class='show_report_spam_link cfx' id='entry_title_box'>
+<div class='tit_02'>
+<h1 id='subject_show'>story about Amy</h1>
+<div class='edit_links'>
+<ul class='cfx'>
+</ul>
+</div>
+</div>
+</div>
+<div class='clear_both'></div>
+<div class='cfx' id='tools_for_journal'>
+<ul class='journal_status floated_on_right'>
+<li class='privacy_level_5' data-original-title='Public' rel='tooltip'>&nbsp;</li>
+<li class='visiters' data-original-title='Views' rel='tooltip' title='Views'>227</li>
+<li class='comment_num' data-original-title='Comments' rel='tooltip' title='Comments'>1</li>
+<li class='corrections_num' data-original-title='Corrections' rel='tooltip' title='Corrections'>2</li>
+<li class='studying' data-original-title='The language that needs to be corrected' rel='tooltip'>English&nbsp;</li>
+</ul>
+<span class='journal_date floated_on_left'>
+Apr 27, 2009 02:00
+</span>
+<script type='text/javascript'>//<![CDATA[
+$j(function(){var journalCounterView=new Lang8.Views.JournalCounterView();});
+//]]></script>
+
+</div>
+<div id='show_buttons'>
+<input class='bt_lv3' data-original-title='Show corrections for sentences when you mouse-over.' id='showAndHide' rel='tooltip' title='' type='button' value='Show'/>
+<input class='bt_lv3' data-original-title='Show all corrections together in a pop-up window.' id='showAll' rel='tooltip' title='' type='button' value='Show All'/>
+</div>
+
+<div class='cfx' id='body_show'>
+<div id='body_show_ori'>
+Little Amy was fearfull. She afraided of darkness, insect, black color (she belived that if she watch long time to black, from there come monster of Black Kindom), touch frightful picture (it strike to her that if she touch their, they bite her),snake, knifes( it always strike to her that they always wanted hit somebody) and many other stupud things.<br/>When Amy became teenager, she colored her hair to black. She had pets tarantula and snake. Her room was black, there some light, many variety knifes and sword. Almost time she was in different party. All her pocket money she spend to clother, knifes, party, alcohol. When she became 17, her parents stop give her money and they saw that they want that she became a doyenne of cancer because her dad illed by cancer. she get angry. Amy take a lot of parents money and left home. <br/>Amy's parents always love her. They belive that today or tomorrow Amy come back. After Amy's escape her dad died. But Amy doesn't know that, she was lived in other city with her boyfriend Max. When she feel baby, Max left her. She was depressed. She come back to her parents by last money. When she ring to door, nobody opened. She was despair and she come to uncle. He said that her dad died yaer ago and that her mum in hospital, she have a stoke.<br/>Now Amy live with mum and dauther. Her deather Lisa is 4. Amy study in university by doyenne of cancer. ...Lisa is very fearful...<br/>     Lets respect our parents!
+</div>
+<div class='box_like_button cfx' id='async_show_like'></div>
+<div class='ad_journal_center clear_both floated_on_left'>
+  
+    <div class="center" style="margin: 0 0 10px;">
+        <a href="https://hinative.com?bt=pc_center&amp;utm_source=pc_banner&amp;utm_campaign=pc_center"><img alt="Learn English, Spanish, and other languages for free with the HiNative app" height="250" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/banner/L8/img_hn_pc_bn300@2x-09139844e642bcc85c91732f558cf3e5.png" width="300"/></a>
+
+    </div>
+  
+
+</div>
+</div>
+</div>
+<div class='little-spaced cfx' data-canonical_url='http://lang-8.com/38826/journals/133398' id='links_for_journal'>
+<span class='horizontal-spaced tw-btn'>
+<a class='twitter-share-button' data-hashtags='lang8' data-related='lang8' data-text='story about Amy' data-url='http://lang-8.com/38826/journals/133398' data-via='lang8' href='https://twitter.com/share'>Tweet</a>
+</span>
+<span class='horizontal-spaced fb-like' data-action='like' data-colorscheme='light' data-href='http://lang-8.com/38826/journals/133398' data-layout='button_count' data-show-faces='false' data-width='100'></span>
+<span class='horizontal-spaced gplus_btn'>
+<!-- %span.g-plusone{'data-size' => 'medium', :href => "#{@journal.canonical_url}"} -->
+</span>
+<span class='floated_on_left'>
+<span class='st_fblike_hcount' displayText='Facebook Like' st_url='http://lang-8.com/38826/journals/133398'></span>
+<span class='st_facebook_hcount' displayText='Facebook' st_url='http://lang-8.com/38826/journals/133398'></span>
+<span class='st_linkedin_hcount' displayText='LinkedIn' st_url='http://lang-8.com/38826/journals/133398'></span>
+</span>
+<a href='#' onclick="Evernote.doClip({styling:'full',providerName:'Lang-8',suggestTags:'Lang-8',suggestNotebook:'Lang-8',contentId:'entry_container'}); return false;" style='float:right;margin-right:5px;'>
+<img alt='Clip to Evernote' src='/static/images2/xarticle-clipper-fr.png.pagespeed.ic.BAKnLUGqIU.png'/>
+</a>
+</div>
+<div id='comments_and_corrections_field'>
+<div class='fukidashi comment_field' id='journal_comment_554866'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/37809"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/no_image.gif"/></a>
+<a href="/37809" class="user_name"></a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Apr 27, 2009 03:13
+</span>
+</div>
+</div>
+<div class='correction_list corner-rounded_5 little-spaced'>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Little Amy was fearfull.</li>
+<li class='corrected correct'>
+<p>When Amy was young she was fearfull.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144376'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>She afraided of darkness, insect, black color (she belived that if she watch long time to black, from there come monster of Black Kindom), touch frightful picture (it strike to her that if she touch their, they bite her),snake, knifes( it always strike to her that they always wanted hit somebody) and many other stupud things.</li>
+<li class='corrected correct'>
+<p>She was afraid<span class="sline">ed</span> of the dark<span class="sline">ness</span>, insects, tthe color black (she belived that if she watched for a long enough time somthing colored black, <span class="sline">from there come</span> a monster from the Black Kingdom would come forth), touch a scary picture (she thought that if she touched it, it might attack her), snake, knives( she thought the knives might want to cut her) and many other stupid things.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144377'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>When Amy became teenager, she colored her hair to black.</li>
+<li class='corrected correct'>
+<p>When Amy became teenager, she dyed her hair<span class="sline"> to</span> black.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144378'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>She had pets tarantula and snake.</li>
+<li class='corrected correct'>
+<p>She had a pet<span class="sline">s</span> tarantula and snake.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144379'>
+<span class="nice_pt_status">
+
+  <a class="eval_user_links" href="#" onclick="new Ajax.Updater('eval_users_list', '/journals/eval_users/1144379', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('qXcSMQc7oVouqB2ZgfQpR4j76FNoE4UoWNpZqZYnHYo=')}); return false;">1 people</a> think this correction is good.
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Her room was black, there some light, many variety knifes and sword.</li>
+<li class='corrected correct'>
+<p>Her room was black, there <span class="f_red">was</span> some light, a variety of knifes and a sword.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144380'>
+<span class="nice_pt_status">
+
+  <a class="eval_user_links" href="#" onclick="new Ajax.Updater('eval_users_list', '/journals/eval_users/1144380', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('qXcSMQc7oVouqB2ZgfQpR4j76FNoE4UoWNpZqZYnHYo=')}); return false;">1 people</a> think this correction is good.
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Almost time she was in different party.</li>
+<li class='corrected correct'>
+<p>She would constantly go to parties.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144381'>
+<span class="nice_pt_status">
+
+  <a class="eval_user_links" href="#" onclick="new Ajax.Updater('eval_users_list', '/journals/eval_users/1144381', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('qXcSMQc7oVouqB2ZgfQpR4j76FNoE4UoWNpZqZYnHYo=')}); return false;">1 people</a> think this correction is good.
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>All her pocket money she spend to clother, knifes, party, alcohol.</li>
+<li class='corrected correct'>
+<p>All her pocket money she spent on clothes, knives, parties, and alcohol.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144382'>
+<span class="nice_pt_status">
+
+  <a class="eval_user_links" href="#" onclick="new Ajax.Updater('eval_users_list', '/journals/eval_users/1144382', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('qXcSMQc7oVouqB2ZgfQpR4j76FNoE4UoWNpZqZYnHYo=')}); return false;">1 people</a> think this correction is good.
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>When she became 17, her parents stop give her money and they saw that they want that she became a doyenne of cancer because her dad illed by cancer.</li>
+<li class='corrected correct'>
+<p>When she became 17, her parents stop giving her money and wished that she would die of cancer because her father was ill with cancer.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144383'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>she get angry.</li>
+<li class='corrected correct'>
+<p>she got angry.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144384'>
+<span class="nice_pt_status">
+
+  <a class="eval_user_links" href="#" onclick="new Ajax.Updater('eval_users_list', '/journals/eval_users/1144384', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('qXcSMQc7oVouqB2ZgfQpR4j76FNoE4UoWNpZqZYnHYo=')}); return false;">1 people</a> think this correction is good.
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Amy take a lot of parents money and left home.</li>
+<li class='corrected correct'>
+<p>Amy took a lot of her parent&#39;s money and left home.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144385'>
+<span class="nice_pt_status">
+
+  <a class="eval_user_links" href="#" onclick="new Ajax.Updater('eval_users_list', '/journals/eval_users/1144385', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('qXcSMQc7oVouqB2ZgfQpR4j76FNoE4UoWNpZqZYnHYo=')}); return false;">1 people</a> think this correction is good.
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Amy&#39;s parents always love her.</li>
+<li class='corrected correct'>
+<p>Amy&#39;s parents always loved her.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144386'>
+<span class="nice_pt_status">
+
+  <a class="eval_user_links" href="#" onclick="new Ajax.Updater('eval_users_list', '/journals/eval_users/1144386', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('qXcSMQc7oVouqB2ZgfQpR4j76FNoE4UoWNpZqZYnHYo=')}); return false;">1 people</a> think this correction is good.
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>They belive that today or tomorrow Amy come back.</li>
+<li class='corrected correct'>
+<p>They belived that any day Amy would come back.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144387'>
+<span class="nice_pt_status">
+
+  <a class="eval_user_links" href="#" onclick="new Ajax.Updater('eval_users_list', '/journals/eval_users/1144387', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('qXcSMQc7oVouqB2ZgfQpR4j76FNoE4UoWNpZqZYnHYo=')}); return false;">1 people</a> think this correction is good.
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>But Amy doesn&#39;t know that, she was lived in other city with her boyfriend Max.</li>
+<li class='corrected correct'>
+<p>But Amy didn&#39;t know that, she was living in aother city with her boyfriend Max.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144388'>
+<span class="nice_pt_status">
+
+  <a class="eval_user_links" href="#" onclick="new Ajax.Updater('eval_users_list', '/journals/eval_users/1144388', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('qXcSMQc7oVouqB2ZgfQpR4j76FNoE4UoWNpZqZYnHYo=')}); return false;">1 people</a> think this correction is good.
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>When she feel baby, Max left her.</li>
+<li class='corrected correct'>
+<p>When she discovered she was pregnant, Max left her.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144389'>
+<span class="nice_pt_status">
+
+  <a class="eval_user_links" href="#" onclick="new Ajax.Updater('eval_users_list', '/journals/eval_users/1144389', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('qXcSMQc7oVouqB2ZgfQpR4j76FNoE4UoWNpZqZYnHYo=')}); return false;">1 people</a> think this correction is good.
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>She come back to her parents by last money.</li>
+<li class='corrected correct'>
+<p>She came back to her parents using the last of her money.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144390'>
+<span class="nice_pt_status">
+
+  <a class="eval_user_links" href="#" onclick="new Ajax.Updater('eval_users_list', '/journals/eval_users/1144390', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('qXcSMQc7oVouqB2ZgfQpR4j76FNoE4UoWNpZqZYnHYo=')}); return false;">1 people</a> think this correction is good.
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>When she ring to door, nobody opened.</li>
+<li class='corrected correct'>
+<p>When she rang the door bell, nobody opened.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144391'>
+<span class="nice_pt_status">
+
+  <a class="eval_user_links" href="#" onclick="new Ajax.Updater('eval_users_list', '/journals/eval_users/1144391', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('qXcSMQc7oVouqB2ZgfQpR4j76FNoE4UoWNpZqZYnHYo=')}); return false;">1 people</a> think this correction is good.
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>She was despair and she come to uncle.</li>
+<li class='corrected correct'>
+<p>She was in despair and she went to her uncle.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144392'>
+<span class="nice_pt_status">
+
+  <a class="eval_user_links" href="#" onclick="new Ajax.Updater('eval_users_list', '/journals/eval_users/1144392', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('qXcSMQc7oVouqB2ZgfQpR4j76FNoE4UoWNpZqZYnHYo=')}); return false;">1 people</a> think this correction is good.
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>He said that her dad died yaer ago and that her mum in hospital, she have a stoke.</li>
+<li class='corrected correct'>
+<p>He told her that her dad died a year ago and that her mum was in the hospital because she had a stoke.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144393'>
+<span class="nice_pt_status">
+
+  <a class="eval_user_links" href="#" onclick="new Ajax.Updater('eval_users_list', '/journals/eval_users/1144393', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('qXcSMQc7oVouqB2ZgfQpR4j76FNoE4UoWNpZqZYnHYo=')}); return false;">1 people</a> think this correction is good.
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Now Amy live with mum and dauther.</li>
+<li class='corrected correct'>
+<p>Now Amy lives with her mum and daugther.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144394'>
+<span class="nice_pt_status">
+
+  <a class="eval_user_links" href="#" onclick="new Ajax.Updater('eval_users_list', '/journals/eval_users/1144394', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('qXcSMQc7oVouqB2ZgfQpR4j76FNoE4UoWNpZqZYnHYo=')}); return false;">1 people</a> think this correction is good.
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Her deather Lisa is 4.</li>
+<li class='corrected correct'>
+<p>Her daughter Lisa is 4.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144395'>
+<span class="nice_pt_status">
+
+  <a class="eval_user_links" href="#" onclick="new Ajax.Updater('eval_users_list', '/journals/eval_users/1144395', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('qXcSMQc7oVouqB2ZgfQpR4j76FNoE4UoWNpZqZYnHYo=')}); return false;">1 people</a> think this correction is good.
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Amy study in university by doyenne of cancer.</li>
+<li class='corrected correct'>
+<p>Amy studies in the university about dying of cancer.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144396'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+The story is sad because there is little hope. Hope can be a light that drives darkness from the heart.
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-554866' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_554866'>
+
+</div>
+</div>
+</div>
+<div class='fukidashi comment_field' id='journal_comment_554973'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/46242"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/m_46242_1404b4f1d2a3c8a7a3c176d969c7a0f2.jpg"/></a>
+<a href="/46242" class="user_name">korgi</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Apr 27, 2009 04:28
+</span>
+</div>
+</div>
+<div class='correction_list corner-rounded_5 little-spaced'>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Little Amy was fearfull.</li>
+<li class='corrected correct'>
+<p>Little Amy was <span class="f_red">fearful</span>.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144697'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>She afraided of darkness, insect, black color (she belived that if she watch long time to black, from there come monster of Black Kindom), touch frightful picture (it strike to her that if she touch their, they bite her),snake, knifes( it always strike to her that they always wanted hit somebody) and many other stupud things.</li>
+<li class='corrected correct'>
+<p>She <span class="f_blue">was</span> afraid<span class="sline">ed</span> of <span class="f_blue">the </span>darkness, insect<span class="f_blue">s</span>, <span class="f_blue">the color black</span>, <span class="f_blue">to </span>touch frightful picture<span class="f_blue">s</span>, snake<span class="f_blue">s</span>, <span class="f_red">knives</span> and many other <span class="f_red">stupid</span> things.  <span class="f_blue">She believed if she watched something black for a long time then a monster from the Black Kingdom would come, that if she touched a frightful picture that it would bite her, and that knives might want to cut her.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144698'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>When Amy became teenager, she colored her hair to black.</li>
+<li class='corrected correct'>
+<p>When Amy became <span class="f_blue">a</span> teenager, she <span class="sline">colored</span> <span class="f_blue">dyed </span>her hair <span class="sline">to</span> black.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144699'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>When she became 17, her parents stop give her money and they saw that they want that she became a doyenne of cancer because her dad illed by cancer.</li>
+<li class='corrected correct'>
+<p>When she became 17 her parents <span class="f_red">stopped</span> <span class="f_red">giving</span> her money and they saw that they <span class="f_red">wanted</span> <span class="sline">that she</span> <span class="f_blue">her to </span><span class="f_red">become</span> an <span class="sline">doyenne</span> <span class="f_blue">expert</span> of cancer because her dad <span class="f_blue">was</span> <span class="f_red">ill</span> <span class="sline">by</span> <span class="f_blue">with </span>cancer.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144700'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Amy study in university by doyenne of cancer.</li>
+<li class='corrected correct'>
+<p>Amy <span class="f_red">studies</span> <span class="sline">in</span> <span class="f_blue">at the </span>university <span class="sline">by doyenne</span> <span class="f_blue">with an expert </span>of cancer.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1144701'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+The first paragraph that tells what Amy is afraid of was a bit wordy, so it may be better to explain why she is afraid of those things as a separate sentence instead of in parenthesis.
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-554973' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_554973'>
+
+</div>
+</div>
+</div>
+<div class='fukidashi comment_field' id='journal_comment_556997'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/38826"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/m_38826_56079ddc8efecc89cbf12cd7c712a278.jpg"/></a>
+<a href="/38826" class="user_name">Lunnie</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Apr 27, 2009 20:20
+</span>
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+thanks a lot))<br/> I was writing about Amy's live when my friend call me. After she had told me her problem about her parents, I wanted write this) I didnt't like it. sorry about my ...er... negative)     (please correct me)
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-556997' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_556997'>
+
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>//<![CDATA[
+var l8=jQuery.extend(l8,{authenticityToken:"qXcSMQc7oVouqB2ZgfQpR4j76FNoE4UoWNpZqZYnHYo=",showTutorial:false,label:"Description about correction.(You can write in any language.)",explanation:"Add a description or comment here.(Optional)",sentences:'c3RvcnkgYWJvdXQgQW15CkxpdHRsZSBBbXkgd2FzIGZlYXJmdWxsLgpTaGUgYWZyYWlkZWQgb2YgZGFya25lc3MsIGluc2VjdCwgYmxhY2sgY29sb3IgKHNoZSBiZWxpdmVkIHRoYXQgaWYgc2hlIHdhdGNoIGxvbmcgdGltZSB0byBibGFjaywgZnJvbSB0aGVyZSBjb21lIG1vbnN0ZXIgb2YgQmxhY2sgS2luZG9tKSwgdG91Y2ggZnJpZ2h0ZnVsIHBpY3R1cmUgKGl0IHN0cmlrZSB0byBoZXIgdGhhdCBpZiBzaGUgdG91Y2ggdGhlaXIsIHRoZXkgYml0ZSBoZXIpLHNuYWtlLCBrbmlmZXMoIGl0IGFsd2F5cyBzdHJpa2UgdG8gaGVyIHRoYXQgdGhleSBhbHdheXMgd2FudGVkIGhpdCBzb21lYm9keSkgYW5kIG1hbnkgb3RoZXIgc3R1cHVkIHRoaW5ncy4KV2hlbiBBbXkgYmVjYW1lIHRlZW5hZ2VyLCBzaGUgY29sb3JlZCBoZXIgaGFpciB0byBibGFjay4KU2hlIGhhZCBwZXRzIHRhcmFudHVsYSBhbmQgc25ha2UuCkhlciByb29tIHdhcyBibGFjaywgdGhlcmUgc29tZSBsaWdodCwgbWFueSB2YXJpZXR5IGtuaWZlcyBhbmQgc3dvcmQuCkFsbW9zdCB0aW1lIHNoZSB3YXMgaW4gZGlmZmVyZW50IHBhcnR5LgpBbGwgaGVyIHBvY2tldCBtb25leSBzaGUgc3BlbmQgdG8gY2xvdGhlciwga25pZmVzLCBwYXJ0eSwgYWxjb2hvbC4KV2hlbiBzaGUgYmVjYW1lIDE3LCBoZXIgcGFyZW50cyBzdG9wIGdpdmUgaGVyIG1vbmV5IGFuZCB0aGV5IHNhdyB0aGF0IHRoZXkgd2FudCB0aGF0IHNoZSBiZWNhbWUgYSBkb3llbm5lIG9mIGNhbmNlciBiZWNhdXNlIGhlciBkYWQgaWxsZWQgYnkgY2FuY2VyLgpzaGUgZ2V0IGFuZ3J5LgpBbXkgdGFrZSBhIGxvdCBvZiBwYXJlbnRzIG1vbmV5IGFuZCBsZWZ0IGhvbWUuCkFteSdzIHBhcmVudHMgYWx3YXlzIGxvdmUgaGVyLgpUaGV5IGJlbGl2ZSB0aGF0IHRvZGF5IG9yIHRvbW9ycm93IEFteSBjb21lIGJhY2suCkFmdGVyIEFteSdzIGVzY2FwZSBoZXIgZGFkIGRpZWQuCkJ1dCBBbXkgZG9lc24ndCBrbm93IHRoYXQsIHNoZSB3YXMgbGl2ZWQgaW4gb3RoZXIgY2l0eSB3aXRoIGhlciBib3lmcmllbmQgTWF4LgpXaGVuIHNoZSBmZWVsIGJhYnksIE1heCBsZWZ0IGhlci4KU2hlIHdhcyBkZXByZXNzZWQuClNoZSBjb21lIGJhY2sgdG8gaGVyIHBhcmVudHMgYnkgbGFzdCBtb25leS4KV2hlbiBzaGUgcmluZyB0byBkb29yLCBub2JvZHkgb3BlbmVkLgpTaGUgd2FzIGRlc3BhaXIgYW5kIHNoZSBjb21lIHRvIHVuY2xlLgpIZSBzYWlkIHRoYXQgaGVyIGRhZCBkaWVkIHlhZXIgYWdvIGFuZCB0aGF0IGhlciBtdW0gaW4gaG9zcGl0YWwsIHNoZSBoYXZlIGEgc3Rva2UuCk5vdyBBbXkgbGl2ZSB3aXRoIG11bSBhbmQgZGF1dGhlci4KSGVyIGRlYXRoZXIgTGlzYSBpcyA0LgpBbXkgc3R1ZHkgaW4gdW5pdmVyc2l0eSBieSBkb3llbm5lIG9mIGNhbmNlci4KLi4uCkxpc2EgaXMgdmVyeSBmZWFyZnVsLi4uCkxldHMgcmVzcGVjdCBvdXIgcGFyZW50cyE=',corrections:[[],["When Amy was young she was fearfull.","Little Amy was [f-red]fearful[/f-red]."],["She was afraid[sline]ed[/sline] of the dark[sline]ness[/sline], insects, tthe color black (she belived that if she watched for a long enough time somthing colored black, [sline]from there come[/sline] a monster from the Black Kingdom would come forth), touch a scary picture (she thought that if she touched it, it might attack her), snake, knives( she thought the knives might want to cut her) and many other stupid things.","She [f-blue]was[/f-blue] afraid[sline]ed[/sline] of [f-blue]the [/f-blue]darkness, insect[f-blue]s[/f-blue], [f-blue]the color black[/f-blue], [f-blue]to [/f-blue]touch frightful picture[f-blue]s[/f-blue], snake[f-blue]s[/f-blue], [f-red]knives[/f-red] and many other [f-red]stupid[/f-red] things.  [f-blue]She believed if she watched something black for a long time then a monster from the Black Kingdom would come, that if she touched a frightful picture that it would bite her, and that knives might want to cut her.[/f-blue]"],["When Amy became teenager, she dyed her hair[sline] to[/sline] black.","When Amy became [f-blue]a[/f-blue] teenager, she [sline]colored[/sline] [f-blue]dyed [/f-blue]her hair [sline]to[/sline] black."],["She had a pet[sline]s[/sline] tarantula and snake."],["Her room was black, there [f-red]was[/f-red] some light, a variety of knifes and a sword."],["She would constantly go to parties."],["All her pocket money she spent on clothes, knives, parties, and alcohol."],["When she became 17, her parents stop giving her money and wished that she would die of cancer because her father was ill with cancer.","When she became 17 her parents [f-red]stopped[/f-red] [f-red]giving[/f-red] her money and they saw that they [f-red]wanted[/f-red] [sline]that she[/sline] [f-blue]her to [/f-blue][f-red]become[/f-red] an [sline]doyenne[/sline] [f-blue]expert[/f-blue] of cancer because her dad [f-blue]was[/f-blue] [f-red]ill[/f-red] [sline]by[/sline] [f-blue]with [/f-blue]cancer."],["she got angry."],["Amy took a lot of her parent's money and left home."],["Amy's parents always loved her."],["They belived that any day Amy would come back."],[],["But Amy didn't know that, she was living in aother city with her boyfriend Max."],["When she discovered she was pregnant, Max left her."],[],["She came back to her parents using the last of her money."],["When she rang the door bell, nobody opened."],["She was in despair and she went to her uncle."],["He told her that her dad died a year ago and that her mum was in the hospital because she had a stoke."],["Now Amy lives with her mum and daugther."],["Her daughter Lisa is 4."],["Amy studies in the university about dying of cancer.","Amy [f-red]studies[/f-red] [sline]in[/sline] [f-blue]at the [/f-blue]university [sline]by doyenne[/sline] [f-blue]with an expert [/f-blue]of cancer."],[],[],[]],correctionComments:[[],[null,null],[null,null],[null,null],[null],[null],[null],[null],[null,null],[null],[null],[null],[null],[],[null],[null],[],[null],[null],[null],[null],[null],[null],[null,null],[],[],[]],perfectSentences:[[],[null,null],[null,null],[null,null],[null],[null],[null],[null],[null,null],[null],[null],[null],[null],[],[null],[null],[],[null],[null],[null],[null],[null],[null],[null,null],[],[],[]],urlForCreateComment:'/journals/create_comment/133398',isLogin:false});sentences='WyJzdG9yeSBhYm91dCBBbXkiLCJMaXR0bGUgQW15IHdhcyBmZWFyZnVsbC4iLCJTaGUgYWZyYWlkZWQgb2YgZGFya25lc3MsIGluc2VjdCwgYmxhY2sgY29sb3IgKHNoZSBiZWxpdmVkIHRoYXQgaWYgc2hlIHdhdGNoIGxvbmcgdGltZSB0byBibGFjaywgZnJvbSB0aGVyZSBjb21lIG1vbnN0ZXIgb2YgQmxhY2sgS2luZG9tKSwgdG91Y2ggZnJpZ2h0ZnVsIHBpY3R1cmUgKGl0IHN0cmlrZSB0byBoZXIgdGhhdCBpZiBzaGUgdG91Y2ggdGhlaXIsIHRoZXkgYml0ZSBoZXIpLHNuYWtlLCBrbmlmZXMoIGl0IGFsd2F5cyBzdHJpa2UgdG8gaGVyIHRoYXQgdGhleSBhbHdheXMgd2FudGVkIGhpdCBzb21lYm9keSkgYW5kIG1hbnkgb3RoZXIgc3R1cHVkIHRoaW5ncy4iLCJXaGVuIEFteSBiZWNhbWUgdGVlbmFnZXIsIHNoZSBjb2xvcmVkIGhlciBoYWlyIHRvIGJsYWNrLiIsIlNoZSBoYWQgcGV0cyB0YXJhbnR1bGEgYW5kIHNuYWtlLiIsIkhlciByb29tIHdhcyBibGFjaywgdGhlcmUgc29tZSBsaWdodCwgbWFueSB2YXJpZXR5IGtuaWZlcyBhbmQgc3dvcmQuIiwiQWxtb3N0IHRpbWUgc2hlIHdhcyBpbiBkaWZmZXJlbnQgcGFydHkuIiwiQWxsIGhlciBwb2NrZXQgbW9uZXkgc2hlIHNwZW5kIHRvIGNsb3RoZXIsIGtuaWZlcywgcGFydHksIGFsY29ob2wuIiwiV2hlbiBzaGUgYmVjYW1lIDE3LCBoZXIgcGFyZW50cyBzdG9wIGdpdmUgaGVyIG1vbmV5IGFuZCB0aGV5IHNhdyB0aGF0IHRoZXkgd2FudCB0aGF0IHNoZSBiZWNhbWUgYSBkb3llbm5lIG9mIGNhbmNlciBiZWNhdXNlIGhlciBkYWQgaWxsZWQgYnkgY2FuY2VyLiIsInNoZSBnZXQgYW5ncnkuIiwiQW15IHRha2UgYSBsb3Qgb2YgcGFyZW50cyBtb25leSBhbmQgbGVmdCBob21lLiIsIkFteSdzIHBhcmVudHMgYWx3YXlzIGxvdmUgaGVyLiIsIlRoZXkgYmVsaXZlIHRoYXQgdG9kYXkgb3IgdG9tb3Jyb3cgQW15IGNvbWUgYmFjay4iLCJBZnRlciBBbXkncyBlc2NhcGUgaGVyIGRhZCBkaWVkLiIsIkJ1dCBBbXkgZG9lc24ndCBrbm93IHRoYXQsIHNoZSB3YXMgbGl2ZWQgaW4gb3RoZXIgY2l0eSB3aXRoIGhlciBib3lmcmllbmQgTWF4LiIsIldoZW4gc2hlIGZlZWwgYmFieSwgTWF4IGxlZnQgaGVyLiIsIlNoZSB3YXMgZGVwcmVzc2VkLiIsIlNoZSBjb21lIGJhY2sgdG8gaGVyIHBhcmVudHMgYnkgbGFzdCBtb25leS4iLCJXaGVuIHNoZSByaW5nIHRvIGRvb3IsIG5vYm9keSBvcGVuZWQuIiwiU2hlIHdhcyBkZXNwYWlyIGFuZCBzaGUgY29tZSB0byB1bmNsZS4iLCJIZSBzYWlkIHRoYXQgaGVyIGRhZCBkaWVkIHlhZXIgYWdvIGFuZCB0aGF0IGhlciBtdW0gaW4gaG9zcGl0YWwsIHNoZSBoYXZlIGEgc3Rva2UuIiwiTm93IEFteSBsaXZlIHdpdGggbXVtIGFuZCBkYXV0aGVyLiIsIkhlciBkZWF0aGVyIExpc2EgaXMgNC4iLCJBbXkgc3R1ZHkgaW4gdW5pdmVyc2l0eSBieSBkb3llbm5lIG9mIGNhbmNlci4iLCIuLi4iLCJMaXNhIGlzIHZlcnkgZmVhcmZ1bC4uLiIsIkxldHMgcmVzcGVjdCBvdXIgcGFyZW50cyEiXQ==';corrections='W1tdLFsiV2hlbiBBbXkgd2FzIHlvdW5nIHNoZSB3YXMgZmVhcmZ1bGwuIiwiTGl0dGxlIEFteSB3YXMgW2YtcmVkXWZlYXJmdWxbL2YtcmVkXS4iXSxbIlNoZSB3YXMgYWZyYWlkW3NsaW5lXWVkWy9zbGluZV0gb2YgdGhlIGRhcmtbc2xpbmVdbmVzc1svc2xpbmVdLCBpbnNlY3RzLCB0dGhlIGNvbG9yIGJsYWNrIChzaGUgYmVsaXZlZCB0aGF0IGlmIHNoZSB3YXRjaGVkIGZvciBhIGxvbmcgZW5vdWdoIHRpbWUgc29tdGhpbmcgY29sb3JlZCBibGFjaywgW3NsaW5lXWZyb20gdGhlcmUgY29tZVsvc2xpbmVdIGEgbW9uc3RlciBmcm9tIHRoZSBCbGFjayBLaW5nZG9tIHdvdWxkIGNvbWUgZm9ydGgpLCB0b3VjaCBhIHNjYXJ5IHBpY3R1cmUgKHNoZSB0aG91Z2h0IHRoYXQgaWYgc2hlIHRvdWNoZWQgaXQsIGl0IG1pZ2h0IGF0dGFjayBoZXIpLCBzbmFrZSwga25pdmVzKCBzaGUgdGhvdWdodCB0aGUga25pdmVzIG1pZ2h0IHdhbnQgdG8gY3V0IGhlcikgYW5kIG1hbnkgb3RoZXIgc3R1cGlkIHRoaW5ncy4iLCJTaGUgW2YtYmx1ZV13YXNbL2YtYmx1ZV0gYWZyYWlkW3NsaW5lXWVkWy9zbGluZV0gb2YgW2YtYmx1ZV10aGUgWy9mLWJsdWVdZGFya25lc3MsIGluc2VjdFtmLWJsdWVdc1svZi1ibHVlXSwgW2YtYmx1ZV10aGUgY29sb3IgYmxhY2tbL2YtYmx1ZV0sIFtmLWJsdWVddG8gWy9mLWJsdWVddG91Y2ggZnJpZ2h0ZnVsIHBpY3R1cmVbZi1ibHVlXXNbL2YtYmx1ZV0sIHNuYWtlW2YtYmx1ZV1zWy9mLWJsdWVdLCBbZi1yZWRda25pdmVzWy9mLXJlZF0gYW5kIG1hbnkgb3RoZXIgW2YtcmVkXXN0dXBpZFsvZi1yZWRdIHRoaW5ncy4gIFtmLWJsdWVdU2hlIGJlbGlldmVkIGlmIHNoZSB3YXRjaGVkIHNvbWV0aGluZyBibGFjayBmb3IgYSBsb25nIHRpbWUgdGhlbiBhIG1vbnN0ZXIgZnJvbSB0aGUgQmxhY2sgS2luZ2RvbSB3b3VsZCBjb21lLCB0aGF0IGlmIHNoZSB0b3VjaGVkIGEgZnJpZ2h0ZnVsIHBpY3R1cmUgdGhhdCBpdCB3b3VsZCBiaXRlIGhlciwgYW5kIHRoYXQga25pdmVzIG1pZ2h0IHdhbnQgdG8gY3V0IGhlci5bL2YtYmx1ZV0iXSxbIldoZW4gQW15IGJlY2FtZSB0ZWVuYWdlciwgc2hlIGR5ZWQgaGVyIGhhaXJbc2xpbmVdIHRvWy9zbGluZV0gYmxhY2suIiwiV2hlbiBBbXkgYmVjYW1lIFtmLWJsdWVdYVsvZi1ibHVlXSB0ZWVuYWdlciwgc2hlIFtzbGluZV1jb2xvcmVkWy9zbGluZV0gW2YtYmx1ZV1keWVkIFsvZi1ibHVlXWhlciBoYWlyIFtzbGluZV10b1svc2xpbmVdIGJsYWNrLiJdLFsiU2hlIGhhZCBhIHBldFtzbGluZV1zWy9zbGluZV0gdGFyYW50dWxhIGFuZCBzbmFrZS4iXSxbIkhlciByb29tIHdhcyBibGFjaywgdGhlcmUgW2YtcmVkXXdhc1svZi1yZWRdIHNvbWUgbGlnaHQsIGEgdmFyaWV0eSBvZiBrbmlmZXMgYW5kIGEgc3dvcmQuIl0sWyJTaGUgd291bGQgY29uc3RhbnRseSBnbyB0byBwYXJ0aWVzLiJdLFsiQWxsIGhlciBwb2NrZXQgbW9uZXkgc2hlIHNwZW50IG9uIGNsb3RoZXMsIGtuaXZlcywgcGFydGllcywgYW5kIGFsY29ob2wuIl0sWyJXaGVuIHNoZSBiZWNhbWUgMTcsIGhlciBwYXJlbnRzIHN0b3AgZ2l2aW5nIGhlciBtb25leSBhbmQgd2lzaGVkIHRoYXQgc2hlIHdvdWxkIGRpZSBvZiBjYW5jZXIgYmVjYXVzZSBoZXIgZmF0aGVyIHdhcyBpbGwgd2l0aCBjYW5jZXIuIiwiV2hlbiBzaGUgYmVjYW1lIDE3IGhlciBwYXJlbnRzIFtmLXJlZF1zdG9wcGVkWy9mLXJlZF0gW2YtcmVkXWdpdmluZ1svZi1yZWRdIGhlciBtb25leSBhbmQgdGhleSBzYXcgdGhhdCB0aGV5IFtmLXJlZF13YW50ZWRbL2YtcmVkXSBbc2xpbmVddGhhdCBzaGVbL3NsaW5lXSBbZi1ibHVlXWhlciB0byBbL2YtYmx1ZV1bZi1yZWRdYmVjb21lWy9mLXJlZF0gYW4gW3NsaW5lXWRveWVubmVbL3NsaW5lXSBbZi1ibHVlXWV4cGVydFsvZi1ibHVlXSBvZiBjYW5jZXIgYmVjYXVzZSBoZXIgZGFkIFtmLWJsdWVdd2FzWy9mLWJsdWVdIFtmLXJlZF1pbGxbL2YtcmVkXSBbc2xpbmVdYnlbL3NsaW5lXSBbZi1ibHVlXXdpdGggWy9mLWJsdWVdY2FuY2VyLiJdLFsic2hlIGdvdCBhbmdyeS4iXSxbIkFteSB0b29rIGEgbG90IG9mIGhlciBwYXJlbnQncyBtb25leSBhbmQgbGVmdCBob21lLiJdLFsiQW15J3MgcGFyZW50cyBhbHdheXMgbG92ZWQgaGVyLiJdLFsiVGhleSBiZWxpdmVkIHRoYXQgYW55IGRheSBBbXkgd291bGQgY29tZSBiYWNrLiJdLFtdLFsiQnV0IEFteSBkaWRuJ3Qga25vdyB0aGF0LCBzaGUgd2FzIGxpdmluZyBpbiBhb3RoZXIgY2l0eSB3aXRoIGhlciBib3lmcmllbmQgTWF4LiJdLFsiV2hlbiBzaGUgZGlzY292ZXJlZCBzaGUgd2FzIHByZWduYW50LCBNYXggbGVmdCBoZXIuIl0sW10sWyJTaGUgY2FtZSBiYWNrIHRvIGhlciBwYXJlbnRzIHVzaW5nIHRoZSBsYXN0IG9mIGhlciBtb25leS4iXSxbIldoZW4gc2hlIHJhbmcgdGhlIGRvb3IgYmVsbCwgbm9ib2R5IG9wZW5lZC4iXSxbIlNoZSB3YXMgaW4gZGVzcGFpciBhbmQgc2hlIHdlbnQgdG8gaGVyIHVuY2xlLiJdLFsiSGUgdG9sZCBoZXIgdGhhdCBoZXIgZGFkIGRpZWQgYSB5ZWFyIGFnbyBhbmQgdGhhdCBoZXIgbXVtIHdhcyBpbiB0aGUgaG9zcGl0YWwgYmVjYXVzZSBzaGUgaGFkIGEgc3Rva2UuIl0sWyJOb3cgQW15IGxpdmVzIHdpdGggaGVyIG11bSBhbmQgZGF1Z3RoZXIuIl0sWyJIZXIgZGF1Z2h0ZXIgTGlzYSBpcyA0LiJdLFsiQW15IHN0dWRpZXMgaW4gdGhlIHVuaXZlcnNpdHkgYWJvdXQgZHlpbmcgb2YgY2FuY2VyLiIsIkFteSBbZi1yZWRdc3R1ZGllc1svZi1yZWRdIFtzbGluZV1pblsvc2xpbmVdIFtmLWJsdWVdYXQgdGhlIFsvZi1ibHVlXXVuaXZlcnNpdHkgW3NsaW5lXWJ5IGRveWVubmVbL3NsaW5lXSBbZi1ibHVlXXdpdGggYW4gZXhwZXJ0IFsvZi1ibHVlXW9mIGNhbmNlci4iXSxbXSxbXSxbXV0=';var correction_comments=[[],[null,null],[null,null],[null,null],[null],[null],[null],[null],[null,null],[null],[null],[null],[null],[],[null],[null],[],[null],[null],[null],[null],[null],[null],[null,null],[],[],[]];
+//]]></script>
+
+</div>
+<div id='right' style='padding-bottom:0'>
+<div class='mb_20' id='author_box'>
+<div class='cfx'>
+<a href="/38826"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w50_h0/m_38826_56079ddc8efecc89cbf12cd7c712a278.jpg"/></a>
+<div class='author_information mb_10 cfx'>
+<a href="/38826" class="user_name">Lunnie</a>
+
+<div class='learning_languages'>
+<ul class='language_status'>
+<li class='speaking' data-title='Native language' rel='tooltip' title='Native language'>Russian</li>
+<li class='studying' data-title='Language of study' rel='tooltip' title='Language of study'>
+English, French
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class='bdbox'>
+<table class='entry_status'>
+<tr>
+<td class='l01'>
+<p><a href="/38826/journals">5</a></p>
+<span>Entries Written</span>
+</td>
+<td class='l02'>
+<p><a href="/38826/correction_logs/sent">1</a></p>
+<span>Corrections made</span>
+</td>
+<td class='l03'>
+<p><a href="/38826/correction_logs/received">4</a></p>
+<span>Corrections received</span>
+</td>
+</tr>
+</table>
+</div>
+
+</div>
+
+  
+    <script type="text/javascript">google_ad_client="ca-pub-6717840198266056";google_ad_slot="1415028544";google_ad_width=300;google_ad_height=250;</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+
+  
+
+
+<div class='box'>
+<div id='journals_calendar'>
+<div class='yui-skin-sam'>
+<div id='jour_cal'>
+    <div id="cal1Container"></div>
+    <script type="text/javascript">//<![CDATA[
+(function(){var cal1=null,popupHolder=[],cal_journal_dates={},str_dates='',date_info=[{"journal_date":1304108331,"journal_id":909152},{"journal_date":1245180770,"journal_id":173507},{"journal_date":1244577335,"journal_id":168577},{"journal_date":1241623439,"journal_id":141016},{"journal_date":1240765225,"journal_id":133398}],now_server2local="11/2018",selected_date='',date_info_json=Object.toJSON(date_info),args=getArgsFromHref(location.href);if(args['begin']!=null){var begin_date_a=args['begin'].split('-');var page_date=begin_date_a[1]+'/'+begin_date_a[0];}else if(args['date']!=null){var date_a=args['date'].split('-');var page_date=date_a[1]+'/'+date_a[0];}else{var page_date=now_server2local;}var pathname=location.pathname.split('/');for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(parseInt(date_info[i].journal_date*1000)).toYAHOODateString();if(cal_journal_dates[tmp_date]){cal_journal_dates[tmp_date]=cal_journal_dates[tmp_date]+'/'+date_info[i].journal_id;}else{cal_journal_dates[tmp_date]=date_info[i].journal_id;str_dates=str_dates+','+tmp_date;}}function init(){cal1=new YAHOO.widget.Calendar('cal1','cal1Container',{LOCALE_MONTHS:'short',LOCALE_WEEKDAYS:'1char',pagedate:page_date});cal1.styleCellDefault=function(workingDate,cell){YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_OOB);}
+cal1.renderCellDefault=function(workingDate,cell){cell.innerHTML='<a class="'+cal1.Style.CSS_CELL_SELECTOR+'">'+cal1.buildDayLabel(workingDate)+"</a>";}
+cal1.renderCellHasJournals=function(workingDate,cell){cell.innerHTML='<a href="/'+'38826'+'/journals?date='+workingDate.toStringYYMMDD()+'" class="'+cal1.Style.CSS_CELL_SELECTABLE+'">'+cal1.buildDayLabel(workingDate)+"</a>";YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_SELECTABLE);YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_HIGHLIGHT1);if(workingDate.getDate()==cal1.today.getDate()&&workingDate.getMonth()==cal1.today.getMonth()&&workingDate.getFullYear()==cal1.today.getFullYear()){YAHOO.util.Dom.removeClass(cell,cal1.Style.CSS_CELL_TODAY);}return YAHOO.widget.Calendar.STOP_RENDER;}
+cal1.addRenderer(str_dates,cal1.renderCellHasJournals);cal1.render();}function getArgsFromHref(sHref){var args=sHref.split('?');var retargs={}
+if(args[0]==sHref){return"";}var str=args[1];args=str.split('&');for(var i=0;i<args.length;i++){str=args[i];var arg=str.split('=');if(arg.length<=1)continue;retargs[arg[0]]=arg[1];}return retargs;}YAHOO.util.Event.onAvailable('cal1Container',init);})();
+//]]></script>
+
+</div>
+</div>
+</div>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Journal Statistics</h3>
+</div>
+<div class='cfx' id='studying_status'>
+<table class='table side-bar table_statusstudy'>
+<tr>
+<th>Total</th>
+<th>This month</th>
+<th>This week</th>
+</tr>
+<tr>
+<td>
+<p><a href="/38826/journals">5</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/38826/journals" id="monthCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/38826/journals" id="todayCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<script type="text/javascript">//<![CDATA[
+(function(){var date_info=[{"journal_date":1304108331,"journal_id":909152},{"journal_date":1245180770,"journal_id":173507},{"journal_date":1244577335,"journal_id":168577},{"journal_date":1241623439,"journal_id":141016},{"journal_date":1240765225,"journal_id":133398}],cur_month_counter=0,week_counter=0;var now_date=new Date(),DateMath=YAHOO.widget.DateMath;var now_date_week_begin=DateMath.getFirstDayOfWeek(now_date,0);var now_date_week_end=DateMath.add(now_date_week_begin,'D',6);for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(date_info[i].journal_date*1000);if(tmp_date.getFullYear()==now_date.getFullYear()){if(tmp_date.getMonth()==now_date.getMonth()){cur_month_counter+=1;if(DateMath.getWeekNumber(tmp_date,0)==DateMath.getWeekNumber(now_date,0)){week_counter+=1;}}}}if(week_counter!=0){$('todayCount').update(week_counter);$('todayCount').href=$('todayCount').href+'?begin='+now_date_week_begin.toStringYYMMDD()+'&end='+now_date_week_end.toStringYYMMDD();}else{$('todayCount').href="#";}if(cur_month_counter!=0){$('monthCount').update(cur_month_counter);$('monthCount').href=$('monthCount').href+'?begin='+DateMath.findMonthStart(now_date).toStringYYMMDD()+'&end='+DateMath.findMonthEnd(now_date).toStringYYMMDD();}else{$('monthCount').href="#";}})();
+//]]></script>
+
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest entries</h3>
+</div>
+<table class='table side-bar ar_icobox'>
+<tr>
+<td><a href="http://lang-8.com/38826/journals/909152">C&#39;est mon premire francais essay =) Please, help me! I have to pass it today! (0) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/38826/journals/173507">Summer (0) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/38826/journals/168577">Eurovision (1) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/38826/journals/141016">question (1) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/38826/journals/133398">story about Amy (3) </a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/38826/journals" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest comments</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<td><a href="http://lang-8.com/38826/journals/133398">Apr 27 Lunnie</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/38826/journals/133398">Apr 27 korgi</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/38826/journals/133398">Apr 27 </a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/38826/journals/comments" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box cfx' id='d_draft_list'>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Entries by Month</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<th class='year'>2011</th>
+</tr>
+<tr>
+<td>
+ <a href="/38826/journals?begin=2011-4-1&amp;end=2011-04-30">April (1)</a>
+</td>
+</tr>
+<tr>
+<th class='year'>2009</th>
+</tr>
+<tr>
+<td>
+ <a href="/38826/journals?begin=2009-6-1&amp;end=2009-06-30">June (2)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/38826/journals?begin=2009-5-1&amp;end=2009-05-31">May (1)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/38826/journals?begin=2009-4-1&amp;end=2009-04-30">April (1)</a>
+</td>
+</tr>
+</table>
+</div>
+
+<div style='height:20px;background-color:#ffffff'></div>
+<div id='eval_comment_form' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='form_to_edit_note' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='journal_comment_liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='eval_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+</div>
+<div class='yui-skin-sam' id='yui_panels'>
+<div id='wt_panel' style='visibility:hidden;'>
+<div class='hd' id='wt_title'></div>
+<div class='bd' id='wt_content'></div>
+<div class='ft'></div>
+</div>
+</div>
+<div id='modal'></div>
+<div id='confirm_box'>
+<div id='confirm_box_close'>
+<a onclick='hide_confirm_box();'>
+<img src='/static/images2/xico_closebt.png.pagespeed.ic.z-nUma7JBr.png'/>
+</a>
+</div>
+<div id='confirm_box_contents'></div>
+</div>
+</div>
+<div class='modal hide' id='report_spam_entry' tabindex='-1'>
+<div class='modal-header'>
+<btn class='close' data-dismiss='modal' type='button'>x</btn>
+<h4>Report this entry</h4>
+</div>
+<div class='modal-body'>
+<strong class='spaced'>Spam entry</strong>
+<p class='spaced'>Little Amy was fearfull. She afraided of darkness, insect, black color (she belived that if she watch long time to black, from there come monster of Black Kindom), touch frightful picture (it strike to her that if she touch their, they bite her),snake, knifes( it always strike to her that they always</p>
+<br/>
+<strong class='spaced'>Author</strong>
+<p class='spaced'>Lunnie</p>
+<br/>
+<strong class='spaced'>Reporter</strong>
+<p class='spaced'>0</p>
+</div>
+<div class='modal-footer'>
+<a class='btn' data-dismiss='modal' href='#'>Close</a>
+<a class="bt_lv1 bt_size_04" href="#" onclick="new Ajax.Request('/spam_reports/report_entry?entry_body=Little+Amy+was+fearfull.+She+afraided+of+darkness%2C+insect%2C+black+color+%28she+belived+that+if+she+watch+long+time+to+black%2C+from+there+come+monster+of+Black+Kindom%29%2C+touch+frightful+picture+%28it+strike+to+her+that+if+she+touch+their%2C+they+bite+her%29%2Csnake%2C+knifes%28+it+always+strike+to+her+that+they+always&amp;reporter_id=0&amp;spammer_id=38826&amp;url=http%3A%2F%2Flang-8.com%2F38826%2Fjournals%2F133398', {asynchronous:true, evalScripts:true, onLoading:function(request){$j('#report_spam_entry').html('&lt;p class=&quot;center&quot;&gt;&lt;br /&gt;&lt;img src=&quot;/static/images2/loading.gif&quot; class=&quot;center spaced vertical-margin&quot; /&gt;&lt;/p&gt;');}, onSuccess:function(request){$j(&quot;#report_spam_entry&quot;).modal(&quot;hide&quot;);$j(&quot;#alert-box&quot;).alerter(&quot;alertSuccess&quot;, &quot;&quot;, &quot;Report sent.&quot; );}, parameters:'authenticity_token=' + encodeURIComponent('qXcSMQc7oVouqB2ZgfQpR4j76FNoE4UoWNpZqZYnHYo=')}); return false;">Send</a>
+</div>
+</div>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show-5f9f69ded18eb0d1a8bef6040b599e7b.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show2-e52e094b14e0c5b5979f64d63309ab8a.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show3-eedb1c964407a61f34a56d6652b21722.js" type="text/javascript"></script>
+<script id="evernote-js" data-cjsexec="true" type="text/cjs" data-cjssrc="http://static.evernote.com/noteit.js"></script>
+<script id="twitter-wjs" data-cjsexec="true" type="text/cjs" data-cjssrc="https://platform.twitter.com/widgets.js"></script>
+<script type='text/javascript'></script>
+<script type='text/javascript'>//<![CDATA[
+jQuery(function($){new Lang8.Views.JournalShowView();});
+//]]></script>
+
+</div>
+</div>
+<div data-search_url='' id='footer'>
+<div class='inner'>
+<div class='box clearfix'>
+<ul class='ft_parts_list f_left'>
+<ul class='ft_parts_list f_left'></ul>
+</ul>
+</div>
+<div class='box02 clearfix'>
+<ul>
+
+</ul>
+<ul>
+<li>
+<p>
+Study
+</p>
+<ul>
+<li><a href="/profiles/search">Member Search</a></li>
+<li><a href="/hotentries">Popular Entries</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+View
+</p>
+<ul>
+<li><a href="/rankings">Rankings</a></li>
+<li>
+<a href="/groups">Groups</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+Help
+</p>
+<ul>
+<li><a href="/help/tumblr" target="_blank">Help</a></li>
+<li><a href="/register/term" target="_blank">Terms of Service</a></li>
+<li><a href="/register/privacy" target="_blank">Privacy Policy</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+About Lang-8
+</p>
+<ul>
+<li><a href="/help/law_1" target="_blank">特定商取引法に基づく表記</a></li>
+<li><a href="/help/donation" target="_blank">Donate</a></li>
+<li><a href="http://lang-8.jp/" target="_blank">Company</a></li>
+<li><a href="http://lang-8.jp/#recruit" target="_blank">Travailler pour Lang-8</a></li>
+<li>
+<a href='mailto:support@lang-8.com'>Contact us</a>
+</li>
+<li>&nbsp;</li>
+</ul>
+</li>
+</ul>
+<ul id='social_web_list'>
+<li class='icon_with twitter'>
+<a class='twitter-follow-button' data-show-count='false' href='https://twitter.com/lang8'>Follow @lang8</a>
+<script defer="defer" src="https://platform.twitter.com/widgets.js" type="text/javascript"></script>
+</li>
+<li class='icon_with facebook'><a href="http://www.facebook.com/lang8" target="_blank">Facebook page</a></li>
+<li class='icon_with rss'><a href="http://blog.lang-8.com" target="_blank">Lang-8 blog</a></li>
+</ul>
+</div>
+<div class='box03 clearfix'>
+<li class='f_left panel_list'>
+<a href='https://mixpanel.com/f/partner' target='_blank'>
+<img alt='Mobile and Web Analytics' src='https://mixpanel.com/site_media/images/partner/badge_light.png'/>
+</a>
+</li>
+<p class='copy f_right'>
+&copy; 2017 Lang-8, Inc. All rights reserved.
+</p>
+</div>
+</div>
+</div>
+
+
+<script type='text/javascript'>//<![CDATA[
+var gaJsHost=(("https:"==document.location.protocol)?"https://ssl.":"http://www.");document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var pageTracker;autoRetry(function(){pageTracker=_gat._getTracker("UA-452011-7");pageTracker._setDomainName("none");pageTracker._setAllowLinker(true);pageTracker._initData();pageTracker._trackPageview("/before/journals/show/133398");},2);
+//]]></script>
+
+
+<script type='text/javascript'>//<![CDATA[
+$j(function(){$j('[rel=tooltip]').tooltip();$j('[rel=popover]').popover();});
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var cjsscript=document.createElement('script');cjsscript.src="/static/javascripts/control_js.js";var cjssib=document.getElementsByTagName('script')[0];cjssib.parentNode.insertBefore(cjsscript,cjssib);
+//]]></script>
+<div id='fb-root'></div>
+<script type='text/javascript'>//<![CDATA[
+(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=138873442911";fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));
+//]]></script>
+</body>
+</html>

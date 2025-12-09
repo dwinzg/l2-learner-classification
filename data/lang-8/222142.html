@@ -1,0 +1,1248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir='ltr' itemscope='' itemtype='http://schema.org/Blog' xmlns:fb='http://www.facebook.com/2008/fbml' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"transactionName":"Jg4MFRNdCllURU4MXBATDAANQUlGWVgW","queueTime":0,"agent":"","errorBeacon":"bam.nr-data.net","applicationTime":360,"applicationID":"11814779","licenseKey":"240011c68f","beacon":"bam.nr-data.net"}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content='text/css' http-equiv='Content-Style-Type'/>
+<meta content='text/javascript' http-equiv='Content-Script-Type'/>
+<meta content='summary' name='twitter:card'/>
+<meta content='@lang8' name='twitter:site'/>
+<meta content='Spanish Civil War' property='og:title'/>
+<meta content='blog' property='og:type'/>
+<meta content='http://lang-8.com/222142/journals/824975' property='og:url'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/fe6959c54408c044ee9d4fcf1ace749dff06bc36.JPG' property='og:image'/>
+<meta content='The Spanish Civil War was a conflict between republicans and nationalists.&#x000A;&#x000A;The rebellion started on July 17, 1936 in Morocco. The day after, the rebellion continued in the Iberian Peninsula.&#x000A;&#x000A;The first objective of nationalists was to take up Madrid and win the war quickly. &#x000A;&#x000A;Nationalists coul' property='og:description'/>
+<meta content='Lang-8' property='og:site_name'/>
+<meta content='138873442911' property='fb:app_id'/>
+<meta content='Spanish Civil War' itemprop='name'/>
+<meta content='The Spanish Civil War was a conflict between republicans and nationalists.&#x000A;&#x000A;The rebellion started on July 17, 1936 in Morocco. The day after, the rebellion continued in the Iberian Peninsula.&#x000A;&#x000A;The first objective of nationalists was to take up Madrid and win the war quickly. &#x000A;&#x000A;Nationalists coul' itemprop='description'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/fe6959c54408c044ee9d4fcf1ace749dff06bc36.JPG' itemprop='image'/>
+
+<title>
+Spanish Civil War | Lang-8: For learning foreign languages
+</title>
+<link href='/favicon.ico' rel='shortcut icon'/>
+<link href="http://dzhimp63a2tb1.cloudfront.net/assets/static/css/application-1b103989b91cc566c626a5030a5c0c04.css" media="screen" rel="stylesheet" type="text/css"/>
+<script type="text/cjs">
+var h = document.getElementsByTagName('head')[0];
+var link = document.createElement('link');
+link.href = 'https://fonts.googleapis.com/css?family=Telex';
+link.type = 'text/css';
+link.rel = 'stylesheet';
+link.media = 'screen'
+h.appendChild(link);
+</script>
+
+
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/application-462b56e1d78c3fb6374e9b344e47357a.js" type="text/javascript"></script>
+
+<script type='text/javascript'>//<![CDATA[
+var lang="2-2";var sessid="";
+//]]></script>
+
+<meta content='The Spanish Civil War was a conflict between republicans and nationalists.    The rebellion start...' name='description'/>
+<meta content='España, Guerra, civil, History, spanish, civil, war' name='keywords'/>
+
+<meta content='1NyOQgk3_D9-R1XWpjxkGinHxWufQzM-DTGssOLEIvs' name='google-site-verification'/>
+</head>
+<body data-device='pc' id='journals_show'>
+<script type="text/javascript">var langsData=[];langsData.push({key:'cjv',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'ckb',body:'Please correct some sentences or comments on this journal.'});langsData.push({key:'cka',body:'Corrections'});langsData.push({key:'cjz',body:'Comment'});langsData.push({key:'cjt',body:'Post'});langsData.push({key:'cju',body:'Back to correcting'});langsData.push({key:'cjw',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjx',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjy',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'D063',body:'There has been an internal system error.'});langsData.push({key:'chc',body:'Show corrections'});langsData.push({key:'chd',body:'Hide'});langsData.push({key:'xlw',body:'Do you really want to reset the data?'});langsData.push({key:'xlx',body:'You have already started to leave a comment on this journal. Do you want to continue with it?'});langsData.push({key:'xly',body:'Continue'});langsData.push({key:'xlz',body:'No'});langsData.push({key:'cix',body:'Red'});langsData.push({key:'ciy',body:'Blue'});langsData.push({key:'qag',body:'Gray'});langsData.push({key:'ciz',body:'Bold'});langsData.push({key:'cja',body:'Cross out'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjc',body:'Cancel'});langsData.push({key:'cjd',body:'Correct'});langsData.push({key:'cje',body:'Unformat'});langsData.push({key:'rgo',body:'This sentence is perfect! No correction needed!'});langsData.push({key:'xll',body:'This is the original post.'});langsData.push({key:'xlm',body:'To correct, click this button.'});langsData.push({key:'xln',body:'You can use the colored fonts and strikethrough feature to help you with your correction.'});langsData.push({key:'xlo',body:'After correcting, please press this button.'});langsData.push({key:'xlp',body:'Your corrections are displayed here.'});langsData.push({key:'xlq',body:'Press this button to complete the correction.'});langsData.push({key:'xmm',body:'Sending...'});langsData.push({key:'xmn',body:'done'});langsData.push({key:'ycs',body:'Success! A friend request will now be sent to your friend.'});langsData.push({key:'xog',body:'Failed to send the friend request. Please try again in a few minutes.'});langsData.push({key:'cit',body:'Comments on this correction'});langsData.push({key:'cir',body:'Add to /Edit My Notebook'});langsData.push({key:'rfv',body:'Vertical View'});langsData.push({key:'rfw',body:'Normal View'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjp',body:'Cancel'});langsData.push({key:'cjr',body:'Remove correction'});langsData.push({key:'ckc',body:'Description about correction.(You can write in any language.)'});langsData.push({key:'cjk',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'cjl',body:'There are not any comments or corrections.'});langsData.push({key:'cjh',body:'Correct this entry'});langsData.push({key:'cjf',body:'Comment'});langsData.push({key:'cjm',body:'There has been an internal system error. Please try again.'});langsData.push({key:'kbm',body:'Draft Saved'});var l8=l8||{};l8.t=l8.t||{};l8.t=new L8I18n(langsData);</script>
+
+<div class='navbar navbar-fixed-top mb_20' id='header'>
+<div class='navbar-inner'>
+<div class='container'>
+<a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</a>
+<div class='nav-collapse'>
+<ul class='nav' id='dropmenu03'>
+<li class='logoname'>
+<a class='brand' href='/'>
+<img alt="Header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0" id="logo" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0.gif"/>
+</a>
+</li>
+<li class='divider'></li>
+<li class='home'>
+<a href="/" class="a_home" title="Home"><img alt="Ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb.png" title="Home"/>
+</a></li>
+<li class='divider'></li>
+<li class='help'>
+<a href="/help/about" class="help" target="_blank" title="What is Lang-8?"><span>
+What is Lang-8?
+</span>
+</a></li>
+<li class='divider'></li>
+</ul>
+<ul class='nav pull-right' id='dropmenu02'>
+<li class='help'>
+<a href="/register/step1?from=header" class="help"><span>Sign up</span>
+</a></li>
+<li class='divider'></li>
+<li class='help' id='login'>
+<a href="https://lang-8.com/login?from=header" class="help"><span>Log in</span>
+</a></li>
+<li class='divider'></li>
+<li class='language_list'>
+<form action="" class="language_select" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="Q64aEdAR9cgpvWra7lexW4wsvuDPFwh/tOuFOaTmoSQ="/></div>
+<select id="interface_lang" name="interface_lang" onchange="onChangeInterfaceLang()"><option value="2-2" selected="selected">English</option>
+<option value="2-5">Español</option>
+<option value="2-6">français</option>
+<option value="2-8">Deutsch</option>
+<option value="2-95">Português(Portugal)</option>
+<option value="2-10">Русский</option>
+<option value="2-59">Polski</option>
+<option value="2-78">Hrvatski</option>
+<option value="2-30">العربية</option>
+<option value="2-1">日本語</option>
+<option value="2-3">中文(简体)</option>
+<option value="2-300">中文(繁體)</option>
+<option value="2-4">한국어</option>
+<option value="2-20">ภาษาไทย</option>
+<option value="2-35">Svenska</option>
+<option value="2-47">Tagalog</option>
+<option value="2-65">Bahasa Melayu</option>
+<option value="2-58">Indonesian</option>
+<option value="2-7">Italiano</option></select>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class='alerter container alert fade in navbar-fixed-top' id='alert-top' style='top:60px;display:none;'>
+<a class='close' data-dismiss='alert' href='#'>
+&times;
+</a>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert Message here
+</span>
+</div>
+<div class='alerter alert fade in navbar-fixed-top' id='alert-box' style='left:40%;top:40%;width:200px;display:none;'>
+<div style='text-align:center;'>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert message here
+</span>
+</div>
+</div>
+
+
+
+
+      <div class="center" style="margin-bottom: 10px;">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- PC_Super_Before_Login -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6717840198266056" data-ad-slot="9171779343" data-ad-format="auto"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+
+      </div>
+
+
+
+
+<div id='page_content'>
+<div class='cfx' id='main_container'>
+<ul class="cfx" id="breadcrumbs"><li class="home"><a href="/">Home</a></li><li class=""><a href="/profiles/search">Member</a></li><li class=""><a href="/222142">arcadivs</a></li><li class=""><a href="/222142/journals">arcadivs's entries</a></li><li class=""><span>Spanish Civil War</span></li></ul>
+<div>
+<div data-use_friend_request_popover='data-use_friend_request_popover' id='main'>
+<style type='text/css'>@font-face{font-family:"FontAwesome";src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot);src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot?#iefix) format('eot') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.woff) format('woff') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.ttf) format('truetype') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.svg#FontAwesome) format('svg');font-weight:normal;font-style:normal}</style>
+<div class='cfx' id='entry_detail'>
+<div class='show_report_spam_link cfx' id='entry_title_box'>
+<div class='tit_02'>
+<h1 id='subject_show'>Spanish Civil War</h1>
+<div class='edit_links'>
+<ul class='cfx'>
+</ul>
+</div>
+</div>
+</div>
+<div class='clear_both'></div>
+<div class='cfx' id='tools_for_journal'>
+<ul class='journal_status floated_on_right'>
+<li class='privacy_level_5' data-original-title='Public' rel='tooltip'>&nbsp;</li>
+<li class='visiters' data-original-title='Views' rel='tooltip' title='Views'>960</li>
+<li class='comment_num' data-original-title='Comments' rel='tooltip' title='Comments'>2</li>
+<li class='corrections_num' data-original-title='Corrections' rel='tooltip' title='Corrections'>2</li>
+<li class='studying' data-original-title='The language that needs to be corrected' rel='tooltip'>English&nbsp;</li>
+</ul>
+<span class='journal_date floated_on_left'>
+Feb 26, 2011 05:31
+<a href="/journals/search?tag=Espa%C3%B1a">España</a>
+
+<a href="/journals/search?tag=Guerra">Guerra</a>
+
+<a href="/journals/search?tag=civil">civil</a>
+
+<a href="/journals/search?tag=History">History</a>
+
+<a href="/journals/search?tag=spanish">spanish</a>
+
+<a href="/journals/search?tag=civil">civil</a>
+
+<a href="/journals/search?tag=war">war</a>
+
+</span>
+<script type='text/javascript'>//<![CDATA[
+$j(function(){var journalCounterView=new Lang8.Views.JournalCounterView();});
+//]]></script>
+
+</div>
+<div id='show_buttons'>
+<input class='bt_lv3' data-original-title='Show corrections for sentences when you mouse-over.' id='showAndHide' rel='tooltip' title='' type='button' value='Show'/>
+<input class='bt_lv3' data-original-title='Show all corrections together in a pop-up window.' id='showAll' rel='tooltip' title='' type='button' value='Show All'/>
+</div>
+
+<div class='cfx' id='body_show'>
+<div id='body_show_ori'>
+The Spanish Civil War was a conflict between republicans and nationalists.<br/><br/>The rebellion started on July 17, 1936 in Morocco. The day after, the rebellion continued in the Iberian Peninsula.<br/><br/>The first objective of nationalists was to take up Madrid and win the war quickly. <br/><br/>Nationalists couldn't to take up Madrid because republicans resisted with help of URSS. Then, nationalists tried to cut off Madrid. Nationalists lost the “Batalla del Jarama” and “Batalla de Guadalajara” in 1936.<br/><br/>URSS and French helped republicans with International Brigades and tanks called, T-24.<br/><br/>Mussolini helped nationalists with tanks called “Fiat Ansaldo”. Hitler too helped nationalists with a terrible troop called Condor Legion.<br/><br/>The next objective of nationalists was to take up the north of Spain. The Condor Legion bombed Gernika, and Picasso painted it.<br/><br/>Spain was divided in half, so Nationalists began the attack of the Mediterraneo to cut off the republic zone in 1938.<br/><br/>Republicans knew that they were losing then they began the battle of the Ebro. Republicans army was massacred and nationalists army could to take up all Catalonia.<br/><br/>Republican zone didn't have aliments and the people was hungry.<br/><br/>In April of 1939 nationalists won the war and, they took up all Spain without resistence.
+</div>
+<div class='box_like_button cfx' id='async_show_like'></div>
+<div class='ad_journal_center clear_both floated_on_left'>
+  
+    <div class="center" style="margin: 0 0 10px;">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- JournalCenter336_280 -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-6717840198266056" data-ad-slot="1360554540"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+
+    </div>
+  
+
+</div>
+</div>
+</div>
+<div class='little-spaced cfx' data-canonical_url='http://lang-8.com/222142/journals/824975' id='links_for_journal'>
+<span class='horizontal-spaced tw-btn'>
+<a class='twitter-share-button' data-hashtags='lang8,España,Guerra,civil,History,spanish,civil,war' data-related='lang8' data-text='Spanish Civil War' data-url='http://lang-8.com/222142/journals/824975' data-via='lang8' href='https://twitter.com/share'>Tweet</a>
+</span>
+<span class='horizontal-spaced fb-like' data-action='like' data-colorscheme='light' data-href='http://lang-8.com/222142/journals/824975' data-layout='button_count' data-show-faces='false' data-width='100'></span>
+<span class='horizontal-spaced gplus_btn'>
+<!-- %span.g-plusone{'data-size' => 'medium', :href => "#{@journal.canonical_url}"} -->
+</span>
+<span class='floated_on_left'>
+<span class='st_fblike_hcount' displayText='Facebook Like' st_url='http://lang-8.com/222142/journals/824975'></span>
+<span class='st_facebook_hcount' displayText='Facebook' st_url='http://lang-8.com/222142/journals/824975'></span>
+<span class='st_linkedin_hcount' displayText='LinkedIn' st_url='http://lang-8.com/222142/journals/824975'></span>
+</span>
+<a href='#' onclick="Evernote.doClip({styling:'full',providerName:'Lang-8',suggestTags:'Lang-8',suggestNotebook:'Lang-8',contentId:'entry_container'}); return false;" style='float:right;margin-right:5px;'>
+<img alt='Clip to Evernote' src='/static/images2/xarticle-clipper-fr.png.pagespeed.ic.BAKnLUGqIU.png'/>
+</a>
+</div>
+<div id='comments_and_corrections_field'>
+<div class='fukidashi comment_field' id='journal_comment_3003744'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/242485"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/78ef92a47c55f48f72cbde4231bd94661eb8bb6e.jpg"/></a>
+<a href="/242485" class="user_name">kyan 蘇童／苏童</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Feb 26, 2011 19:10
+</span>
+</div>
+</div>
+<div class='correction_list corner-rounded_5 little-spaced'>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>The first objective of nationalists was to take up Madrid and win the war quickly.</li>
+<li class='corrected correct'>
+<p>The first objective of <span class="f_red">the </span>nationalists was to take <span class="f_red">over</span> Madrid and win the war quickly.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7375348'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Nationalists couldn&#39;t to take up Madrid because republicans resisted with help of URSS.</li>
+<li class='corrected correct'>
+<p>Nationalists couldn&#39;t to take <span class="f_red">over </span>Madrid because <span class="f_red">the</span> republicans resisted with help of <span class="f_red">the </span>URSS.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7375349'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Then, nationalists tried to cut off Madrid.</li>
+<li class='corrected correct'>
+<p>Then, <span class="f_red">the </span>nationalists tried to cut off Madrid.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7375350'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Nationalists lost the “Batalla del Jarama” and “Batalla de Guadalajara” in 1936.</li>
+<li class='corrected correct'>
+<p><span class="f_red">The n</span>ationalists lost the “Batalla del Jarama” and “Batalla de Guadalajara” in 1936.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7375351'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>URSS and French helped republicans with International Brigades and tanks called, T-24.</li>
+<li class='corrected correct'>
+<p><span class="f_red">The </span>URSS and French helped republicans with International Brigades and tanks called, T-24.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7375352'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Mussolini helped nationalists with tanks called “Fiat Ansaldo”.</li>
+<li class='corrected correct'>
+<p>Mussolini helped <span class="f_red">the </span>nationalists with tanks called “Fiat Ansaldo”.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7375353'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Hitler too helped nationalists with a terrible troop called Condor Legion.</li>
+<li class='corrected correct'>
+<p>Hitler too helped <span class="f_red">the </span>nationalists with a terrible troop called Condor Legion.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7375354'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>The next objective of nationalists was to take up the north of Spain.</li>
+<li class='corrected correct'>
+<p>The next objective of <span class="f_red">the </span>nationalists was to take up the north of Spain.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7375355'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Spain was divided in half, so Nationalists began the attack of the Mediterraneo to cut off the republic zone in 1938.</li>
+<li class='corrected correct'>
+<p>Spain was divided in half, so <span class="f_red">the </span>Nationalists began the attack of the Mediterraneo to cut off the republic zone in 1938.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7375356'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Republicans knew that they were losing then they began the battle of the Ebro.</li>
+<li class='corrected correct'>
+<p><span class="f_red">The </span>Republicans knew that they were losing then they began the battle of the Ebro.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7375357'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Republicans army was massacred and nationalists army could to take up all Catalonia.</li>
+<li class='corrected correct'>
+<p><span class="f_red">The </span>Republican<span class="f_red">&#39;</span>s army was massacred and <span class="f_red">the </span>nationalists army <span class="f_red">took over</span> all Catalonia.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7375358'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>In April of 1939 nationalists won the war and, they took up all Spain without resistence.</li>
+<li class='corrected correct'>
+<p>In April of 1939 <span class="f_red">the </span>nationalists won the war and took <span class="f_red">over </span>all <span class="f_red">of</span> Spain without resistence.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7375359'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+
+</div>
+</div>
+<div class='thankspoint thankscustom' id='s-3003744' style='padding-left:5px;'>
+    <div class='gray-font'>
+      <span class="thank_after">Thank you for your correction!</span>
+    </div>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_3003744'>
+<div class='cfx reply_commentblock journla_comment_wrapper' id='journal_comment_3003899'>
+<p class='f_left'><a href="/222142"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/7e5d6b68bc0c758ecfd3c74ce25fe4f2ba2a7104.jpeg"/></a></p>
+<div class='pos_relative f_right box_reply'>
+<div class='cfx comment_status_bar_body'>
+<div class='small_left_arrow f_left'>
+&nbsp;
+</div>
+<div class='spaced reply_comment_box show_report_spam_link f_right'>
+<div class='journal_comment_header'>
+<span class='f_right gray_text'>
+Feb 26, 2011 19:54
+</span>
+<a href="/222142" class="user_name">arcadivs</a>
+
+</div>
+<div class='comment_after_correction comment_normal'>
+<ul class='cfx'>
+<li class='journal_comment_text'>
+haha only &quot;the&quot; and &quot;over&quot; thanks!!
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div class='fukidashi comment_field' id='journal_comment_3016361'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/floury"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/c41a600d559d4f4e3a3e378ceeddb61beb738a54.jpg"/></a>
+<a href="/floury" class="user_name">floury</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Mar 1, 2011 07:27
+</span>
+</div>
+</div>
+<div class='correction_list corner-rounded_5 little-spaced'>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Spanish Civil War</li>
+<li class='corrected correct'>
+<p><span class="f_blue">The</span> Spanish Civil War</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7400774'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>The first objective of nationalists was to take up Madrid and win the war quickly.</li>
+<li class='corrected correct'>
+<p>The first objective of <span class="f_blue">the </span>nationalists was to take <span class="f_blue">(over)</span> Madrid and win the war quickly.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7400775'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Nationalists couldn&#39;t to take up Madrid because republicans resisted with help of URSS.</li>
+<li class='corrected correct'>
+<p><span class="f_blue">The nationalists </span>couldn&#39;t <span class="sline">to </span>take <span class="f_blue">(over)</span> Madrid because <span class="f_blue">the </span>republicans resisted with <span class="f_blue">the </span>help of <span class="f_blue">the </span>URSS.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7400776'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Nationalists lost the “Batalla del Jarama” and “Batalla de Guadalajara” in 1936.</li>
+<li class='corrected correct'>
+<p>Nationalists lost the “Batalla del Jarama” and <span class="f_blue">the </span>“Batalla de Guadalajara” in 1936.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7400777'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>URSS and French helped republicans with International Brigades and tanks called, T-24.</li>
+<li class='corrected correct'>
+<p><span class="f_blue">The </span>URSS and <span class="f_blue">the </span>French helped <span class="f_blue">the </span>republicans with International Brigades and tanks called<span class="sline">,</span> <span class="f_blue">T-24s.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7400778'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Mussolini helped nationalists with tanks called “Fiat Ansaldo”.</li>
+<li class='corrected correct'>
+<p>Mussolini helped nationalists with tanks called <span class="f_blue">“Fiat Ansaldos”.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7400779'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Hitler too helped nationalists with a terrible troop called Condor Legion.</li>
+<li class='corrected correct'>
+<p>Hitler <span class="f_blue">also </span>helped <span class="f_blue">the </span>nationalists with a terrible <span class="f_blue">unit </span>called <span class="f_blue">the </span>Condor Legion.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7400780'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>The next objective of nationalists was to take up the north of Spain.</li>
+<li class='corrected correct'>
+<p>The next objective of nationalists was to take <span class="sline">up</span> the north of Spain.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7400781'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>The Condor Legion bombed Gernika, and Picasso painted it.</li>
+<li class='corrected correct'>
+<p>The Condor Legion bombed Gernika, and Picasso painted <span class="f_blue">the event.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7400782'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Republicans knew that they were losing then they began the battle of the Ebro.</li>
+<li class='corrected correct'>
+<p><span class="f_blue">The</span> Republicans knew that they were losing, <span class="f_blue">so </span>they began the battle of the Ebro.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7400783'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Republicans army was massacred and nationalists army could to take up all Catalonia.</li>
+<li class='corrected correct'>
+<p><span class="f_blue">The</span> <span class="f_blue">Republican </span>army was massacred and<span class="f_blue"> the nationalist</span> army <span class="f_blue">was able</span> to take <span class="sline">up</span> all <span class="f_blue">of</span> Catalonia.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7400784'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Republican zone didn&#39;t have aliments and the people was hungry.</li>
+<li class='corrected correct'>
+<p><span class="f_blue">The</span> Republican zone didn&#39;t have <span class="f_blue">food </span>and the people <span class="f_blue">were </span>hungry.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7400785'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+Very good. I caught a few more tiny errors. Interesting entry!
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-3016361' style='padding-left:5px;'>
+    <div class='gray-font'>
+      <span class="thank_after">Thank you for your correction!</span>
+    </div>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_3016361'>
+<div class='cfx reply_commentblock journla_comment_wrapper' id='journal_comment_3021445'>
+<p class='f_left'><a href="/222142"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/7e5d6b68bc0c758ecfd3c74ce25fe4f2ba2a7104.jpeg"/></a></p>
+<div class='pos_relative f_right box_reply'>
+<div class='cfx comment_status_bar_body'>
+<div class='small_left_arrow f_left'>
+&nbsp;
+</div>
+<div class='spaced reply_comment_box show_report_spam_link f_right'>
+<div class='journal_comment_header'>
+<span class='f_right gray_text'>
+Mar 1, 2011 23:54
+</span>
+<a href="/222142" class="user_name">arcadivs</a>
+
+</div>
+<div class='comment_after_correction comment_normal'>
+<ul class='cfx'>
+<li class='journal_comment_text'>
+Oh really? Thanks for your correction !!!
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>//<![CDATA[
+var l8=jQuery.extend(l8,{authenticityToken:"Q64aEdAR9cgpvWra7lexW4wsvuDPFwh/tOuFOaTmoSQ=",showTutorial:false,label:"Description about correction.(You can write in any language.)",explanation:"Add a description or comment here.(Optional)",sentences:'U3BhbmlzaCBDaXZpbCBXYXIKVGhlIFNwYW5pc2ggQ2l2aWwgV2FyIHdhcyBhIGNvbmZsaWN0IGJldHdlZW4gcmVwdWJsaWNhbnMgYW5kIG5hdGlvbmFsaXN0cy4KVGhlIHJlYmVsbGlvbiBzdGFydGVkIG9uIEp1bHkgMTcsIDE5MzYgaW4gTW9yb2Njby4KVGhlIGRheSBhZnRlciwgdGhlIHJlYmVsbGlvbiBjb250aW51ZWQgaW4gdGhlIEliZXJpYW4gUGVuaW5zdWxhLgpUaGUgZmlyc3Qgb2JqZWN0aXZlIG9mIG5hdGlvbmFsaXN0cyB3YXMgdG8gdGFrZSB1cCBNYWRyaWQgYW5kIHdpbiB0aGUgd2FyIHF1aWNrbHkuCk5hdGlvbmFsaXN0cyBjb3VsZG4ndCB0byB0YWtlIHVwIE1hZHJpZCBiZWNhdXNlIHJlcHVibGljYW5zIHJlc2lzdGVkIHdpdGggaGVscCBvZiBVUlNTLgpUaGVuLCBuYXRpb25hbGlzdHMgdHJpZWQgdG8gY3V0IG9mZiBNYWRyaWQuCk5hdGlvbmFsaXN0cyBsb3N0IHRoZSDigJxCYXRhbGxhIGRlbCBKYXJhbWHigJ0gYW5kIOKAnEJhdGFsbGEgZGUgR3VhZGFsYWphcmHigJ0gaW4gMTkzNi4KVVJTUyBhbmQgRnJlbmNoIGhlbHBlZCByZXB1YmxpY2FucyB3aXRoIEludGVybmF0aW9uYWwgQnJpZ2FkZXMgYW5kIHRhbmtzIGNhbGxlZCwgVC0yNC4KTXVzc29saW5pIGhlbHBlZCBuYXRpb25hbGlzdHMgd2l0aCB0YW5rcyBjYWxsZWQg4oCcRmlhdCBBbnNhbGRv4oCdLgpIaXRsZXIgdG9vIGhlbHBlZCBuYXRpb25hbGlzdHMgd2l0aCBhIHRlcnJpYmxlIHRyb29wIGNhbGxlZCBDb25kb3IgTGVnaW9uLgpUaGUgbmV4dCBvYmplY3RpdmUgb2YgbmF0aW9uYWxpc3RzIHdhcyB0byB0YWtlIHVwIHRoZSBub3J0aCBvZiBTcGFpbi4KVGhlIENvbmRvciBMZWdpb24gYm9tYmVkIEdlcm5pa2EsIGFuZCBQaWNhc3NvIHBhaW50ZWQgaXQuClNwYWluIHdhcyBkaXZpZGVkIGluIGhhbGYsIHNvIE5hdGlvbmFsaXN0cyBiZWdhbiB0aGUgYXR0YWNrIG9mIHRoZSBNZWRpdGVycmFuZW8gdG8gY3V0IG9mZiB0aGUgcmVwdWJsaWMgem9uZSBpbiAxOTM4LgpSZXB1YmxpY2FucyBrbmV3IHRoYXQgdGhleSB3ZXJlIGxvc2luZyB0aGVuIHRoZXkgYmVnYW4gdGhlIGJhdHRsZSBvZiB0aGUgRWJyby4KUmVwdWJsaWNhbnMgYXJteSB3YXMgbWFzc2FjcmVkIGFuZCBuYXRpb25hbGlzdHMgYXJteSBjb3VsZCB0byB0YWtlIHVwIGFsbCBDYXRhbG9uaWEuClJlcHVibGljYW4gem9uZSBkaWRuJ3QgaGF2ZSBhbGltZW50cyBhbmQgdGhlIHBlb3BsZSB3YXMgaHVuZ3J5LgpJbiBBcHJpbCBvZiAxOTM5IG5hdGlvbmFsaXN0cyB3b24gdGhlIHdhciBhbmQsIHRoZXkgdG9vayB1cCBhbGwgU3BhaW4gd2l0aG91dCByZXNpc3RlbmNlLg==',corrections:[["[f-blue]The[/f-blue] Spanish Civil War"],[],[],[],["The first objective of [f-red]the [/f-red]nationalists was to take [f-red]over[/f-red] Madrid and win the war quickly.","The first objective of [f-blue]the [/f-blue]nationalists was to take [f-blue](over)[/f-blue] Madrid and win the war quickly."],["Nationalists couldn't to take [f-red]over [/f-red]Madrid because [f-red]the[/f-red] republicans resisted with help of [f-red]the [/f-red]URSS.","[f-blue]The nationalists [/f-blue]couldn't [sline]to [/sline]take [f-blue](over)[/f-blue] Madrid because [f-blue]the [/f-blue]republicans resisted with [f-blue]the [/f-blue]help of [f-blue]the [/f-blue]URSS."],["Then, [f-red]the [/f-red]nationalists tried to cut off Madrid."],["[f-red]The n[/f-red]ationalists lost the “Batalla del Jarama” and “Batalla de Guadalajara” in 1936.","Nationalists lost the “Batalla del Jarama” and [f-blue]the [/f-blue]“Batalla de Guadalajara” in 1936."],["[f-red]The [/f-red]URSS and French helped republicans with International Brigades and tanks called, T-24.","[f-blue]The [/f-blue]URSS and [f-blue]the [/f-blue]French helped [f-blue]the [/f-blue]republicans with International Brigades and tanks called[sline],[/sline] [f-blue]T-24s.[/f-blue]"],["Mussolini helped [f-red]the [/f-red]nationalists with tanks called “Fiat Ansaldo”.","Mussolini helped nationalists with tanks called [f-blue]“Fiat Ansaldos”.[/f-blue]"],["Hitler too helped [f-red]the [/f-red]nationalists with a terrible troop called Condor Legion.","Hitler [f-blue]also [/f-blue]helped [f-blue]the [/f-blue]nationalists with a terrible [f-blue]unit [/f-blue]called [f-blue]the [/f-blue]Condor Legion."],["The next objective of [f-red]the [/f-red]nationalists was to take up the north of Spain.","The next objective of nationalists was to take [sline]up[/sline] the north of Spain."],["The Condor Legion bombed Gernika, and Picasso painted [f-blue]the event.[/f-blue]"],["Spain was divided in half, so [f-red]the [/f-red]Nationalists began the attack of the Mediterraneo to cut off the republic zone in 1938."],["[f-red]The [/f-red]Republicans knew that they were losing then they began the battle of the Ebro.","[f-blue]The[/f-blue] Republicans knew that they were losing, [f-blue]so [/f-blue]they began the battle of the Ebro."],["[f-red]The [/f-red]Republican[f-red]'[/f-red]s army was massacred and [f-red]the [/f-red]nationalists army [f-red]took over[/f-red] all Catalonia.","[f-blue]The[/f-blue] [f-blue]Republican [/f-blue]army was massacred and[f-blue] the nationalist[/f-blue] army [f-blue]was able[/f-blue] to take [sline]up[/sline] all [f-blue]of[/f-blue] Catalonia."],["[f-blue]The[/f-blue] Republican zone didn't have [f-blue]food [/f-blue]and the people [f-blue]were [/f-blue]hungry."],["In April of 1939 [f-red]the [/f-red]nationalists won the war and took [f-red]over [/f-red]all [f-red]of[/f-red] Spain without resistence."]],correctionComments:[[null],[],[],[],[null,null],[null,null],[null],[null,null],[null,null],[null,null],[null,null],[null,null],[null],[null],[null,null],[null,null],[null],[null]],perfectSentences:[[null],[],[],[],[null,null],[null,null],[null],[null,null],[null,null],[null,null],[null,null],[null,null],[null],[null],[null,null],[null,null],[null],[null]],urlForCreateComment:'/journals/create_comment/824975',isLogin:false});sentences='WyJTcGFuaXNoIENpdmlsIFdhciIsIlRoZSBTcGFuaXNoIENpdmlsIFdhciB3YXMgYSBjb25mbGljdCBiZXR3ZWVuIHJlcHVibGljYW5zIGFuZCBuYXRpb25hbGlzdHMuIiwiVGhlIHJlYmVsbGlvbiBzdGFydGVkIG9uIEp1bHkgMTcsIDE5MzYgaW4gTW9yb2Njby4iLCJUaGUgZGF5IGFmdGVyLCB0aGUgcmViZWxsaW9uIGNvbnRpbnVlZCBpbiB0aGUgSWJlcmlhbiBQZW5pbnN1bGEuIiwiVGhlIGZpcnN0IG9iamVjdGl2ZSBvZiBuYXRpb25hbGlzdHMgd2FzIHRvIHRha2UgdXAgTWFkcmlkIGFuZCB3aW4gdGhlIHdhciBxdWlja2x5LiIsIk5hdGlvbmFsaXN0cyBjb3VsZG4ndCB0byB0YWtlIHVwIE1hZHJpZCBiZWNhdXNlIHJlcHVibGljYW5zIHJlc2lzdGVkIHdpdGggaGVscCBvZiBVUlNTLiIsIlRoZW4sIG5hdGlvbmFsaXN0cyB0cmllZCB0byBjdXQgb2ZmIE1hZHJpZC4iLCJOYXRpb25hbGlzdHMgbG9zdCB0aGUg4oCcQmF0YWxsYSBkZWwgSmFyYW1h4oCdIGFuZCDigJxCYXRhbGxhIGRlIEd1YWRhbGFqYXJh4oCdIGluIDE5MzYuIiwiVVJTUyBhbmQgRnJlbmNoIGhlbHBlZCByZXB1YmxpY2FucyB3aXRoIEludGVybmF0aW9uYWwgQnJpZ2FkZXMgYW5kIHRhbmtzIGNhbGxlZCwgVC0yNC4iLCJNdXNzb2xpbmkgaGVscGVkIG5hdGlvbmFsaXN0cyB3aXRoIHRhbmtzIGNhbGxlZCDigJxGaWF0IEFuc2FsZG/igJ0uIiwiSGl0bGVyIHRvbyBoZWxwZWQgbmF0aW9uYWxpc3RzIHdpdGggYSB0ZXJyaWJsZSB0cm9vcCBjYWxsZWQgQ29uZG9yIExlZ2lvbi4iLCJUaGUgbmV4dCBvYmplY3RpdmUgb2YgbmF0aW9uYWxpc3RzIHdhcyB0byB0YWtlIHVwIHRoZSBub3J0aCBvZiBTcGFpbi4iLCJUaGUgQ29uZG9yIExlZ2lvbiBib21iZWQgR2VybmlrYSwgYW5kIFBpY2Fzc28gcGFpbnRlZCBpdC4iLCJTcGFpbiB3YXMgZGl2aWRlZCBpbiBoYWxmLCBzbyBOYXRpb25hbGlzdHMgYmVnYW4gdGhlIGF0dGFjayBvZiB0aGUgTWVkaXRlcnJhbmVvIHRvIGN1dCBvZmYgdGhlIHJlcHVibGljIHpvbmUgaW4gMTkzOC4iLCJSZXB1YmxpY2FucyBrbmV3IHRoYXQgdGhleSB3ZXJlIGxvc2luZyB0aGVuIHRoZXkgYmVnYW4gdGhlIGJhdHRsZSBvZiB0aGUgRWJyby4iLCJSZXB1YmxpY2FucyBhcm15IHdhcyBtYXNzYWNyZWQgYW5kIG5hdGlvbmFsaXN0cyBhcm15IGNvdWxkIHRvIHRha2UgdXAgYWxsIENhdGFsb25pYS4iLCJSZXB1YmxpY2FuIHpvbmUgZGlkbid0IGhhdmUgYWxpbWVudHMgYW5kIHRoZSBwZW9wbGUgd2FzIGh1bmdyeS4iLCJJbiBBcHJpbCBvZiAxOTM5IG5hdGlvbmFsaXN0cyB3b24gdGhlIHdhciBhbmQsIHRoZXkgdG9vayB1cCBhbGwgU3BhaW4gd2l0aG91dCByZXNpc3RlbmNlLiJd';corrections='W1siW2YtYmx1ZV1UaGVbL2YtYmx1ZV0gU3BhbmlzaCBDaXZpbCBXYXIiXSxbXSxbXSxbXSxbIlRoZSBmaXJzdCBvYmplY3RpdmUgb2YgW2YtcmVkXXRoZSBbL2YtcmVkXW5hdGlvbmFsaXN0cyB3YXMgdG8gdGFrZSBbZi1yZWRdb3ZlclsvZi1yZWRdIE1hZHJpZCBhbmQgd2luIHRoZSB3YXIgcXVpY2tseS4iLCJUaGUgZmlyc3Qgb2JqZWN0aXZlIG9mIFtmLWJsdWVddGhlIFsvZi1ibHVlXW5hdGlvbmFsaXN0cyB3YXMgdG8gdGFrZSBbZi1ibHVlXShvdmVyKVsvZi1ibHVlXSBNYWRyaWQgYW5kIHdpbiB0aGUgd2FyIHF1aWNrbHkuIl0sWyJOYXRpb25hbGlzdHMgY291bGRuJ3QgdG8gdGFrZSBbZi1yZWRdb3ZlciBbL2YtcmVkXU1hZHJpZCBiZWNhdXNlIFtmLXJlZF10aGVbL2YtcmVkXSByZXB1YmxpY2FucyByZXNpc3RlZCB3aXRoIGhlbHAgb2YgW2YtcmVkXXRoZSBbL2YtcmVkXVVSU1MuIiwiW2YtYmx1ZV1UaGUgbmF0aW9uYWxpc3RzIFsvZi1ibHVlXWNvdWxkbid0IFtzbGluZV10byBbL3NsaW5lXXRha2UgW2YtYmx1ZV0ob3ZlcilbL2YtYmx1ZV0gTWFkcmlkIGJlY2F1c2UgW2YtYmx1ZV10aGUgWy9mLWJsdWVdcmVwdWJsaWNhbnMgcmVzaXN0ZWQgd2l0aCBbZi1ibHVlXXRoZSBbL2YtYmx1ZV1oZWxwIG9mIFtmLWJsdWVddGhlIFsvZi1ibHVlXVVSU1MuIl0sWyJUaGVuLCBbZi1yZWRddGhlIFsvZi1yZWRdbmF0aW9uYWxpc3RzIHRyaWVkIHRvIGN1dCBvZmYgTWFkcmlkLiJdLFsiW2YtcmVkXVRoZSBuWy9mLXJlZF1hdGlvbmFsaXN0cyBsb3N0IHRoZSDigJxCYXRhbGxhIGRlbCBKYXJhbWHigJ0gYW5kIOKAnEJhdGFsbGEgZGUgR3VhZGFsYWphcmHigJ0gaW4gMTkzNi4iLCJOYXRpb25hbGlzdHMgbG9zdCB0aGUg4oCcQmF0YWxsYSBkZWwgSmFyYW1h4oCdIGFuZCBbZi1ibHVlXXRoZSBbL2YtYmx1ZV3igJxCYXRhbGxhIGRlIEd1YWRhbGFqYXJh4oCdIGluIDE5MzYuIl0sWyJbZi1yZWRdVGhlIFsvZi1yZWRdVVJTUyBhbmQgRnJlbmNoIGhlbHBlZCByZXB1YmxpY2FucyB3aXRoIEludGVybmF0aW9uYWwgQnJpZ2FkZXMgYW5kIHRhbmtzIGNhbGxlZCwgVC0yNC4iLCJbZi1ibHVlXVRoZSBbL2YtYmx1ZV1VUlNTIGFuZCBbZi1ibHVlXXRoZSBbL2YtYmx1ZV1GcmVuY2ggaGVscGVkIFtmLWJsdWVddGhlIFsvZi1ibHVlXXJlcHVibGljYW5zIHdpdGggSW50ZXJuYXRpb25hbCBCcmlnYWRlcyBhbmQgdGFua3MgY2FsbGVkW3NsaW5lXSxbL3NsaW5lXSBbZi1ibHVlXVQtMjRzLlsvZi1ibHVlXSJdLFsiTXVzc29saW5pIGhlbHBlZCBbZi1yZWRddGhlIFsvZi1yZWRdbmF0aW9uYWxpc3RzIHdpdGggdGFua3MgY2FsbGVkIOKAnEZpYXQgQW5zYWxkb+KAnS4iLCJNdXNzb2xpbmkgaGVscGVkIG5hdGlvbmFsaXN0cyB3aXRoIHRhbmtzIGNhbGxlZCBbZi1ibHVlXeKAnEZpYXQgQW5zYWxkb3PigJ0uWy9mLWJsdWVdIl0sWyJIaXRsZXIgdG9vIGhlbHBlZCBbZi1yZWRddGhlIFsvZi1yZWRdbmF0aW9uYWxpc3RzIHdpdGggYSB0ZXJyaWJsZSB0cm9vcCBjYWxsZWQgQ29uZG9yIExlZ2lvbi4iLCJIaXRsZXIgW2YtYmx1ZV1hbHNvIFsvZi1ibHVlXWhlbHBlZCBbZi1ibHVlXXRoZSBbL2YtYmx1ZV1uYXRpb25hbGlzdHMgd2l0aCBhIHRlcnJpYmxlIFtmLWJsdWVddW5pdCBbL2YtYmx1ZV1jYWxsZWQgW2YtYmx1ZV10aGUgWy9mLWJsdWVdQ29uZG9yIExlZ2lvbi4iXSxbIlRoZSBuZXh0IG9iamVjdGl2ZSBvZiBbZi1yZWRddGhlIFsvZi1yZWRdbmF0aW9uYWxpc3RzIHdhcyB0byB0YWtlIHVwIHRoZSBub3J0aCBvZiBTcGFpbi4iLCJUaGUgbmV4dCBvYmplY3RpdmUgb2YgbmF0aW9uYWxpc3RzIHdhcyB0byB0YWtlIFtzbGluZV11cFsvc2xpbmVdIHRoZSBub3J0aCBvZiBTcGFpbi4iXSxbIlRoZSBDb25kb3IgTGVnaW9uIGJvbWJlZCBHZXJuaWthLCBhbmQgUGljYXNzbyBwYWludGVkIFtmLWJsdWVddGhlIGV2ZW50LlsvZi1ibHVlXSJdLFsiU3BhaW4gd2FzIGRpdmlkZWQgaW4gaGFsZiwgc28gW2YtcmVkXXRoZSBbL2YtcmVkXU5hdGlvbmFsaXN0cyBiZWdhbiB0aGUgYXR0YWNrIG9mIHRoZSBNZWRpdGVycmFuZW8gdG8gY3V0IG9mZiB0aGUgcmVwdWJsaWMgem9uZSBpbiAxOTM4LiJdLFsiW2YtcmVkXVRoZSBbL2YtcmVkXVJlcHVibGljYW5zIGtuZXcgdGhhdCB0aGV5IHdlcmUgbG9zaW5nIHRoZW4gdGhleSBiZWdhbiB0aGUgYmF0dGxlIG9mIHRoZSBFYnJvLiIsIltmLWJsdWVdVGhlWy9mLWJsdWVdIFJlcHVibGljYW5zIGtuZXcgdGhhdCB0aGV5IHdlcmUgbG9zaW5nLCBbZi1ibHVlXXNvIFsvZi1ibHVlXXRoZXkgYmVnYW4gdGhlIGJhdHRsZSBvZiB0aGUgRWJyby4iXSxbIltmLXJlZF1UaGUgWy9mLXJlZF1SZXB1YmxpY2FuW2YtcmVkXSdbL2YtcmVkXXMgYXJteSB3YXMgbWFzc2FjcmVkIGFuZCBbZi1yZWRddGhlIFsvZi1yZWRdbmF0aW9uYWxpc3RzIGFybXkgW2YtcmVkXXRvb2sgb3ZlclsvZi1yZWRdIGFsbCBDYXRhbG9uaWEuIiwiW2YtYmx1ZV1UaGVbL2YtYmx1ZV0gW2YtYmx1ZV1SZXB1YmxpY2FuIFsvZi1ibHVlXWFybXkgd2FzIG1hc3NhY3JlZCBhbmRbZi1ibHVlXSB0aGUgbmF0aW9uYWxpc3RbL2YtYmx1ZV0gYXJteSBbZi1ibHVlXXdhcyBhYmxlWy9mLWJsdWVdIHRvIHRha2UgW3NsaW5lXXVwWy9zbGluZV0gYWxsIFtmLWJsdWVdb2ZbL2YtYmx1ZV0gQ2F0YWxvbmlhLiJdLFsiW2YtYmx1ZV1UaGVbL2YtYmx1ZV0gUmVwdWJsaWNhbiB6b25lIGRpZG4ndCBoYXZlIFtmLWJsdWVdZm9vZCBbL2YtYmx1ZV1hbmQgdGhlIHBlb3BsZSBbZi1ibHVlXXdlcmUgWy9mLWJsdWVdaHVuZ3J5LiJdLFsiSW4gQXByaWwgb2YgMTkzOSBbZi1yZWRddGhlIFsvZi1yZWRdbmF0aW9uYWxpc3RzIHdvbiB0aGUgd2FyIGFuZCB0b29rIFtmLXJlZF1vdmVyIFsvZi1yZWRdYWxsIFtmLXJlZF1vZlsvZi1yZWRdIFNwYWluIHdpdGhvdXQgcmVzaXN0ZW5jZS4iXV0=';var correction_comments=[[null],[],[],[],[null,null],[null,null],[null],[null,null],[null,null],[null,null],[null,null],[null,null],[null],[null],[null,null],[null,null],[null],[null]];
+//]]></script>
+
+</div>
+<div id='right' style='padding-bottom:0'>
+<div class='mb_20' id='author_box'>
+<div class='cfx'>
+<a href="/222142"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w50_h0/7e5d6b68bc0c758ecfd3c74ce25fe4f2ba2a7104.jpeg"/></a>
+<div class='author_information mb_10 cfx'>
+<a href="/222142" class="user_name">arcadivs</a>
+
+<div class='learning_languages'>
+<ul class='language_status'>
+<li class='speaking' data-title='Native language' rel='tooltip' title='Native language'>Spanish</li>
+<li class='studying' data-title='Language of study' rel='tooltip' title='Language of study'>
+Japanese
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class='bdbox'>
+<table class='entry_status'>
+<tr>
+<td class='l01'>
+<p><a href="/222142/journals">108</a></p>
+<span>Entries Written</span>
+</td>
+<td class='l02'>
+<p><a href="/222142/correction_logs/sent">372</a></p>
+<span>Corrections made</span>
+</td>
+<td class='l03'>
+<p><a href="/222142/correction_logs/received">371</a></p>
+<span>Corrections received</span>
+</td>
+</tr>
+</table>
+</div>
+
+</div>
+
+  
+    <script type="text/javascript">google_ad_client="ca-pub-6717840198266056";google_ad_slot="1415028544";google_ad_width=300;google_ad_height=250;</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+
+  
+
+
+<div class='box'>
+<div id='journals_calendar'>
+<div class='yui-skin-sam'>
+<div id='jour_cal'>
+    <div id="cal1Container"></div>
+    <script type="text/javascript">//<![CDATA[
+(function(){var cal1=null,popupHolder=[],cal_journal_dates={},str_dates='',date_info=[{"journal_id":"205680610778449918480706270387533417420","journal_date":1485205501},{"journal_id":"226892144884737016232496928303701364474","journal_date":1399057074},{"journal_id":"18522319214354016737220780500779507300","journal_date":1376951902},{"journal_id":"208191959970437694844514959660483059300","journal_date":1376856793},{"journal_id":"170388224954204639901510984527138059142","journal_date":1376568124},{"journal_id":"293866642036570949164336604859563404766","journal_date":1376502137},{"journal_id":"204082620028911815265036138231531107206","journal_date":1376346546},{"journal_id":"38757674893095781419474093108243896794","journal_date":1376141897},{"journal_id":"194637042612983050382616695145390644836","journal_date":1376047175},{"journal_id":"132313559329960467924656841911747539846","journal_date":1375294189},{"journal_id":"164520169622724260598492237435147099748","journal_date":1375136604},{"journal_id":"83689758864392142096836972371380248164","journal_date":1375044590},{"journal_id":"44866392732402089970702661499484386460","journal_date":1374770522},{"journal_id":"288999380056079475269667395520643869239","journal_date":1374530312},{"journal_id":"236109809982209557199019560432575684196","journal_date":1374429743},{"journal_id":"34279511291272324257872582206172230534","journal_date":1373817026},{"journal_id":"297445687673549308007184689279794126436","journal_date":1373581135},{"journal_id":"189594914568321428565501246706368181126","journal_date":1373321582},{"journal_id":"150396896044124670727553210317781573220","journal_date":1372930691},{"journal_id":"212835791226443768621361959383096827045","journal_date":1372716451},{"journal_id":"3423597604134519586800141590954046342","journal_date":1372620409},{"journal_id":"106232182981518832688652942615950368356","journal_date":1361494426},{"journal_id":"195043356197187677902457443739810736784","journal_date":1359987004},{"journal_id":"57314295018506403960105291723588232779","journal_date":1359241654},{"journal_id":"228249515470836218091523166086701754798","journal_date":1354818483},{"journal_id":1808722,"journal_date":1354576000},{"journal_id":1807082,"journal_date":1354488516},{"journal_id":1728899,"journal_date":1350254391},{"journal_id":1723783,"journal_date":1349995260},{"journal_id":1721980,"journal_date":1349907219},{"journal_id":1698293,"journal_date":1348700804},{"journal_id":1696426,"journal_date":1348610503},{"journal_id":1691994,"journal_date":1348399032},{"journal_id":1687921,"journal_date":1348169845},{"journal_id":1686111,"journal_date":1348074424},{"journal_id":1683576,"journal_date":1347964989},{"journal_id":1565448,"journal_date":1341499744},{"journal_id":1564339,"journal_date":1341446218},{"journal_id":1558046,"journal_date":1341135513},{"journal_id":1535860,"journal_date":1339974846},{"journal_id":1532710,"journal_date":1339798621},{"journal_id":1531110,"journal_date":1339708120},{"journal_id":1525871,"journal_date":1339433232},{"journal_id":1520839,"journal_date":1339191918},{"journal_id":1516712,"journal_date":1339022310},{"journal_id":1514859,"journal_date":1338933884},{"journal_id":1512529,"journal_date":1338819854},{"journal_id":1509395,"journal_date":1338659745},{"journal_id":1506173,"journal_date":1338501593},{"journal_id":1504337,"journal_date":1338414631},{"journal_id":1502498,"journal_date":1338338836},{"journal_id":1500219,"journal_date":1338217216},{"journal_id":1498915,"journal_date":1338154919},{"journal_id":1497206,"journal_date":1338058446},{"journal_id":1495620,"journal_date":1337964019},{"journal_id":1490701,"journal_date":1337723692},{"journal_id":1488789,"journal_date":1337633653},{"journal_id":1484678,"journal_date":1337436846},{"journal_id":1483721,"journal_date":1337384370},{"journal_id":1480452,"journal_date":1337207778},{"journal_id":1476772,"journal_date":1337035768},{"journal_id":1474956,"journal_date":1336934709},{"journal_id":1466974,"journal_date":1336505270},{"journal_id":1465361,"journal_date":1336434822},{"journal_id":1456699,"journal_date":1336003364},{"journal_id":1453015,"journal_date":1335828554},{"journal_id":1439009,"journal_date":1335111935},{"journal_id":1364968,"journal_date":1331769300},{"journal_id":1312507,"journal_date":1329092830},{"journal_id":1276881,"journal_date":1327089901},{"journal_id":1262891,"journal_date":1326279496},{"journal_id":1262218,"journal_date":1326239373},{"journal_id":1253110,"journal_date":1325700886},{"journal_id":1248969,"journal_date":1325444040},{"journal_id":1226180,"journal_date":1323872455},{"journal_id":1072725,"journal_date":1314484156},{"journal_id":1071401,"journal_date":1314396644},{"journal_id":1068523,"journal_date":1314225219},{"journal_id":1062385,"journal_date":1313882502},{"journal_id":1059779,"journal_date":1313712178},{"journal_id":1055469,"journal_date":1313453472},{"journal_id":853612,"journal_date":1300542198},{"journal_id":852869,"journal_date":1300486687},{"journal_id":851767,"journal_date":1300396733},{"journal_id":849478,"journal_date":1300221637},{"journal_id":848263,"journal_date":1300133166},{"journal_id":845528,"journal_date":1299958895},{"journal_id":844109,"journal_date":1299880466},{"journal_id":839531,"journal_date":1299615340},{"journal_id":838156,"journal_date":1299534437},{"journal_id":836010,"journal_date":1299406371},{"journal_id":834060,"journal_date":1299270686},{"journal_id":832763,"journal_date":1299184356},{"journal_id":831286,"journal_date":1299088611},{"journal_id":827284,"journal_date":1298839409},{"journal_id":826310,"journal_date":1298766633},{"journal_id":824975,"journal_date":1298665879},{"journal_id":824320,"journal_date":1298578285},{"journal_id":818790,"journal_date":1298231060},{"journal_id":815932,"journal_date":1298061462},{"journal_id":808556,"journal_date":1297632237},{"journal_id":781466,"journal_date":1295989819},{"journal_id":769984,"journal_date":1295302908},{"journal_id":768504,"journal_date":1295215727},{"journal_id":755932,"journal_date":1294429859},{"journal_id":745228,"journal_date":1293655249},{"journal_id":744978,"journal_date":1293634205},{"journal_id":744887,"journal_date":1293629823}],now_server2local="11/2018",selected_date='',date_info_json=Object.toJSON(date_info),args=getArgsFromHref(location.href);if(args['begin']!=null){var begin_date_a=args['begin'].split('-');var page_date=begin_date_a[1]+'/'+begin_date_a[0];}else if(args['date']!=null){var date_a=args['date'].split('-');var page_date=date_a[1]+'/'+date_a[0];}else{var page_date=now_server2local;}var pathname=location.pathname.split('/');for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(parseInt(date_info[i].journal_date*1000)).toYAHOODateString();if(cal_journal_dates[tmp_date]){cal_journal_dates[tmp_date]=cal_journal_dates[tmp_date]+'/'+date_info[i].journal_id;}else{cal_journal_dates[tmp_date]=date_info[i].journal_id;str_dates=str_dates+','+tmp_date;}}function init(){cal1=new YAHOO.widget.Calendar('cal1','cal1Container',{LOCALE_MONTHS:'short',LOCALE_WEEKDAYS:'1char',pagedate:page_date});cal1.styleCellDefault=function(workingDate,cell){YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_OOB);}
+cal1.renderCellDefault=function(workingDate,cell){cell.innerHTML='<a class="'+cal1.Style.CSS_CELL_SELECTOR+'">'+cal1.buildDayLabel(workingDate)+"</a>";}
+cal1.renderCellHasJournals=function(workingDate,cell){cell.innerHTML='<a href="/'+'222142'+'/journals?date='+workingDate.toStringYYMMDD()+'" class="'+cal1.Style.CSS_CELL_SELECTABLE+'">'+cal1.buildDayLabel(workingDate)+"</a>";YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_SELECTABLE);YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_HIGHLIGHT1);if(workingDate.getDate()==cal1.today.getDate()&&workingDate.getMonth()==cal1.today.getMonth()&&workingDate.getFullYear()==cal1.today.getFullYear()){YAHOO.util.Dom.removeClass(cell,cal1.Style.CSS_CELL_TODAY);}return YAHOO.widget.Calendar.STOP_RENDER;}
+cal1.addRenderer(str_dates,cal1.renderCellHasJournals);cal1.render();}function getArgsFromHref(sHref){var args=sHref.split('?');var retargs={}
+if(args[0]==sHref){return"";}var str=args[1];args=str.split('&');for(var i=0;i<args.length;i++){str=args[i];var arg=str.split('=');if(arg.length<=1)continue;retargs[arg[0]]=arg[1];}return retargs;}YAHOO.util.Event.onAvailable('cal1Container',init);})();
+//]]></script>
+
+</div>
+</div>
+</div>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Journal Statistics</h3>
+</div>
+<div class='cfx' id='studying_status'>
+<table class='table side-bar table_statusstudy'>
+<tr>
+<th>Total</th>
+<th>This month</th>
+<th>This week</th>
+</tr>
+<tr>
+<td>
+<p><a href="/222142/journals">108</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/222142/journals" id="monthCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/222142/journals" id="todayCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<script type="text/javascript">//<![CDATA[
+(function(){var date_info=[{"journal_id":"205680610778449918480706270387533417420","journal_date":1485205501},{"journal_id":"226892144884737016232496928303701364474","journal_date":1399057074},{"journal_id":"18522319214354016737220780500779507300","journal_date":1376951902},{"journal_id":"208191959970437694844514959660483059300","journal_date":1376856793},{"journal_id":"170388224954204639901510984527138059142","journal_date":1376568124},{"journal_id":"293866642036570949164336604859563404766","journal_date":1376502137},{"journal_id":"204082620028911815265036138231531107206","journal_date":1376346546},{"journal_id":"38757674893095781419474093108243896794","journal_date":1376141897},{"journal_id":"194637042612983050382616695145390644836","journal_date":1376047175},{"journal_id":"132313559329960467924656841911747539846","journal_date":1375294189},{"journal_id":"164520169622724260598492237435147099748","journal_date":1375136604},{"journal_id":"83689758864392142096836972371380248164","journal_date":1375044590},{"journal_id":"44866392732402089970702661499484386460","journal_date":1374770522},{"journal_id":"288999380056079475269667395520643869239","journal_date":1374530312},{"journal_id":"236109809982209557199019560432575684196","journal_date":1374429743},{"journal_id":"34279511291272324257872582206172230534","journal_date":1373817026},{"journal_id":"297445687673549308007184689279794126436","journal_date":1373581135},{"journal_id":"189594914568321428565501246706368181126","journal_date":1373321582},{"journal_id":"150396896044124670727553210317781573220","journal_date":1372930691},{"journal_id":"212835791226443768621361959383096827045","journal_date":1372716451},{"journal_id":"3423597604134519586800141590954046342","journal_date":1372620409},{"journal_id":"106232182981518832688652942615950368356","journal_date":1361494426},{"journal_id":"195043356197187677902457443739810736784","journal_date":1359987004},{"journal_id":"57314295018506403960105291723588232779","journal_date":1359241654},{"journal_id":"228249515470836218091523166086701754798","journal_date":1354818483},{"journal_id":1808722,"journal_date":1354576000},{"journal_id":1807082,"journal_date":1354488516},{"journal_id":1728899,"journal_date":1350254391},{"journal_id":1723783,"journal_date":1349995260},{"journal_id":1721980,"journal_date":1349907219},{"journal_id":1698293,"journal_date":1348700804},{"journal_id":1696426,"journal_date":1348610503},{"journal_id":1691994,"journal_date":1348399032},{"journal_id":1687921,"journal_date":1348169845},{"journal_id":1686111,"journal_date":1348074424},{"journal_id":1683576,"journal_date":1347964989},{"journal_id":1565448,"journal_date":1341499744},{"journal_id":1564339,"journal_date":1341446218},{"journal_id":1558046,"journal_date":1341135513},{"journal_id":1535860,"journal_date":1339974846},{"journal_id":1532710,"journal_date":1339798621},{"journal_id":1531110,"journal_date":1339708120},{"journal_id":1525871,"journal_date":1339433232},{"journal_id":1520839,"journal_date":1339191918},{"journal_id":1516712,"journal_date":1339022310},{"journal_id":1514859,"journal_date":1338933884},{"journal_id":1512529,"journal_date":1338819854},{"journal_id":1509395,"journal_date":1338659745},{"journal_id":1506173,"journal_date":1338501593},{"journal_id":1504337,"journal_date":1338414631},{"journal_id":1502498,"journal_date":1338338836},{"journal_id":1500219,"journal_date":1338217216},{"journal_id":1498915,"journal_date":1338154919},{"journal_id":1497206,"journal_date":1338058446},{"journal_id":1495620,"journal_date":1337964019},{"journal_id":1490701,"journal_date":1337723692},{"journal_id":1488789,"journal_date":1337633653},{"journal_id":1484678,"journal_date":1337436846},{"journal_id":1483721,"journal_date":1337384370},{"journal_id":1480452,"journal_date":1337207778},{"journal_id":1476772,"journal_date":1337035768},{"journal_id":1474956,"journal_date":1336934709},{"journal_id":1466974,"journal_date":1336505270},{"journal_id":1465361,"journal_date":1336434822},{"journal_id":1456699,"journal_date":1336003364},{"journal_id":1453015,"journal_date":1335828554},{"journal_id":1439009,"journal_date":1335111935},{"journal_id":1364968,"journal_date":1331769300},{"journal_id":1312507,"journal_date":1329092830},{"journal_id":1276881,"journal_date":1327089901},{"journal_id":1262891,"journal_date":1326279496},{"journal_id":1262218,"journal_date":1326239373},{"journal_id":1253110,"journal_date":1325700886},{"journal_id":1248969,"journal_date":1325444040},{"journal_id":1226180,"journal_date":1323872455},{"journal_id":1072725,"journal_date":1314484156},{"journal_id":1071401,"journal_date":1314396644},{"journal_id":1068523,"journal_date":1314225219},{"journal_id":1062385,"journal_date":1313882502},{"journal_id":1059779,"journal_date":1313712178},{"journal_id":1055469,"journal_date":1313453472},{"journal_id":853612,"journal_date":1300542198},{"journal_id":852869,"journal_date":1300486687},{"journal_id":851767,"journal_date":1300396733},{"journal_id":849478,"journal_date":1300221637},{"journal_id":848263,"journal_date":1300133166},{"journal_id":845528,"journal_date":1299958895},{"journal_id":844109,"journal_date":1299880466},{"journal_id":839531,"journal_date":1299615340},{"journal_id":838156,"journal_date":1299534437},{"journal_id":836010,"journal_date":1299406371},{"journal_id":834060,"journal_date":1299270686},{"journal_id":832763,"journal_date":1299184356},{"journal_id":831286,"journal_date":1299088611},{"journal_id":827284,"journal_date":1298839409},{"journal_id":826310,"journal_date":1298766633},{"journal_id":824975,"journal_date":1298665879},{"journal_id":824320,"journal_date":1298578285},{"journal_id":818790,"journal_date":1298231060},{"journal_id":815932,"journal_date":1298061462},{"journal_id":808556,"journal_date":1297632237},{"journal_id":781466,"journal_date":1295989819},{"journal_id":769984,"journal_date":1295302908},{"journal_id":768504,"journal_date":1295215727},{"journal_id":755932,"journal_date":1294429859},{"journal_id":745228,"journal_date":1293655249},{"journal_id":744978,"journal_date":1293634205},{"journal_id":744887,"journal_date":1293629823}],cur_month_counter=0,week_counter=0;var now_date=new Date(),DateMath=YAHOO.widget.DateMath;var now_date_week_begin=DateMath.getFirstDayOfWeek(now_date,0);var now_date_week_end=DateMath.add(now_date_week_begin,'D',6);for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(date_info[i].journal_date*1000);if(tmp_date.getFullYear()==now_date.getFullYear()){if(tmp_date.getMonth()==now_date.getMonth()){cur_month_counter+=1;if(DateMath.getWeekNumber(tmp_date,0)==DateMath.getWeekNumber(now_date,0)){week_counter+=1;}}}}if(week_counter!=0){$('todayCount').update(week_counter);$('todayCount').href=$('todayCount').href+'?begin='+now_date_week_begin.toStringYYMMDD()+'&end='+now_date_week_end.toStringYYMMDD();}else{$('todayCount').href="#";}if(cur_month_counter!=0){$('monthCount').update(cur_month_counter);$('monthCount').href=$('monthCount').href+'?begin='+DateMath.findMonthStart(now_date).toStringYYMMDD()+'&end='+DateMath.findMonthEnd(now_date).toStringYYMMDD();}else{$('monthCount').href="#";}})();
+//]]></script>
+
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest entries</h3>
+</div>
+<table class='table side-bar ar_icobox'>
+<tr>
+<td><a href="http://lang-8.com/222142/journals/205680610778449918480706270387533417420">お久しぶりです！ (5) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/222142/journals/226892144884737016232496928303701364474">永遠の愛は、現実に存在するのでしょうか？ (9) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/222142/journals/18522319214354016737220780500779507300">また海岸へ行きました。 (11) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/222142/journals/208191959970437694844514959660483059300">MotoGPレース (8) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/222142/journals/170388224954204639901510984527138059142">ビデオゲーム (38) </a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/222142/journals" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest comments</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<td><a href="http://lang-8.com/222142/journals/205680610778449918480706270387533417420">Jan 24 Kaoru.</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/222142/journals/205680610778449918480706270387533417420">Jan 24 Emi</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/222142/journals/205680610778449918480706270387533417420">Jan 24 Sekiz</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/222142/journals/226892144884737016232496928303701364474">May 5 gojira</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/222142/journals/226892144884737016232496928303701364474">May 3 Kaoru.</a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/222142/journals/comments" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box cfx' id='d_draft_list'>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Entries by Month</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<th class='year'>2017</th>
+</tr>
+<tr>
+<td>
+ <a href="/222142/journals?begin=2017-1-1&amp;end=2017-01-31">January (1)</a>
+</td>
+</tr>
+<tr>
+<th class='year'>2014</th>
+</tr>
+<tr>
+<td>
+ <a href="/222142/journals?begin=2014-5-1&amp;end=2014-05-31">May (1)</a>
+</td>
+</tr>
+<tr>
+<th class='year'>2013</th>
+</tr>
+<tr>
+<td>
+ <a href="/222142/journals?begin=2013-8-1&amp;end=2013-08-31">August (8)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/222142/journals?begin=2013-7-1&amp;end=2013-07-31">July (11)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/222142/journals?begin=2013-2-1&amp;end=2013-02-28">February (2)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/222142/journals?begin=2013-1-1&amp;end=2013-01-31">January (1)</a>
+</td>
+</tr>
+<tr>
+<th class='year'>2012</th>
+</tr>
+<tr>
+<td>
+ <a href="/222142/journals?begin=2012-12-1&amp;end=2012-12-31">December (3)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/222142/journals?begin=2012-10-1&amp;end=2012-10-31">October (3)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/222142/journals?begin=2012-9-1&amp;end=2012-09-30">September (6)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/222142/journals?begin=2012-7-1&amp;end=2012-07-31">July (3)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/222142/journals?begin=2012-6-1&amp;end=2012-06-30">June (10)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/222142/journals?begin=2012-5-1&amp;end=2012-05-31">May (17)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/222142/journals?begin=2012-4-1&amp;end=2012-04-30">April (1)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/222142/journals?begin=2012-3-1&amp;end=2012-03-31">March (1)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/222142/journals?begin=2012-2-1&amp;end=2012-02-29">February (1)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/222142/journals?begin=2012-1-1&amp;end=2012-01-31">January (5)</a>
+</td>
+</tr>
+<tr>
+<th class='year'>2011</th>
+</tr>
+<tr>
+<td>
+ <a href="/222142/journals?begin=2011-12-1&amp;end=2011-12-31">December (1)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/222142/journals?begin=2011-8-1&amp;end=2011-08-31">August (6)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/222142/journals?begin=2011-3-1&amp;end=2011-03-31">March (13)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/222142/journals?begin=2011-2-1&amp;end=2011-02-28">February (7)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/222142/journals?begin=2011-1-1&amp;end=2011-01-31">January (4)</a>
+</td>
+</tr>
+<tr>
+<th class='year'>2010</th>
+</tr>
+<tr>
+<td>
+ <a href="/222142/journals?begin=2010-12-1&amp;end=2010-12-31">December (3)</a>
+</td>
+</tr>
+</table>
+</div>
+
+<div style='height:20px;background-color:#ffffff'></div>
+<div id='eval_comment_form' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='form_to_edit_note' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='journal_comment_liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='eval_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+</div>
+<div class='yui-skin-sam' id='yui_panels'>
+<div id='wt_panel' style='visibility:hidden;'>
+<div class='hd' id='wt_title'></div>
+<div class='bd' id='wt_content'></div>
+<div class='ft'></div>
+</div>
+</div>
+<div id='modal'></div>
+<div id='confirm_box'>
+<div id='confirm_box_close'>
+<a onclick='hide_confirm_box();'>
+<img src='/static/images2/xico_closebt.png.pagespeed.ic.z-nUma7JBr.png'/>
+</a>
+</div>
+<div id='confirm_box_contents'></div>
+</div>
+</div>
+<div class='modal hide' id='report_spam_entry' tabindex='-1'>
+<div class='modal-header'>
+<btn class='close' data-dismiss='modal' type='button'>x</btn>
+<h4>Report this entry</h4>
+</div>
+<div class='modal-body'>
+<strong class='spaced'>Spam entry</strong>
+<p class='spaced'>The Spanish Civil War was a conflict between republicans and nationalists.
+
+The rebellion started on July 17, 1936 in Morocco. The day after, the rebellion continued in the Iberian Peninsula.
+
+The first objective of nationalists was to take up Madrid and win the war quickly. 
+
+Nationalists coul</p>
+<br/>
+<strong class='spaced'>Author</strong>
+<p class='spaced'>arcadivs</p>
+<br/>
+<strong class='spaced'>Reporter</strong>
+<p class='spaced'>0</p>
+</div>
+<div class='modal-footer'>
+<a class='btn' data-dismiss='modal' href='#'>Close</a>
+<a class="bt_lv1 bt_size_04" href="#" onclick="new Ajax.Request('/spam_reports/report_entry?entry_body=The+Spanish+Civil+War+was+a+conflict+between+republicans+and+nationalists.%0D%0A%0D%0AThe+rebellion+started+on+July+17%2C+1936+in+Morocco.+The+day+after%2C+the+rebellion+continued+in+the+Iberian+Peninsula.%0D%0A%0D%0AThe+first+objective+of+nationalists+was+to+take+up+Madrid+and+win+the+war+quickly.+%0D%0A%0D%0ANationalists+coul&amp;reporter_id=0&amp;spammer_id=222142&amp;url=http%3A%2F%2Flang-8.com%2F222142%2Fjournals%2F824975', {asynchronous:true, evalScripts:true, onLoading:function(request){$j('#report_spam_entry').html('&lt;p class=&quot;center&quot;&gt;&lt;br /&gt;&lt;img src=&quot;/static/images2/loading.gif&quot; class=&quot;center spaced vertical-margin&quot; /&gt;&lt;/p&gt;');}, onSuccess:function(request){$j(&quot;#report_spam_entry&quot;).modal(&quot;hide&quot;);$j(&quot;#alert-box&quot;).alerter(&quot;alertSuccess&quot;, &quot;&quot;, &quot;Report sent.&quot; );}, parameters:'authenticity_token=' + encodeURIComponent('Q64aEdAR9cgpvWra7lexW4wsvuDPFwh/tOuFOaTmoSQ=')}); return false;">Send</a>
+</div>
+</div>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show-5f9f69ded18eb0d1a8bef6040b599e7b.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show2-e52e094b14e0c5b5979f64d63309ab8a.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show3-eedb1c964407a61f34a56d6652b21722.js" type="text/javascript"></script>
+<script id="evernote-js" data-cjsexec="true" type="text/cjs" data-cjssrc="http://static.evernote.com/noteit.js"></script>
+<script id="twitter-wjs" data-cjsexec="true" type="text/cjs" data-cjssrc="https://platform.twitter.com/widgets.js"></script>
+<script type='text/javascript'></script>
+<script type='text/javascript'>//<![CDATA[
+jQuery(function($){new Lang8.Views.JournalShowView();});
+//]]></script>
+
+</div>
+</div>
+<div data-search_url='' id='footer'>
+<div class='inner'>
+<div class='box clearfix'>
+<ul class='ft_parts_list f_left'>
+<ul class='ft_parts_list f_left'></ul>
+</ul>
+</div>
+<div class='box02 clearfix'>
+<ul>
+
+</ul>
+<ul>
+<li>
+<p>
+Study
+</p>
+<ul>
+<li><a href="/profiles/search">Member Search</a></li>
+<li><a href="/hotentries">Popular Entries</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+View
+</p>
+<ul>
+<li><a href="/rankings">Rankings</a></li>
+<li>
+<a href="/groups">Groups</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+Help
+</p>
+<ul>
+<li><a href="/help/tumblr" target="_blank">Help</a></li>
+<li><a href="/register/term" target="_blank">Terms of Service</a></li>
+<li><a href="/register/privacy" target="_blank">Privacy Policy</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+About Lang-8
+</p>
+<ul>
+<li><a href="/help/law_1" target="_blank">特定商取引法に基づく表記</a></li>
+<li><a href="/help/donation" target="_blank">Donate</a></li>
+<li><a href="http://lang-8.jp/" target="_blank">Company</a></li>
+<li><a href="http://lang-8.jp/#recruit" target="_blank">Travailler pour Lang-8</a></li>
+<li>
+<a href='mailto:support@lang-8.com'>Contact us</a>
+</li>
+<li>&nbsp;</li>
+</ul>
+</li>
+</ul>
+<ul id='social_web_list'>
+<li class='icon_with twitter'>
+<a class='twitter-follow-button' data-show-count='false' href='https://twitter.com/lang8'>Follow @lang8</a>
+<script defer="defer" src="https://platform.twitter.com/widgets.js" type="text/javascript"></script>
+</li>
+<li class='icon_with facebook'><a href="http://www.facebook.com/lang8" target="_blank">Facebook page</a></li>
+<li class='icon_with rss'><a href="http://blog.lang-8.com" target="_blank">Lang-8 blog</a></li>
+</ul>
+</div>
+<div class='box03 clearfix'>
+<li class='f_left panel_list'>
+<a href='https://mixpanel.com/f/partner' target='_blank'>
+<img alt='Mobile and Web Analytics' src='https://mixpanel.com/site_media/images/partner/badge_light.png'/>
+</a>
+</li>
+<p class='copy f_right'>
+&copy; 2017 Lang-8, Inc. All rights reserved.
+</p>
+</div>
+</div>
+</div>
+
+
+<script type='text/javascript'>//<![CDATA[
+var gaJsHost=(("https:"==document.location.protocol)?"https://ssl.":"http://www.");document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var pageTracker;autoRetry(function(){pageTracker=_gat._getTracker("UA-452011-7");pageTracker._setDomainName("none");pageTracker._setAllowLinker(true);pageTracker._initData();pageTracker._trackPageview("/before/journals/show/824975");},2);
+//]]></script>
+
+
+<script type='text/javascript'>//<![CDATA[
+$j(function(){$j('[rel=tooltip]').tooltip();$j('[rel=popover]').popover();});
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var cjsscript=document.createElement('script');cjsscript.src="/static/javascripts/control_js.js";var cjssib=document.getElementsByTagName('script')[0];cjssib.parentNode.insertBefore(cjsscript,cjssib);
+//]]></script>
+<div id='fb-root'></div>
+<script type='text/javascript'>//<![CDATA[
+(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=138873442911";fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));
+//]]></script>
+</body>
+</html>

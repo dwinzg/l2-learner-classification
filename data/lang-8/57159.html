@@ -1,0 +1,1236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir='ltr' itemscope='' itemtype='http://schema.org/Blog' xmlns:fb='http://www.facebook.com/2008/fbml' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"agent":"","applicationTime":673,"queueTime":0,"applicationID":"11814779","errorBeacon":"bam.nr-data.net","transactionName":"Jg4MFRNdCllURU4MXBATDAANQUlGWVgW","licenseKey":"240011c68f","beacon":"bam.nr-data.net"}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content='text/css' http-equiv='Content-Style-Type'/>
+<meta content='text/javascript' http-equiv='Content-Script-Type'/>
+<meta content='summary' name='twitter:card'/>
+<meta content='@lang8' name='twitter:site'/>
+<meta content='hello' property='og:title'/>
+<meta content='blog' property='og:type'/>
+<meta content='http://lang-8.com/57159/journals/171707' property='og:url'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/m_57159_908b0fc0ce491b44abfb0077ce940819.jpg' property='og:image'/>
+<meta content='from now .&#x000A;i try to write blog in english.&#x000A;please check my english. &#x000A;also please send e-mail&#x000A;&#x000A;im amazing this site.this system is very nice for us (student),&#x000A;we just conect  internet .we can get english education .&#x000A;we dont need money.&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;im university  student  in tokyo japan.&#x000A;my major ' property='og:description'/>
+<meta content='Lang-8' property='og:site_name'/>
+<meta content='138873442911' property='fb:app_id'/>
+<meta content='hello' itemprop='name'/>
+<meta content='from now .&#x000A;i try to write blog in english.&#x000A;please check my english. &#x000A;also please send e-mail&#x000A;&#x000A;im amazing this site.this system is very nice for us (student),&#x000A;we just conect  internet .we can get english education .&#x000A;we dont need money.&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;im university  student  in tokyo japan.&#x000A;my major ' itemprop='description'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/m_57159_908b0fc0ce491b44abfb0077ce940819.jpg' itemprop='image'/>
+
+<title>
+hello | Lang-8: For learning foreign languages
+</title>
+<link href='/favicon.ico' rel='shortcut icon'/>
+<link href="http://dzhimp63a2tb1.cloudfront.net/assets/static/css/application-1b103989b91cc566c626a5030a5c0c04.css" media="screen" rel="stylesheet" type="text/css"/>
+<script type="text/cjs">
+var h = document.getElementsByTagName('head')[0];
+var link = document.createElement('link');
+link.href = 'https://fonts.googleapis.com/css?family=Telex';
+link.type = 'text/css';
+link.rel = 'stylesheet';
+link.media = 'screen'
+h.appendChild(link);
+</script>
+
+
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/application-462b56e1d78c3fb6374e9b344e47357a.js" type="text/javascript"></script>
+
+<script type='text/javascript'>//<![CDATA[
+var lang="2-2";var sessid="";
+//]]></script>
+
+<meta content='from now .  i try to write blog in english.  please check my english.   also please send e-mail  ...' name='description'/>
+<meta content='archtecture' name='keywords'/>
+
+<meta content='1NyOQgk3_D9-R1XWpjxkGinHxWufQzM-DTGssOLEIvs' name='google-site-verification'/>
+</head>
+<body data-device='pc' id='journals_show'>
+<script type="text/javascript">var langsData=[];langsData.push({key:'cjv',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'ckb',body:'Please correct some sentences or comments on this journal.'});langsData.push({key:'cka',body:'Corrections'});langsData.push({key:'cjz',body:'Comment'});langsData.push({key:'cjt',body:'Post'});langsData.push({key:'cju',body:'Back to correcting'});langsData.push({key:'cjw',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjx',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjy',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'D063',body:'There has been an internal system error.'});langsData.push({key:'chc',body:'Show corrections'});langsData.push({key:'chd',body:'Hide'});langsData.push({key:'xlw',body:'Do you really want to reset the data?'});langsData.push({key:'xlx',body:'You have already started to leave a comment on this journal. Do you want to continue with it?'});langsData.push({key:'xly',body:'Continue'});langsData.push({key:'xlz',body:'No'});langsData.push({key:'cix',body:'Red'});langsData.push({key:'ciy',body:'Blue'});langsData.push({key:'qag',body:'Gray'});langsData.push({key:'ciz',body:'Bold'});langsData.push({key:'cja',body:'Cross out'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjc',body:'Cancel'});langsData.push({key:'cjd',body:'Correct'});langsData.push({key:'cje',body:'Unformat'});langsData.push({key:'rgo',body:'This sentence is perfect! No correction needed!'});langsData.push({key:'xll',body:'This is the original post.'});langsData.push({key:'xlm',body:'To correct, click this button.'});langsData.push({key:'xln',body:'You can use the colored fonts and strikethrough feature to help you with your correction.'});langsData.push({key:'xlo',body:'After correcting, please press this button.'});langsData.push({key:'xlp',body:'Your corrections are displayed here.'});langsData.push({key:'xlq',body:'Press this button to complete the correction.'});langsData.push({key:'xmm',body:'Sending...'});langsData.push({key:'xmn',body:'done'});langsData.push({key:'ycs',body:'Success! A friend request will now be sent to your friend.'});langsData.push({key:'xog',body:'Failed to send the friend request. Please try again in a few minutes.'});langsData.push({key:'cit',body:'Comments on this correction'});langsData.push({key:'cir',body:'Add to /Edit My Notebook'});langsData.push({key:'rfv',body:'Vertical View'});langsData.push({key:'rfw',body:'Normal View'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjp',body:'Cancel'});langsData.push({key:'cjr',body:'Remove correction'});langsData.push({key:'ckc',body:'Description about correction.(You can write in any language.)'});langsData.push({key:'cjk',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'cjl',body:'There are not any comments or corrections.'});langsData.push({key:'cjh',body:'Correct this entry'});langsData.push({key:'cjf',body:'Comment'});langsData.push({key:'cjm',body:'There has been an internal system error. Please try again.'});langsData.push({key:'kbm',body:'Draft Saved'});var l8=l8||{};l8.t=l8.t||{};l8.t=new L8I18n(langsData);</script>
+
+<div class='navbar navbar-fixed-top mb_20' id='header'>
+<div class='navbar-inner'>
+<div class='container'>
+<a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</a>
+<div class='nav-collapse'>
+<ul class='nav' id='dropmenu03'>
+<li class='logoname'>
+<a class='brand' href='/'>
+<img alt="Header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0" id="logo" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0.gif"/>
+</a>
+</li>
+<li class='divider'></li>
+<li class='home'>
+<a href="/" class="a_home" title="Home"><img alt="Ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb.png" title="Home"/>
+</a></li>
+<li class='divider'></li>
+<li class='help'>
+<a href="/help/about" class="help" target="_blank" title="What is Lang-8?"><span>
+What is Lang-8?
+</span>
+</a></li>
+<li class='divider'></li>
+</ul>
+<ul class='nav pull-right' id='dropmenu02'>
+<li class='help'>
+<a href="/register/step1?from=header" class="help"><span>Sign up</span>
+</a></li>
+<li class='divider'></li>
+<li class='help' id='login'>
+<a href="https://lang-8.com/login?from=header" class="help"><span>Log in</span>
+</a></li>
+<li class='divider'></li>
+<li class='language_list'>
+<form action="" class="language_select" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="H6iKXG+8752nVo6vmYH3D8jBUowaY9yeiO4SORUxqu4="/></div>
+<select id="interface_lang" name="interface_lang" onchange="onChangeInterfaceLang()"><option value="2-2" selected="selected">English</option>
+<option value="2-5">Español</option>
+<option value="2-6">français</option>
+<option value="2-8">Deutsch</option>
+<option value="2-95">Português(Portugal)</option>
+<option value="2-10">Русский</option>
+<option value="2-59">Polski</option>
+<option value="2-78">Hrvatski</option>
+<option value="2-30">العربية</option>
+<option value="2-1">日本語</option>
+<option value="2-3">中文(简体)</option>
+<option value="2-300">中文(繁體)</option>
+<option value="2-4">한국어</option>
+<option value="2-20">ภาษาไทย</option>
+<option value="2-35">Svenska</option>
+<option value="2-47">Tagalog</option>
+<option value="2-65">Bahasa Melayu</option>
+<option value="2-58">Indonesian</option>
+<option value="2-7">Italiano</option></select>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class='alerter container alert fade in navbar-fixed-top' id='alert-top' style='top:60px;display:none;'>
+<a class='close' data-dismiss='alert' href='#'>
+&times;
+</a>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert Message here
+</span>
+</div>
+<div class='alerter alert fade in navbar-fixed-top' id='alert-box' style='left:40%;top:40%;width:200px;display:none;'>
+<div style='text-align:center;'>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert message here
+</span>
+</div>
+</div>
+
+
+
+
+      <div class="center" style="margin-bottom: 10px;">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- PC_Super_Before_Login -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6717840198266056" data-ad-slot="9171779343" data-ad-format="auto"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+
+      </div>
+
+
+
+
+<div id='page_content'>
+<div class='cfx' id='main_container'>
+<ul class="cfx" id="breadcrumbs"><li class="home"><a href="/">Home</a></li><li class=""><a href="/profiles/search">Member</a></li><li class=""><a href="/57159">kisouchi</a></li><li class=""><a href="/57159/journals">kisouchi's entries</a></li><li class=""><span>hello</span></li></ul>
+<div>
+<div data-use_friend_request_popover='data-use_friend_request_popover' id='main'>
+<style type='text/css'>@font-face{font-family:"FontAwesome";src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot);src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot?#iefix) format('eot') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.woff) format('woff') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.ttf) format('truetype') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.svg#FontAwesome) format('svg');font-weight:normal;font-style:normal}</style>
+<div class='cfx' id='entry_detail'>
+<div class='show_report_spam_link cfx' id='entry_title_box'>
+<div class='tit_02'>
+<h1 id='subject_show'>hello</h1>
+<div class='edit_links'>
+<ul class='cfx'>
+</ul>
+</div>
+</div>
+</div>
+<div class='clear_both'></div>
+<div class='cfx' id='tools_for_journal'>
+<ul class='journal_status floated_on_right'>
+<li class='privacy_level_5' data-original-title='Public' rel='tooltip'>&nbsp;</li>
+<li class='visiters' data-original-title='Views' rel='tooltip' title='Views'>161</li>
+<li class='comment_num' data-original-title='Comments' rel='tooltip' title='Comments'>0</li>
+<li class='corrections_num' data-original-title='Corrections' rel='tooltip' title='Corrections'>3</li>
+<li class='studying' data-original-title='The language that needs to be corrected' rel='tooltip'>English&nbsp;</li>
+</ul>
+<span class='journal_date floated_on_left'>
+Jun 14, 2009 18:49
+<a href="/journals/search?tag=archtecture">archtecture</a>
+
+</span>
+<script type='text/javascript'>//<![CDATA[
+$j(function(){var journalCounterView=new Lang8.Views.JournalCounterView();});
+//]]></script>
+
+</div>
+<div id='show_buttons'>
+<input class='bt_lv3' data-original-title='Show corrections for sentences when you mouse-over.' id='showAndHide' rel='tooltip' title='' type='button' value='Show'/>
+<input class='bt_lv3' data-original-title='Show all corrections together in a pop-up window.' id='showAll' rel='tooltip' title='' type='button' value='Show All'/>
+</div>
+
+<div class='cfx' id='body_show'>
+<div id='body_show_ori'>
+from now .<br/>i try to write blog in english.<br/>please check my english. <br/>also please send e-mail<br/><br/>im amazing this site.this system is very nice for us (student),<br/>we just conect  internet .we can get english education .<br/>we dont need money.<br/><br/><br/><br/><br/>im university  student  in tokyo japan.<br/>my major is archtecture.<br/>now i read [content] written by rem koolhaas.<br/>i really respect his theory.
+</div>
+<div class='box_like_button cfx' id='async_show_like'></div>
+<div class='ad_journal_center clear_both floated_on_left'>
+  
+    <div class="center" style="margin: 0 0 10px;">
+        <a href="https://hinative.com?bt=pc_center&amp;utm_source=pc_banner&amp;utm_campaign=pc_center"><img alt="Learn English, Spanish, and other languages for free with the HiNative app" height="250" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/banner/L8/img_hn_pc_bn300@2x-09139844e642bcc85c91732f558cf3e5.png" width="300"/></a>
+
+    </div>
+  
+
+</div>
+</div>
+</div>
+<div class='little-spaced cfx' data-canonical_url='http://lang-8.com/57159/journals/171707' id='links_for_journal'>
+<span class='horizontal-spaced tw-btn'>
+<a class='twitter-share-button' data-hashtags='lang8,archtecture' data-related='lang8' data-text='hello' data-url='http://lang-8.com/57159/journals/171707' data-via='lang8' href='https://twitter.com/share'>Tweet</a>
+</span>
+<span class='horizontal-spaced fb-like' data-action='like' data-colorscheme='light' data-href='http://lang-8.com/57159/journals/171707' data-layout='button_count' data-show-faces='false' data-width='100'></span>
+<span class='horizontal-spaced gplus_btn'>
+<!-- %span.g-plusone{'data-size' => 'medium', :href => "#{@journal.canonical_url}"} -->
+</span>
+<span class='floated_on_left'>
+<span class='st_fblike_hcount' displayText='Facebook Like' st_url='http://lang-8.com/57159/journals/171707'></span>
+<span class='st_facebook_hcount' displayText='Facebook' st_url='http://lang-8.com/57159/journals/171707'></span>
+<span class='st_linkedin_hcount' displayText='LinkedIn' st_url='http://lang-8.com/57159/journals/171707'></span>
+</span>
+<a href='#' onclick="Evernote.doClip({styling:'full',providerName:'Lang-8',suggestTags:'Lang-8',suggestNotebook:'Lang-8',contentId:'entry_container'}); return false;" style='float:right;margin-right:5px;'>
+<img alt='Clip to Evernote' src='/static/images2/xarticle-clipper-fr.png.pagespeed.ic.BAKnLUGqIU.png'/>
+</a>
+</div>
+<div id='comments_and_corrections_field'>
+<div class='fukidashi comment_field' id='journal_comment_694852'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/57138"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/8300151a8765797da0278721a2fe68f9bd28deab.jpg"/></a>
+<a href="/57138" class="user_name">Eso</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Jun 14, 2009 19:09
+</span>
+</div>
+</div>
+<div class='correction_list corner-rounded_5 little-spaced'>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>from now .</li>
+<li class='corrected correct'>
+<p>From now onwards,</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494794'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>i try to write blog in english.</li>
+<li class='corrected correct'>
+<p>I would try to write my blogs in <span class="f_blue">E</span>nglish.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494795'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>please check my english.</li>
+<li class='corrected correct'>
+<p><span class="f_blue">P</span>lease check my <span class="f_blue">E</span>nglish.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494796'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>also please send e-mail</li>
+<li class='corrected correct'>
+<p>Please send me an e-mail too.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494797'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>im amazing this site.</li>
+<li class='corrected correct'>
+<p>I&#39;m amazing at this site.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494798'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>this system is very nice for us (student),</li>
+<li class='corrected correct'>
+<p><span class="f_blue">T</span>his system is very <span class="f_blue">helpful</span> for us (students),</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494799'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>we just conect  internet .</li>
+<li class='corrected correct'>
+<p><span class="f_blue">W</span>e would just simply connect to the <span class="f_blue">I</span>nternet.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494800'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>we can get english education .</li>
+<li class='corrected correct'>
+<p>We would be able to receive English education.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494801'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>we dont need money.</li>
+<li class='corrected correct'>
+<p>We wouldn&#39;t need to spend any money.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494802'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>im university  student  in tokyo japan.</li>
+<li class='corrected correct'>
+<p>I&#39;m currently a university student in Tokyo, Japan.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494803'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>my major is archtecture.</li>
+<li class='corrected correct'>
+<p>My major is Architecture.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494804'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>now i read [content] written by rem koolhaas.</li>
+<li class='corrected correct'>
+<p>Currently I am reading a book written by rem koolhaas.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494805'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>i really respect his theory.</li>
+<li class='corrected correct'>
+<p><span class="f_blue">I</span> really respect his theory.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494806'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+It was a pleasure to help you in your English. I am currently studying in college, my major is Biomedical Sciences and I am studying Japanese as a hobby. I find this site very helpful too.  Gambatte Kisouchi-san!
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-694852' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_694852'>
+
+</div>
+</div>
+</div>
+<div class='fukidashi comment_field' id='journal_comment_694862'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/53628"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/no_image.gif"/></a>
+<a href="/53628" class="user_name"></a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Jun 14, 2009 19:14
+</span>
+</div>
+</div>
+<div class='correction_list corner-rounded_5 little-spaced'>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>from now .</li>
+<li class='corrected correct'>
+<p>from now <span class="sline">.</span><span class="f_blue">on</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494816'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>i try to write blog in english.</li>
+<li class='corrected correct'>
+<p>i try to <span class="sline">write</span> blog in <span class="f_red">E</span>nglish.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494817'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>please check my english.</li>
+<li class='corrected correct'>
+<p><span class="f_red">P</span>lease check my <span class="f_red">E</span>nglish<span class="sline">.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494818'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>also please send e-mail</li>
+<li class='corrected correct'>
+<p><span class="f_bold">and e-mails are welcome.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494819'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>im amazing this site.</li>
+<li class='corrected correct'>
+<p><span class="f_bold">I found this amazing website.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494820'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>this system is very nice for us (student),</li>
+<li class='corrected correct'>
+<p>this system is very <span class="f_red">suitable</span> for us <span class="f_red">students</span>,</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494821'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>we just conect  internet .</li>
+<li class='corrected correct'>
+<p><span class="f_bold">All we have to do is connect to the Internet.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494822'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>we can get english education .</li>
+<li class='corrected correct'>
+<p>we can get english education . <span class="f_blue">(I don&#39;t think we get English education here,just a supplement to our daily English lessons.)</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494823'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>we dont need money.</li>
+<li class='corrected correct'>
+<p><span class="f_bold">It is all for free.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494824'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>im university  student  in tokyo japan.</li>
+<li class='corrected correct'>
+<p>i<span class="f_red">&#39;</span>m <span class="f_red">a </span>university  student  in <span class="f_red">T</span>okyo<span class="f_red">,</span><span class="f_red">J</span>apan.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494825'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>my major is archtecture.</li>
+<li class='corrected correct'>
+<p><span class="f_bold">I am majoring in architecture.</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494826'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>now i read [content] written by rem koolhaas.</li>
+<li class='corrected correct'>
+<p>now i <span class="f_red">am </span>read<span class="f_red">ing</span> [content]<span class="f_blue">(What are you trying to convey here?)</span> written by <span class="f_red">R</span>em <span class="f_red">K</span>oolhaas.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1494827'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+One thing to keep in mind is the capitalisation of letters that form English words make a difference.Always remember to use capital letters where appropriate.<br/>All the best learning English!<br/>:)
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-694862' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_694862'>
+
+</div>
+</div>
+</div>
+<div class='fukidashi comment_field' id='journal_comment_695569'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/57078"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/no_image.gif"/></a>
+<a href="/57078" class="user_name"></a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Jun 15, 2009 00:22
+</span>
+</div>
+</div>
+<div class='correction_list corner-rounded_5 little-spaced'>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>from now .</li>
+<li class='corrected correct'>
+<p>from now <span class="f_red">on,</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1496747'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>i try to write blog in english.</li>
+<li class='corrected correct'>
+<p>i <span class="f_red">will</span> try to write blog<span class="f_red">s</span> in <span class="f_red">E</span>nglish.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1496748'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>also please send e-mail</li>
+<li class='corrected correct'>
+<p>also please send <span class="f_red">me</span> e-mail<span class="f_red">s</span></p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1496749'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>im amazing this site.</li>
+<li class='corrected correct'>
+<p>I&#39;m amaz<span class="f_red">ed at</span> this site.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1496750'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>this system is very nice for us (student),</li>
+<li class='corrected correct'>
+<p>this system is very <span class="sline">nice </span> <span class="f_red">useful</span> for us (student),</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1496751'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>we just conect  internet .</li>
+<li class='corrected correct'>
+<p>we just con<span class="f_red">n</span>ect <span class="f_red">to the</span> internet .</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1496752'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>we can get english education .</li>
+<li class='corrected correct'>
+<p><span class="f_red">and </span>we can get <span class="f_red">an </span> English education .</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1496753'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>we dont need money.</li>
+<li class='corrected correct'>
+<p>we don<span class="f_red">&#39;</span>t need money.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-1496754'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+Hello Kisouchi! Your English is very good :)<br/>Good luck with studying it. I will<br/>be pleased if i can help you.
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-695569' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_695569'>
+
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>//<![CDATA[
+var l8=jQuery.extend(l8,{authenticityToken:"H6iKXG+8752nVo6vmYH3D8jBUowaY9yeiO4SORUxqu4=",showTutorial:false,label:"Description about correction.(You can write in any language.)",explanation:"Add a description or comment here.(Optional)",sentences:'aGVsbG8KZnJvbSBub3cgLgppIHRyeSB0byB3cml0ZSBibG9nIGluIGVuZ2xpc2guCnBsZWFzZSBjaGVjayBteSBlbmdsaXNoLgphbHNvIHBsZWFzZSBzZW5kIGUtbWFpbAppbSBhbWF6aW5nIHRoaXMgc2l0ZS4KdGhpcyBzeXN0ZW0gaXMgdmVyeSBuaWNlIGZvciB1cyAoc3R1ZGVudCksCndlIGp1c3QgY29uZWN0ICBpbnRlcm5ldCAuCndlIGNhbiBnZXQgZW5nbGlzaCBlZHVjYXRpb24gLgp3ZSBkb250IG5lZWQgbW9uZXkuCmltIHVuaXZlcnNpdHkgIHN0dWRlbnQgIGluIHRva3lvIGphcGFuLgpteSBtYWpvciBpcyBhcmNodGVjdHVyZS4Kbm93IGkgcmVhZCBbY29udGVudF0gd3JpdHRlbiBieSByZW0ga29vbGhhYXMuCmkgcmVhbGx5IHJlc3BlY3QgaGlzIHRoZW9yeS4=',corrections:[[],["From now onwards,","from now [sline].[/sline][f-blue]on[/f-blue]","from now [f-red]on,[/f-red]"],["I would try to write my blogs in [f-blue]E[/f-blue]nglish.","i try to [sline]write[/sline] blog in [f-red]E[/f-red]nglish.","i [f-red]will[/f-red] try to write blog[f-red]s[/f-red] in [f-red]E[/f-red]nglish."],["[f-blue]P[/f-blue]lease check my [f-blue]E[/f-blue]nglish.","[f-red]P[/f-red]lease check my [f-red]E[/f-red]nglish[sline].[/sline]"],["Please send me an e-mail too.","[f-bold]and e-mails are welcome.[/f-bold]","also please send [f-red]me[/f-red] e-mail[f-red]s[/f-red]"],["I'm amazing at this site.","[f-bold]I found this amazing website.[/f-bold]","I'm amaz[f-red]ed at[/f-red] this site."],["[f-blue]T[/f-blue]his system is very [f-blue]helpful[/f-blue] for us (students),","this system is very [f-red]suitable[/f-red] for us [f-red]students[/f-red],","this system is very [sline]nice [/sline] [f-red]useful[/f-red] for us (student),"],["[f-blue]W[/f-blue]e would just simply connect to the [f-blue]I[/f-blue]nternet.","[f-bold]All we have to do is connect to the Internet.[/f-bold]","we just con[f-red]n[/f-red]ect [f-red]to the[/f-red] internet ."],["We would be able to receive English education.","we can get english education . [f-blue](I don't think we get English education here,just a supplement to our daily English lessons.)[/f-blue]","[f-red]and [/f-red]we can get [f-red]an [/f-red] English education ."],["We wouldn't need to spend any money.","[f-bold]It is all for free.[/f-bold]","we don[f-red]'[/f-red]t need money."],["I'm currently a university student in Tokyo, Japan.","i[f-red]'[/f-red]m [f-red]a [/f-red]university  student  in [f-red]T[/f-red]okyo[f-red],[/f-red][f-red]J[/f-red]apan."],["My major is Architecture.","[f-bold]I am majoring in architecture.[/f-bold]"],["Currently I am reading a book written by rem koolhaas.","now i [f-red]am [/f-red]read[f-red]ing[/f-red] [content][f-blue](What are you trying to convey here?)[/f-blue] written by [f-red]R[/f-red]em [f-red]K[/f-red]oolhaas."],["[f-blue]I[/f-blue] really respect his theory."]],correctionComments:[[],[null,null,null],[null,null,null],[null,null],[null,null,null],[null,null,null],[null,null,null],[null,null,null],[null,null,null],[null,null,null],[null,null],[null,null],[null,null],[null]],perfectSentences:[[],[null,null,null],[null,null,null],[null,null],[null,null,null],[null,null,null],[null,null,null],[null,null,null],[null,null,null],[null,null,null],[null,null],[null,null],[null,null],[null]],urlForCreateComment:'/journals/create_comment/171707',isLogin:false});sentences='WyJoZWxsbyIsImZyb20gbm93IC4iLCJpIHRyeSB0byB3cml0ZSBibG9nIGluIGVuZ2xpc2guIiwicGxlYXNlIGNoZWNrIG15IGVuZ2xpc2guIiwiYWxzbyBwbGVhc2Ugc2VuZCBlLW1haWwiLCJpbSBhbWF6aW5nIHRoaXMgc2l0ZS4iLCJ0aGlzIHN5c3RlbSBpcyB2ZXJ5IG5pY2UgZm9yIHVzIChzdHVkZW50KSwiLCJ3ZSBqdXN0IGNvbmVjdCAgaW50ZXJuZXQgLiIsIndlIGNhbiBnZXQgZW5nbGlzaCBlZHVjYXRpb24gLiIsIndlIGRvbnQgbmVlZCBtb25leS4iLCJpbSB1bml2ZXJzaXR5ICBzdHVkZW50ICBpbiB0b2t5byBqYXBhbi4iLCJteSBtYWpvciBpcyBhcmNodGVjdHVyZS4iLCJub3cgaSByZWFkIFtjb250ZW50XSB3cml0dGVuIGJ5IHJlbSBrb29saGFhcy4iLCJpIHJlYWxseSByZXNwZWN0IGhpcyB0aGVvcnkuIl0=';corrections='W1tdLFsiRnJvbSBub3cgb253YXJkcywiLCJmcm9tIG5vdyBbc2xpbmVdLlsvc2xpbmVdW2YtYmx1ZV1vblsvZi1ibHVlXSIsImZyb20gbm93IFtmLXJlZF1vbixbL2YtcmVkXSJdLFsiSSB3b3VsZCB0cnkgdG8gd3JpdGUgbXkgYmxvZ3MgaW4gW2YtYmx1ZV1FWy9mLWJsdWVdbmdsaXNoLiIsImkgdHJ5IHRvIFtzbGluZV13cml0ZVsvc2xpbmVdIGJsb2cgaW4gW2YtcmVkXUVbL2YtcmVkXW5nbGlzaC4iLCJpIFtmLXJlZF13aWxsWy9mLXJlZF0gdHJ5IHRvIHdyaXRlIGJsb2dbZi1yZWRdc1svZi1yZWRdIGluIFtmLXJlZF1FWy9mLXJlZF1uZ2xpc2guIl0sWyJbZi1ibHVlXVBbL2YtYmx1ZV1sZWFzZSBjaGVjayBteSBbZi1ibHVlXUVbL2YtYmx1ZV1uZ2xpc2guIiwiW2YtcmVkXVBbL2YtcmVkXWxlYXNlIGNoZWNrIG15IFtmLXJlZF1FWy9mLXJlZF1uZ2xpc2hbc2xpbmVdLlsvc2xpbmVdIl0sWyJQbGVhc2Ugc2VuZCBtZSBhbiBlLW1haWwgdG9vLiIsIltmLWJvbGRdYW5kIGUtbWFpbHMgYXJlIHdlbGNvbWUuWy9mLWJvbGRdIiwiYWxzbyBwbGVhc2Ugc2VuZCBbZi1yZWRdbWVbL2YtcmVkXSBlLW1haWxbZi1yZWRdc1svZi1yZWRdIl0sWyJJJ20gYW1hemluZyBhdCB0aGlzIHNpdGUuIiwiW2YtYm9sZF1JIGZvdW5kIHRoaXMgYW1hemluZyB3ZWJzaXRlLlsvZi1ib2xkXSIsIkknbSBhbWF6W2YtcmVkXWVkIGF0Wy9mLXJlZF0gdGhpcyBzaXRlLiJdLFsiW2YtYmx1ZV1UWy9mLWJsdWVdaGlzIHN5c3RlbSBpcyB2ZXJ5IFtmLWJsdWVdaGVscGZ1bFsvZi1ibHVlXSBmb3IgdXMgKHN0dWRlbnRzKSwiLCJ0aGlzIHN5c3RlbSBpcyB2ZXJ5IFtmLXJlZF1zdWl0YWJsZVsvZi1yZWRdIGZvciB1cyBbZi1yZWRdc3R1ZGVudHNbL2YtcmVkXSwiLCJ0aGlzIHN5c3RlbSBpcyB2ZXJ5IFtzbGluZV1uaWNlIFsvc2xpbmVdIFtmLXJlZF11c2VmdWxbL2YtcmVkXSBmb3IgdXMgKHN0dWRlbnQpLCJdLFsiW2YtYmx1ZV1XWy9mLWJsdWVdZSB3b3VsZCBqdXN0IHNpbXBseSBjb25uZWN0IHRvIHRoZSBbZi1ibHVlXUlbL2YtYmx1ZV1udGVybmV0LiIsIltmLWJvbGRdQWxsIHdlIGhhdmUgdG8gZG8gaXMgY29ubmVjdCB0byB0aGUgSW50ZXJuZXQuWy9mLWJvbGRdIiwid2UganVzdCBjb25bZi1yZWRdblsvZi1yZWRdZWN0IFtmLXJlZF10byB0aGVbL2YtcmVkXSBpbnRlcm5ldCAuIl0sWyJXZSB3b3VsZCBiZSBhYmxlIHRvIHJlY2VpdmUgRW5nbGlzaCBlZHVjYXRpb24uIiwid2UgY2FuIGdldCBlbmdsaXNoIGVkdWNhdGlvbiAuIFtmLWJsdWVdKEkgZG9uJ3QgdGhpbmsgd2UgZ2V0IEVuZ2xpc2ggZWR1Y2F0aW9uIGhlcmUsanVzdCBhIHN1cHBsZW1lbnQgdG8gb3VyIGRhaWx5IEVuZ2xpc2ggbGVzc29ucy4pWy9mLWJsdWVdIiwiW2YtcmVkXWFuZCBbL2YtcmVkXXdlIGNhbiBnZXQgW2YtcmVkXWFuIFsvZi1yZWRdIEVuZ2xpc2ggZWR1Y2F0aW9uIC4iXSxbIldlIHdvdWxkbid0IG5lZWQgdG8gc3BlbmQgYW55IG1vbmV5LiIsIltmLWJvbGRdSXQgaXMgYWxsIGZvciBmcmVlLlsvZi1ib2xkXSIsIndlIGRvbltmLXJlZF0nWy9mLXJlZF10IG5lZWQgbW9uZXkuIl0sWyJJJ20gY3VycmVudGx5IGEgdW5pdmVyc2l0eSBzdHVkZW50IGluIFRva3lvLCBKYXBhbi4iLCJpW2YtcmVkXSdbL2YtcmVkXW0gW2YtcmVkXWEgWy9mLXJlZF11bml2ZXJzaXR5ICBzdHVkZW50ICBpbiBbZi1yZWRdVFsvZi1yZWRdb2t5b1tmLXJlZF0sWy9mLXJlZF1bZi1yZWRdSlsvZi1yZWRdYXBhbi4iXSxbIk15IG1ham9yIGlzIEFyY2hpdGVjdHVyZS4iLCJbZi1ib2xkXUkgYW0gbWFqb3JpbmcgaW4gYXJjaGl0ZWN0dXJlLlsvZi1ib2xkXSJdLFsiQ3VycmVudGx5IEkgYW0gcmVhZGluZyBhIGJvb2sgd3JpdHRlbiBieSByZW0ga29vbGhhYXMuIiwibm93IGkgW2YtcmVkXWFtIFsvZi1yZWRdcmVhZFtmLXJlZF1pbmdbL2YtcmVkXSBbY29udGVudF1bZi1ibHVlXShXaGF0IGFyZSB5b3UgdHJ5aW5nIHRvIGNvbnZleSBoZXJlPylbL2YtYmx1ZV0gd3JpdHRlbiBieSBbZi1yZWRdUlsvZi1yZWRdZW0gW2YtcmVkXUtbL2YtcmVkXW9vbGhhYXMuIl0sWyJbZi1ibHVlXUlbL2YtYmx1ZV0gcmVhbGx5IHJlc3BlY3QgaGlzIHRoZW9yeS4iXV0=';var correction_comments=[[],[null,null,null],[null,null,null],[null,null],[null,null,null],[null,null,null],[null,null,null],[null,null,null],[null,null,null],[null,null,null],[null,null],[null,null],[null,null],[null]];
+//]]></script>
+
+</div>
+<div id='right' style='padding-bottom:0'>
+<div class='mb_20' id='author_box'>
+<div class='cfx'>
+<a href="/57159"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w50_h0/m_57159_908b0fc0ce491b44abfb0077ce940819.jpg"/></a>
+<div class='author_information mb_10 cfx'>
+<a href="/57159" class="user_name">kisouchi</a>
+
+<div class='learning_languages'>
+<ul class='language_status'>
+<li class='speaking' data-title='Native language' rel='tooltip' title='Native language'>Japanese</li>
+<li class='studying' data-title='Language of study' rel='tooltip' title='Language of study'>
+English
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class='bdbox'>
+<table class='entry_status'>
+<tr>
+<td class='l01'>
+<p><a href="/57159/journals">1</a></p>
+<span>Entries Written</span>
+</td>
+<td class='l02'>
+<p><a href="/57159/correction_logs/sent">1</a></p>
+<span>Corrections made</span>
+</td>
+<td class='l03'>
+<p><a href="/57159/correction_logs/received">3</a></p>
+<span>Corrections received</span>
+</td>
+</tr>
+</table>
+</div>
+
+</div>
+
+  
+    <script type="text/javascript">google_ad_client="ca-pub-6717840198266056";google_ad_slot="1415028544";google_ad_width=300;google_ad_height=250;</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+
+  
+
+
+<div class='box'>
+<div id='journals_calendar'>
+<div class='yui-skin-sam'>
+<div id='jour_cal'>
+    <div id="cal1Container"></div>
+    <script type="text/javascript">//<![CDATA[
+(function(){var cal1=null,popupHolder=[],cal_journal_dates={},str_dates='',date_info=[{"journal_date":1244972948,"journal_id":171707}],now_server2local="11/2018",selected_date='',date_info_json=Object.toJSON(date_info),args=getArgsFromHref(location.href);if(args['begin']!=null){var begin_date_a=args['begin'].split('-');var page_date=begin_date_a[1]+'/'+begin_date_a[0];}else if(args['date']!=null){var date_a=args['date'].split('-');var page_date=date_a[1]+'/'+date_a[0];}else{var page_date=now_server2local;}var pathname=location.pathname.split('/');for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(parseInt(date_info[i].journal_date*1000)).toYAHOODateString();if(cal_journal_dates[tmp_date]){cal_journal_dates[tmp_date]=cal_journal_dates[tmp_date]+'/'+date_info[i].journal_id;}else{cal_journal_dates[tmp_date]=date_info[i].journal_id;str_dates=str_dates+','+tmp_date;}}function init(){cal1=new YAHOO.widget.Calendar('cal1','cal1Container',{LOCALE_MONTHS:'short',LOCALE_WEEKDAYS:'1char',pagedate:page_date});cal1.styleCellDefault=function(workingDate,cell){YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_OOB);}
+cal1.renderCellDefault=function(workingDate,cell){cell.innerHTML='<a class="'+cal1.Style.CSS_CELL_SELECTOR+'">'+cal1.buildDayLabel(workingDate)+"</a>";}
+cal1.renderCellHasJournals=function(workingDate,cell){cell.innerHTML='<a href="/'+'57159'+'/journals?date='+workingDate.toStringYYMMDD()+'" class="'+cal1.Style.CSS_CELL_SELECTABLE+'">'+cal1.buildDayLabel(workingDate)+"</a>";YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_SELECTABLE);YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_HIGHLIGHT1);if(workingDate.getDate()==cal1.today.getDate()&&workingDate.getMonth()==cal1.today.getMonth()&&workingDate.getFullYear()==cal1.today.getFullYear()){YAHOO.util.Dom.removeClass(cell,cal1.Style.CSS_CELL_TODAY);}return YAHOO.widget.Calendar.STOP_RENDER;}
+cal1.addRenderer(str_dates,cal1.renderCellHasJournals);cal1.render();}function getArgsFromHref(sHref){var args=sHref.split('?');var retargs={}
+if(args[0]==sHref){return"";}var str=args[1];args=str.split('&');for(var i=0;i<args.length;i++){str=args[i];var arg=str.split('=');if(arg.length<=1)continue;retargs[arg[0]]=arg[1];}return retargs;}YAHOO.util.Event.onAvailable('cal1Container',init);})();
+//]]></script>
+
+</div>
+</div>
+</div>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Journal Statistics</h3>
+</div>
+<div class='cfx' id='studying_status'>
+<table class='table side-bar table_statusstudy'>
+<tr>
+<th>Total</th>
+<th>This month</th>
+<th>This week</th>
+</tr>
+<tr>
+<td>
+<p><a href="/57159/journals">1</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/57159/journals" id="monthCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/57159/journals" id="todayCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<script type="text/javascript">//<![CDATA[
+(function(){var date_info=[{"journal_date":1244972948,"journal_id":171707}],cur_month_counter=0,week_counter=0;var now_date=new Date(),DateMath=YAHOO.widget.DateMath;var now_date_week_begin=DateMath.getFirstDayOfWeek(now_date,0);var now_date_week_end=DateMath.add(now_date_week_begin,'D',6);for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(date_info[i].journal_date*1000);if(tmp_date.getFullYear()==now_date.getFullYear()){if(tmp_date.getMonth()==now_date.getMonth()){cur_month_counter+=1;if(DateMath.getWeekNumber(tmp_date,0)==DateMath.getWeekNumber(now_date,0)){week_counter+=1;}}}}if(week_counter!=0){$('todayCount').update(week_counter);$('todayCount').href=$('todayCount').href+'?begin='+now_date_week_begin.toStringYYMMDD()+'&end='+now_date_week_end.toStringYYMMDD();}else{$('todayCount').href="#";}if(cur_month_counter!=0){$('monthCount').update(cur_month_counter);$('monthCount').href=$('monthCount').href+'?begin='+DateMath.findMonthStart(now_date).toStringYYMMDD()+'&end='+DateMath.findMonthEnd(now_date).toStringYYMMDD();}else{$('monthCount').href="#";}})();
+//]]></script>
+
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest entries</h3>
+</div>
+<table class='table side-bar ar_icobox'>
+<tr>
+<td><a href="http://lang-8.com/57159/journals/171707">hello (3) </a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/57159/journals" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest comments</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<td><a href="http://lang-8.com/57159/journals/171707">Jun 15 </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/57159/journals/171707">Jun 14 </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/57159/journals/171707">Jun 14 Eso</a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/57159/journals/comments" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box cfx' id='d_draft_list'>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Entries by Month</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<th class='year'>2009</th>
+</tr>
+<tr>
+<td>
+ <a href="/57159/journals?begin=2009-6-1&amp;end=2009-06-30">June (1)</a>
+</td>
+</tr>
+</table>
+</div>
+
+<div style='height:20px;background-color:#ffffff'></div>
+<div id='eval_comment_form' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='form_to_edit_note' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='journal_comment_liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='eval_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+</div>
+<div class='yui-skin-sam' id='yui_panels'>
+<div id='wt_panel' style='visibility:hidden;'>
+<div class='hd' id='wt_title'></div>
+<div class='bd' id='wt_content'></div>
+<div class='ft'></div>
+</div>
+</div>
+<div id='modal'></div>
+<div id='confirm_box'>
+<div id='confirm_box_close'>
+<a onclick='hide_confirm_box();'>
+<img src='/static/images2/xico_closebt.png.pagespeed.ic.z-nUma7JBr.png'/>
+</a>
+</div>
+<div id='confirm_box_contents'></div>
+</div>
+</div>
+<div class='modal hide' id='report_spam_entry' tabindex='-1'>
+<div class='modal-header'>
+<btn class='close' data-dismiss='modal' type='button'>x</btn>
+<h4>Report this entry</h4>
+</div>
+<div class='modal-body'>
+<strong class='spaced'>Spam entry</strong>
+<p class='spaced'>from now .
+i try to write blog in english.
+please check my english. 
+also please send e-mail
+
+im amazing this site.this system is very nice for us (student),
+we just conect  internet .we can get english education .
+we dont need money.
+
+
+
+
+im university  student  in tokyo japan.
+my major </p>
+<br/>
+<strong class='spaced'>Author</strong>
+<p class='spaced'>kisouchi</p>
+<br/>
+<strong class='spaced'>Reporter</strong>
+<p class='spaced'>0</p>
+</div>
+<div class='modal-footer'>
+<a class='btn' data-dismiss='modal' href='#'>Close</a>
+<a class="bt_lv1 bt_size_04" href="#" onclick="new Ajax.Request('/spam_reports/report_entry?entry_body=from+now+.%0D%0Ai+try+to+write+blog+in+english.%0D%0Aplease+check+my+english.+%0D%0Aalso+please+send+e-mail%0D%0A%0D%0Aim+amazing+this+site.this+system+is+very+nice+for+us+%28student%29%2C%0D%0Awe+just+conect++internet+.we+can+get+english+education+.%0D%0Awe+dont+need+money.%0D%0A%0D%0A%0D%0A%0D%0A%0D%0Aim+university++student++in+tokyo+japan.%0D%0Amy+major+&amp;reporter_id=0&amp;spammer_id=57159&amp;url=http%3A%2F%2Flang-8.com%2F57159%2Fjournals%2F171707', {asynchronous:true, evalScripts:true, onLoading:function(request){$j('#report_spam_entry').html('&lt;p class=&quot;center&quot;&gt;&lt;br /&gt;&lt;img src=&quot;/static/images2/loading.gif&quot; class=&quot;center spaced vertical-margin&quot; /&gt;&lt;/p&gt;');}, onSuccess:function(request){$j(&quot;#report_spam_entry&quot;).modal(&quot;hide&quot;);$j(&quot;#alert-box&quot;).alerter(&quot;alertSuccess&quot;, &quot;&quot;, &quot;Report sent.&quot; );}, parameters:'authenticity_token=' + encodeURIComponent('H6iKXG+8752nVo6vmYH3D8jBUowaY9yeiO4SORUxqu4=')}); return false;">Send</a>
+</div>
+</div>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show-5f9f69ded18eb0d1a8bef6040b599e7b.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show2-e52e094b14e0c5b5979f64d63309ab8a.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show3-eedb1c964407a61f34a56d6652b21722.js" type="text/javascript"></script>
+<script id="evernote-js" data-cjsexec="true" type="text/cjs" data-cjssrc="http://static.evernote.com/noteit.js"></script>
+<script id="twitter-wjs" data-cjsexec="true" type="text/cjs" data-cjssrc="https://platform.twitter.com/widgets.js"></script>
+<script type='text/javascript'></script>
+<script type='text/javascript'>//<![CDATA[
+jQuery(function($){new Lang8.Views.JournalShowView();});
+//]]></script>
+
+</div>
+</div>
+<div data-search_url='' id='footer'>
+<div class='inner'>
+<div class='box clearfix'>
+<ul class='ft_parts_list f_left'>
+<ul class='ft_parts_list f_left'></ul>
+</ul>
+</div>
+<div class='box02 clearfix'>
+<ul>
+
+</ul>
+<ul>
+<li>
+<p>
+Study
+</p>
+<ul>
+<li><a href="/profiles/search">Member Search</a></li>
+<li><a href="/hotentries">Popular Entries</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+View
+</p>
+<ul>
+<li><a href="/rankings">Rankings</a></li>
+<li>
+<a href="/groups">Groups</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+Help
+</p>
+<ul>
+<li><a href="/help/tumblr" target="_blank">Help</a></li>
+<li><a href="/register/term" target="_blank">Terms of Service</a></li>
+<li><a href="/register/privacy" target="_blank">Privacy Policy</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+About Lang-8
+</p>
+<ul>
+<li><a href="/help/law_1" target="_blank">特定商取引法に基づく表記</a></li>
+<li><a href="/help/donation" target="_blank">Donate</a></li>
+<li><a href="http://lang-8.jp/" target="_blank">Company</a></li>
+<li><a href="http://lang-8.jp/#recruit" target="_blank">Travailler pour Lang-8</a></li>
+<li>
+<a href='mailto:support@lang-8.com'>Contact us</a>
+</li>
+<li>&nbsp;</li>
+</ul>
+</li>
+</ul>
+<ul id='social_web_list'>
+<li class='icon_with twitter'>
+<a class='twitter-follow-button' data-show-count='false' href='https://twitter.com/lang8'>Follow @lang8</a>
+<script defer="defer" src="https://platform.twitter.com/widgets.js" type="text/javascript"></script>
+</li>
+<li class='icon_with facebook'><a href="http://www.facebook.com/lang8" target="_blank">Facebook page</a></li>
+<li class='icon_with rss'><a href="http://blog.lang-8.com" target="_blank">Lang-8 blog</a></li>
+</ul>
+</div>
+<div class='box03 clearfix'>
+<li class='f_left panel_list'>
+<a href='https://mixpanel.com/f/partner' target='_blank'>
+<img alt='Mobile and Web Analytics' src='https://mixpanel.com/site_media/images/partner/badge_light.png'/>
+</a>
+</li>
+<p class='copy f_right'>
+&copy; 2017 Lang-8, Inc. All rights reserved.
+</p>
+</div>
+</div>
+</div>
+
+
+<script type='text/javascript'>//<![CDATA[
+var gaJsHost=(("https:"==document.location.protocol)?"https://ssl.":"http://www.");document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var pageTracker;autoRetry(function(){pageTracker=_gat._getTracker("UA-452011-7");pageTracker._setDomainName("none");pageTracker._setAllowLinker(true);pageTracker._initData();pageTracker._trackPageview("/before/journals/show/171707");},2);
+//]]></script>
+
+
+<script type='text/javascript'>//<![CDATA[
+$j(function(){$j('[rel=tooltip]').tooltip();$j('[rel=popover]').popover();});
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var cjsscript=document.createElement('script');cjsscript.src="/static/javascripts/control_js.js";var cjssib=document.getElementsByTagName('script')[0];cjssib.parentNode.insertBefore(cjsscript,cjssib);
+//]]></script>
+<div id='fb-root'></div>
+<script type='text/javascript'>//<![CDATA[
+(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=138873442911";fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,782 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir='ltr' itemscope='' itemtype='http://schema.org/Blog' xmlns:fb='http://www.facebook.com/2008/fbml' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"transactionName":"Jg4MFRNdCllURU4MXBATDAANQUlGWVgW","queueTime":0,"agent":"","errorBeacon":"bam.nr-data.net","applicationTime":352,"applicationID":"11814779","licenseKey":"240011c68f","beacon":"bam.nr-data.net"}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content='text/css' http-equiv='Content-Style-Type'/>
+<meta content='text/javascript' http-equiv='Content-Script-Type'/>
+<meta content='summary' name='twitter:card'/>
+<meta content='@lang8' name='twitter:site'/>
+<meta content='First one!' property='og:title'/>
+<meta content='blog' property='og:type'/>
+<meta content='http://lang-8.com/97796/journals/297571' property='og:url'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/f57926a8f15e261ea20ae443e12cd37dc88b9e60.jpg' property='og:image'/>
+<meta content="Hi there!&#x000A;&#x000A;First, I have to say that English isn't my maternal language. I'm actually speaking French. I'm on Lang-8 to speak better English :P&#x000A;&#x000A;I know that sometimes I make some odd mistakes, so don't hesitate to correct me! I'm here to learn and to speak English like if it was my maternal langu" property='og:description'/>
+<meta content='Lang-8' property='og:site_name'/>
+<meta content='138873442911' property='fb:app_id'/>
+<meta content='First one!' itemprop='name'/>
+<meta content="Hi there!&#x000A;&#x000A;First, I have to say that English isn't my maternal language. I'm actually speaking French. I'm on Lang-8 to speak better English :P&#x000A;&#x000A;I know that sometimes I make some odd mistakes, so don't hesitate to correct me! I'm here to learn and to speak English like if it was my maternal langu" itemprop='description'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/f57926a8f15e261ea20ae443e12cd37dc88b9e60.jpg' itemprop='image'/>
+
+<title>
+First one! | Lang-8: For learning foreign languages
+</title>
+<link href='/favicon.ico' rel='shortcut icon'/>
+<link href="http://dzhimp63a2tb1.cloudfront.net/assets/static/css/application-1b103989b91cc566c626a5030a5c0c04.css" media="screen" rel="stylesheet" type="text/css"/>
+<script type="text/cjs">
+var h = document.getElementsByTagName('head')[0];
+var link = document.createElement('link');
+link.href = 'https://fonts.googleapis.com/css?family=Telex';
+link.type = 'text/css';
+link.rel = 'stylesheet';
+link.media = 'screen'
+h.appendChild(link);
+</script>
+
+
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/application-462b56e1d78c3fb6374e9b344e47357a.js" type="text/javascript"></script>
+
+<script type='text/javascript'>//<![CDATA[
+var lang="2-2";var sessid="";
+//]]></script>
+
+<meta content='Hi there!    First, I have to say that English isn&amp;#39;t my maternal language. I&amp;#39;m actually speaking ...' name='description'/>
+<meta content='' name='keywords'/>
+
+<meta content='1NyOQgk3_D9-R1XWpjxkGinHxWufQzM-DTGssOLEIvs' name='google-site-verification'/>
+</head>
+<body data-device='pc' id='journals_show'>
+<script type="text/javascript">var langsData=[];langsData.push({key:'cjv',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'ckb',body:'Please correct some sentences or comments on this journal.'});langsData.push({key:'cka',body:'Corrections'});langsData.push({key:'cjz',body:'Comment'});langsData.push({key:'cjt',body:'Post'});langsData.push({key:'cju',body:'Back to correcting'});langsData.push({key:'cjw',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjx',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjy',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'D063',body:'There has been an internal system error.'});langsData.push({key:'chc',body:'Show corrections'});langsData.push({key:'chd',body:'Hide'});langsData.push({key:'xlw',body:'Do you really want to reset the data?'});langsData.push({key:'xlx',body:'You have already started to leave a comment on this journal. Do you want to continue with it?'});langsData.push({key:'xly',body:'Continue'});langsData.push({key:'xlz',body:'No'});langsData.push({key:'cix',body:'Red'});langsData.push({key:'ciy',body:'Blue'});langsData.push({key:'qag',body:'Gray'});langsData.push({key:'ciz',body:'Bold'});langsData.push({key:'cja',body:'Cross out'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjc',body:'Cancel'});langsData.push({key:'cjd',body:'Correct'});langsData.push({key:'cje',body:'Unformat'});langsData.push({key:'rgo',body:'This sentence is perfect! No correction needed!'});langsData.push({key:'xll',body:'This is the original post.'});langsData.push({key:'xlm',body:'To correct, click this button.'});langsData.push({key:'xln',body:'You can use the colored fonts and strikethrough feature to help you with your correction.'});langsData.push({key:'xlo',body:'After correcting, please press this button.'});langsData.push({key:'xlp',body:'Your corrections are displayed here.'});langsData.push({key:'xlq',body:'Press this button to complete the correction.'});langsData.push({key:'xmm',body:'Sending...'});langsData.push({key:'xmn',body:'done'});langsData.push({key:'ycs',body:'Success! A friend request will now be sent to your friend.'});langsData.push({key:'xog',body:'Failed to send the friend request. Please try again in a few minutes.'});langsData.push({key:'cit',body:'Comments on this correction'});langsData.push({key:'cir',body:'Add to /Edit My Notebook'});langsData.push({key:'rfv',body:'Vertical View'});langsData.push({key:'rfw',body:'Normal View'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjp',body:'Cancel'});langsData.push({key:'cjr',body:'Remove correction'});langsData.push({key:'ckc',body:'Description about correction.(You can write in any language.)'});langsData.push({key:'cjk',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'cjl',body:'There are not any comments or corrections.'});langsData.push({key:'cjh',body:'Correct this entry'});langsData.push({key:'cjf',body:'Comment'});langsData.push({key:'cjm',body:'There has been an internal system error. Please try again.'});langsData.push({key:'kbm',body:'Draft Saved'});var l8=l8||{};l8.t=l8.t||{};l8.t=new L8I18n(langsData);</script>
+
+<div class='navbar navbar-fixed-top mb_20' id='header'>
+<div class='navbar-inner'>
+<div class='container'>
+<a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</a>
+<div class='nav-collapse'>
+<ul class='nav' id='dropmenu03'>
+<li class='logoname'>
+<a class='brand' href='/'>
+<img alt="Header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0" id="logo" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0.gif"/>
+</a>
+</li>
+<li class='divider'></li>
+<li class='home'>
+<a href="/" class="a_home" title="Home"><img alt="Ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb.png" title="Home"/>
+</a></li>
+<li class='divider'></li>
+<li class='help'>
+<a href="/help/about" class="help" target="_blank" title="What is Lang-8?"><span>
+What is Lang-8?
+</span>
+</a></li>
+<li class='divider'></li>
+</ul>
+<ul class='nav pull-right' id='dropmenu02'>
+<li class='help'>
+<a href="/register/step1?from=header" class="help"><span>Sign up</span>
+</a></li>
+<li class='divider'></li>
+<li class='help' id='login'>
+<a href="https://lang-8.com/login?from=header" class="help"><span>Log in</span>
+</a></li>
+<li class='divider'></li>
+<li class='language_list'>
+<form action="" class="language_select" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="qE4du0JprhXtVHi+BADO8fonh+69WB5O3+vUPLimBQw="/></div>
+<select id="interface_lang" name="interface_lang" onchange="onChangeInterfaceLang()"><option value="2-2" selected="selected">English</option>
+<option value="2-5">Español</option>
+<option value="2-6">français</option>
+<option value="2-8">Deutsch</option>
+<option value="2-95">Português(Portugal)</option>
+<option value="2-10">Русский</option>
+<option value="2-59">Polski</option>
+<option value="2-78">Hrvatski</option>
+<option value="2-30">العربية</option>
+<option value="2-1">日本語</option>
+<option value="2-3">中文(简体)</option>
+<option value="2-300">中文(繁體)</option>
+<option value="2-4">한국어</option>
+<option value="2-20">ภาษาไทย</option>
+<option value="2-35">Svenska</option>
+<option value="2-47">Tagalog</option>
+<option value="2-65">Bahasa Melayu</option>
+<option value="2-58">Indonesian</option>
+<option value="2-7">Italiano</option></select>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class='alerter container alert fade in navbar-fixed-top' id='alert-top' style='top:60px;display:none;'>
+<a class='close' data-dismiss='alert' href='#'>
+&times;
+</a>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert Message here
+</span>
+</div>
+<div class='alerter alert fade in navbar-fixed-top' id='alert-box' style='left:40%;top:40%;width:200px;display:none;'>
+<div style='text-align:center;'>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert message here
+</span>
+</div>
+</div>
+
+
+
+
+      <div class="center" style="margin-bottom: 10px;">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- PC_Super_Before_Login -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6717840198266056" data-ad-slot="9171779343" data-ad-format="auto"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+
+      </div>
+
+
+
+
+<div id='page_content'>
+<div class='cfx' id='main_container'>
+<ul class="cfx" id="breadcrumbs"><li class="home"><a href="/">Home</a></li><li class=""><a href="/profiles/search">Member</a></li><li class=""><a href="/97796">RedSashimi</a></li><li class=""><a href="/97796/journals">RedSashimi's entries</a></li><li class=""><span>First one!</span></li></ul>
+<div>
+<div data-use_friend_request_popover='data-use_friend_request_popover' id='main'>
+<style type='text/css'>@font-face{font-family:"FontAwesome";src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot);src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot?#iefix) format('eot') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.woff) format('woff') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.ttf) format('truetype') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.svg#FontAwesome) format('svg');font-weight:normal;font-style:normal}</style>
+<div class='cfx' id='entry_detail'>
+<div class='show_report_spam_link cfx' id='entry_title_box'>
+<div class='tit_02'>
+<h1 id='subject_show'>First one!</h1>
+<div class='edit_links'>
+<ul class='cfx'>
+</ul>
+</div>
+</div>
+</div>
+<div class='clear_both'></div>
+<div class='cfx' id='tools_for_journal'>
+<ul class='journal_status floated_on_right'>
+<li class='privacy_level_5' data-original-title='Public' rel='tooltip'>&nbsp;</li>
+<li class='visiters' data-original-title='Views' rel='tooltip' title='Views'>226</li>
+<li class='comment_num' data-original-title='Comments' rel='tooltip' title='Comments'>1</li>
+<li class='corrections_num' data-original-title='Corrections' rel='tooltip' title='Corrections'>1</li>
+<li class='studying' data-original-title='The language that needs to be corrected' rel='tooltip'>English&nbsp;</li>
+</ul>
+<span class='journal_date floated_on_left'>
+Nov 29, 2009 02:03
+</span>
+<script type='text/javascript'>//<![CDATA[
+$j(function(){var journalCounterView=new Lang8.Views.JournalCounterView();});
+//]]></script>
+
+</div>
+<div id='show_buttons'>
+<input class='bt_lv3' data-original-title='Show corrections for sentences when you mouse-over.' id='showAndHide' rel='tooltip' title='' type='button' value='Show'/>
+<input class='bt_lv3' data-original-title='Show all corrections together in a pop-up window.' id='showAll' rel='tooltip' title='' type='button' value='Show All'/>
+</div>
+
+<div class='cfx' id='body_show'>
+<div id='body_show_ori'>
+<font onmouseover='emph_wt(this,"Hi")'>Hi</font> <font onmouseover='emph_wt(this,"there")'>there</font>!<br/><br/><font onmouseover='emph_wt(this,"First")'>First</font>, I <font onmouseover='emph_wt(this,"have")'>have</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"say")'>say</font> <font onmouseover='emph_wt(this,"that")'>that</font> <font onmouseover='emph_wt(this,"English")'>English</font> isn't <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"maternal")'>maternal</font> <font onmouseover='emph_wt(this,"language")'>language</font>. I'm <font onmouseover='emph_wt(this,"actually")'>actually</font> <font onmouseover='emph_wt(this,"speaking")'>speaking</font> <font onmouseover='emph_wt(this,"French")'>French</font>. I'm <font onmouseover='emph_wt(this,"on")'>on</font> Lang-8 <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"speak")'>speak</font> <font onmouseover='emph_wt(this,"better")'>better</font> <font onmouseover='emph_wt(this,"English")'>English</font> :P<br/><br/>I <font onmouseover='emph_wt(this,"know")'>know</font> <font onmouseover='emph_wt(this,"that")'>that</font> <font onmouseover='emph_wt(this,"sometimes")'>sometimes</font> I <font onmouseover='emph_wt(this,"make")'>make</font> <font onmouseover='emph_wt(this,"some")'>some</font> <font onmouseover='emph_wt(this,"odd")'>odd</font> <font onmouseover='emph_wt(this,"mistakes")'>mistakes</font>, <font onmouseover='emph_wt(this,"so")'>so</font> don't <font onmouseover='emph_wt(this,"hesitate")'>hesitate</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"correct")'>correct</font> <font onmouseover='emph_wt(this,"me")'>me</font>! I'm <font onmouseover='emph_wt(this,"here")'>here</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"learn")'>learn</font> <font onmouseover='emph_wt(this,"and")'>and</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"speak")'>speak</font> <font onmouseover='emph_wt(this,"English")'>English</font> <font onmouseover='emph_wt(this,"like")'>like</font> <font onmouseover='emph_wt(this,"if")'>if</font> <font onmouseover='emph_wt(this,"it")'>it</font> <font onmouseover='emph_wt(this,"was")'>was</font> <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"maternal")'>maternal</font> <font onmouseover='emph_wt(this,"language")'>language</font> :) (I <font onmouseover='emph_wt(this,"want")'>want</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"live")'>live</font> <font onmouseover='emph_wt(this,"in")'>in</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"UK")'>UK</font> <font onmouseover='emph_wt(this,"when")'>when</font> I <font onmouseover='emph_wt(this,"grow")'>grow</font> <font onmouseover='emph_wt(this,"up")'>up</font>, <font onmouseover='emph_wt(this,"so")'>so</font> I <font onmouseover='emph_wt(this,"think")'>think</font> it's <font onmouseover='emph_wt(this,"better")'>better</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"speak")'>speak</font> <font onmouseover='emph_wt(this,"English")'>English</font> fluently)<br/><br/><font onmouseover='emph_wt(this,"Just")'>Just</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"know")'>know</font> <font onmouseover='emph_wt(this,"me")'>me</font> <font onmouseover='emph_wt(this,"better")'>better</font> :) <font onmouseover='emph_wt(this,"My")'>My</font> name's <font onmouseover='emph_wt(this,"Yuan")'>Yuan</font> (<font onmouseover='emph_wt(this,"and")'>and</font> <font onmouseover='emph_wt(this,"yes")'>yes</font>, it's a <font onmouseover='emph_wt(this,"Chinese")'>Chinese</font> <font onmouseover='emph_wt(this,"name")'>name</font>, <font onmouseover='emph_wt(this,"but")'>but</font> I don't <font onmouseover='emph_wt(this,"speak")'>speak</font> <font onmouseover='emph_wt(this,"Mandarin")'>Mandarin</font>, <font onmouseover='emph_wt(this,"just")'>just</font> Shanghainese), I'm a <font onmouseover='emph_wt(this,"girl")'>girl</font> (<font onmouseover='emph_wt(this,"for")'>for</font> <font onmouseover='emph_wt(this,"who")'>who</font> didn't <font onmouseover='emph_wt(this,"know")'>know</font>...), I <font onmouseover='emph_wt(this,"just")'>just</font> <font onmouseover='emph_wt(this,"turned")'>turned</font> 15 <font onmouseover='emph_wt(this,"the")'>the</font> 11<font onmouseover='emph_wt(this,"th")'>th</font> <font onmouseover='emph_wt(this,"August")'>August</font> <font onmouseover='emph_wt(this,"and")'>and</font> I <font onmouseover='emph_wt(this,"live")'>live</font> <font onmouseover='emph_wt(this,"somewhere")'>somewhere</font> <font onmouseover='emph_wt(this,"in")'>in</font> <font onmouseover='emph_wt(this,"Belgium")'>Belgium</font>.<br/><br/><font onmouseover='emph_wt(this,"Well")'>Well</font>, I <font onmouseover='emph_wt(this,"think")'>think</font> it's <font onmouseover='emph_wt(this,"all")'>all</font>. <font onmouseover='emph_wt(this,"Hope")'>Hope</font> I haven't <font onmouseover='emph_wt(this,"made")'>made</font> <font onmouseover='emph_wt(this,"too")'>too</font> <font onmouseover='emph_wt(this,"many")'>many</font> <font onmouseover='emph_wt(this,"mistake")'>mistake</font> :P <br/>(<font onmouseover='emph_wt(this,"Notice")'>Notice</font> <font onmouseover='emph_wt(this,"that")'>that</font> I <font onmouseover='emph_wt(this,"have")'>have</font> <font onmouseover='emph_wt(this,"some")'>some</font> <font onmouseover='emph_wt(this,"problems")'>problems</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"differentiate")'>differentiate</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"past")'>past</font> <font onmouseover='emph_wt(this,"simple")'>simple</font> <font onmouseover='emph_wt(this,"and")'>and</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"present")'>present</font> perfect)
+</div>
+<div class='box_like_button cfx' id='async_show_like'></div>
+<div class='ad_journal_center clear_both floated_on_left'>
+  
+    <div class="center" style="margin: 0 0 10px;">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- JournalCenter336_280 -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-6717840198266056" data-ad-slot="1360554540"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+
+    </div>
+  
+
+</div>
+</div>
+</div>
+<div class='little-spaced cfx' data-canonical_url='http://lang-8.com/97796/journals/297571' id='links_for_journal'>
+<span class='horizontal-spaced tw-btn'>
+<a class='twitter-share-button' data-hashtags='lang8' data-related='lang8' data-text='First one!' data-url='http://lang-8.com/97796/journals/297571' data-via='lang8' href='https://twitter.com/share'>Tweet</a>
+</span>
+<span class='horizontal-spaced fb-like' data-action='like' data-colorscheme='light' data-href='http://lang-8.com/97796/journals/297571' data-layout='button_count' data-show-faces='false' data-width='100'></span>
+<span class='horizontal-spaced gplus_btn'>
+<!-- %span.g-plusone{'data-size' => 'medium', :href => "#{@journal.canonical_url}"} -->
+</span>
+<span class='floated_on_left'>
+<span class='st_fblike_hcount' displayText='Facebook Like' st_url='http://lang-8.com/97796/journals/297571'></span>
+<span class='st_facebook_hcount' displayText='Facebook' st_url='http://lang-8.com/97796/journals/297571'></span>
+<span class='st_linkedin_hcount' displayText='LinkedIn' st_url='http://lang-8.com/97796/journals/297571'></span>
+</span>
+<a href='#' onclick="Evernote.doClip({styling:'full',providerName:'Lang-8',suggestTags:'Lang-8',suggestNotebook:'Lang-8',contentId:'entry_container'}); return false;" style='float:right;margin-right:5px;'>
+<img alt='Clip to Evernote' src='/static/images2/xarticle-clipper-fr.png.pagespeed.ic.BAKnLUGqIU.png'/>
+</a>
+</div>
+<div id='comments_and_corrections_field'>
+<div class='fukidashi comment_field' id='journal_comment_1138614'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/62657"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/m_62657_4538d5ed7f9aad3b495d49f6680e5c95.jpg"/></a>
+<a href="/62657" class="user_name">Zoe</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Nov 29, 2009 07:23
+</span>
+</div>
+</div>
+<div class='correction_list corner-rounded_5 little-spaced'>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>First, I have to say that English isn&#39;t my maternal language.</li>
+<li class='corrected correct'>
+<p>First, I have to say that English isn&#39;t my <span class="sline">maternal</span> <span class="f_red">first</span> language.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2674885'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I&#39;m actually speaking French.</li>
+<li class='corrected correct'>
+<p>I<span class="sline">&#39;m actually</span> <span class="f_red">speak</span> French.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2674886'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I&#39;m on Lang-8 to speak better English :P</li>
+<li class='corrected correct'>
+<p>I&#39;m <span class="f_red">using</span> Lang-8 to <span class="sline">speak better</span> <span class="f_red">improve my</span> English :P</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2674887'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I&#39;m here to learn and to speak English like if it was my maternal language :) (I want to live in the UK when I grow up, so I think it&#39;s better to speak English fluently)</li>
+<li class='corrected correct'>
+<p>I&#39;m here to learn and to speak English like if it was my <span class="f_red">first</span> language :) (I want to live in the UK when I grow up, so I think it&#39;s better to speak English fluently)</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2674888'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Just to know me better :) My name&#39;s Yuan (and yes, it&#39;s a Chinese name, but I don&#39;t speak Mandarin, just Shanghainese), I&#39;m a girl (for who didn&#39;t know...), I just turned 15 the 11th August and I live somewhere in Belgium.</li>
+<li class='corrected correct'>
+<p>Just to know me better :) My name&#39;s Yuan (and yes, it&#39;s a Chinese name, but I don&#39;t speak Mandarin, just Shanghainese), I&#39;m a girl (for who didn&#39;t know...), I just turned 15 <span class="f_red">on</span> 11th August and I live somewhere in Belgium.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2674889'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Well, I think it&#39;s all.</li>
+<li class='corrected correct'>
+<p>Well, I think <span class="f_red">that&#39;s it</span>.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2674890'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>(Notice that I have some problems to differentiate the past simple and the present perfect)</li>
+<li class='corrected correct'>
+<p>(Notice that I have some problems <span class="sline">to</span> differentiat<span class="f_red">ing</span> the past simple and the present perfect <span class="f_blue">tense</span>)</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-2674891'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+Wow!  Your English is really good!  You made some small mistakes but it's easy to understand what you're saying.
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-1138614' style='padding-left:5px;'>
+    <div class='gray-font'>
+      <span class="thank_after">Thank you for your correction!</span>
+    </div>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_1138614'>
+
+</div>
+</div>
+</div>
+<div class='fukidashi comment_field' id='journal_comment_1138696'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/97796"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/f57926a8f15e261ea20ae443e12cd37dc88b9e60.jpg"/></a>
+<a href="/97796" class="user_name">RedSashimi</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Nov 29, 2009 08:11
+</span>
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+<font onmouseover='emph_wt(this,"Thanks")'>Thanks</font> <font onmouseover='emph_wt(this,"Zoe")'>Zoe</font>! :)
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-1138696' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_1138696'>
+
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>//<![CDATA[
+var l8=jQuery.extend(l8,{authenticityToken:"qE4du0JprhXtVHi+BADO8fonh+69WB5O3+vUPLimBQw=",showTutorial:false,label:"Description about correction.(You can write in any language.)",explanation:"Add a description or comment here.(Optional)",sentences:'Rmlyc3Qgb25lIQpIaSB0aGVyZSEKRmlyc3QsIEkgaGF2ZSB0byBzYXkgdGhhdCBFbmdsaXNoIGlzbid0IG15IG1hdGVybmFsIGxhbmd1YWdlLgpJJ20gYWN0dWFsbHkgc3BlYWtpbmcgRnJlbmNoLgpJJ20gb24gTGFuZy04IHRvIHNwZWFrIGJldHRlciBFbmdsaXNoIDpQCkkga25vdyB0aGF0IHNvbWV0aW1lcyBJIG1ha2Ugc29tZSBvZGQgbWlzdGFrZXMsIHNvIGRvbid0IGhlc2l0YXRlIHRvIGNvcnJlY3QgbWUhCkknbSBoZXJlIHRvIGxlYXJuIGFuZCB0byBzcGVhayBFbmdsaXNoIGxpa2UgaWYgaXQgd2FzIG15IG1hdGVybmFsIGxhbmd1YWdlIDopIChJIHdhbnQgdG8gbGl2ZSBpbiB0aGUgVUsgd2hlbiBJIGdyb3cgdXAsIHNvIEkgdGhpbmsgaXQncyBiZXR0ZXIgdG8gc3BlYWsgRW5nbGlzaCBmbHVlbnRseSkKSnVzdCB0byBrbm93IG1lIGJldHRlciA6KSBNeSBuYW1lJ3MgWXVhbiAoYW5kIHllcywgaXQncyBhIENoaW5lc2UgbmFtZSwgYnV0IEkgZG9uJ3Qgc3BlYWsgTWFuZGFyaW4sIGp1c3QgU2hhbmdoYWluZXNlKSwgSSdtIGEgZ2lybCAoZm9yIHdobyBkaWRuJ3Qga25vdy4uLiksIEkganVzdCB0dXJuZWQgMTUgdGhlIDExdGggQXVndXN0IGFuZCBJIGxpdmUgc29tZXdoZXJlIGluIEJlbGdpdW0uCldlbGwsIEkgdGhpbmsgaXQncyBhbGwuCkhvcGUgSSBoYXZlbid0IG1hZGUgdG9vIG1hbnkgbWlzdGFrZSA6UCAKKE5vdGljZSB0aGF0IEkgaGF2ZSBzb21lIHByb2JsZW1zIHRvIGRpZmZlcmVudGlhdGUgdGhlIHBhc3Qgc2ltcGxlIGFuZCB0aGUgcHJlc2VudCBwZXJmZWN0KQ==',corrections:[[],[],["First, I have to say that English isn't my [sline]maternal[/sline] [f-red]first[/f-red] language."],["I[sline]'m actually[/sline] [f-red]speak[/f-red] French."],["I'm [f-red]using[/f-red] Lang-8 to [sline]speak better[/sline] [f-red]improve my[/f-red] English :P"],[],["I'm here to learn and to speak English like if it was my [f-red]first[/f-red] language :) (I want to live in the UK when I grow up, so I think it's better to speak English fluently)"],["Just to know me better :) My name's Yuan (and yes, it's a Chinese name, but I don't speak Mandarin, just Shanghainese), I'm a girl (for who didn't know...), I just turned 15 [f-red]on[/f-red] 11th August and I live somewhere in Belgium."],["Well, I think [f-red]that's it[/f-red]."],[],["(Notice that I have some problems [sline]to[/sline] differentiat[f-red]ing[/f-red] the past simple and the present perfect [f-blue]tense[/f-blue])"]],correctionComments:[[],[],[null],[null],[null],[],[null],[null],[null],[],[null]],perfectSentences:[[],[],[null],[null],[null],[],[null],[null],[null],[],[null]],urlForCreateComment:'/journals/create_comment/297571',isLogin:false});sentences='WyJGaXJzdCBvbmUhIiwiSGkgdGhlcmUhIiwiRmlyc3QsIEkgaGF2ZSB0byBzYXkgdGhhdCBFbmdsaXNoIGlzbid0IG15IG1hdGVybmFsIGxhbmd1YWdlLiIsIkknbSBhY3R1YWxseSBzcGVha2luZyBGcmVuY2guIiwiSSdtIG9uIExhbmctOCB0byBzcGVhayBiZXR0ZXIgRW5nbGlzaCA6UCIsIkkga25vdyB0aGF0IHNvbWV0aW1lcyBJIG1ha2Ugc29tZSBvZGQgbWlzdGFrZXMsIHNvIGRvbid0IGhlc2l0YXRlIHRvIGNvcnJlY3QgbWUhIiwiSSdtIGhlcmUgdG8gbGVhcm4gYW5kIHRvIHNwZWFrIEVuZ2xpc2ggbGlrZSBpZiBpdCB3YXMgbXkgbWF0ZXJuYWwgbGFuZ3VhZ2UgOikgKEkgd2FudCB0byBsaXZlIGluIHRoZSBVSyB3aGVuIEkgZ3JvdyB1cCwgc28gSSB0aGluayBpdCdzIGJldHRlciB0byBzcGVhayBFbmdsaXNoIGZsdWVudGx5KSIsIkp1c3QgdG8ga25vdyBtZSBiZXR0ZXIgOikgTXkgbmFtZSdzIFl1YW4gKGFuZCB5ZXMsIGl0J3MgYSBDaGluZXNlIG5hbWUsIGJ1dCBJIGRvbid0IHNwZWFrIE1hbmRhcmluLCBqdXN0IFNoYW5naGFpbmVzZSksIEknbSBhIGdpcmwgKGZvciB3aG8gZGlkbid0IGtub3cuLi4pLCBJIGp1c3QgdHVybmVkIDE1IHRoZSAxMXRoIEF1Z3VzdCBhbmQgSSBsaXZlIHNvbWV3aGVyZSBpbiBCZWxnaXVtLiIsIldlbGwsIEkgdGhpbmsgaXQncyBhbGwuIiwiSG9wZSBJIGhhdmVuJ3QgbWFkZSB0b28gbWFueSBtaXN0YWtlIDpQICIsIihOb3RpY2UgdGhhdCBJIGhhdmUgc29tZSBwcm9ibGVtcyB0byBkaWZmZXJlbnRpYXRlIHRoZSBwYXN0IHNpbXBsZSBhbmQgdGhlIHByZXNlbnQgcGVyZmVjdCkiXQ==';corrections='W1tdLFtdLFsiRmlyc3QsIEkgaGF2ZSB0byBzYXkgdGhhdCBFbmdsaXNoIGlzbid0IG15IFtzbGluZV1tYXRlcm5hbFsvc2xpbmVdIFtmLXJlZF1maXJzdFsvZi1yZWRdIGxhbmd1YWdlLiJdLFsiSVtzbGluZV0nbSBhY3R1YWxseVsvc2xpbmVdIFtmLXJlZF1zcGVha1svZi1yZWRdIEZyZW5jaC4iXSxbIkknbSBbZi1yZWRddXNpbmdbL2YtcmVkXSBMYW5nLTggdG8gW3NsaW5lXXNwZWFrIGJldHRlclsvc2xpbmVdIFtmLXJlZF1pbXByb3ZlIG15Wy9mLXJlZF0gRW5nbGlzaCA6UCJdLFtdLFsiSSdtIGhlcmUgdG8gbGVhcm4gYW5kIHRvIHNwZWFrIEVuZ2xpc2ggbGlrZSBpZiBpdCB3YXMgbXkgW2YtcmVkXWZpcnN0Wy9mLXJlZF0gbGFuZ3VhZ2UgOikgKEkgd2FudCB0byBsaXZlIGluIHRoZSBVSyB3aGVuIEkgZ3JvdyB1cCwgc28gSSB0aGluayBpdCdzIGJldHRlciB0byBzcGVhayBFbmdsaXNoIGZsdWVudGx5KSJdLFsiSnVzdCB0byBrbm93IG1lIGJldHRlciA6KSBNeSBuYW1lJ3MgWXVhbiAoYW5kIHllcywgaXQncyBhIENoaW5lc2UgbmFtZSwgYnV0IEkgZG9uJ3Qgc3BlYWsgTWFuZGFyaW4sIGp1c3QgU2hhbmdoYWluZXNlKSwgSSdtIGEgZ2lybCAoZm9yIHdobyBkaWRuJ3Qga25vdy4uLiksIEkganVzdCB0dXJuZWQgMTUgW2YtcmVkXW9uWy9mLXJlZF0gMTF0aCBBdWd1c3QgYW5kIEkgbGl2ZSBzb21ld2hlcmUgaW4gQmVsZ2l1bS4iXSxbIldlbGwsIEkgdGhpbmsgW2YtcmVkXXRoYXQncyBpdFsvZi1yZWRdLiJdLFtdLFsiKE5vdGljZSB0aGF0IEkgaGF2ZSBzb21lIHByb2JsZW1zIFtzbGluZV10b1svc2xpbmVdIGRpZmZlcmVudGlhdFtmLXJlZF1pbmdbL2YtcmVkXSB0aGUgcGFzdCBzaW1wbGUgYW5kIHRoZSBwcmVzZW50IHBlcmZlY3QgW2YtYmx1ZV10ZW5zZVsvZi1ibHVlXSkiXV0=';var correction_comments=[[],[],[null],[null],[null],[],[null],[null],[null],[],[null]];
+//]]></script>
+
+</div>
+<div id='right' style='padding-bottom:0'>
+<div class='mb_20' id='author_box'>
+<div class='cfx'>
+<a href="/97796"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w50_h0/f57926a8f15e261ea20ae443e12cd37dc88b9e60.jpg"/></a>
+<div class='author_information mb_10 cfx'>
+<a href="/97796" class="user_name">RedSashimi</a>
+
+<div class='learning_languages'>
+<ul class='language_status'>
+<li class='speaking' data-title='Native language' rel='tooltip' title='Native language'>French</li>
+<li class='studying' data-title='Language of study' rel='tooltip' title='Language of study'>
+English, Mandarin
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class='bdbox'>
+<table class='entry_status'>
+<tr>
+<td class='l01'>
+<p><a href="/97796/journals">3</a></p>
+<span>Entries Written</span>
+</td>
+<td class='l02'>
+<p><a href="/97796/correction_logs/sent">1</a></p>
+<span>Corrections made</span>
+</td>
+<td class='l03'>
+<p><a href="/97796/correction_logs/received">3</a></p>
+<span>Corrections received</span>
+</td>
+</tr>
+</table>
+</div>
+
+</div>
+
+  
+    <script type="text/javascript">google_ad_client="ca-pub-6717840198266056";google_ad_slot="1415028544";google_ad_width=300;google_ad_height=250;</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+
+  
+
+
+<div class='box'>
+<div id='journals_calendar'>
+<div class='yui-skin-sam'>
+<div id='jour_cal'>
+    <div id="cal1Container"></div>
+    <script type="text/javascript">//<![CDATA[
+(function(){var cal1=null,popupHolder=[],cal_journal_dates={},str_dates='',date_info=[{"journal_id":"325142766720508098192620072759860333674","journal_date":1418149616},{"journal_id":496696,"journal_date":1274875865},{"journal_id":297571,"journal_date":1259427805}],now_server2local="11/2018",selected_date='',date_info_json=Object.toJSON(date_info),args=getArgsFromHref(location.href);if(args['begin']!=null){var begin_date_a=args['begin'].split('-');var page_date=begin_date_a[1]+'/'+begin_date_a[0];}else if(args['date']!=null){var date_a=args['date'].split('-');var page_date=date_a[1]+'/'+date_a[0];}else{var page_date=now_server2local;}var pathname=location.pathname.split('/');for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(parseInt(date_info[i].journal_date*1000)).toYAHOODateString();if(cal_journal_dates[tmp_date]){cal_journal_dates[tmp_date]=cal_journal_dates[tmp_date]+'/'+date_info[i].journal_id;}else{cal_journal_dates[tmp_date]=date_info[i].journal_id;str_dates=str_dates+','+tmp_date;}}function init(){cal1=new YAHOO.widget.Calendar('cal1','cal1Container',{LOCALE_MONTHS:'short',LOCALE_WEEKDAYS:'1char',pagedate:page_date});cal1.styleCellDefault=function(workingDate,cell){YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_OOB);}
+cal1.renderCellDefault=function(workingDate,cell){cell.innerHTML='<a class="'+cal1.Style.CSS_CELL_SELECTOR+'">'+cal1.buildDayLabel(workingDate)+"</a>";}
+cal1.renderCellHasJournals=function(workingDate,cell){cell.innerHTML='<a href="/'+'97796'+'/journals?date='+workingDate.toStringYYMMDD()+'" class="'+cal1.Style.CSS_CELL_SELECTABLE+'">'+cal1.buildDayLabel(workingDate)+"</a>";YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_SELECTABLE);YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_HIGHLIGHT1);if(workingDate.getDate()==cal1.today.getDate()&&workingDate.getMonth()==cal1.today.getMonth()&&workingDate.getFullYear()==cal1.today.getFullYear()){YAHOO.util.Dom.removeClass(cell,cal1.Style.CSS_CELL_TODAY);}return YAHOO.widget.Calendar.STOP_RENDER;}
+cal1.addRenderer(str_dates,cal1.renderCellHasJournals);cal1.render();}function getArgsFromHref(sHref){var args=sHref.split('?');var retargs={}
+if(args[0]==sHref){return"";}var str=args[1];args=str.split('&');for(var i=0;i<args.length;i++){str=args[i];var arg=str.split('=');if(arg.length<=1)continue;retargs[arg[0]]=arg[1];}return retargs;}YAHOO.util.Event.onAvailable('cal1Container',init);})();
+//]]></script>
+
+</div>
+</div>
+</div>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Journal Statistics</h3>
+</div>
+<div class='cfx' id='studying_status'>
+<table class='table side-bar table_statusstudy'>
+<tr>
+<th>Total</th>
+<th>This month</th>
+<th>This week</th>
+</tr>
+<tr>
+<td>
+<p><a href="/97796/journals">3</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/97796/journals" id="monthCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/97796/journals" id="todayCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<script type="text/javascript">//<![CDATA[
+(function(){var date_info=[{"journal_id":"325142766720508098192620072759860333674","journal_date":1418149616},{"journal_id":496696,"journal_date":1274875865},{"journal_id":297571,"journal_date":1259427805}],cur_month_counter=0,week_counter=0;var now_date=new Date(),DateMath=YAHOO.widget.DateMath;var now_date_week_begin=DateMath.getFirstDayOfWeek(now_date,0);var now_date_week_end=DateMath.add(now_date_week_begin,'D',6);for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(date_info[i].journal_date*1000);if(tmp_date.getFullYear()==now_date.getFullYear()){if(tmp_date.getMonth()==now_date.getMonth()){cur_month_counter+=1;if(DateMath.getWeekNumber(tmp_date,0)==DateMath.getWeekNumber(now_date,0)){week_counter+=1;}}}}if(week_counter!=0){$('todayCount').update(week_counter);$('todayCount').href=$('todayCount').href+'?begin='+now_date_week_begin.toStringYYMMDD()+'&end='+now_date_week_end.toStringYYMMDD();}else{$('todayCount').href="#";}if(cur_month_counter!=0){$('monthCount').update(cur_month_counter);$('monthCount').href=$('monthCount').href+'?begin='+DateMath.findMonthStart(now_date).toStringYYMMDD()+'&end='+DateMath.findMonthEnd(now_date).toStringYYMMDD();}else{$('monthCount').href="#";}})();
+//]]></script>
+
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest entries</h3>
+</div>
+<table class='table side-bar ar_icobox'>
+<tr>
+<td><a href="http://lang-8.com/97796/journals/325142766720508098192620072759860333674">Wow it&#39;s been a while ! (9) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/97796/journals/496696">Nice weather and other stuff (2) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/97796/journals/297571/First-one%2521">First one! (2) </a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/97796/journals" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest comments</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<td><a href="http://lang-8.com/97796/journals/325142766720508098192620072759860333674">Dec 10 tcmvl</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/97796/journals/325142766720508098192620072759860333674">Dec 10 Gibby99</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/97796/journals/496696">May 26 RedSashimi</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/97796/journals/496696">May 26 vaguette</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/97796/journals/297571/First-one%2521">Nov 29 RedSashimi</a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/97796/journals/comments" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box cfx' id='d_draft_list'>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Entries by Month</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<th class='year'>2014</th>
+</tr>
+<tr>
+<td>
+ <a href="/97796/journals?begin=2014-12-1&amp;end=2014-12-31">December (1)</a>
+</td>
+</tr>
+<tr>
+<th class='year'>2010</th>
+</tr>
+<tr>
+<td>
+ <a href="/97796/journals?begin=2010-5-1&amp;end=2010-05-31">May (1)</a>
+</td>
+</tr>
+<tr>
+<th class='year'>2009</th>
+</tr>
+<tr>
+<td>
+ <a href="/97796/journals?begin=2009-11-1&amp;end=2009-11-30">November (1)</a>
+</td>
+</tr>
+</table>
+</div>
+
+<div style='height:20px;background-color:#ffffff'></div>
+<div id='eval_comment_form' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='form_to_edit_note' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='journal_comment_liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='eval_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+</div>
+<div class='yui-skin-sam' id='yui_panels'>
+<div id='wt_panel' style='visibility:hidden;'>
+<div class='hd' id='wt_title'></div>
+<div class='bd' id='wt_content'></div>
+<div class='ft'></div>
+</div>
+</div>
+<div id='modal'></div>
+<div id='confirm_box'>
+<div id='confirm_box_close'>
+<a onclick='hide_confirm_box();'>
+<img src='/static/images2/xico_closebt.png.pagespeed.ic.z-nUma7JBr.png'/>
+</a>
+</div>
+<div id='confirm_box_contents'></div>
+</div>
+</div>
+<div class='modal hide' id='report_spam_entry' tabindex='-1'>
+<div class='modal-header'>
+<btn class='close' data-dismiss='modal' type='button'>x</btn>
+<h4>Report this entry</h4>
+</div>
+<div class='modal-body'>
+<strong class='spaced'>Spam entry</strong>
+<p class='spaced'>Hi there!
+
+First, I have to say that English isn&#39;t my maternal language. I&#39;m actually speaking French. I&#39;m on Lang-8 to speak better English :P
+
+I know that sometimes I make some odd mistakes, so don&#39;t hesitate to correct me! I&#39;m here to learn and to speak English like if it was my maternal langu</p>
+<br/>
+<strong class='spaced'>Author</strong>
+<p class='spaced'>RedSashimi</p>
+<br/>
+<strong class='spaced'>Reporter</strong>
+<p class='spaced'>0</p>
+</div>
+<div class='modal-footer'>
+<a class='btn' data-dismiss='modal' href='#'>Close</a>
+<a class="bt_lv1 bt_size_04" href="#" onclick="new Ajax.Request('/spam_reports/report_entry?entry_body=Hi+there%21%0D%0A%0D%0AFirst%2C+I+have+to+say+that+English+isn%27t+my+maternal+language.+I%27m+actually+speaking+French.+I%27m+on+Lang-8+to+speak+better+English+%3AP%0D%0A%0D%0AI+know+that+sometimes+I+make+some+odd+mistakes%2C+so+don%27t+hesitate+to+correct+me%21+I%27m+here+to+learn+and+to+speak+English+like+if+it+was+my+maternal+langu&amp;reporter_id=0&amp;spammer_id=97796&amp;url=http%3A%2F%2Flang-8.com%2F97796%2Fjournals%2F297571', {asynchronous:true, evalScripts:true, onLoading:function(request){$j('#report_spam_entry').html('&lt;p class=&quot;center&quot;&gt;&lt;br /&gt;&lt;img src=&quot;/static/images2/loading.gif&quot; class=&quot;center spaced vertical-margin&quot; /&gt;&lt;/p&gt;');}, onSuccess:function(request){$j(&quot;#report_spam_entry&quot;).modal(&quot;hide&quot;);$j(&quot;#alert-box&quot;).alerter(&quot;alertSuccess&quot;, &quot;&quot;, &quot;Report sent.&quot; );}, parameters:'authenticity_token=' + encodeURIComponent('qE4du0JprhXtVHi+BADO8fonh+69WB5O3+vUPLimBQw=')}); return false;">Send</a>
+</div>
+</div>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show-5f9f69ded18eb0d1a8bef6040b599e7b.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show2-e52e094b14e0c5b5979f64d63309ab8a.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show3-eedb1c964407a61f34a56d6652b21722.js" type="text/javascript"></script>
+<script id="evernote-js" data-cjsexec="true" type="text/cjs" data-cjssrc="http://static.evernote.com/noteit.js"></script>
+<script id="twitter-wjs" data-cjsexec="true" type="text/cjs" data-cjssrc="https://platform.twitter.com/widgets.js"></script>
+<script type='text/javascript'></script>
+<script type='text/javascript'>//<![CDATA[
+jQuery(function($){new Lang8.Views.JournalShowView();});
+//]]></script>
+
+</div>
+</div>
+<div data-search_url='' id='footer'>
+<div class='inner'>
+<div class='box clearfix'>
+<ul class='ft_parts_list f_left'>
+<ul class='ft_parts_list f_left'></ul>
+</ul>
+</div>
+<div class='box02 clearfix'>
+<ul>
+
+</ul>
+<ul>
+<li>
+<p>
+Study
+</p>
+<ul>
+<li><a href="/profiles/search">Member Search</a></li>
+<li><a href="/hotentries">Popular Entries</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+View
+</p>
+<ul>
+<li><a href="/rankings">Rankings</a></li>
+<li>
+<a href="/groups">Groups</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+Help
+</p>
+<ul>
+<li><a href="/help/tumblr" target="_blank">Help</a></li>
+<li><a href="/register/term" target="_blank">Terms of Service</a></li>
+<li><a href="/register/privacy" target="_blank">Privacy Policy</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+About Lang-8
+</p>
+<ul>
+<li><a href="/help/law_1" target="_blank">特定商取引法に基づく表記</a></li>
+<li><a href="/help/donation" target="_blank">Donate</a></li>
+<li><a href="http://lang-8.jp/" target="_blank">Company</a></li>
+<li><a href="http://lang-8.jp/#recruit" target="_blank">Travailler pour Lang-8</a></li>
+<li>
+<a href='mailto:support@lang-8.com'>Contact us</a>
+</li>
+<li>&nbsp;</li>
+</ul>
+</li>
+</ul>
+<ul id='social_web_list'>
+<li class='icon_with twitter'>
+<a class='twitter-follow-button' data-show-count='false' href='https://twitter.com/lang8'>Follow @lang8</a>
+<script defer="defer" src="https://platform.twitter.com/widgets.js" type="text/javascript"></script>
+</li>
+<li class='icon_with facebook'><a href="http://www.facebook.com/lang8" target="_blank">Facebook page</a></li>
+<li class='icon_with rss'><a href="http://blog.lang-8.com" target="_blank">Lang-8 blog</a></li>
+</ul>
+</div>
+<div class='box03 clearfix'>
+<li class='f_left panel_list'>
+<a href='https://mixpanel.com/f/partner' target='_blank'>
+<img alt='Mobile and Web Analytics' src='https://mixpanel.com/site_media/images/partner/badge_light.png'/>
+</a>
+</li>
+<p class='copy f_right'>
+&copy; 2017 Lang-8, Inc. All rights reserved.
+</p>
+</div>
+</div>
+</div>
+
+
+<script type='text/javascript'>//<![CDATA[
+var gaJsHost=(("https:"==document.location.protocol)?"https://ssl.":"http://www.");document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var pageTracker;autoRetry(function(){pageTracker=_gat._getTracker("UA-452011-7");pageTracker._setDomainName("none");pageTracker._setAllowLinker(true);pageTracker._initData();pageTracker._trackPageview("/before/journals/show/297571");},2);
+//]]></script>
+
+
+<script type='text/javascript'>//<![CDATA[
+$j(function(){$j('[rel=tooltip]').tooltip();$j('[rel=popover]').popover();});
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var cjsscript=document.createElement('script');cjsscript.src="/static/javascripts/control_js.js";var cjssib=document.getElementsByTagName('script')[0];cjssib.parentNode.insertBefore(cjsscript,cjssib);
+//]]></script>
+<div id='fb-root'></div>
+<script type='text/javascript'>//<![CDATA[
+(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=138873442911";fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));
+//]]></script>
+</body>
+</html>

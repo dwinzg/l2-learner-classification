@@ -1,0 +1,901 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir='ltr' itemscope='' itemtype='http://schema.org/Blog' xmlns:fb='http://www.facebook.com/2008/fbml' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationTime":602,"transactionName":"Jg4MFRNdCllURU4MXBATDAANQUlGWVgW","errorBeacon":"bam.nr-data.net","licenseKey":"240011c68f","applicationID":"11814779","agent":"","queueTime":0,"beacon":"bam.nr-data.net"}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content='text/css' http-equiv='Content-Style-Type'/>
+<meta content='text/javascript' http-equiv='Content-Script-Type'/>
+<meta content='summary' name='twitter:card'/>
+<meta content='@lang8' name='twitter:site'/>
+<meta content='My University.)' property='og:title'/>
+<meta content='blog' property='og:type'/>
+<meta content='http://lang-8.com/209494/journals/700941' property='og:url'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/5031f33257cbc10f4ac758bf87bb381f8dd555d3.jpg' property='og:image'/>
+<meta content="Hi.))I'm Margaret.And I'm learning English at the university not so long.Could you,please, check my composition.)=)&#x000A;&#x000A;My University.)&#x000A;&#x000A;I am currently a student at the Moscow Teacher Training University,completing a degree of the teacher.Our university is still young.At first my university was boar" property='og:description'/>
+<meta content='Lang-8' property='og:site_name'/>
+<meta content='138873442911' property='fb:app_id'/>
+<meta content='My University.)' itemprop='name'/>
+<meta content="Hi.))I'm Margaret.And I'm learning English at the university not so long.Could you,please, check my composition.)=)&#x000A;&#x000A;My University.)&#x000A;&#x000A;I am currently a student at the Moscow Teacher Training University,completing a degree of the teacher.Our university is still young.At first my university was boar" itemprop='description'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/5031f33257cbc10f4ac758bf87bb381f8dd555d3.jpg' itemprop='image'/>
+
+<title>
+My University.) | Lang-8: For learning foreign languages
+</title>
+<link href='/favicon.ico' rel='shortcut icon'/>
+<link href="http://dzhimp63a2tb1.cloudfront.net/assets/static/css/application-1b103989b91cc566c626a5030a5c0c04.css" media="screen" rel="stylesheet" type="text/css"/>
+<script type="text/cjs">
+var h = document.getElementsByTagName('head')[0];
+var link = document.createElement('link');
+link.href = 'https://fonts.googleapis.com/css?family=Telex';
+link.type = 'text/css';
+link.rel = 'stylesheet';
+link.media = 'screen'
+h.appendChild(link);
+</script>
+
+
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/application-462b56e1d78c3fb6374e9b344e47357a.js" type="text/javascript"></script>
+
+<script type='text/javascript'>//<![CDATA[
+var lang="2-2";var sessid="";
+//]]></script>
+
+<meta content='Hi.))I&amp;#39;m Margaret.And I&amp;#39;m learning English at the university not so long.Could you,please, check ...' name='description'/>
+<meta content='' name='keywords'/>
+
+<meta content='1NyOQgk3_D9-R1XWpjxkGinHxWufQzM-DTGssOLEIvs' name='google-site-verification'/>
+</head>
+<body data-device='pc' id='journals_show'>
+<script type="text/javascript">var langsData=[];langsData.push({key:'cjv',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'ckb',body:'Please correct some sentences or comments on this journal.'});langsData.push({key:'cka',body:'Corrections'});langsData.push({key:'cjz',body:'Comment'});langsData.push({key:'cjt',body:'Post'});langsData.push({key:'cju',body:'Back to correcting'});langsData.push({key:'cjw',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjx',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjy',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'D063',body:'There has been an internal system error.'});langsData.push({key:'chc',body:'Show corrections'});langsData.push({key:'chd',body:'Hide'});langsData.push({key:'xlw',body:'Do you really want to reset the data?'});langsData.push({key:'xlx',body:'You have already started to leave a comment on this journal. Do you want to continue with it?'});langsData.push({key:'xly',body:'Continue'});langsData.push({key:'xlz',body:'No'});langsData.push({key:'cix',body:'Red'});langsData.push({key:'ciy',body:'Blue'});langsData.push({key:'qag',body:'Gray'});langsData.push({key:'ciz',body:'Bold'});langsData.push({key:'cja',body:'Cross out'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjc',body:'Cancel'});langsData.push({key:'cjd',body:'Correct'});langsData.push({key:'cje',body:'Unformat'});langsData.push({key:'rgo',body:'This sentence is perfect! No correction needed!'});langsData.push({key:'xll',body:'This is the original post.'});langsData.push({key:'xlm',body:'To correct, click this button.'});langsData.push({key:'xln',body:'You can use the colored fonts and strikethrough feature to help you with your correction.'});langsData.push({key:'xlo',body:'After correcting, please press this button.'});langsData.push({key:'xlp',body:'Your corrections are displayed here.'});langsData.push({key:'xlq',body:'Press this button to complete the correction.'});langsData.push({key:'xmm',body:'Sending...'});langsData.push({key:'xmn',body:'done'});langsData.push({key:'ycs',body:'Success! A friend request will now be sent to your friend.'});langsData.push({key:'xog',body:'Failed to send the friend request. Please try again in a few minutes.'});langsData.push({key:'cit',body:'Comments on this correction'});langsData.push({key:'cir',body:'Add to /Edit My Notebook'});langsData.push({key:'rfv',body:'Vertical View'});langsData.push({key:'rfw',body:'Normal View'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjp',body:'Cancel'});langsData.push({key:'cjr',body:'Remove correction'});langsData.push({key:'ckc',body:'Description about correction.(You can write in any language.)'});langsData.push({key:'cjk',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'cjl',body:'There are not any comments or corrections.'});langsData.push({key:'cjh',body:'Correct this entry'});langsData.push({key:'cjf',body:'Comment'});langsData.push({key:'cjm',body:'There has been an internal system error. Please try again.'});langsData.push({key:'kbm',body:'Draft Saved'});var l8=l8||{};l8.t=l8.t||{};l8.t=new L8I18n(langsData);</script>
+
+<div class='navbar navbar-fixed-top mb_20' id='header'>
+<div class='navbar-inner'>
+<div class='container'>
+<a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</a>
+<div class='nav-collapse'>
+<ul class='nav' id='dropmenu03'>
+<li class='logoname'>
+<a class='brand' href='/'>
+<img alt="Header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0" id="logo" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0.gif"/>
+</a>
+</li>
+<li class='divider'></li>
+<li class='home'>
+<a href="/" class="a_home" title="Home"><img alt="Ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb.png" title="Home"/>
+</a></li>
+<li class='divider'></li>
+<li class='help'>
+<a href="/help/about" class="help" target="_blank" title="What is Lang-8?"><span>
+What is Lang-8?
+</span>
+</a></li>
+<li class='divider'></li>
+</ul>
+<ul class='nav pull-right' id='dropmenu02'>
+<li class='help'>
+<a href="/register/step1?from=header" class="help"><span>Sign up</span>
+</a></li>
+<li class='divider'></li>
+<li class='help' id='login'>
+<a href="https://lang-8.com/login?from=header" class="help"><span>Log in</span>
+</a></li>
+<li class='divider'></li>
+<li class='language_list'>
+<form action="" class="language_select" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="jezcH+WnoGabFhXVmsWGZc4HkPjxT6KY6CGxNqY+uzY="/></div>
+<select id="interface_lang" name="interface_lang" onchange="onChangeInterfaceLang()"><option value="2-2" selected="selected">English</option>
+<option value="2-5">Español</option>
+<option value="2-6">français</option>
+<option value="2-8">Deutsch</option>
+<option value="2-95">Português(Portugal)</option>
+<option value="2-10">Русский</option>
+<option value="2-59">Polski</option>
+<option value="2-78">Hrvatski</option>
+<option value="2-30">العربية</option>
+<option value="2-1">日本語</option>
+<option value="2-3">中文(简体)</option>
+<option value="2-300">中文(繁體)</option>
+<option value="2-4">한국어</option>
+<option value="2-20">ภาษาไทย</option>
+<option value="2-35">Svenska</option>
+<option value="2-47">Tagalog</option>
+<option value="2-65">Bahasa Melayu</option>
+<option value="2-58">Indonesian</option>
+<option value="2-7">Italiano</option></select>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class='alerter container alert fade in navbar-fixed-top' id='alert-top' style='top:60px;display:none;'>
+<a class='close' data-dismiss='alert' href='#'>
+&times;
+</a>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert Message here
+</span>
+</div>
+<div class='alerter alert fade in navbar-fixed-top' id='alert-box' style='left:40%;top:40%;width:200px;display:none;'>
+<div style='text-align:center;'>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert message here
+</span>
+</div>
+</div>
+
+
+
+
+      <div class="center" style="margin-bottom: 10px;">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- PC_Super_Before_Login -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6717840198266056" data-ad-slot="9171779343" data-ad-format="auto"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+
+      </div>
+
+
+
+
+<div id='page_content'>
+<div class='cfx' id='main_container'>
+<ul class="cfx" id="breadcrumbs"><li class="home"><a href="/">Home</a></li><li class=""><a href="/profiles/search">Member</a></li><li class=""><a href="/209494">Margarita</a></li><li class=""><a href="/209494/journals">Margarita's entries</a></li><li class=""><span>My University.)</span></li></ul>
+<div>
+<div data-use_friend_request_popover='data-use_friend_request_popover' id='main'>
+<style type='text/css'>@font-face{font-family:"FontAwesome";src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot);src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot?#iefix) format('eot') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.woff) format('woff') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.ttf) format('truetype') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.svg#FontAwesome) format('svg');font-weight:normal;font-style:normal}</style>
+<div class='cfx' id='entry_detail'>
+<div class='show_report_spam_link cfx' id='entry_title_box'>
+<div class='tit_02'>
+<h1 id='subject_show'>My University.)</h1>
+<div class='edit_links'>
+<ul class='cfx'>
+</ul>
+</div>
+</div>
+</div>
+<div class='clear_both'></div>
+<div class='cfx' id='tools_for_journal'>
+<ul class='journal_status floated_on_right'>
+<li class='privacy_level_5' data-original-title='Public' rel='tooltip'>&nbsp;</li>
+<li class='visiters' data-original-title='Views' rel='tooltip' title='Views'>155</li>
+<li class='comment_num' data-original-title='Comments' rel='tooltip' title='Comments'>1</li>
+<li class='corrections_num' data-original-title='Corrections' rel='tooltip' title='Corrections'>1</li>
+<li class='studying' data-original-title='The language that needs to be corrected' rel='tooltip'>English&nbsp;</li>
+</ul>
+<span class='journal_date floated_on_left'>
+Nov 21, 2010 07:15
+</span>
+<script type='text/javascript'>//<![CDATA[
+$j(function(){var journalCounterView=new Lang8.Views.JournalCounterView();});
+//]]></script>
+
+</div>
+<div id='show_buttons'>
+<input class='bt_lv3' data-original-title='Show corrections for sentences when you mouse-over.' id='showAndHide' rel='tooltip' title='' type='button' value='Show'/>
+<input class='bt_lv3' data-original-title='Show all corrections together in a pop-up window.' id='showAll' rel='tooltip' title='' type='button' value='Show All'/>
+</div>
+
+<div class='cfx' id='body_show'>
+<div id='body_show_ori'>
+<font onmouseover='emph_wt(this,"Hi")'>Hi</font>.))I'm <font onmouseover='emph_wt(this,"Margaret")'>Margaret</font>.<font onmouseover='emph_wt(this,"And")'>And</font> I'm <font onmouseover='emph_wt(this,"learning")'>learning</font> <font onmouseover='emph_wt(this,"English")'>English</font> <font onmouseover='emph_wt(this,"at")'>at</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"university")'>university</font> <font onmouseover='emph_wt(this,"not")'>not</font> <font onmouseover='emph_wt(this,"so")'>so</font> <font onmouseover='emph_wt(this,"long")'>long</font>.<font onmouseover='emph_wt(this,"Could")'>Could</font> <font onmouseover='emph_wt(this,"you")'>you</font>,please, <font onmouseover='emph_wt(this,"check")'>check</font> <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"composition")'>composition</font>.)=)<br/><br/><font onmouseover='emph_wt(this,"My")'>My</font> <font onmouseover='emph_wt(this,"University")'>University</font>.)<br/><br/>I <font onmouseover='emph_wt(this,"am")'>am</font> <font onmouseover='emph_wt(this,"currently")'>currently</font> a <font onmouseover='emph_wt(this,"student")'>student</font> <font onmouseover='emph_wt(this,"at")'>at</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"Moscow")'>Moscow</font> <font onmouseover='emph_wt(this,"Teacher")'>Teacher</font> <font onmouseover='emph_wt(this,"Training")'>Training</font> <font onmouseover='emph_wt(this,"University")'>University</font>,<font onmouseover='emph_wt(this,"completing")'>completing</font> a <font onmouseover='emph_wt(this,"degree")'>degree</font> <font onmouseover='emph_wt(this,"of")'>of</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"teacher")'>teacher</font>.<font onmouseover='emph_wt(this,"Our")'>Our</font> <font onmouseover='emph_wt(this,"university")'>university</font> <font onmouseover='emph_wt(this,"is")'>is</font> <font onmouseover='emph_wt(this,"still")'>still</font> <font onmouseover='emph_wt(this,"young")'>young</font>.<font onmouseover='emph_wt(this,"At")'>At</font> <font onmouseover='emph_wt(this,"first")'>first</font> <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"university")'>university</font> <font onmouseover='emph_wt(this,"was")'>was</font> boarding-<font onmouseover='emph_wt(this,"house")'>house</font> <font onmouseover='emph_wt(this,"for")'>for</font> <font onmouseover='emph_wt(this,"girls")'>girls</font>.(<font onmouseover='emph_wt(this,"It")'>It</font> <font onmouseover='emph_wt(this,"was")'>was</font> <font onmouseover='emph_wt(this,"in")'>in</font> <font onmouseover='emph_wt(this,"it")'>it</font> <font onmouseover='emph_wt(this,"in")'>in</font> 1874).<font onmouseover='emph_wt(this,"Every")'>Every</font> <font onmouseover='emph_wt(this,"Saturday")'>Saturday</font> <font onmouseover='emph_wt(this,"were")'>were</font> <font onmouseover='emph_wt(this,"spent")'>spent</font> <font onmouseover='emph_wt(this,"balls")'>balls</font>.<font onmouseover='emph_wt(this,"There")'>There</font> <font onmouseover='emph_wt(this,"was")'>was</font> M.J.<font onmouseover='emph_wt(this,"Lermontov")'>Lermontov</font> <font onmouseover='emph_wt(this,"on")'>on</font> <font onmouseover='emph_wt(this,"them")'>them</font>.<font onmouseover='emph_wt(this,"This")'>This</font> <font onmouseover='emph_wt(this,"year")'>year</font> <font onmouseover='emph_wt(this,"at")'>at</font> <font onmouseover='emph_wt(this,"our")'>our</font> <font onmouseover='emph_wt(this,"university")'>university</font> <font onmouseover='emph_wt(this,"was")'>was</font> <font onmouseover='emph_wt(this,"put")'>put</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"Birthday")'>Birthday</font>.<font onmouseover='emph_wt(this,"My")'>My</font> <font onmouseover='emph_wt(this,"University")'>University</font> <font onmouseover='emph_wt(this,"was")'>was</font> <font onmouseover='emph_wt(this,"exeluted")'>exeluted</font> 10 <font onmouseover='emph_wt(this,"years")'>years</font>.<font onmouseover='emph_wt(this,"Then")'>Then</font> a <font onmouseover='emph_wt(this,"college")'>college</font> <font onmouseover='emph_wt(this,"in")'>in</font> <font onmouseover='emph_wt(this,"this")'>this</font> <font onmouseover='emph_wt(this,"place")'>place</font> <font onmouseover='emph_wt(this,"has")'>has</font> <font onmouseover='emph_wt(this,"built")'>built</font>. <font onmouseover='emph_wt(this,"For")'>For</font> 2000 <font onmouseover='emph_wt(this,"years")'>years</font> <font onmouseover='emph_wt(this,"is")'>is</font> <font onmouseover='emph_wt(this,"already")'>already</font> <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"university")'>university</font>.<font onmouseover='emph_wt(this,"The")'>The</font> <font onmouseover='emph_wt(this,"University")'>University</font> <font onmouseover='emph_wt(this,"comprises")'>comprises</font> 11 Faculties:<br/>- Philology;<br/>-Romance-<font onmouseover='emph_wt(this,"Germanie")'>Germanie</font> Philology;<br/>-<font onmouseover='emph_wt(this,"English")'>English</font> Philology;<br/>-<font onmouseover='emph_wt(this,"Pedagogie")'>Pedagogie</font> <font onmouseover='emph_wt(this,"and")'>and</font> <font onmouseover='emph_wt(this,"Preschool")'>Preschool</font> <font onmouseover='emph_wt(this,"education")'>education</font> Technigue;<br/>-<font onmouseover='emph_wt(this,"Pedagogie")'>Pedagogie</font> <font onmouseover='emph_wt(this,"and")'>and</font> <font onmouseover='emph_wt(this,"Elementery")'>Elementery</font> Technigue;<br/>-<font onmouseover='emph_wt(this,"Welfare")'>Welfare</font> activity;<br/>-<font onmouseover='emph_wt(this,"Information")'>Information</font> Technology;<br/>-Managment;<br/>-<font onmouseover='emph_wt(this,"Additional")'>Additional</font> education;<br/>-<font onmouseover='emph_wt(this,"Social")'>Social</font> pedagogies;<br/>-<font onmouseover='emph_wt(this,"Social")'>Social</font> work;<br/>I <font onmouseover='emph_wt(this,"am")'>am</font> <font onmouseover='emph_wt(this,"studing")'>studing</font> <font onmouseover='emph_wt(this,"at")'>at</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"Faculty")'>Faculty</font> <font onmouseover='emph_wt(this,"of")'>of</font> Romance-<font onmouseover='emph_wt(this,"Germanie")'>Germanie</font> <font onmouseover='emph_wt(this,"Philology")'>Philology</font>.<font onmouseover='emph_wt(this,"Ilike")'>Ilike</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"study")'>study</font> <font onmouseover='emph_wt(this,"here")'>here</font>.<font onmouseover='emph_wt(this,"At")'>At</font> <font onmouseover='emph_wt(this,"this")'>this</font> <font onmouseover='emph_wt(this,"faculty")'>faculty</font> <font onmouseover='emph_wt(this,"work")'>work</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"qualified")'>qualified</font> <font onmouseover='emph_wt(this,"theachers")'>theachers</font>.<font onmouseover='emph_wt(this,"They")'>They</font> <font onmouseover='emph_wt(this,"know")'>know</font> <font onmouseover='emph_wt(this,"very")'>very</font> <font onmouseover='emph_wt(this,"well")'>well</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"subject")'>subject</font>.I <font onmouseover='emph_wt(this,"am")'>am</font> <font onmouseover='emph_wt(this,"studing")'>studing</font> <font onmouseover='emph_wt(this,"in")'>in</font> <font onmouseover='emph_wt(this,"group")'>group</font> <font onmouseover='emph_wt(this,"of")'>of</font> 10 <font onmouseover='emph_wt(this,"persons")'>persons</font>.<font onmouseover='emph_wt(this,"This")'>This</font> <font onmouseover='emph_wt(this,"year")'>year</font> <font onmouseover='emph_wt(this,"have")'>have</font> <font onmouseover='emph_wt(this,"we")'>we</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"student")'>student</font> <font onmouseover='emph_wt(this,"practise")'>practise</font>.<font onmouseover='emph_wt(this,"Every")'>Every</font> <font onmouseover='emph_wt(this,"Friday")'>Friday</font> I <font onmouseover='emph_wt(this,"am")'>am</font> <font onmouseover='emph_wt(this,"going")'>going</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"school")'>school</font>.<font onmouseover='emph_wt(this,"The")'>The</font> <font onmouseover='emph_wt(this,"Children")'>Children</font> <font onmouseover='emph_wt(this,"are")'>are</font> <font onmouseover='emph_wt(this,"very")'>very</font> <font onmouseover='emph_wt(this,"clever")'>clever</font>,<font onmouseover='emph_wt(this,"cheerful")'>cheerful</font> <font onmouseover='emph_wt(this,"and")'>and</font> <font onmouseover='emph_wt(this,"sociable")'>sociable</font>.I <font onmouseover='emph_wt(this,"am")'>am</font> <font onmouseover='emph_wt(this,"working")'>working</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"like")'>like</font> <font onmouseover='emph_wt(this,"very")'>very</font> <font onmouseover='emph_wt(this,"much")'>much</font> <font onmouseover='emph_wt(this,"with")'>with</font> <font onmouseover='emph_wt(this,"children")'>children</font>.I <font onmouseover='emph_wt(this,"think")'>think</font> <font onmouseover='emph_wt(this,"that")'>that</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"children")'>children</font>  <font onmouseover='emph_wt(this,"are")'>are</font> &quot;<font onmouseover='emph_wt(this,"flowers")'>flowers</font> <font onmouseover='emph_wt(this,"the")'>the</font> life&quot;.<font onmouseover='emph_wt(this,"What")'>What</font> <font onmouseover='emph_wt(this,"language")'>language</font> I <font onmouseover='emph_wt(this,"am")'>am</font> <font onmouseover='emph_wt(this,"learning")'>learning</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"like")'>like</font> <font onmouseover='emph_wt(this,"at")'>at</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"university")'>university</font>?<br/>I <font onmouseover='emph_wt(this,"think")'>think</font> <font onmouseover='emph_wt(this,"that")'>that</font> <font onmouseover='emph_wt(this,"each")'>each</font> <font onmouseover='emph_wt(this,"languages")'>languages</font> <font onmouseover='emph_wt(this,"are")'>are</font> fine(<font onmouseover='emph_wt(this,"on")'>on</font> the).<font onmouseover='emph_wt(this,"But")'>But</font> <font onmouseover='emph_wt(this,"English")'>English</font> <font onmouseover='emph_wt(this,"has")'>has</font> <font onmouseover='emph_wt(this,"bigger")'>bigger</font> <font onmouseover='emph_wt(this,"advantage")'>advantage</font> <font onmouseover='emph_wt(this,"than")'>than</font> <font onmouseover='emph_wt(this,"German")'>German</font>. <font onmouseover='emph_wt(this,"In")'>In</font> <font onmouseover='emph_wt(this,"our")'>our</font> <font onmouseover='emph_wt(this,"university")'>university</font>  <font onmouseover='emph_wt(this,"begins")'>begins</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"lectures")'>lectures</font> <font onmouseover='emph_wt(this,"at")'>at</font> 9 o'clock.I <font onmouseover='emph_wt(this,"have")'>have</font> <font onmouseover='emph_wt(this,"from")'>from</font> 1 <font onmouseover='emph_wt(this,"to")'>to</font> 5 <font onmouseover='emph_wt(this,"lectures")'>lectures</font> <font onmouseover='emph_wt(this,"every")'>every</font> <font onmouseover='emph_wt(this,"time")'>time</font>,<font onmouseover='emph_wt(this,"depending")'>depending</font> <font onmouseover='emph_wt(this,"on")'>on</font> <font onmouseover='emph_wt(this,"day")'>day</font>.<font onmouseover='emph_wt(this,"At")'>At</font> <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"university")'>university</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"student")'>student</font> <font onmouseover='emph_wt(this,"stage")'>stage</font> . <font onmouseover='emph_wt(this,"The")'>The</font> <font onmouseover='emph_wt(this,"play")'>play</font> <font onmouseover='emph_wt(this,"also")'>also</font> <font onmouseover='emph_wt(this,"bring")'>bring</font> <font onmouseover='emph_wt(this,"on")'>on</font> <font onmouseover='emph_wt(this,"foreign")'>foreign</font> <font onmouseover='emph_wt(this,"languages")'>languages</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"performance")'>performance</font>. <font onmouseover='emph_wt(this,"Our")'>Our</font> <font onmouseover='emph_wt(this,"group")'>group</font> <font onmouseover='emph_wt(this,"take")'>take</font> <font onmouseover='emph_wt(this,"in")'>in</font> <font onmouseover='emph_wt(this,"her")'>her</font>.<font onmouseover='emph_wt(this,"It")'>It</font> <font onmouseover='emph_wt(this,"goes")'>goes</font> <font onmouseover='emph_wt(this,"without")'>without</font> <font onmouseover='emph_wt(this,"saying")'>saying</font>.<font onmouseover='emph_wt(this,"To")'>To</font> <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"mind")'>mind</font> <font onmouseover='emph_wt(this,"study")'>study</font> <font onmouseover='emph_wt(this,"at")'>at</font> <font onmouseover='emph_wt(this,"university")'>university</font> <font onmouseover='emph_wt(this,"is")'>is</font> <font onmouseover='emph_wt(this,"far")'>far</font> <font onmouseover='emph_wt(this,"more")'>more</font> <font onmouseover='emph_wt(this,"interesting")'>interesting</font> <font onmouseover='emph_wt(this,"than")'>than</font> <font onmouseover='emph_wt(this,"at")'>at</font> <font onmouseover='emph_wt(this,"school")'>school</font>.<font onmouseover='emph_wt(this,"After")'>After</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"lectures")'>lectures</font> I <font onmouseover='emph_wt(this,"usually")'>usually</font> <font onmouseover='emph_wt(this,"return")'>return</font> <font onmouseover='emph_wt(this,"home")'>home</font>.I <font onmouseover='emph_wt(this,"take")'>take</font> a <font onmouseover='emph_wt(this,"bath")'>bath</font> <font onmouseover='emph_wt(this,"or")'>or</font> a <font onmouseover='emph_wt(this,"shower")'>shower</font>.I <font onmouseover='emph_wt(this,"eat")'>eat</font> <font onmouseover='emph_wt(this,"an")'>an</font> <font onmouseover='emph_wt(this,"easy")'>easy</font> <font onmouseover='emph_wt(this,"supper")'>supper</font>.<font onmouseover='emph_wt(this,"On")'>On</font> <font onmouseover='emph_wt(this,"returning")'>returning</font> <font onmouseover='emph_wt(this,"home")'>home</font>  I <font onmouseover='emph_wt(this,"usually")'>usually</font> <font onmouseover='emph_wt(this,"start")'>start</font> <font onmouseover='emph_wt(this,"doing")'>doing</font> <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"homework")'>homework</font>.<font onmouseover='emph_wt(this,"Sometimes")'>Sometimes</font> I <font onmouseover='emph_wt(this,"can")'>can</font> <font onmouseover='emph_wt(this,"meet")'>meet</font> <font onmouseover='emph_wt(this,"with")'>with</font> <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"friends")'>friends</font>  <font onmouseover='emph_wt(this,"if")'>if</font> I <font onmouseover='emph_wt(this,"finished")'>finished</font> <font onmouseover='emph_wt(this,"early")'>early</font>.<font onmouseover='emph_wt(this,"We")'>We</font> <font onmouseover='emph_wt(this,"go")'>go</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"cafe")'>cafe</font>, <font onmouseover='emph_wt(this,"we")'>we</font> <font onmouseover='emph_wt(this,"visit")'>visit</font> <font onmouseover='emph_wt(this,"exhibitions")'>exhibitions</font> <font onmouseover='emph_wt(this,"and")'>and</font> <font onmouseover='emph_wt(this,"theater")'>theater</font>.<font onmouseover='emph_wt(this,"This")'>This</font> <font onmouseover='emph_wt(this,"is")'>is</font> <font onmouseover='emph_wt(this,"now")'>now</font> <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"university")'>university</font>  <font onmouseover='emph_wt(this,"and")'>and</font> <font onmouseover='emph_wt(this,"active")'>active</font> <font onmouseover='emph_wt(this,"student")'>student</font> <font onmouseover='emph_wt(this,"life")'>life</font> <font onmouseover='emph_wt(this,"help")'>help</font> <font onmouseover='emph_wt(this,"to")'>to</font> <font onmouseover='emph_wt(this,"improve")'>improve</font> <font onmouseover='emph_wt(this,"and")'>and</font> <font onmouseover='emph_wt(this,"develop")'>develop</font> <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"natural")'>natural</font> <font onmouseover='emph_wt(this,"skills")'>skills</font>.<br/><br/><font onmouseover='emph_wt(this,"Thanks")'>Thanks</font> a <font onmouseover='emph_wt(this,"lot")'>lot</font> <font onmouseover='emph_wt(this,"of")'>of</font> <font onmouseover='emph_wt(this,"for")'>for</font> <font onmouseover='emph_wt(this,"correction")'>correction</font> <font onmouseover='emph_wt(this,"of")'>of</font> <font onmouseover='emph_wt(this,"my")'>my</font> <font onmouseover='emph_wt(this,"mistakes")'>mistakes</font> <font onmouseover='emph_wt(this,"and")'>and</font> <font onmouseover='emph_wt(this,"the")'>the</font> <font onmouseover='emph_wt(this,"good")'>good</font> <font onmouseover='emph_wt(this,"help")'>help</font>.))
+</div>
+<div class='box_like_button cfx' id='async_show_like'></div>
+<div class='ad_journal_center clear_both floated_on_left'>
+  
+    <div class="center" style="margin: 0 0 10px;">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- JournalCenter336_280 -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-6717840198266056" data-ad-slot="1360554540"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+
+    </div>
+  
+
+</div>
+</div>
+</div>
+<div class='little-spaced cfx' data-canonical_url='http://lang-8.com/209494/journals/700941' id='links_for_journal'>
+<span class='horizontal-spaced tw-btn'>
+<a class='twitter-share-button' data-hashtags='lang8' data-related='lang8' data-text='My University.)' data-url='http://lang-8.com/209494/journals/700941' data-via='lang8' href='https://twitter.com/share'>Tweet</a>
+</span>
+<span class='horizontal-spaced fb-like' data-action='like' data-colorscheme='light' data-href='http://lang-8.com/209494/journals/700941' data-layout='button_count' data-show-faces='false' data-width='100'></span>
+<span class='horizontal-spaced gplus_btn'>
+<!-- %span.g-plusone{'data-size' => 'medium', :href => "#{@journal.canonical_url}"} -->
+</span>
+<span class='floated_on_left'>
+<span class='st_fblike_hcount' displayText='Facebook Like' st_url='http://lang-8.com/209494/journals/700941'></span>
+<span class='st_facebook_hcount' displayText='Facebook' st_url='http://lang-8.com/209494/journals/700941'></span>
+<span class='st_linkedin_hcount' displayText='LinkedIn' st_url='http://lang-8.com/209494/journals/700941'></span>
+</span>
+<a href='#' onclick="Evernote.doClip({styling:'full',providerName:'Lang-8',suggestTags:'Lang-8',suggestNotebook:'Lang-8',contentId:'entry_container'}); return false;" style='float:right;margin-right:5px;'>
+<img alt='Clip to Evernote' src='/static/images2/xarticle-clipper-fr.png.pagespeed.ic.BAKnLUGqIU.png'/>
+</a>
+</div>
+<div id='comments_and_corrections_field'>
+<div class='fukidashi comment_field' id='journal_comment_3037531'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/240315"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/no_image.gif"/></a>
+<a href="/240315" class="user_name"></a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Mar 4, 2011 08:26
+</span>
+</div>
+</div>
+<div class='correction_list corner-rounded_5 little-spaced'>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>And I&#39;m learning English at the university not so long.</li>
+<li class='corrected correct'>
+<p>And I&#39;<span class="f_red">ve been</span> learning English at the university not very <span class="sline">so</span> long.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7441493'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I am currently a student at the Moscow Teacher Training University,completing a degree of the teacher.</li>
+<li class='corrected correct'>
+<p>I am currently a student at the Moscow Teacher Training University,completing a degree <span class="f_red">to be a</span> <span class="sline">of the</span> teacher.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7441494'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>At first my university was boarding-house for girls.(It was in it in 1874).</li>
+<li class='corrected correct'>
+<p>At first my university was <span class="f_red">a</span> boarding-house for girls.(It was <span class="sline">in it in</span> <span class="f_red">until </span>1874).</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7441495'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>The University comprises 11 Faculties:</li>
+<li class='corrected correct'>
+<p>The University <span class="f_red">is</span> comprise<span class="f_red">d of</span> 11 Faculties:</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7441496'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>- Philology;</li>
+<li class='corrected correct'>
+<p>- Philology; (philosophy??or psychology?? )</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7441497'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>-Romance-Germanie Philology;</li>
+<li class='corrected correct'>
+<p>-Romance-German<span class="sline">ie</span> Philology<span class="f_red">??</span>;</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7441498'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>-Pedagogie and Preschool education Technigue;</li>
+<li class='corrected correct'>
+<p>-Pedagogie and Preschool education Techni<span class="f_red">q</span>ue;</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7441499'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>-Pedagogie and Elementery Technigue;</li>
+<li class='corrected correct'>
+<p>-Pedagogie and Element<span class="f_red">a</span>ry Techni<span class="f_red">q</span>ue;</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7441500'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>Ilike to study here.</li>
+<li class='corrected correct'>
+<p>Ilike to study <span class="f_blue">t</span>here.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7441501'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>They know very well the subject.</li>
+<li class='corrected correct'>
+<p>They know the subject very well.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7441502'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I am studing in group of 10 persons.</li>
+<li class='corrected correct'>
+<p>I am studing in groups of 10 persons.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7441503'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I am working to like very much with children.</li>
+<li class='corrected correct'>
+<p>I like to work very much with children.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7441504'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>I think that the children  are &quot;flowers the life&quot;.</li>
+<li class='corrected correct'>
+<p>I think that the children are &quot;flowers the(of?) life&quot;.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7441505'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>At my university the student stage .</li>
+<li class='corrected correct'>
+<p>At my university in the student stage .</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7441506'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>On returning home  I usually start doing my homework.</li>
+<li class='corrected correct'>
+<p>Once i&#39;m home I usually start doing my homework.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7441507'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+<hr/>
+</div>
+<div class='correction_box'>
+<ul class='correction_field'>
+<li class='incorrect'>We go to cafe, we visit exhibitions and theater.</li>
+<li class='corrected correct'>
+<p>We go to a cafe, or we visit exhibitions and the theater.</p>
+</li>
+</ul>
+<div class='correction_note_box gray-font right' id='e-7441508'>
+<span class="nice_pt_status">
+
+</span>
+
+  &nbsp;
+
+</div>
+
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+you still had a couple of errors towards the end but i didnt quite understand. sorry!!
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-3037531' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_3037531'>
+
+</div>
+</div>
+</div>
+<div class='fukidashi comment_field' id='journal_comment_3062104'>
+<div class='single_comment_block'></div>
+<div class='little-spaced mb_10 single_comment_box show_report_spam_link cfx'>
+<div class='cfx cmt_body_bar'>
+<div class='f_left cmt_status'>
+<a href="/209494"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w30_h0/5031f33257cbc10f4ac758bf87bb381f8dd555d3.jpg"/></a>
+<a href="/209494" class="user_name">Margarita</a>
+
+</div>
+<div class='f_right cmt_status2'>
+<span class='floated_on_right gray_text p_datetime'>
+Mar 8, 2011 04:00
+</span>
+</div>
+</div>
+<div class='cfx'></div>
+<div class='comment_after_correction'>
+<p class='comment_small'>
+<font onmouseover='emph_wt(this,"Thank")'>Thank</font> you))
+</p>
+</div>
+<div class='thankspoint thankscustom' id='s-3062104' style='padding-left:5px;'>
+
+</div>
+</div>
+<div class='reply_comment_field'>
+<div id='journal_replies_field_3062104'>
+
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>//<![CDATA[
+var l8=jQuery.extend(l8,{authenticityToken:"jezcH+WnoGabFhXVmsWGZc4HkPjxT6KY6CGxNqY+uzY=",showTutorial:false,label:"Description about correction.(You can write in any language.)",explanation:"Add a description or comment here.(Optional)",sentences:'TXkgVW5pdmVyc2l0eS4pCkhpLikpSSdtIE1hcmdhcmV0LgpBbmQgSSdtIGxlYXJuaW5nIEVuZ2xpc2ggYXQgdGhlIHVuaXZlcnNpdHkgbm90IHNvIGxvbmcuCkNvdWxkIHlvdSxwbGVhc2UsIGNoZWNrIG15IGNvbXBvc2l0aW9uLik9KQpNeSBVbml2ZXJzaXR5LikKSSBhbSBjdXJyZW50bHkgYSBzdHVkZW50IGF0IHRoZSBNb3Njb3cgVGVhY2hlciBUcmFpbmluZyBVbml2ZXJzaXR5LGNvbXBsZXRpbmcgYSBkZWdyZWUgb2YgdGhlIHRlYWNoZXIuCk91ciB1bml2ZXJzaXR5IGlzIHN0aWxsIHlvdW5nLgpBdCBmaXJzdCBteSB1bml2ZXJzaXR5IHdhcyBib2FyZGluZy1ob3VzZSBmb3IgZ2lybHMuKEl0IHdhcyBpbiBpdCBpbiAxODc0KS4KRXZlcnkgU2F0dXJkYXkgd2VyZSBzcGVudCBiYWxscy4KVGhlcmUgd2FzIE0uCkouCkxlcm1vbnRvdiBvbiB0aGVtLgpUaGlzIHllYXIgYXQgb3VyIHVuaXZlcnNpdHkgd2FzIHB1dCB0aGUgQmlydGhkYXkuCk15IFVuaXZlcnNpdHkgd2FzIGV4ZWx1dGVkIDEwIHllYXJzLgpUaGVuIGEgY29sbGVnZSBpbiB0aGlzIHBsYWNlIGhhcyBidWlsdC4KRm9yIDIwMDAgeWVhcnMgaXMgYWxyZWFkeSBteSB1bml2ZXJzaXR5LgpUaGUgVW5pdmVyc2l0eSBjb21wcmlzZXMgMTEgRmFjdWx0aWVzOgotIFBoaWxvbG9neTsKLVJvbWFuY2UtR2VybWFuaWUgUGhpbG9sb2d5OwotRW5nbGlzaCBQaGlsb2xvZ3k7Ci1QZWRhZ29naWUgYW5kIFByZXNjaG9vbCBlZHVjYXRpb24gVGVjaG5pZ3VlOwotUGVkYWdvZ2llIGFuZCBFbGVtZW50ZXJ5IFRlY2huaWd1ZTsKLVdlbGZhcmUgYWN0aXZpdHk7Ci1JbmZvcm1hdGlvbiBUZWNobm9sb2d5OwotTWFuYWdtZW50OwotQWRkaXRpb25hbCBlZHVjYXRpb247Ci1Tb2NpYWwgcGVkYWdvZ2llczsKLVNvY2lhbCB3b3JrOwpJIGFtIHN0dWRpbmcgYXQgdGhlIEZhY3VsdHkgb2YgUm9tYW5jZS1HZXJtYW5pZSBQaGlsb2xvZ3kuCklsaWtlIHRvIHN0dWR5IGhlcmUuCkF0IHRoaXMgZmFjdWx0eSB3b3JrIHRoZSBxdWFsaWZpZWQgdGhlYWNoZXJzLgpUaGV5IGtub3cgdmVyeSB3ZWxsIHRoZSBzdWJqZWN0LgpJIGFtIHN0dWRpbmcgaW4gZ3JvdXAgb2YgMTAgcGVyc29ucy4KVGhpcyB5ZWFyIGhhdmUgd2UgdGhlIHN0dWRlbnQgcHJhY3Rpc2UuCkV2ZXJ5IEZyaWRheSBJIGFtIGdvaW5nIHRvIHNjaG9vbC4KVGhlIENoaWxkcmVuIGFyZSB2ZXJ5IGNsZXZlcixjaGVlcmZ1bCBhbmQgc29jaWFibGUuCkkgYW0gd29ya2luZyB0byBsaWtlIHZlcnkgbXVjaCB3aXRoIGNoaWxkcmVuLgpJIHRoaW5rIHRoYXQgdGhlIGNoaWxkcmVuICBhcmUgImZsb3dlcnMgdGhlIGxpZmUiLgpXaGF0IGxhbmd1YWdlIEkgYW0gbGVhcm5pbmcgdG8gbGlrZSBhdCB0aGUgdW5pdmVyc2l0eT8KSSB0aGluayB0aGF0IGVhY2ggbGFuZ3VhZ2VzIGFyZSBmaW5lKG9uIHRoZSkuCkJ1dCBFbmdsaXNoIGhhcyBiaWdnZXIgYWR2YW50YWdlIHRoYW4gR2VybWFuLgpJbiBvdXIgdW5pdmVyc2l0eSAgYmVnaW5zIHRoZSBsZWN0dXJlcyBhdCA5IG8nY2xvY2suCkkgaGF2ZSBmcm9tIDEgdG8gNSBsZWN0dXJlcyBldmVyeSB0aW1lLGRlcGVuZGluZyBvbiBkYXkuCkF0IG15IHVuaXZlcnNpdHkgdGhlIHN0dWRlbnQgc3RhZ2UgLgpUaGUgcGxheSBhbHNvIGJyaW5nIG9uIGZvcmVpZ24gbGFuZ3VhZ2VzIHRvIHRoZSBwZXJmb3JtYW5jZS4KT3VyIGdyb3VwIHRha2UgaW4gaGVyLgpJdCBnb2VzIHdpdGhvdXQgc2F5aW5nLgpUbyBteSBtaW5kIHN0dWR5IGF0IHVuaXZlcnNpdHkgaXMgZmFyIG1vcmUgaW50ZXJlc3RpbmcgdGhhbiBhdCBzY2hvb2wuCkFmdGVyIHRoZSBsZWN0dXJlcyBJIHVzdWFsbHkgcmV0dXJuIGhvbWUuCkkgdGFrZSBhIGJhdGggb3IgYSBzaG93ZXIuCkkgZWF0IGFuIGVhc3kgc3VwcGVyLgpPbiByZXR1cm5pbmcgaG9tZSAgSSB1c3VhbGx5IHN0YXJ0IGRvaW5nIG15IGhvbWV3b3JrLgpTb21ldGltZXMgSSBjYW4gbWVldCB3aXRoIG15IGZyaWVuZHMgIGlmIEkgZmluaXNoZWQgZWFybHkuCldlIGdvIHRvIGNhZmUsIHdlIHZpc2l0IGV4aGliaXRpb25zIGFuZCB0aGVhdGVyLgpUaGlzIGlzIG5vdyBteSB1bml2ZXJzaXR5ICBhbmQgYWN0aXZlIHN0dWRlbnQgbGlmZSBoZWxwIHRvIGltcHJvdmUgYW5kIGRldmVsb3AgbXkgbmF0dXJhbCBza2lsbHMuClRoYW5rcyBhIGxvdCBvZiBmb3IgY29ycmVjdGlvbiBvZiBteSBtaXN0YWtlcyBhbmQgdGhlIGdvb2QgaGVscC4pKQ==',corrections:[[],[],["And I'[f-red]ve been[/f-red] learning English at the university not very [sline]so[/sline] long."],[],[],["I am currently a student at the Moscow Teacher Training University,completing a degree [f-red]to be a[/f-red] [sline]of the[/sline] teacher."],[],["At first my university was [f-red]a[/f-red] boarding-house for girls.(It was [sline]in it in[/sline] [f-red]until [/f-red]1874)."],[],[],[],[],[],[],[],[],["The University [f-red]is[/f-red] comprise[f-red]d of[/f-red] 11 Faculties:"],["- Philology; (philosophy??or psychology?? )"],["-Romance-German[sline]ie[/sline] Philology[f-red]??[/f-red];"],[],["-Pedagogie and Preschool education Techni[f-red]q[/f-red]ue;"],["-Pedagogie and Element[f-red]a[/f-red]ry Techni[f-red]q[/f-red]ue;"],[],[],[],[],[],[],[],["Ilike to study [f-blue]t[/f-blue]here."],[],["They know the subject very well."],["I am studing in groups of 10 persons."],[],[],[],["I like to work very much with children."],["I think that the children are \"flowers the(of?) life\"."],[],[],[],[],[],["At my university in the student stage ."],[],[],[],[],[],[],[],["Once i'm home I usually start doing my homework."],[],["We go to a cafe, or we visit exhibitions and the theater."],[],[]],correctionComments:[[],[],[null],[],[],[null],[],[null],[],[],[],[],[],[],[],[],[null],[null],[null],[],[null],[null],[],[],[],[],[],[],[],[null],[],[null],[null],[],[],[],[null],[null],[],[],[],[],[],[null],[],[],[],[],[],[],[],[null],[],[null],[],[]],perfectSentences:[[],[],[null],[],[],[null],[],[null],[],[],[],[],[],[],[],[],[null],[null],[null],[],[null],[null],[],[],[],[],[],[],[],[null],[],[null],[null],[],[],[],[null],[null],[],[],[],[],[],[null],[],[],[],[],[],[],[],[null],[],[null],[],[]],urlForCreateComment:'/journals/create_comment/700941',isLogin:false});sentences='WyJNeSBVbml2ZXJzaXR5LikiLCJIaS4pKUknbSBNYXJnYXJldC4iLCJBbmQgSSdtIGxlYXJuaW5nIEVuZ2xpc2ggYXQgdGhlIHVuaXZlcnNpdHkgbm90IHNvIGxvbmcuIiwiQ291bGQgeW91LHBsZWFzZSwgY2hlY2sgbXkgY29tcG9zaXRpb24uKT0pIiwiTXkgVW5pdmVyc2l0eS4pIiwiSSBhbSBjdXJyZW50bHkgYSBzdHVkZW50IGF0IHRoZSBNb3Njb3cgVGVhY2hlciBUcmFpbmluZyBVbml2ZXJzaXR5LGNvbXBsZXRpbmcgYSBkZWdyZWUgb2YgdGhlIHRlYWNoZXIuIiwiT3VyIHVuaXZlcnNpdHkgaXMgc3RpbGwgeW91bmcuIiwiQXQgZmlyc3QgbXkgdW5pdmVyc2l0eSB3YXMgYm9hcmRpbmctaG91c2UgZm9yIGdpcmxzLihJdCB3YXMgaW4gaXQgaW4gMTg3NCkuIiwiRXZlcnkgU2F0dXJkYXkgd2VyZSBzcGVudCBiYWxscy4iLCJUaGVyZSB3YXMgTS4iLCJKLiIsIkxlcm1vbnRvdiBvbiB0aGVtLiIsIlRoaXMgeWVhciBhdCBvdXIgdW5pdmVyc2l0eSB3YXMgcHV0IHRoZSBCaXJ0aGRheS4iLCJNeSBVbml2ZXJzaXR5IHdhcyBleGVsdXRlZCAxMCB5ZWFycy4iLCJUaGVuIGEgY29sbGVnZSBpbiB0aGlzIHBsYWNlIGhhcyBidWlsdC4iLCJGb3IgMjAwMCB5ZWFycyBpcyBhbHJlYWR5IG15IHVuaXZlcnNpdHkuIiwiVGhlIFVuaXZlcnNpdHkgY29tcHJpc2VzIDExIEZhY3VsdGllczoiLCItIFBoaWxvbG9neTsiLCItUm9tYW5jZS1HZXJtYW5pZSBQaGlsb2xvZ3k7IiwiLUVuZ2xpc2ggUGhpbG9sb2d5OyIsIi1QZWRhZ29naWUgYW5kIFByZXNjaG9vbCBlZHVjYXRpb24gVGVjaG5pZ3VlOyIsIi1QZWRhZ29naWUgYW5kIEVsZW1lbnRlcnkgVGVjaG5pZ3VlOyIsIi1XZWxmYXJlIGFjdGl2aXR5OyIsIi1JbmZvcm1hdGlvbiBUZWNobm9sb2d5OyIsIi1NYW5hZ21lbnQ7IiwiLUFkZGl0aW9uYWwgZWR1Y2F0aW9uOyIsIi1Tb2NpYWwgcGVkYWdvZ2llczsiLCItU29jaWFsIHdvcms7IiwiSSBhbSBzdHVkaW5nIGF0IHRoZSBGYWN1bHR5IG9mIFJvbWFuY2UtR2VybWFuaWUgUGhpbG9sb2d5LiIsIklsaWtlIHRvIHN0dWR5IGhlcmUuIiwiQXQgdGhpcyBmYWN1bHR5IHdvcmsgdGhlIHF1YWxpZmllZCB0aGVhY2hlcnMuIiwiVGhleSBrbm93IHZlcnkgd2VsbCB0aGUgc3ViamVjdC4iLCJJIGFtIHN0dWRpbmcgaW4gZ3JvdXAgb2YgMTAgcGVyc29ucy4iLCJUaGlzIHllYXIgaGF2ZSB3ZSB0aGUgc3R1ZGVudCBwcmFjdGlzZS4iLCJFdmVyeSBGcmlkYXkgSSBhbSBnb2luZyB0byBzY2hvb2wuIiwiVGhlIENoaWxkcmVuIGFyZSB2ZXJ5IGNsZXZlcixjaGVlcmZ1bCBhbmQgc29jaWFibGUuIiwiSSBhbSB3b3JraW5nIHRvIGxpa2UgdmVyeSBtdWNoIHdpdGggY2hpbGRyZW4uIiwiSSB0aGluayB0aGF0IHRoZSBjaGlsZHJlbiAgYXJlIFwiZmxvd2VycyB0aGUgbGlmZVwiLiIsIldoYXQgbGFuZ3VhZ2UgSSBhbSBsZWFybmluZyB0byBsaWtlIGF0IHRoZSB1bml2ZXJzaXR5PyIsIkkgdGhpbmsgdGhhdCBlYWNoIGxhbmd1YWdlcyBhcmUgZmluZShvbiB0aGUpLiIsIkJ1dCBFbmdsaXNoIGhhcyBiaWdnZXIgYWR2YW50YWdlIHRoYW4gR2VybWFuLiIsIkluIG91ciB1bml2ZXJzaXR5ICBiZWdpbnMgdGhlIGxlY3R1cmVzIGF0IDkgbydjbG9jay4iLCJJIGhhdmUgZnJvbSAxIHRvIDUgbGVjdHVyZXMgZXZlcnkgdGltZSxkZXBlbmRpbmcgb24gZGF5LiIsIkF0IG15IHVuaXZlcnNpdHkgdGhlIHN0dWRlbnQgc3RhZ2UgLiIsIlRoZSBwbGF5IGFsc28gYnJpbmcgb24gZm9yZWlnbiBsYW5ndWFnZXMgdG8gdGhlIHBlcmZvcm1hbmNlLiIsIk91ciBncm91cCB0YWtlIGluIGhlci4iLCJJdCBnb2VzIHdpdGhvdXQgc2F5aW5nLiIsIlRvIG15IG1pbmQgc3R1ZHkgYXQgdW5pdmVyc2l0eSBpcyBmYXIgbW9yZSBpbnRlcmVzdGluZyB0aGFuIGF0IHNjaG9vbC4iLCJBZnRlciB0aGUgbGVjdHVyZXMgSSB1c3VhbGx5IHJldHVybiBob21lLiIsIkkgdGFrZSBhIGJhdGggb3IgYSBzaG93ZXIuIiwiSSBlYXQgYW4gZWFzeSBzdXBwZXIuIiwiT24gcmV0dXJuaW5nIGhvbWUgIEkgdXN1YWxseSBzdGFydCBkb2luZyBteSBob21ld29yay4iLCJTb21ldGltZXMgSSBjYW4gbWVldCB3aXRoIG15IGZyaWVuZHMgIGlmIEkgZmluaXNoZWQgZWFybHkuIiwiV2UgZ28gdG8gY2FmZSwgd2UgdmlzaXQgZXhoaWJpdGlvbnMgYW5kIHRoZWF0ZXIuIiwiVGhpcyBpcyBub3cgbXkgdW5pdmVyc2l0eSAgYW5kIGFjdGl2ZSBzdHVkZW50IGxpZmUgaGVscCB0byBpbXByb3ZlIGFuZCBkZXZlbG9wIG15IG5hdHVyYWwgc2tpbGxzLiIsIlRoYW5rcyBhIGxvdCBvZiBmb3IgY29ycmVjdGlvbiBvZiBteSBtaXN0YWtlcyBhbmQgdGhlIGdvb2QgaGVscC4pKSJd';corrections='W1tdLFtdLFsiQW5kIEknW2YtcmVkXXZlIGJlZW5bL2YtcmVkXSBsZWFybmluZyBFbmdsaXNoIGF0IHRoZSB1bml2ZXJzaXR5IG5vdCB2ZXJ5IFtzbGluZV1zb1svc2xpbmVdIGxvbmcuIl0sW10sW10sWyJJIGFtIGN1cnJlbnRseSBhIHN0dWRlbnQgYXQgdGhlIE1vc2NvdyBUZWFjaGVyIFRyYWluaW5nIFVuaXZlcnNpdHksY29tcGxldGluZyBhIGRlZ3JlZSBbZi1yZWRddG8gYmUgYVsvZi1yZWRdIFtzbGluZV1vZiB0aGVbL3NsaW5lXSB0ZWFjaGVyLiJdLFtdLFsiQXQgZmlyc3QgbXkgdW5pdmVyc2l0eSB3YXMgW2YtcmVkXWFbL2YtcmVkXSBib2FyZGluZy1ob3VzZSBmb3IgZ2lybHMuKEl0IHdhcyBbc2xpbmVdaW4gaXQgaW5bL3NsaW5lXSBbZi1yZWRddW50aWwgWy9mLXJlZF0xODc0KS4iXSxbXSxbXSxbXSxbXSxbXSxbXSxbXSxbXSxbIlRoZSBVbml2ZXJzaXR5IFtmLXJlZF1pc1svZi1yZWRdIGNvbXByaXNlW2YtcmVkXWQgb2ZbL2YtcmVkXSAxMSBGYWN1bHRpZXM6Il0sWyItIFBoaWxvbG9neTsgKHBoaWxvc29waHk/P29yIHBzeWNob2xvZ3k/PyApIl0sWyItUm9tYW5jZS1HZXJtYW5bc2xpbmVdaWVbL3NsaW5lXSBQaGlsb2xvZ3lbZi1yZWRdPz9bL2YtcmVkXTsiXSxbXSxbIi1QZWRhZ29naWUgYW5kIFByZXNjaG9vbCBlZHVjYXRpb24gVGVjaG5pW2YtcmVkXXFbL2YtcmVkXXVlOyJdLFsiLVBlZGFnb2dpZSBhbmQgRWxlbWVudFtmLXJlZF1hWy9mLXJlZF1yeSBUZWNobmlbZi1yZWRdcVsvZi1yZWRddWU7Il0sW10sW10sW10sW10sW10sW10sW10sWyJJbGlrZSB0byBzdHVkeSBbZi1ibHVlXXRbL2YtYmx1ZV1oZXJlLiJdLFtdLFsiVGhleSBrbm93IHRoZSBzdWJqZWN0IHZlcnkgd2VsbC4iXSxbIkkgYW0gc3R1ZGluZyBpbiBncm91cHMgb2YgMTAgcGVyc29ucy4iXSxbXSxbXSxbXSxbIkkgbGlrZSB0byB3b3JrIHZlcnkgbXVjaCB3aXRoIGNoaWxkcmVuLiJdLFsiSSB0aGluayB0aGF0IHRoZSBjaGlsZHJlbiBhcmUgXCJmbG93ZXJzIHRoZShvZj8pIGxpZmVcIi4iXSxbXSxbXSxbXSxbXSxbXSxbIkF0IG15IHVuaXZlcnNpdHkgaW4gdGhlIHN0dWRlbnQgc3RhZ2UgLiJdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFsiT25jZSBpJ20gaG9tZSBJIHVzdWFsbHkgc3RhcnQgZG9pbmcgbXkgaG9tZXdvcmsuIl0sW10sWyJXZSBnbyB0byBhIGNhZmUsIG9yIHdlIHZpc2l0IGV4aGliaXRpb25zIGFuZCB0aGUgdGhlYXRlci4iXSxbXSxbXV0=';var correction_comments=[[],[],[null],[],[],[null],[],[null],[],[],[],[],[],[],[],[],[null],[null],[null],[],[null],[null],[],[],[],[],[],[],[],[null],[],[null],[null],[],[],[],[null],[null],[],[],[],[],[],[null],[],[],[],[],[],[],[],[null],[],[null],[],[]];
+//]]></script>
+
+</div>
+<div id='right' style='padding-bottom:0'>
+<div class='mb_20' id='author_box'>
+<div class='cfx'>
+<a href="/209494"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w50_h0/5031f33257cbc10f4ac758bf87bb381f8dd555d3.jpg"/></a>
+<div class='author_information mb_10 cfx'>
+<a href="/209494" class="user_name">Margarita</a>
+
+<div class='learning_languages'>
+<ul class='language_status'>
+<li class='speaking' data-title='Native language' rel='tooltip' title='Native language'>Russian</li>
+<li class='studying' data-title='Language of study' rel='tooltip' title='Language of study'>
+German, English
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class='bdbox'>
+<table class='entry_status'>
+<tr>
+<td class='l01'>
+<p><a href="/209494/journals">1</a></p>
+<span>Entries Written</span>
+</td>
+<td class='l02'>
+<p>0</p>
+<span>Corrections made</span>
+</td>
+<td class='l03'>
+<p><a href="/209494/correction_logs/received">1</a></p>
+<span>Corrections received</span>
+</td>
+</tr>
+</table>
+</div>
+
+</div>
+
+  
+    <script type="text/javascript">google_ad_client="ca-pub-6717840198266056";google_ad_slot="1415028544";google_ad_width=300;google_ad_height=250;</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+
+  
+
+
+<div class='box'>
+<div id='journals_calendar'>
+<div class='yui-skin-sam'>
+<div id='jour_cal'>
+    <div id="cal1Container"></div>
+    <script type="text/javascript">//<![CDATA[
+(function(){var cal1=null,popupHolder=[],cal_journal_dates={},str_dates='',date_info=[{"journal_id":700941,"journal_date":1290291326}],now_server2local="11/2018",selected_date='',date_info_json=Object.toJSON(date_info),args=getArgsFromHref(location.href);if(args['begin']!=null){var begin_date_a=args['begin'].split('-');var page_date=begin_date_a[1]+'/'+begin_date_a[0];}else if(args['date']!=null){var date_a=args['date'].split('-');var page_date=date_a[1]+'/'+date_a[0];}else{var page_date=now_server2local;}var pathname=location.pathname.split('/');for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(parseInt(date_info[i].journal_date*1000)).toYAHOODateString();if(cal_journal_dates[tmp_date]){cal_journal_dates[tmp_date]=cal_journal_dates[tmp_date]+'/'+date_info[i].journal_id;}else{cal_journal_dates[tmp_date]=date_info[i].journal_id;str_dates=str_dates+','+tmp_date;}}function init(){cal1=new YAHOO.widget.Calendar('cal1','cal1Container',{LOCALE_MONTHS:'short',LOCALE_WEEKDAYS:'1char',pagedate:page_date});cal1.styleCellDefault=function(workingDate,cell){YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_OOB);}
+cal1.renderCellDefault=function(workingDate,cell){cell.innerHTML='<a class="'+cal1.Style.CSS_CELL_SELECTOR+'">'+cal1.buildDayLabel(workingDate)+"</a>";}
+cal1.renderCellHasJournals=function(workingDate,cell){cell.innerHTML='<a href="/'+'209494'+'/journals?date='+workingDate.toStringYYMMDD()+'" class="'+cal1.Style.CSS_CELL_SELECTABLE+'">'+cal1.buildDayLabel(workingDate)+"</a>";YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_SELECTABLE);YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_HIGHLIGHT1);if(workingDate.getDate()==cal1.today.getDate()&&workingDate.getMonth()==cal1.today.getMonth()&&workingDate.getFullYear()==cal1.today.getFullYear()){YAHOO.util.Dom.removeClass(cell,cal1.Style.CSS_CELL_TODAY);}return YAHOO.widget.Calendar.STOP_RENDER;}
+cal1.addRenderer(str_dates,cal1.renderCellHasJournals);cal1.render();}function getArgsFromHref(sHref){var args=sHref.split('?');var retargs={}
+if(args[0]==sHref){return"";}var str=args[1];args=str.split('&');for(var i=0;i<args.length;i++){str=args[i];var arg=str.split('=');if(arg.length<=1)continue;retargs[arg[0]]=arg[1];}return retargs;}YAHOO.util.Event.onAvailable('cal1Container',init);})();
+//]]></script>
+
+</div>
+</div>
+</div>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Journal Statistics</h3>
+</div>
+<div class='cfx' id='studying_status'>
+<table class='table side-bar table_statusstudy'>
+<tr>
+<th>Total</th>
+<th>This month</th>
+<th>This week</th>
+</tr>
+<tr>
+<td>
+<p><a href="/209494/journals">1</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/209494/journals" id="monthCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/209494/journals" id="todayCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<script type="text/javascript">//<![CDATA[
+(function(){var date_info=[{"journal_id":700941,"journal_date":1290291326}],cur_month_counter=0,week_counter=0;var now_date=new Date(),DateMath=YAHOO.widget.DateMath;var now_date_week_begin=DateMath.getFirstDayOfWeek(now_date,0);var now_date_week_end=DateMath.add(now_date_week_begin,'D',6);for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(date_info[i].journal_date*1000);if(tmp_date.getFullYear()==now_date.getFullYear()){if(tmp_date.getMonth()==now_date.getMonth()){cur_month_counter+=1;if(DateMath.getWeekNumber(tmp_date,0)==DateMath.getWeekNumber(now_date,0)){week_counter+=1;}}}}if(week_counter!=0){$('todayCount').update(week_counter);$('todayCount').href=$('todayCount').href+'?begin='+now_date_week_begin.toStringYYMMDD()+'&end='+now_date_week_end.toStringYYMMDD();}else{$('todayCount').href="#";}if(cur_month_counter!=0){$('monthCount').update(cur_month_counter);$('monthCount').href=$('monthCount').href+'?begin='+DateMath.findMonthStart(now_date).toStringYYMMDD()+'&end='+DateMath.findMonthEnd(now_date).toStringYYMMDD();}else{$('monthCount').href="#";}})();
+//]]></script>
+
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest entries</h3>
+</div>
+<table class='table side-bar ar_icobox'>
+<tr>
+<td><a href="http://lang-8.com/209494/journals/700941/My-University-%2529">My University.) (2) </a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/209494/journals" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest comments</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<td><a href="http://lang-8.com/209494/journals/700941/My-University-%2529">Mar 8 Margarita</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/209494/journals/700941/My-University-%2529">Mar 4 </a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/209494/journals/comments" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box cfx' id='d_draft_list'>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Entries by Month</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<th class='year'>2010</th>
+</tr>
+<tr>
+<td>
+ <a href="/209494/journals?begin=2010-11-1&amp;end=2010-11-30">November (1)</a>
+</td>
+</tr>
+</table>
+</div>
+
+<div style='height:20px;background-color:#ffffff'></div>
+<div id='eval_comment_form' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='form_to_edit_note' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='journal_comment_liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='eval_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+</div>
+<div class='yui-skin-sam' id='yui_panels'>
+<div id='wt_panel' style='visibility:hidden;'>
+<div class='hd' id='wt_title'></div>
+<div class='bd' id='wt_content'></div>
+<div class='ft'></div>
+</div>
+</div>
+<div id='modal'></div>
+<div id='confirm_box'>
+<div id='confirm_box_close'>
+<a onclick='hide_confirm_box();'>
+<img src='/static/images2/xico_closebt.png.pagespeed.ic.z-nUma7JBr.png'/>
+</a>
+</div>
+<div id='confirm_box_contents'></div>
+</div>
+</div>
+<div class='modal hide' id='report_spam_entry' tabindex='-1'>
+<div class='modal-header'>
+<btn class='close' data-dismiss='modal' type='button'>x</btn>
+<h4>Report this entry</h4>
+</div>
+<div class='modal-body'>
+<strong class='spaced'>Spam entry</strong>
+<p class='spaced'>Hi.))I&#39;m Margaret.And I&#39;m learning English at the university not so long.Could you,please, check my composition.)=)
+
+My University.)
+
+I am currently a student at the Moscow Teacher Training University,completing a degree of the teacher.Our university is still young.At first my university was boar</p>
+<br/>
+<strong class='spaced'>Author</strong>
+<p class='spaced'>Margarita</p>
+<br/>
+<strong class='spaced'>Reporter</strong>
+<p class='spaced'>0</p>
+</div>
+<div class='modal-footer'>
+<a class='btn' data-dismiss='modal' href='#'>Close</a>
+<a class="bt_lv1 bt_size_04" href="#" onclick="new Ajax.Request('/spam_reports/report_entry?entry_body=Hi.%29%29I%27m+Margaret.And+I%27m+learning+English+at+the+university+not+so+long.Could+you%2Cplease%2C+check+my+composition.%29%3D%29%0D%0A%0D%0AMy+University.%29%0D%0A%0D%0AI+am+currently+a+student+at+the+Moscow+Teacher+Training+University%2Ccompleting+a+degree+of+the+teacher.Our+university+is+still+young.At+first+my+university+was+boar&amp;reporter_id=0&amp;spammer_id=209494&amp;url=http%3A%2F%2Flang-8.com%2F209494%2Fjournals%2F700941', {asynchronous:true, evalScripts:true, onLoading:function(request){$j('#report_spam_entry').html('&lt;p class=&quot;center&quot;&gt;&lt;br /&gt;&lt;img src=&quot;/static/images2/loading.gif&quot; class=&quot;center spaced vertical-margin&quot; /&gt;&lt;/p&gt;');}, onSuccess:function(request){$j(&quot;#report_spam_entry&quot;).modal(&quot;hide&quot;);$j(&quot;#alert-box&quot;).alerter(&quot;alertSuccess&quot;, &quot;&quot;, &quot;Report sent.&quot; );}, parameters:'authenticity_token=' + encodeURIComponent('jezcH+WnoGabFhXVmsWGZc4HkPjxT6KY6CGxNqY+uzY=')}); return false;">Send</a>
+</div>
+</div>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show-5f9f69ded18eb0d1a8bef6040b599e7b.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show2-e52e094b14e0c5b5979f64d63309ab8a.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show3-eedb1c964407a61f34a56d6652b21722.js" type="text/javascript"></script>
+<script id="evernote-js" data-cjsexec="true" type="text/cjs" data-cjssrc="http://static.evernote.com/noteit.js"></script>
+<script id="twitter-wjs" data-cjsexec="true" type="text/cjs" data-cjssrc="https://platform.twitter.com/widgets.js"></script>
+<script type='text/javascript'></script>
+<script type='text/javascript'>//<![CDATA[
+jQuery(function($){new Lang8.Views.JournalShowView();});
+//]]></script>
+
+</div>
+</div>
+<div data-search_url='' id='footer'>
+<div class='inner'>
+<div class='box clearfix'>
+<ul class='ft_parts_list f_left'>
+<ul class='ft_parts_list f_left'></ul>
+</ul>
+</div>
+<div class='box02 clearfix'>
+<ul>
+
+</ul>
+<ul>
+<li>
+<p>
+Study
+</p>
+<ul>
+<li><a href="/profiles/search">Member Search</a></li>
+<li><a href="/hotentries">Popular Entries</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+View
+</p>
+<ul>
+<li><a href="/rankings">Rankings</a></li>
+<li>
+<a href="/groups">Groups</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+Help
+</p>
+<ul>
+<li><a href="/help/tumblr" target="_blank">Help</a></li>
+<li><a href="/register/term" target="_blank">Terms of Service</a></li>
+<li><a href="/register/privacy" target="_blank">Privacy Policy</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+About Lang-8
+</p>
+<ul>
+<li><a href="/help/law_1" target="_blank">特定商取引法に基づく表記</a></li>
+<li><a href="/help/donation" target="_blank">Donate</a></li>
+<li><a href="http://lang-8.jp/" target="_blank">Company</a></li>
+<li><a href="http://lang-8.jp/#recruit" target="_blank">Travailler pour Lang-8</a></li>
+<li>
+<a href='mailto:support@lang-8.com'>Contact us</a>
+</li>
+<li>&nbsp;</li>
+</ul>
+</li>
+</ul>
+<ul id='social_web_list'>
+<li class='icon_with twitter'>
+<a class='twitter-follow-button' data-show-count='false' href='https://twitter.com/lang8'>Follow @lang8</a>
+<script defer="defer" src="https://platform.twitter.com/widgets.js" type="text/javascript"></script>
+</li>
+<li class='icon_with facebook'><a href="http://www.facebook.com/lang8" target="_blank">Facebook page</a></li>
+<li class='icon_with rss'><a href="http://blog.lang-8.com" target="_blank">Lang-8 blog</a></li>
+</ul>
+</div>
+<div class='box03 clearfix'>
+<li class='f_left panel_list'>
+<a href='https://mixpanel.com/f/partner' target='_blank'>
+<img alt='Mobile and Web Analytics' src='https://mixpanel.com/site_media/images/partner/badge_light.png'/>
+</a>
+</li>
+<p class='copy f_right'>
+&copy; 2017 Lang-8, Inc. All rights reserved.
+</p>
+</div>
+</div>
+</div>
+
+
+<script type='text/javascript'>//<![CDATA[
+var gaJsHost=(("https:"==document.location.protocol)?"https://ssl.":"http://www.");document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var pageTracker;autoRetry(function(){pageTracker=_gat._getTracker("UA-452011-7");pageTracker._setDomainName("none");pageTracker._setAllowLinker(true);pageTracker._initData();pageTracker._trackPageview("/before/journals/show/700941");},2);
+//]]></script>
+
+
+<script type='text/javascript'>//<![CDATA[
+$j(function(){$j('[rel=tooltip]').tooltip();$j('[rel=popover]').popover();});
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var cjsscript=document.createElement('script');cjsscript.src="/static/javascripts/control_js.js";var cjssib=document.getElementsByTagName('script')[0];cjssib.parentNode.insertBefore(cjsscript,cjssib);
+//]]></script>
+<div id='fb-root'></div>
+<script type='text/javascript'>//<![CDATA[
+(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=138873442911";fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));
+//]]></script>
+</body>
+</html>

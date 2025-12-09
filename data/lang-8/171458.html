@@ -1,0 +1,630 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir='ltr' itemscope='' itemtype='http://schema.org/Blog' xmlns:fb='http://www.facebook.com/2008/fbml' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationTime":119,"transactionName":"Jg4MFRNdCllURU4MXBATDAANQUlGWVgW","errorBeacon":"bam.nr-data.net","licenseKey":"240011c68f","applicationID":"11814779","agent":"","queueTime":0,"beacon":"bam.nr-data.net"}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content='text/css' http-equiv='Content-Style-Type'/>
+<meta content='text/javascript' http-equiv='Content-Script-Type'/>
+<meta content='summary' name='twitter:card'/>
+<meta content='@lang8' name='twitter:site'/>
+<meta content='Expo 2010 in Shanghai,' property='og:title'/>
+<meta content='blog' property='og:type'/>
+<meta content='http://lang-8.com/171458/journals/553107' property='og:url'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/03f2f63e65288a7f2abb1bb114002659c2d4425c.JPG' property='og:image'/>
+<meta content='Recently, I graduated from the university. I have plenty of holidays to be used before I can get the job. So, I decided to travel Shanghai Expo in this summmer holiday. That is a wonderful experience, many things that is showed in Expo is very fresh and new. The staff in the expo are friendly ,they a' property='og:description'/>
+<meta content='Lang-8' property='og:site_name'/>
+<meta content='138873442911' property='fb:app_id'/>
+<meta content='Expo 2010 in Shanghai,' itemprop='name'/>
+<meta content='Recently, I graduated from the university. I have plenty of holidays to be used before I can get the job. So, I decided to travel Shanghai Expo in this summmer holiday. That is a wonderful experience, many things that is showed in Expo is very fresh and new. The staff in the expo are friendly ,they a' itemprop='description'/>
+<meta content='https://d2ktchr4dpd4o2.cloudfront.net/w200_h200/03f2f63e65288a7f2abb1bb114002659c2d4425c.JPG' itemprop='image'/>
+
+<title>
+Expo 2010 in Shanghai, | Lang-8: For learning foreign languages
+</title>
+<link href='/favicon.ico' rel='shortcut icon'/>
+<link href="http://dzhimp63a2tb1.cloudfront.net/assets/static/css/application-1b103989b91cc566c626a5030a5c0c04.css" media="screen" rel="stylesheet" type="text/css"/>
+<script type="text/cjs">
+var h = document.getElementsByTagName('head')[0];
+var link = document.createElement('link');
+link.href = 'https://fonts.googleapis.com/css?family=Telex';
+link.type = 'text/css';
+link.rel = 'stylesheet';
+link.media = 'screen'
+h.appendChild(link);
+</script>
+
+
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/application-462b56e1d78c3fb6374e9b344e47357a.js" type="text/javascript"></script>
+
+<script type='text/javascript'>//<![CDATA[
+var lang="2-2";var sessid="";
+//]]></script>
+
+<meta content='Recently, I graduated from the university. I have plenty of holidays to be used before I can get ...' name='description'/>
+<meta content='Expo' name='keywords'/>
+
+<meta content='1NyOQgk3_D9-R1XWpjxkGinHxWufQzM-DTGssOLEIvs' name='google-site-verification'/>
+</head>
+<body data-device='pc' id='journals_show'>
+<script type="text/javascript">var langsData=[];langsData.push({key:'cjv',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'ckb',body:'Please correct some sentences or comments on this journal.'});langsData.push({key:'cka',body:'Corrections'});langsData.push({key:'cjz',body:'Comment'});langsData.push({key:'cjt',body:'Post'});langsData.push({key:'cju',body:'Back to correcting'});langsData.push({key:'cjw',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjx',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'cjy',body:'Are you sure you want to leave this page? Some correction boxes are still open.'});langsData.push({key:'D063',body:'There has been an internal system error.'});langsData.push({key:'chc',body:'Show corrections'});langsData.push({key:'chd',body:'Hide'});langsData.push({key:'xlw',body:'Do you really want to reset the data?'});langsData.push({key:'xlx',body:'You have already started to leave a comment on this journal. Do you want to continue with it?'});langsData.push({key:'xly',body:'Continue'});langsData.push({key:'xlz',body:'No'});langsData.push({key:'cix',body:'Red'});langsData.push({key:'ciy',body:'Blue'});langsData.push({key:'qag',body:'Gray'});langsData.push({key:'ciz',body:'Bold'});langsData.push({key:'cja',body:'Cross out'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjc',body:'Cancel'});langsData.push({key:'cjd',body:'Correct'});langsData.push({key:'cje',body:'Unformat'});langsData.push({key:'rgo',body:'This sentence is perfect! No correction needed!'});langsData.push({key:'xll',body:'This is the original post.'});langsData.push({key:'xlm',body:'To correct, click this button.'});langsData.push({key:'xln',body:'You can use the colored fonts and strikethrough feature to help you with your correction.'});langsData.push({key:'xlo',body:'After correcting, please press this button.'});langsData.push({key:'xlp',body:'Your corrections are displayed here.'});langsData.push({key:'xlq',body:'Press this button to complete the correction.'});langsData.push({key:'xmm',body:'Sending...'});langsData.push({key:'xmn',body:'done'});langsData.push({key:'ycs',body:'Success! A friend request will now be sent to your friend.'});langsData.push({key:'xog',body:'Failed to send the friend request. Please try again in a few minutes.'});langsData.push({key:'cit',body:'Comments on this correction'});langsData.push({key:'cir',body:'Add to /Edit My Notebook'});langsData.push({key:'rfv',body:'Vertical View'});langsData.push({key:'rfw',body:'Normal View'});langsData.push({key:'cjb',body:'Preview'});langsData.push({key:'cjp',body:'Cancel'});langsData.push({key:'cjr',body:'Remove correction'});langsData.push({key:'ckc',body:'Description about correction.(You can write in any language.)'});langsData.push({key:'cjk',body:'Whoops! Some correction boxes are still open. Please close them and try again.'});langsData.push({key:'cjl',body:'There are not any comments or corrections.'});langsData.push({key:'cjh',body:'Correct this entry'});langsData.push({key:'cjf',body:'Comment'});langsData.push({key:'cjm',body:'There has been an internal system error. Please try again.'});langsData.push({key:'kbm',body:'Draft Saved'});var l8=l8||{};l8.t=l8.t||{};l8.t=new L8I18n(langsData);</script>
+
+<div class='navbar navbar-fixed-top mb_20' id='header'>
+<div class='navbar-inner'>
+<div class='container'>
+<a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</a>
+<div class='nav-collapse'>
+<ul class='nav' id='dropmenu03'>
+<li class='logoname'>
+<a class='brand' href='/'>
+<img alt="Header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0" id="logo" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/header_logo-5ad8f70fcf9b61838c1f218b7abf3dd0.gif"/>
+</a>
+</li>
+<li class='divider'></li>
+<li class='home'>
+<a href="/" class="a_home" title="Home"><img alt="Ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb" src="http://dzhimp63a2tb1.cloudfront.net/assets/static/images2/header/ico_home-eaf24c41a75d4f4f581dcf7a768ea9cb.png" title="Home"/>
+</a></li>
+<li class='divider'></li>
+<li class='help'>
+<a href="/help/about" class="help" target="_blank" title="What is Lang-8?"><span>
+What is Lang-8?
+</span>
+</a></li>
+<li class='divider'></li>
+</ul>
+<ul class='nav pull-right' id='dropmenu02'>
+<li class='help'>
+<a href="/register/step1?from=header" class="help"><span>Sign up</span>
+</a></li>
+<li class='divider'></li>
+<li class='help' id='login'>
+<a href="https://lang-8.com/login?from=header" class="help"><span>Log in</span>
+</a></li>
+<li class='divider'></li>
+<li class='language_list'>
+<form action="" class="language_select" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="7YKkqKkuoKgJQ2eJwxgYFJvrqCNHdIEb/NGc9GxJEZA="/></div>
+<select id="interface_lang" name="interface_lang" onchange="onChangeInterfaceLang()"><option value="2-2" selected="selected">English</option>
+<option value="2-5">Español</option>
+<option value="2-6">français</option>
+<option value="2-8">Deutsch</option>
+<option value="2-95">Português(Portugal)</option>
+<option value="2-10">Русский</option>
+<option value="2-59">Polski</option>
+<option value="2-78">Hrvatski</option>
+<option value="2-30">العربية</option>
+<option value="2-1">日本語</option>
+<option value="2-3">中文(简体)</option>
+<option value="2-300">中文(繁體)</option>
+<option value="2-4">한국어</option>
+<option value="2-20">ภาษาไทย</option>
+<option value="2-35">Svenska</option>
+<option value="2-47">Tagalog</option>
+<option value="2-65">Bahasa Melayu</option>
+<option value="2-58">Indonesian</option>
+<option value="2-7">Italiano</option></select>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class='alerter container alert fade in navbar-fixed-top' id='alert-top' style='top:60px;display:none;'>
+<a class='close' data-dismiss='alert' href='#'>
+&times;
+</a>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert Message here
+</span>
+</div>
+<div class='alerter alert fade in navbar-fixed-top' id='alert-box' style='left:40%;top:40%;width:200px;display:none;'>
+<div style='text-align:center;'>
+<strong class='alert-message-title'>
+Alert!
+</strong>
+<span class='alert-message-body'>
+Alert message here
+</span>
+</div>
+</div>
+
+
+
+
+      <div class="center" style="margin-bottom: 10px;">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- PC_Super_Before_Login -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6717840198266056" data-ad-slot="9171779343" data-ad-format="auto"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+
+      </div>
+
+
+
+
+<div id='page_content'>
+<div class='cfx' id='main_container'>
+<ul class="cfx" id="breadcrumbs"><li class="home"><a href="/">Home</a></li><li class=""><a href="/profiles/search">Member</a></li><li class=""><a href="/171458">阿立</a></li><li class=""><a href="/171458/journals">阿立's entries</a></li><li class=""><span>Expo 2010 in Shanghai,</span></li></ul>
+<div>
+<div data-use_friend_request_popover='data-use_friend_request_popover' id='main'>
+<style type='text/css'>@font-face{font-family:"FontAwesome";src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot);src:url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.eot?#iefix) format('eot') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.woff) format('woff') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.ttf) format('truetype') , url(http://lang-8.com/static/css/fontawesome/font/fontawesome-webfont.svg#FontAwesome) format('svg');font-weight:normal;font-style:normal}</style>
+<div class='cfx' id='entry_detail'>
+<div class='show_report_spam_link cfx' id='entry_title_box'>
+<div class='tit_02'>
+<h1 id='subject_show'>Expo 2010 in Shanghai,</h1>
+<div class='edit_links'>
+<ul class='cfx'>
+</ul>
+</div>
+</div>
+</div>
+<div class='clear_both'></div>
+<div class='cfx' id='tools_for_journal'>
+<ul class='journal_status floated_on_right'>
+<li class='privacy_level_5' data-original-title='Public' rel='tooltip'>&nbsp;</li>
+<li class='visiters' data-original-title='Views' rel='tooltip' title='Views'>148</li>
+<li class='comment_num' data-original-title='Comments' rel='tooltip' title='Comments'>0</li>
+<li class='corrections_num' data-original-title='Corrections' rel='tooltip' title='Corrections'>0</li>
+<li class='studying' data-original-title='The language that needs to be corrected' rel='tooltip'>English&nbsp;</li>
+</ul>
+<span class='journal_date floated_on_left'>
+Jul 13, 2010 16:26
+<a href="/journals/search?tag=Expo">Expo</a>
+
+</span>
+<script type='text/javascript'>//<![CDATA[
+$j(function(){var journalCounterView=new Lang8.Views.JournalCounterView();});
+//]]></script>
+
+</div>
+<div id='show_buttons'>
+</div>
+
+<div class='cfx' id='body_show'>
+<div id='body_show_ori'>
+Recently, I graduated from the university. I have plenty of holidays to be used before I can get the job. So, I decided to travel Shanghai Expo in this summmer holiday. That is a wonderful experience, many things that is showed in Expo is very fresh and new. The staff in the expo are friendly ,they are welcome to answer questions. I also meet some new friends in the trip. They have different nationality ,Taiwan ,Korea and Hong Kong. I love the Expo.<br/><br/>Two years after,Korea is going to organize Expo. I am eager to go visit there. Korea ,I am coming to seeing you soon!
+</div>
+<div class='box_like_button cfx' id='async_show_like'></div>
+<div class='ad_journal_center clear_both floated_on_left'>
+  
+    <div class="center" style="margin: 0 0 10px;">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- JournalCenter336_280 -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-6717840198266056" data-ad-slot="1360554540"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+
+    </div>
+  
+
+</div>
+</div>
+</div>
+<div class='little-spaced cfx' data-canonical_url='http://lang-8.com/171458/journals/553107' id='links_for_journal'>
+<span class='horizontal-spaced tw-btn'>
+<a class='twitter-share-button' data-hashtags='lang8,Expo' data-related='lang8' data-text='Expo 2010 in Shanghai,' data-url='http://lang-8.com/171458/journals/553107' data-via='lang8' href='https://twitter.com/share'>Tweet</a>
+</span>
+<span class='horizontal-spaced fb-like' data-action='like' data-colorscheme='light' data-href='http://lang-8.com/171458/journals/553107' data-layout='button_count' data-show-faces='false' data-width='100'></span>
+<span class='horizontal-spaced gplus_btn'>
+<!-- %span.g-plusone{'data-size' => 'medium', :href => "#{@journal.canonical_url}"} -->
+</span>
+<span class='floated_on_left'>
+<span class='st_fblike_hcount' displayText='Facebook Like' st_url='http://lang-8.com/171458/journals/553107'></span>
+<span class='st_facebook_hcount' displayText='Facebook' st_url='http://lang-8.com/171458/journals/553107'></span>
+<span class='st_linkedin_hcount' displayText='LinkedIn' st_url='http://lang-8.com/171458/journals/553107'></span>
+</span>
+<a href='#' onclick="Evernote.doClip({styling:'full',providerName:'Lang-8',suggestTags:'Lang-8',suggestNotebook:'Lang-8',contentId:'entry_container'}); return false;" style='float:right;margin-right:5px;'>
+<img alt='Clip to Evernote' src='/static/images2/xarticle-clipper-fr.png.pagespeed.ic.BAKnLUGqIU.png'/>
+</a>
+</div>
+<div id='comments_and_corrections_field'>
+</div>
+<script type='text/javascript'>//<![CDATA[
+var l8=jQuery.extend(l8,{authenticityToken:"7YKkqKkuoKgJQ2eJwxgYFJvrqCNHdIEb/NGc9GxJEZA=",showTutorial:false,label:"Description about correction.(You can write in any language.)",explanation:"Add a description or comment here.(Optional)",sentences:'RXhwbyAyMDEwIGluIFNoYW5naGFpLApSZWNlbnRseSwgSSBncmFkdWF0ZWQgZnJvbSB0aGUgdW5pdmVyc2l0eS4KSSBoYXZlIHBsZW50eSBvZiBob2xpZGF5cyB0byBiZSB1c2VkIGJlZm9yZSBJIGNhbiBnZXQgdGhlIGpvYi4KU28sIEkgZGVjaWRlZCB0byB0cmF2ZWwgU2hhbmdoYWkgRXhwbyBpbiB0aGlzIHN1bW1tZXIgaG9saWRheS4KVGhhdCBpcyBhIHdvbmRlcmZ1bCBleHBlcmllbmNlLCBtYW55IHRoaW5ncyB0aGF0IGlzIHNob3dlZCBpbiBFeHBvIGlzIHZlcnkgZnJlc2ggYW5kIG5ldy4KVGhlIHN0YWZmIGluIHRoZSBleHBvIGFyZSBmcmllbmRseSAsdGhleSBhcmUgd2VsY29tZSB0byBhbnN3ZXIgcXVlc3Rpb25zLgpJIGFsc28gbWVldCBzb21lIG5ldyBmcmllbmRzIGluIHRoZSB0cmlwLgpUaGV5IGhhdmUgZGlmZmVyZW50IG5hdGlvbmFsaXR5ICxUYWl3YW4gLEtvcmVhIGFuZCBIb25nIEtvbmcuCkkgbG92ZSB0aGUgRXhwby4KVHdvIHllYXJzIGFmdGVyLEtvcmVhIGlzIGdvaW5nIHRvIG9yZ2FuaXplIEV4cG8uCkkgYW0gZWFnZXIgdG8gZ28gdmlzaXQgdGhlcmUuCktvcmVhICxJIGFtIGNvbWluZyB0byBzZWVpbmcgeW91IHNvb24h',corrections:[[],[],[],[],[],[],[],[],[],[],[],[]],correctionComments:[[],[],[],[],[],[],[],[],[],[],[],[]],perfectSentences:[[],[],[],[],[],[],[],[],[],[],[],[]],urlForCreateComment:'/journals/create_comment/553107',isLogin:false});sentences='WyJFeHBvIDIwMTAgaW4gU2hhbmdoYWksIiwiUmVjZW50bHksIEkgZ3JhZHVhdGVkIGZyb20gdGhlIHVuaXZlcnNpdHkuIiwiSSBoYXZlIHBsZW50eSBvZiBob2xpZGF5cyB0byBiZSB1c2VkIGJlZm9yZSBJIGNhbiBnZXQgdGhlIGpvYi4iLCJTbywgSSBkZWNpZGVkIHRvIHRyYXZlbCBTaGFuZ2hhaSBFeHBvIGluIHRoaXMgc3VtbW1lciBob2xpZGF5LiIsIlRoYXQgaXMgYSB3b25kZXJmdWwgZXhwZXJpZW5jZSwgbWFueSB0aGluZ3MgdGhhdCBpcyBzaG93ZWQgaW4gRXhwbyBpcyB2ZXJ5IGZyZXNoIGFuZCBuZXcuIiwiVGhlIHN0YWZmIGluIHRoZSBleHBvIGFyZSBmcmllbmRseSAsdGhleSBhcmUgd2VsY29tZSB0byBhbnN3ZXIgcXVlc3Rpb25zLiIsIkkgYWxzbyBtZWV0IHNvbWUgbmV3IGZyaWVuZHMgaW4gdGhlIHRyaXAuIiwiVGhleSBoYXZlIGRpZmZlcmVudCBuYXRpb25hbGl0eSAsVGFpd2FuICxLb3JlYSBhbmQgSG9uZyBLb25nLiIsIkkgbG92ZSB0aGUgRXhwby4iLCJUd28geWVhcnMgYWZ0ZXIsS29yZWEgaXMgZ29pbmcgdG8gb3JnYW5pemUgRXhwby4iLCJJIGFtIGVhZ2VyIHRvIGdvIHZpc2l0IHRoZXJlLiIsIktvcmVhICxJIGFtIGNvbWluZyB0byBzZWVpbmcgeW91IHNvb24hIl0=';corrections='W1tdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdLFtdXQ==';var correction_comments=[[],[],[],[],[],[],[],[],[],[],[],[]];
+//]]></script>
+
+</div>
+<div id='right' style='padding-bottom:0'>
+<div class='mb_20' id='author_box'>
+<div class='cfx'>
+<a href="/171458"><img alt="" class="user_icon" src="https://d2ktchr4dpd4o2.cloudfront.net/w50_h0/2bae9d52eb7a3e93b154ac2dd25d8d263b99fd63.JPG"/></a>
+<div class='author_information mb_10 cfx'>
+<a href="/171458" class="user_name">阿立</a>
+
+<div class='learning_languages'>
+<ul class='language_status'>
+<li class='speaking' data-title='Native language' rel='tooltip' title='Native language'>Mandarin</li>
+<li class='studying' data-title='Language of study' rel='tooltip' title='Language of study'>
+English, Japanese
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class='bdbox'>
+<table class='entry_status'>
+<tr>
+<td class='l01'>
+<p><a href="/171458/journals">80</a></p>
+<span>Entries Written</span>
+</td>
+<td class='l02'>
+<p><a href="/171458/correction_logs/sent">72</a></p>
+<span>Corrections made</span>
+</td>
+<td class='l03'>
+<p><a href="/171458/correction_logs/received">99</a></p>
+<span>Corrections received</span>
+</td>
+</tr>
+</table>
+</div>
+
+</div>
+
+  
+    <script type="text/javascript">google_ad_client="ca-pub-6717840198266056";google_ad_slot="1415028544";google_ad_width=300;google_ad_height=250;</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+
+  
+
+
+<div class='box'>
+<div id='journals_calendar'>
+<div class='yui-skin-sam'>
+<div id='jour_cal'>
+    <div id="cal1Container"></div>
+    <script type="text/javascript">//<![CDATA[
+(function(){var cal1=null,popupHolder=[],cal_journal_dates={},str_dates='',date_info=[{"journal_id":1063559,"journal_date":1313944790},{"journal_id":957699,"journal_date":1307211028},{"journal_id":954942,"journal_date":1307030889},{"journal_id":826122,"journal_date":1298746366},{"journal_id":810001,"journal_date":1297703494},{"journal_id":805471,"journal_date":1297450090},{"journal_id":796656,"journal_date":1296933505},{"journal_id":795099,"journal_date":1296834125},{"journal_id":789149,"journal_date":1296461348},{"journal_id":788504,"journal_date":1296409118},{"journal_id":786970,"journal_date":1296317398},{"journal_id":785626,"journal_date":1296233785},{"journal_id":784227,"journal_date":1296150880},{"journal_id":782859,"journal_date":1296069647},{"journal_id":780741,"journal_date":1295955190},{"journal_id":779106,"journal_date":1295860952},{"journal_id":778178,"journal_date":1295796031},{"journal_id":777347,"journal_date":1295760756},{"journal_id":776905,"journal_date":1295721582},{"journal_id":776268,"journal_date":1295691121},{"journal_id":775599,"journal_date":1295633625},{"journal_id":775258,"journal_date":1295620145},{"journal_id":768364,"journal_date":1295202530},{"journal_id":766817,"journal_date":1295109085},{"journal_id":765491,"journal_date":1295021811},{"journal_id":758165,"journal_date":1294581615},{"journal_id":755895,"journal_date":1294424092},{"journal_id":755842,"journal_date":1294419630},{"journal_id":751867,"journal_date":1294163145},{"journal_id":739621,"journal_date":1293181953},{"journal_id":732236,"journal_date":1292612482},{"journal_id":698495,"journal_date":1290095466},{"journal_id":691439,"journal_date":1289584956},{"journal_id":691431,"journal_date":1289584015},{"journal_id":672832,"journal_date":1288199408},{"journal_id":665477,"journal_date":1287687393},{"journal_id":659710,"journal_date":1287296453},{"journal_id":645179,"journal_date":1286216612},{"journal_id":639647,"journal_date":1285782210},{"journal_id":634425,"journal_date":1285432267},{"journal_id":629961,"journal_date":1285085921},{"journal_id":627142,"journal_date":1284893924},{"journal_id":623413,"journal_date":1284572580},{"journal_id":622187,"journal_date":1284482615},{"journal_id":621035,"journal_date":1284399836},{"journal_id":619857,"journal_date":1284316012},{"journal_id":618267,"journal_date":1284205938},{"journal_id":616519,"journal_date":1284053128},{"journal_id":615339,"journal_date":1283966697},{"journal_id":614019,"journal_date":1283876395},{"journal_id":612847,"journal_date":1283788112},{"journal_id":611715,"journal_date":1283703866},{"journal_id":610033,"journal_date":1283592305},{"journal_id":607153,"journal_date":1283354929},{"journal_id":603933,"journal_date":1283098123},{"journal_id":599671,"journal_date":1282740505},{"journal_id":597482,"journal_date":1282572733},{"journal_id":595682,"journal_date":1282431266},{"journal_id":594593,"journal_date":1282329452},{"journal_id":594504,"journal_date":1282321298},{"journal_id":592926,"journal_date":1282200841},{"journal_id":592494,"journal_date":1282154897},{"journal_id":591373,"journal_date":1282073055},{"journal_id":590177,"journal_date":1281978797},{"journal_id":587612,"journal_date":1281803311},{"journal_id":586699,"journal_date":1281725813},{"journal_id":585556,"journal_date":1281642923},{"journal_id":585544,"journal_date":1281640695},{"journal_id":583211,"journal_date":1281462197},{"journal_id":582178,"journal_date":1281380871},{"journal_id":579437,"journal_date":1281161233},{"journal_id":575337,"journal_date":1280819876},{"journal_id":570787,"journal_date":1280423557},{"journal_id":562786,"journal_date":1279736834},{"journal_id":562644,"journal_date":1279726610},{"journal_id":559831,"journal_date":1279519789},{"journal_id":558317,"journal_date":1279385546},{"journal_id":557222,"journal_date":1279297119},{"journal_id":553107,"journal_date":1279005981}],now_server2local="11/2018",selected_date='',date_info_json=Object.toJSON(date_info),args=getArgsFromHref(location.href);if(args['begin']!=null){var begin_date_a=args['begin'].split('-');var page_date=begin_date_a[1]+'/'+begin_date_a[0];}else if(args['date']!=null){var date_a=args['date'].split('-');var page_date=date_a[1]+'/'+date_a[0];}else{var page_date=now_server2local;}var pathname=location.pathname.split('/');for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(parseInt(date_info[i].journal_date*1000)).toYAHOODateString();if(cal_journal_dates[tmp_date]){cal_journal_dates[tmp_date]=cal_journal_dates[tmp_date]+'/'+date_info[i].journal_id;}else{cal_journal_dates[tmp_date]=date_info[i].journal_id;str_dates=str_dates+','+tmp_date;}}function init(){cal1=new YAHOO.widget.Calendar('cal1','cal1Container',{LOCALE_MONTHS:'short',LOCALE_WEEKDAYS:'1char',pagedate:page_date});cal1.styleCellDefault=function(workingDate,cell){YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_OOB);}
+cal1.renderCellDefault=function(workingDate,cell){cell.innerHTML='<a class="'+cal1.Style.CSS_CELL_SELECTOR+'">'+cal1.buildDayLabel(workingDate)+"</a>";}
+cal1.renderCellHasJournals=function(workingDate,cell){cell.innerHTML='<a href="/'+'171458'+'/journals?date='+workingDate.toStringYYMMDD()+'" class="'+cal1.Style.CSS_CELL_SELECTABLE+'">'+cal1.buildDayLabel(workingDate)+"</a>";YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_SELECTABLE);YAHOO.util.Dom.addClass(cell,cal1.Style.CSS_CELL_HIGHLIGHT1);if(workingDate.getDate()==cal1.today.getDate()&&workingDate.getMonth()==cal1.today.getMonth()&&workingDate.getFullYear()==cal1.today.getFullYear()){YAHOO.util.Dom.removeClass(cell,cal1.Style.CSS_CELL_TODAY);}return YAHOO.widget.Calendar.STOP_RENDER;}
+cal1.addRenderer(str_dates,cal1.renderCellHasJournals);cal1.render();}function getArgsFromHref(sHref){var args=sHref.split('?');var retargs={}
+if(args[0]==sHref){return"";}var str=args[1];args=str.split('&');for(var i=0;i<args.length;i++){str=args[i];var arg=str.split('=');if(arg.length<=1)continue;retargs[arg[0]]=arg[1];}return retargs;}YAHOO.util.Event.onAvailable('cal1Container',init);})();
+//]]></script>
+
+</div>
+</div>
+</div>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Journal Statistics</h3>
+</div>
+<div class='cfx' id='studying_status'>
+<table class='table side-bar table_statusstudy'>
+<tr>
+<th>Total</th>
+<th>This month</th>
+<th>This week</th>
+</tr>
+<tr>
+<td>
+<p><a href="/171458/journals">79</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/171458/journals" id="monthCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+<td>
+<p><a href="/171458/journals" id="todayCount">0</a></p>
+<span>
+Entries Written
+</span>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<script type="text/javascript">//<![CDATA[
+(function(){var date_info=[{"journal_id":1063559,"journal_date":1313944790},{"journal_id":957699,"journal_date":1307211028},{"journal_id":954942,"journal_date":1307030889},{"journal_id":826122,"journal_date":1298746366},{"journal_id":810001,"journal_date":1297703494},{"journal_id":805471,"journal_date":1297450090},{"journal_id":796656,"journal_date":1296933505},{"journal_id":795099,"journal_date":1296834125},{"journal_id":789149,"journal_date":1296461348},{"journal_id":788504,"journal_date":1296409118},{"journal_id":786970,"journal_date":1296317398},{"journal_id":785626,"journal_date":1296233785},{"journal_id":784227,"journal_date":1296150880},{"journal_id":782859,"journal_date":1296069647},{"journal_id":780741,"journal_date":1295955190},{"journal_id":779106,"journal_date":1295860952},{"journal_id":778178,"journal_date":1295796031},{"journal_id":777347,"journal_date":1295760756},{"journal_id":776905,"journal_date":1295721582},{"journal_id":776268,"journal_date":1295691121},{"journal_id":775599,"journal_date":1295633625},{"journal_id":775258,"journal_date":1295620145},{"journal_id":768364,"journal_date":1295202530},{"journal_id":766817,"journal_date":1295109085},{"journal_id":765491,"journal_date":1295021811},{"journal_id":758165,"journal_date":1294581615},{"journal_id":755895,"journal_date":1294424092},{"journal_id":755842,"journal_date":1294419630},{"journal_id":751867,"journal_date":1294163145},{"journal_id":739621,"journal_date":1293181953},{"journal_id":732236,"journal_date":1292612482},{"journal_id":698495,"journal_date":1290095466},{"journal_id":691439,"journal_date":1289584956},{"journal_id":691431,"journal_date":1289584015},{"journal_id":672832,"journal_date":1288199408},{"journal_id":665477,"journal_date":1287687393},{"journal_id":659710,"journal_date":1287296453},{"journal_id":645179,"journal_date":1286216612},{"journal_id":639647,"journal_date":1285782210},{"journal_id":634425,"journal_date":1285432267},{"journal_id":629961,"journal_date":1285085921},{"journal_id":627142,"journal_date":1284893924},{"journal_id":623413,"journal_date":1284572580},{"journal_id":622187,"journal_date":1284482615},{"journal_id":621035,"journal_date":1284399836},{"journal_id":619857,"journal_date":1284316012},{"journal_id":618267,"journal_date":1284205938},{"journal_id":616519,"journal_date":1284053128},{"journal_id":615339,"journal_date":1283966697},{"journal_id":614019,"journal_date":1283876395},{"journal_id":612847,"journal_date":1283788112},{"journal_id":611715,"journal_date":1283703866},{"journal_id":610033,"journal_date":1283592305},{"journal_id":607153,"journal_date":1283354929},{"journal_id":603933,"journal_date":1283098123},{"journal_id":599671,"journal_date":1282740505},{"journal_id":597482,"journal_date":1282572733},{"journal_id":595682,"journal_date":1282431266},{"journal_id":594593,"journal_date":1282329452},{"journal_id":594504,"journal_date":1282321298},{"journal_id":592926,"journal_date":1282200841},{"journal_id":592494,"journal_date":1282154897},{"journal_id":591373,"journal_date":1282073055},{"journal_id":590177,"journal_date":1281978797},{"journal_id":587612,"journal_date":1281803311},{"journal_id":586699,"journal_date":1281725813},{"journal_id":585556,"journal_date":1281642923},{"journal_id":585544,"journal_date":1281640695},{"journal_id":583211,"journal_date":1281462197},{"journal_id":582178,"journal_date":1281380871},{"journal_id":579437,"journal_date":1281161233},{"journal_id":575337,"journal_date":1280819876},{"journal_id":570787,"journal_date":1280423557},{"journal_id":562786,"journal_date":1279736834},{"journal_id":562644,"journal_date":1279726610},{"journal_id":559831,"journal_date":1279519789},{"journal_id":558317,"journal_date":1279385546},{"journal_id":557222,"journal_date":1279297119},{"journal_id":553107,"journal_date":1279005981}],cur_month_counter=0,week_counter=0;var now_date=new Date(),DateMath=YAHOO.widget.DateMath;var now_date_week_begin=DateMath.getFirstDayOfWeek(now_date,0);var now_date_week_end=DateMath.add(now_date_week_begin,'D',6);for(var i=0,len=date_info.length;i<len;++i){var tmp_date=new Date(date_info[i].journal_date*1000);if(tmp_date.getFullYear()==now_date.getFullYear()){if(tmp_date.getMonth()==now_date.getMonth()){cur_month_counter+=1;if(DateMath.getWeekNumber(tmp_date,0)==DateMath.getWeekNumber(now_date,0)){week_counter+=1;}}}}if(week_counter!=0){$('todayCount').update(week_counter);$('todayCount').href=$('todayCount').href+'?begin='+now_date_week_begin.toStringYYMMDD()+'&end='+now_date_week_end.toStringYYMMDD();}else{$('todayCount').href="#";}if(cur_month_counter!=0){$('monthCount').update(cur_month_counter);$('monthCount').href=$('monthCount').href+'?begin='+DateMath.findMonthStart(now_date).toStringYYMMDD()+'&end='+DateMath.findMonthEnd(now_date).toStringYYMMDD();}else{$('monthCount').href="#";}})();
+//]]></script>
+
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest entries</h3>
+</div>
+<table class='table side-bar ar_icobox'>
+<tr>
+<td><a href="http://lang-8.com/171458/journals/1063559">I would go to seoul on this Nov :) (1) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/171458/journals/957699">Dairy one -June  (5) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/171458/journals/954942">A new day~~~ (1) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/171458/journals/826122">오늘 친구집에 가요 그리고 보스를 타요.   (2) </a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/171458/journals/810001">Verbs --(1) (1) </a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/171458/journals" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Latest comments</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<td><a href="http://lang-8.com/171458/journals/957699">Jun 7 maa</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/171458/journals/957699">Jun 5 youmei</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/171458/journals/957699">Jun 5 Small Mountain</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/171458/journals/954942">Jun 3 wwsh</a></td>
+</tr>
+<tr>
+<td><a href="http://lang-8.com/171458/journals/826122">Feb 28 wwsh</a></td>
+</tr>
+</table>
+<p class='read_more2'><a href="/171458/journals/comments" class="bt_lv3"><i class='i_arrow'></i>Read more</a></p>
+</div>
+<div class='box cfx' id='d_draft_list'>
+</div>
+<div class='box'>
+<div class='tit_03'>
+<h3>Entries by Month</h3>
+</div>
+<table class='table ar_icobox side-bar'>
+<tr>
+<th class='year'>2011</th>
+</tr>
+<tr>
+<td>
+ <a href="/171458/journals?begin=2011-8-1&amp;end=2011-08-31">August (1)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/171458/journals?begin=2011-6-1&amp;end=2011-06-30">June (2)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/171458/journals?begin=2011-2-1&amp;end=2011-02-28">February (5)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/171458/journals?begin=2011-1-1&amp;end=2011-01-31">January (21)</a>
+</td>
+</tr>
+<tr>
+<th class='year'>2010</th>
+</tr>
+<tr>
+<td>
+ <a href="/171458/journals?begin=2010-12-1&amp;end=2010-12-31">December (2)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/171458/journals?begin=2010-11-1&amp;end=2010-11-30">November (3)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/171458/journals?begin=2010-10-1&amp;end=2010-10-31">October (4)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/171458/journals?begin=2010-9-1&amp;end=2010-09-30">September (16)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/171458/journals?begin=2010-8-1&amp;end=2010-08-31">August (18)</a>
+</td>
+</tr>
+<tr>
+<td>
+ <a href="/171458/journals?begin=2010-7-1&amp;end=2010-07-31">July (7)</a>
+</td>
+</tr>
+</table>
+</div>
+
+<div style='height:20px;background-color:#ffffff'></div>
+<div id='eval_comment_form' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='form_to_edit_note' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='journal_comment_liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='liked_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+<div id='eval_users_list' style='display: none;'>
+<p class='center'>
+<img src='/static/images2/loading.gif'/>
+</p>
+</div>
+</div>
+<div class='yui-skin-sam' id='yui_panels'>
+<div id='wt_panel' style='visibility:hidden;'>
+<div class='hd' id='wt_title'></div>
+<div class='bd' id='wt_content'></div>
+<div class='ft'></div>
+</div>
+</div>
+<div id='modal'></div>
+<div id='confirm_box'>
+<div id='confirm_box_close'>
+<a onclick='hide_confirm_box();'>
+<img src='/static/images2/xico_closebt.png.pagespeed.ic.z-nUma7JBr.png'/>
+</a>
+</div>
+<div id='confirm_box_contents'></div>
+</div>
+</div>
+<div class='modal hide' id='report_spam_entry' tabindex='-1'>
+<div class='modal-header'>
+<btn class='close' data-dismiss='modal' type='button'>x</btn>
+<h4>Report this entry</h4>
+</div>
+<div class='modal-body'>
+<strong class='spaced'>Spam entry</strong>
+<p class='spaced'>Recently, I graduated from the university. I have plenty of holidays to be used before I can get the job. So, I decided to travel Shanghai Expo in this summmer holiday. That is a wonderful experience, many things that is showed in Expo is very fresh and new. The staff in the expo are friendly ,they a</p>
+<br/>
+<strong class='spaced'>Author</strong>
+<p class='spaced'>阿立</p>
+<br/>
+<strong class='spaced'>Reporter</strong>
+<p class='spaced'>0</p>
+</div>
+<div class='modal-footer'>
+<a class='btn' data-dismiss='modal' href='#'>Close</a>
+<a class="bt_lv1 bt_size_04" href="#" onclick="new Ajax.Request('/spam_reports/report_entry?entry_body=Recently%2C+I+graduated+from+the+university.+I+have+plenty+of+holidays+to+be+used+before+I+can+get+the+job.+So%2C+I+decided+to+travel+Shanghai+Expo+in+this+summmer+holiday.+That+is+a+wonderful+experience%2C+many+things+that+is+showed+in+Expo+is+very+fresh+and+new.+The+staff+in+the+expo+are+friendly+%2Cthey+a&amp;reporter_id=0&amp;spammer_id=171458&amp;url=http%3A%2F%2Flang-8.com%2F171458%2Fjournals%2F553107', {asynchronous:true, evalScripts:true, onLoading:function(request){$j('#report_spam_entry').html('&lt;p class=&quot;center&quot;&gt;&lt;br /&gt;&lt;img src=&quot;/static/images2/loading.gif&quot; class=&quot;center spaced vertical-margin&quot; /&gt;&lt;/p&gt;');}, onSuccess:function(request){$j(&quot;#report_spam_entry&quot;).modal(&quot;hide&quot;);$j(&quot;#alert-box&quot;).alerter(&quot;alertSuccess&quot;, &quot;&quot;, &quot;Report sent.&quot; );}, parameters:'authenticity_token=' + encodeURIComponent('7YKkqKkuoKgJQ2eJwxgYFJvrqCNHdIEb/NGc9GxJEZA=')}); return false;">Send</a>
+</div>
+</div>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show-5f9f69ded18eb0d1a8bef6040b599e7b.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show2-e52e094b14e0c5b5979f64d63309ab8a.js" type="text/javascript"></script>
+<script src="http://dzhimp63a2tb1.cloudfront.net/assets/static/javascripts/journals/show3-eedb1c964407a61f34a56d6652b21722.js" type="text/javascript"></script>
+<script id="evernote-js" data-cjsexec="true" type="text/cjs" data-cjssrc="http://static.evernote.com/noteit.js"></script>
+<script id="twitter-wjs" data-cjsexec="true" type="text/cjs" data-cjssrc="https://platform.twitter.com/widgets.js"></script>
+<script type='text/javascript'></script>
+<script type='text/javascript'>//<![CDATA[
+jQuery(function($){new Lang8.Views.JournalShowView();});
+//]]></script>
+
+</div>
+</div>
+<div data-search_url='' id='footer'>
+<div class='inner'>
+<div class='box clearfix'>
+<ul class='ft_parts_list f_left'>
+<ul class='ft_parts_list f_left'></ul>
+</ul>
+</div>
+<div class='box02 clearfix'>
+<ul>
+
+</ul>
+<ul>
+<li>
+<p>
+Study
+</p>
+<ul>
+<li><a href="/profiles/search">Member Search</a></li>
+<li><a href="/hotentries">Popular Entries</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+View
+</p>
+<ul>
+<li><a href="/rankings">Rankings</a></li>
+<li>
+<a href="/groups">Groups</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+Help
+</p>
+<ul>
+<li><a href="/help/tumblr" target="_blank">Help</a></li>
+<li><a href="/register/term" target="_blank">Terms of Service</a></li>
+<li><a href="/register/privacy" target="_blank">Privacy Policy</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+About Lang-8
+</p>
+<ul>
+<li><a href="/help/law_1" target="_blank">特定商取引法に基づく表記</a></li>
+<li><a href="/help/donation" target="_blank">Donate</a></li>
+<li><a href="http://lang-8.jp/" target="_blank">Company</a></li>
+<li><a href="http://lang-8.jp/#recruit" target="_blank">Travailler pour Lang-8</a></li>
+<li>
+<a href='mailto:support@lang-8.com'>Contact us</a>
+</li>
+<li>&nbsp;</li>
+</ul>
+</li>
+</ul>
+<ul id='social_web_list'>
+<li class='icon_with twitter'>
+<a class='twitter-follow-button' data-show-count='false' href='https://twitter.com/lang8'>Follow @lang8</a>
+<script defer="defer" src="https://platform.twitter.com/widgets.js" type="text/javascript"></script>
+</li>
+<li class='icon_with facebook'><a href="http://www.facebook.com/lang8" target="_blank">Facebook page</a></li>
+<li class='icon_with rss'><a href="http://blog.lang-8.com" target="_blank">Lang-8 blog</a></li>
+</ul>
+</div>
+<div class='box03 clearfix'>
+<li class='f_left panel_list'>
+<a href='https://mixpanel.com/f/partner' target='_blank'>
+<img alt='Mobile and Web Analytics' src='https://mixpanel.com/site_media/images/partner/badge_light.png'/>
+</a>
+</li>
+<p class='copy f_right'>
+&copy; 2017 Lang-8, Inc. All rights reserved.
+</p>
+</div>
+</div>
+</div>
+
+
+<script type='text/javascript'>//<![CDATA[
+var gaJsHost=(("https:"==document.location.protocol)?"https://ssl.":"http://www.");document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var pageTracker;autoRetry(function(){pageTracker=_gat._getTracker("UA-452011-7");pageTracker._setDomainName("none");pageTracker._setAllowLinker(true);pageTracker._initData();pageTracker._trackPageview("/before/journals/show/553107");},2);
+//]]></script>
+
+
+<script type='text/javascript'>//<![CDATA[
+$j(function(){$j('[rel=tooltip]').tooltip();$j('[rel=popover]').popover();});
+//]]></script>
+<script type='text/javascript'>//<![CDATA[
+var cjsscript=document.createElement('script');cjsscript.src="/static/javascripts/control_js.js";var cjssib=document.getElementsByTagName('script')[0];cjssib.parentNode.insertBefore(cjsscript,cjssib);
+//]]></script>
+<div id='fb-root'></div>
+<script type='text/javascript'>//<![CDATA[
+(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=138873442911";fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));
+//]]></script>
+</body>
+</html>
