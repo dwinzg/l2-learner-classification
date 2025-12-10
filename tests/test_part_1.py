@@ -18,7 +18,6 @@ from src.part_1 import extract_l1, extract_text, parse_html
 import unittest
 
 class TestExtraction(unittest.TestCase):
-
     """
     Test 'extract_l1'
     """
@@ -102,7 +101,6 @@ class TestExtraction(unittest.TestCase):
         self.assertIsNone(l1)
         self.assertIn(text, '')
         self.assertEqual(filename, "test.html")
-
 
 if __name__ == "__main__":
     unittest.main()
