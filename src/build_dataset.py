@@ -1,6 +1,23 @@
-from src.part_1 import iterate_documents
-from src.part_2 import sentence_length_stats, text_stats
-# from src.part_2_wip import extract_headging_words_feature, extract_romance_cognates_feature, ... 
+from part_1 import iterate_documents
+from part_2_stats import sentence_length_stats, text_stats
+from part_2_lexicon_pos import extract_lexicon_features, get_POS_rato_features
+
+def create_label(l1):
+    """
+    Convert L1 to binary class label.
+    
+    Args:
+        l1 (str): Native language
+    
+    Returns:
+        str: 'European' or 'Asian', or None for other languages
+    """
+    if l1 in ['French', 'Spanish']:
+        return 'European'
+    elif l1 in ['Mandarin', 'Japanese', 'Korean']:
+        return 'Asian'
+    else:
+        return None
 
 def build_dataset(zip_path, train_files, dev_files, test_files):
     """
@@ -35,14 +52,9 @@ def build_dataset(zip_path, train_files, dev_files, test_files):
         # Start a fresh feature dict for this document
         features = {}
 
-        features.update(extract_headging_words_feature(text))
-        features.update(extract_romance_cognates_feature(text))
-        features.update(extract_transport_words_feature(text))
-        features.update(get_adjectives_ratio(text))
-        features.update(get_article_ratio(text))
-        features.update(get_modals_verb_ratio(text))
-        features.update(get_pronoun_density(text))
-        features.update(get_prepositions_ratio(text))
+        # === 8 features (Lexicon and POS features)
+        features.update(extract_lexicon_features(text))
+        features.update(get_POS_rato_features(text))
 
         # === 8 features (Sentence segmentation–based, Statistical) ===
         features.update(sentence_length_stats(text, long_thresh=20))
