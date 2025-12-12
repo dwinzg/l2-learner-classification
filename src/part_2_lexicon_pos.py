@@ -3,7 +3,6 @@ from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk.stem import PorterStemmer
 from nltk import pos_tag
 from collections import Counter
-from part_1 import iterate_documents
 import string
 
 # Define lexicons
@@ -18,7 +17,7 @@ TRANSPORT_WORDS = {"taxi", "train", "bus", "bicycle", "subway", "metro", "bike"}
 HEDGING_WORDS = {
     "maybe", "perhaps", "possibly", "probably", "might", 
     "seem", "appear", "somewhat", "relatively", "fairly", 
-    "rather", "kind of", "sort of" 
+    "rather", "kind", "sort" 
 }
 # Download required NLTK data
 nltk.download('punkt')
