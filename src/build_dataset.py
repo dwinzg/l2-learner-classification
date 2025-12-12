@@ -56,7 +56,7 @@ def build_dataset(zip_path, train_files, dev_files, test_files):
         features.update(extract_lexicon_features(text))
         features.update(get_POS_rato_features(text))
 
-        # === 8 features (Sentence segmentation–based, Statistical) ===
+        # === 7 features (Sentence segmentation–based, Statistical) ===
         features.update(sentence_length_stats(text, long_thresh=20))
         features.update(text_stats(text))
 

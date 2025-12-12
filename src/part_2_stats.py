@@ -5,6 +5,7 @@ from typing import Dict, Iterator
 from collections import Counter
 import string
 import re
+import math 
 
 import spacy
 
@@ -25,7 +26,13 @@ def sentence_length_stats(text: str, long_thresh: int = 20) -> Dict[str, float]:
         - sent_count: number of sentences
         - avg_sent_len_tokens: mean sentence length in tokens
         - std_sent_len_tokens: population std of sentence length in tokens
-        - prop_long_sents: proportion of sentences with length > long_thresh
+        - sent_cv_log: log-normalized coefficient of variation of sentence length
+          (log(1 + std_sent_len_tokens / avg_sent_len_tokens))
+
+    Note:
+        The original feature `prop_long_sents` (proportion of sentences with
+        length > long_thresh) was removed because ablation showed it hurt model
+        performance and it was highly correlated with avg/std sentence length.
     """
     doc = _nlp(text)
     lengths = []
@@ -42,19 +49,30 @@ def sentence_length_stats(text: str, long_thresh: int = 20) -> Dict[str, float]:
             "sent_count": 0,
             "avg_sent_len_tokens": 0.0,
             "std_sent_len_tokens": 0.0,
-            "prop_long_sents": 0.0,
+            # "prop_long_sents": 0.0,  # original feature (now removed)
+            "sent_cv_log": 0.0,
         }
 
     sent_count = len(lengths)
     avg_len = mean(lengths)
     std_len = pstdev(lengths) if len(lengths) > 1 else 0.0
-    prop_long = sum(l > long_thresh for l in lengths) / sent_count
+
+    # Original prop_long_sents (commented out):
+    # prop_long = sum(l > long_thresh for l in lengths) / sent_count
+
+    # Coefficient of variation of sentence length
+    if avg_len > 0:
+        sent_cv = std_len / avg_len
+        sent_cv_log = math.log1p(sent_cv)  # log(1 + cv), more stable
+    else:
+        sent_cv_log = 0.0
 
     return {
         "sent_count": sent_count,
         "avg_sent_len_tokens": avg_len,
         "std_sent_len_tokens": std_len,
-        "prop_long_sents": prop_long,
+        # "prop_long_sents": prop_long,  # original feature (now removed)
+        "sent_cv_log": sent_cv_log,
     }
 
 
@@ -62,12 +80,17 @@ def text_stats(text: str) -> Dict[str, float]:
     """
     Compute token-level statistical features for a single text.
 
-    Features:
-        - type_token_ratio: unique_tokens / total_tokens (lowercased, no punctuation tokens)
+    Features (updated):
         - hapax_ratio: hapax_legomena_count / total_tokens
         - mean_word_len: average characters per token (letters only)
         - punct_per_token: punctuation characters count / total_tokens
+
+    Note:
+        The original feature `type_token_ratio` was removed because
+        ablation and correlation analysis showed it was redundant
+        with hapax_ratio and harmed classifier performance.
     """
+
     # Simple tokenization: words made of letters/digits/underscore
     tokens = re.findall(r"\b\w+\b", text.lower())
     total_tokens = len(tokens)
@@ -77,15 +100,15 @@ def text_stats(text: str) -> Dict[str, float]:
 
     if total_tokens == 0:
         return {
-            "type_token_ratio": 0.0,
+            # "type_token_ratio": 0.0,   # removed
             "hapax_ratio": 0.0,
             "mean_word_len": 0.0,
             "punct_per_token": 0.0,
         }
 
-    # Type–token ratio
-    unique_tokens = len(set(tokens))
-    type_token_ratio = unique_tokens / total_tokens
+    # --- REMOVED ---
+    # unique_tokens = len(set(tokens))
+    # type_token_ratio = unique_tokens / total_tokens
 
     # Hapax ratio (tokens that appear exactly once)
     counts = Counter(tokens)
@@ -103,7 +126,7 @@ def text_stats(text: str) -> Dict[str, float]:
     punct_per_token = punct_chars / total_tokens
 
     return {
-        "type_token_ratio": type_token_ratio,
+        # "type_token_ratio": type_token_ratio,  # removed
         "hapax_ratio": hapax_ratio,
         "mean_word_len": mean_word_len,
         "punct_per_token": punct_per_token,
@@ -119,8 +142,8 @@ def iter_sentence_features(
     Yields one dict per document with keys:
         - 'l1'
         - 'filename'
-        - sentence-based: 
-            'sent_count', 'avg_sent_len_tokens', 'std_sent_len_tokens', 'prop_long_sents'
+        - sentence-based:
+            'sent_count', 'avg_sent_len_tokens', 'std_sent_len_tokens', 'sent_cv_log'
         - statistical:
             'type_token_ratio', 'hapax_ratio', 'mean_word_len', 'punct_per_token'
     """
@@ -139,7 +162,7 @@ def iter_sentence_features(
             **token_stats,
         }
 
-# Example usage
+#Example Usage
 # if __name__ == "__main__":
 #     zip_path = "data/raw/lang-8.zip"
 #     for i, row in enumerate(iter_sentence_features(zip_path, long_thresh=20)):
@@ -148,8 +171,8 @@ def iter_sentence_features(
 #             f"sent_count={row['sent_count']}, "
 #             f"avg_len={row['avg_sent_len_tokens']:.2f}, "
 #             f"std_len={row['std_sent_len_tokens']:.2f}, "
-#             f"prop_long={row['prop_long_sents']:.2f}, "
-#             f"TTR={row['type_token_ratio']:.3f}, "
+#             f"sent_cv_log={row['sent_cv_log']:.3f}, "
+#             # type_token_ratio removed
 #             f"hapax={row['hapax_ratio']:.3f}, "
 #             f"mean_word_len={row['mean_word_len']:.2f}, "
 #             f"punct_per_tok={row['punct_per_token']:.3f}"
