@@ -74,7 +74,3 @@ def build_dataset(zip_path, train_files, dev_files, test_files):
             y_test.append(label)
 
     return X_train, y_train, X_dev, y_dev, X_test, y_test
-
-X_train, y_train, X_dev, y_dev, X_test, y_test = [], [], [], [], [], []
-X_train, y_train, X_dev, y_dev, X_test, y_test = build_dataset("../data/raw/lang-8.zip","../data/train.txt","../data/dev.txt","../data/test.txt")
-print(y_test)
