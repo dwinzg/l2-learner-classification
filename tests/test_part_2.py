@@ -3,7 +3,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from src.part_2 import text_stats, sentence_length_stats
+from src.part_2_stats import text_stats, sentence_length_stats
+from src.part_2_lexicon_pos import extract_lexicon_features, get_POS_rato_features
 
 def test_text_stats_basic():
     text = "Hello world! Hello again."
@@ -64,9 +65,39 @@ def test_sentence_length_stats_long_threshold():
     assert 0 < stats["prop_long_sents"] < 1
     print('test_sentence_length_stats_long_threshold test pass')
 
+def test_romance_cognates_lexicon():
+    text = "Whatever you say is okay. Moreover, you can do whatever you want."
+
+    assert extract_lexicon_features(text)['has_romance_cognates'] == True
+    print('test_romance_cognates_lexicon pass')
+
+def test_transport_lexicon():
+    text = "I take the bus to UBC everyday from Burnaby."
+
+    assert extract_lexicon_features(text)['TRANSPORT_WORDS'] == True
+    print("test_transport_lexicon pass")
+
+def test_hedging_words_lexicon():
+    text = "I don't know if my mom make dinner for me. I heard she is kind of tired today."
+
+    assert extract_lexicon_features(text)['HEDGING_WORDS'] == True
+    print("test_hedging_words_lexicon pass")
+
+def test_pos_ratio():
+    text = "I have a very good feeling that my parents are going to sponsor my study in UBC. Even though there is a relative of mine being toxic about it."
+
+    for key in get_POS_rato_features(text):
+        assert 0<= get_POS_rato_features(text)[key] <= 1
+    print ("test_pos_ratio pass")
+
+
 if __name__ == "__main__":
     test_text_stats_basic()
     test_text_stats_empty()
     test_sentence_length_stats_basic()
     test_sentence_length_stats_empty()
     test_sentence_length_stats_long_threshold()
+    test_romance_cognates_lexicon()
+    test_transport_lexicon()
+    test_hedging_words_lexicon()
+    test_pos_ratio()
