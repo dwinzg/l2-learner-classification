@@ -100,14 +100,3 @@ def iterate_documents(zip_path):
             text = extract_text(soup)
             # Yield document
             yield l1, text, filename
-
-
-documents = []
-for l1, text, filename in iterate_documents("../data/raw/lang-8.zip"):
-    documents.append({
-        'native_language': l1,
-        'text': text,
-        'filename': filename
-    })
-
-print(documents[1])
