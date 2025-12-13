@@ -2,8 +2,8 @@
 
 Group: Yusen Huang, Marco Wang, Darwin Zhang, and Tianhao Cao
 
+```
 COLX_521_lab_4/
-│
 ├── data/
 │   └── raw/
 │       ├── lang-8.zip
@@ -15,8 +15,7 @@ COLX_521_lab_4/
 │   └── Lab4.ipynb
 │
 ├── reports/
-│   └─── figures/
-│   
+│   └── figures/
 │
 ├── src/
 │   ├── build_dataset.py
@@ -29,4 +28,5 @@ COLX_521_lab_4/
 │   └── test_part_2.py
 │
 ├── .gitignore
-└──  README.md
+└── README.md
+```
