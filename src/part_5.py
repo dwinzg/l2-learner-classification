@@ -12,7 +12,7 @@ from pathlib import Path
 
 # ---------- Image output directory ----------
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-IMAGE_DIR = PROJECT_ROOT / "images" / "part_5"
+IMAGE_DIR = PROJECT_ROOT / "reports/figures" / "part_5"
 IMAGE_DIR.mkdir(parents=True, exist_ok=True)
 
 # -----------------------
