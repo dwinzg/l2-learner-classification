@@ -2,8 +2,7 @@
 
 Yusen Huang, Marco Wang, Darwin Zhang, and Tianhao Cao
 
-## COLX 521 Lab 4 — Language Classification Pipeline
-#Project Structure
+## COLX 521 Lab 4 — L2 Learner Classifier Project
 ```
 .
 ├── data/
