@@ -3,6 +3,9 @@
 Yusen Huang, Marco Wang, Darwin Zhang, and Tianhao Cao
 
 ## COLX 521 Lab 4 — L2 Learner Classifier Project
+
+**[Full Report](/reports/part_4_report.html)**
+
 ```
 .
 ├── data/
