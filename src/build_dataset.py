@@ -1,6 +1,6 @@
-from part_1 import iterate_documents
-from part_2_stats import sentence_length_stats, text_stats
-from part_2_lexicon_pos import extract_lexicon_features, get_POS_rato_features
+from src.part_1 import iterate_documents
+from src.part_2_stats import sentence_length_stats, text_stats
+from src.part_2_lexicon_pos import extract_lexicon_features, get_POS_rato_features
 
 def create_label(l1):
     """
