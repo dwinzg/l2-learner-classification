@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-
 from pathlib import Path
 from src.build_dataset import build_dataset
 
@@ -75,11 +74,18 @@ for index, feature in enumerate(vec.feature_names_):
     )
 
 result = sorted(result, key=lambda x: x[3])
+print(f'index, feature name, accuracy without the feature, the accuracy changes compare with the baseline model \n{result}')
 
 ablation_features = []
 for index, feature, score, delta in result:
-    if delta < 0:
+    if delta == 0:
         ablation_features.append(index)
+
+ablation_features_with_name = []
+for index, feature, score, delta in result:
+    if delta == 0:
+        ablation_features_with_name.append(feature)
+print(ablation_features_with_name)
 
 # -----------------------
 # Retrain with selected features
@@ -91,4 +97,4 @@ keep_cols = np.delete(np.arange(n_features), ablation_features)
 
 test_tree.fit(X_train_array[:, keep_cols], y_train)
 
-print(test_tree.score(X_dev_array[:, keep_cols], y_dev))
+print(f'model performance after feature ablation on test set: {test_tree.score(X_test_array[:, keep_cols], y_test)}')
