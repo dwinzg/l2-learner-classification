@@ -6,19 +6,26 @@ from collections import Counter
 import string
 
 # Define lexicons
-ROMANCE_COGNATES = {
-    "consequently", "therefore", "however", "nevertheless", 
-    "furthermore", "moreover", "additionally", "alternatively", 
-    "specifically", "particularly"
+Asian_words = {
+    "china", "chinese", "korea", "korean", 
+    "japan", "japanese", "tokyo", "beijing", 
+    "shanghai", "seoul"
 }
 
-TRANSPORT_WORDS = {"taxi", "train", "bus", "bicycle", "subway", "metro", "bike"}
-
-HEDGING_WORDS = {
-    "maybe", "perhaps", "possibly", "probably", "might", 
-    "seem", "appear", "somewhat", "relatively", "fairly", 
-    "rather", "kind", "sort" 
+European_words = {
+    "Spain", "Spanish", "French", "France", "Paris",
+    "Madrid", "Barcelona", "Lyon", "Merci"
 }
+
+Religion_words = {
+    "catholic", "christ", "god", "church",
+    "pray", "angel", "holy", "spirit", "devil"
+}
+
+#Define Noun tags
+NOUN_TAGS = {'NN', 'NNS', 'NNP', 'NNPS'}
+
+
 # Download required NLTK data
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger_eng')
@@ -46,21 +53,34 @@ def extract_lexicon_features(text):
 
     # Tokenization
     words = word_tokenize(text.lower())
-    sentences = sent_tokenize(text)
-    
-    # POS tagging
-    pos_tags = pos_tag(words)
-    
-    # Safety checks
     total_words = len(words)
-    total_sentences = len(sentences)
-
     if total_words == 0:
-        return 0
+        features['asian_top_word_match'] = False
+        features['Religious_Feature'] = False
+        return features
+    
+    pos_tagged_words = pos_tag(words)
+    nouns = [word for word, tag in pos_tagged_words if tag in NOUN_TAGS]
 
-    features['has_romance_cognates'] = any(word in ROMANCE_COGNATES for word in words)
-    features['HEDGING_WORDS'] = any(word in HEDGING_WORDS for word in words)
-    features['TRANSPORT_WORDS'] = any(word in TRANSPORT_WORDS for word in words)
+    # Calculate Word Frequencies
+    word_counts = Counter(nouns)
+    
+    # Get the Top 3 Most Frequent Words
+    top_3_list = word_counts.most_common(3)
+    
+    # Extract just the word strings
+    top_3_words = [item[0] for item in top_3_list]
+
+    match_count = 0
+    
+    for word in top_3_words:
+        # Check if the word is in the Asian_words
+        if word in Asian_words:
+            match_count += 1
+            
+    # The feature is True if 2 or more words matched the lexicon
+    features['asian_top_word_match'] = (match_count >= 2)
+    features['Religious_Feature'] = any(word in Religion_words  for word in words)
     return features
 
 def get_POS_rato_features(text):
