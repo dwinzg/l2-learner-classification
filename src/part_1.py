@@ -6,7 +6,6 @@ Processing and extracting files for:
     - the raw text (string) of the entry, with HTML removed
     - the original filename (so that you can use our provided train/dev/test split) 
 
-# Author: Darwin Zhang
 # Date: 2025-12-09
 """
 
