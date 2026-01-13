@@ -1,10 +1,13 @@
 # COLX 521 Lab 4
 
-Yusen Huang, Marco Wang, Darwin Zhang, and Tianhao Cao
+> Authors: Yusen Huang, Marco Wang, Darwin Zhang, and Tianhao Cao
 
 ## L2 Learner Classifier Project
 
 **[Full Report](/reports/part_4_report.html)**
+
+# About:
+This project involves building an end-to-end supervised classification system for Native Language Identification (NLI) to predict the native language background of English learners based on their writing. Using a corpus of HTML documents scraped from the Lang-8 platform, the pipeline processes raw text to extract corpus linguistic features including document statistics, syntactic patterns via regular expressions, and lexicon-based style markers. The classifier specifically distinguishes between native speakers of Romance languages (French and Spanish) and East Asian languages (Japanese, Korean, and Mandarin) by analyzing how linguistic distance from English influences learner writing styles and error patterns.
 
 ```
 .
