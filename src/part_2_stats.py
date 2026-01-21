@@ -182,5 +182,5 @@ def iter_sentence_features(
 #             f"mean_word_len={row['mean_word_len']:.2f}, "
 #             f"punct_per_tok={row['punct_per_token']:.3f}"
 #         )
-#         if i >= 10:
+#         if i >= 10:  # To show more or less information, edit i
 #             break
