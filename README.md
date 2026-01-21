@@ -1,8 +1,5 @@
-# COLX 521 Lab 4
-
+# L2 Learner Classifier Project
 > Authors: Darwin Zhang, Marco Wang, Tianhao Cao, Yusen Huang
-
-## L2 Learner Classifier Project
 
 **[Full Report](/reports/part_4_report.html)**
 
